@@ -1,0 +1,144 @@
+/* font family */
+:root {
+  --app-font-family: 'Poppins', sans-serif !important;
+}
+
+body {
+  font-family: var(--app-font-family);
+}
+
+/* sigin in page */
+.logoAlign img{
+  max-width: 500% !important;
+  width: 10rem;
+}
+.signInButton{
+  width: 26%;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 2rem !important;
+}
+.eyeToggle{
+  top: 20px;
+}
+
+/* header section :: start */
+/* Adjust logo size for small mobile screens (320px–420px) */
+@media (min-width: 320px) and (max-width: 420px) {
+  #headerResize {
+    gap: calc(var(--spacing) * 1);
+  }
+  #headerResize img {
+    width: 2.5rem; /* smaller width (≈ 40px) */
+    height: auto;
+  }
+
+  #headerResize h1 {
+    font-size: 0.9rem; /* reduce text slightly */
+  }
+
+  #headerResize span {
+    font-size: 0.4rem;
+  }
+  .status-btn {
+    font-size: 0.75rem;   /* smaller text */
+    padding: 0.25rem 0.75rem; /* less padding vertically & horizontally */
+    border-radius: 0.25rem;   /* slightly smaller rounded corners */
+  }
+  .statusDiv {
+       gap: calc(var(--spacing) * 3);
+  }
+}
+
+@media (min-width: 80rem) {
+    .headerAlign{
+        max-width: var(--breakpoint-2xl) !important;
+    } 
+}
+@media (min-width: 80rem) {
+    .footerAlign{
+        max-width: var(--breakpoint-2xl) !important;
+    } 
+}
+.kt-dropdown-menu-toggle span + span {
+  display: block;
+  margin-top: 1rem;
+}
+/* header section :: end  */
+
+/* patient summary :: start */
+.background-color {
+    background-color: var(--color-gray-200);
+}
+
+.w-100 {
+    width: 100px;
+}
+.w-half {
+  width: 50%;
+}
+
+.deleteHidden {
+    display: none !important;
+}
+
+#filterDropdownButton {
+    padding: 7px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.text-color {
+    color: #096fab;
+}
+
+.filter-option.active {
+    background-color: #f0f8ff;
+}
+.text-purple {
+  color: #7f74f7;
+}
+.mr-0\.5 {
+  margin-right: calc(var(--spacing) * 0.5);
+}
+.suture-btn {
+    transition: opacity 0.3s ease;
+}
+
+.text-name{
+  color: #096fab;
+}
+/* toastr  */
+.toast-success {
+    background-color: #3699FF !important;
+}
+
+.toast-error {
+    background-color: #F64E60 !important;
+}
+
+.toast-info {
+    background-color: #8950FC !important;
+}
+
+.toast-warning {
+    background-color: #FFA800 !important;
+}
+.toast-message {
+  font-size: var(--text-sm) !important;
+}
+
+/* toastr end */
+/* patient summary :: end */
+
+.recording-section {
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent !important;
+  background: linear-gradient(#fff, #fff) padding-box, linear-gradient(135deg, #72bcef 0%, #ac68f7 100%) border-box;
+  background-clip: padding-box, border-box;
+}

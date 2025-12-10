@@ -1,0 +1,101 @@
+
+    <header class="kt-header fixed top-0 z-10 start-0 end-0 flex items-stretch shrink-0 bg-background" data-kt-sticky="true" data-kt-sticky-class="border-b border-border" data-kt-sticky-name="header" id="header" data-kt-sticky-initialized="true">
+     <!-- Container -->
+     <div class="kt-container-fixed flex justify-between items-stretch lg:gap-4 headerAlign" id="headerContainer">
+      <!-- Mobile Logo -->
+       <!-- 👇 BEGIN: Brand (Logo + Text) -->
+        <div class="flex items-center gap-3 cursor-pointer" onclick="redirectStatusPage('home')" id="headerResize">
+        <img
+            src="../assets/media/images/Suturenote_logo_BluePurple.png"
+            alt="SutureNote Logo"
+            class="w-14 h-auto"
+        />
+        <h1 class="text-lg font-semibold text-foreground">
+            SutureNote
+            <span class="text-[11px]  ml-1 text-destructive">Beta</span>
+        </h1>
+        </div>
+        <!-- 👆 END: Brand -->
+      <!-- End of Mobile Logo -->
+      <!-- Topbar -->
+      <div class="flex items-center gap-6 statusDiv">
+        <!-- ✅ New Status Button -->
+       <div class="shrink-0" data-kt-dropdown="true" data-kt-dropdown-offset="10px, 10px" data-kt-dropdown-offset-rtl="-20px, 10px" data-kt-dropdown-placement="bottom-end" data-kt-dropdown-placement-rtl="bottom-start" data-kt-dropdown-trigger="click" data-kt-dropdown-initialized="true">
+       <div
+        class="cursor-pointer shrink-0 flex items-center gap-2 px-2 py-1 border border-gray-200 rounded-2xl bg-white text-sm font-medium text-foreground hover:bg-gray-50"
+        data-kt-dropdown-toggle="true">
+        <span class="text-primary">Hi, </span><span class="text-primary" id="getUserNamePopup"></span>
+        <span
+            class="inline-flex items-center justify-center ml-1 rounded-2xl text-white font-semibold"
+            style="background: linear-gradient(to bottom right, #7ac7fcd9, #ca9dff); width: 33px; height: 33px; font-size: medium;">
+            <span id="headerUserFirstLetter"></span>
+          </span>
+        </span>
+        </div>
+        <div class="kt-dropdown-menu w-[280px]" data-kt-dropdown-menu="true">
+         <div class="flex items-center justify-between px-2.5 py-1.5 gap-1.5">
+          <div class="flex items-center gap-2">
+           <div class="flex flex-col gap-1.5">
+            <span class="text-sm text-foreground font-semibold leading-none" id="getUserNamePopup">
+            </span>
+            <a class="text-xs text-secondary-foreground hover:text-primary font-medium leading-none text-primary" href="" id="getUserEmailId">
+            </a>
+           </div>
+          </div>
+         </div>
+         <ul class="kt-dropdown-menu-sub">
+          <li>
+           <div class="kt-dropdown-menu-separator">
+           </div>
+          </li>
+          <li>
+           <a class="kt-dropdown-menu-link text-gray-600" href="">
+            <i class="ki-filled ki-badge text-primary">
+            </i>
+            User Profile
+           </a>
+          </li>
+          <li>
+           <a class="kt-dropdown-menu-link text-gray-600" onclick="redirectStatusPage('status_page')">
+            <i class="ki-filled ki-chart-line text-primary"></i>
+            Status
+           </a>
+          </li>
+         <!-- <li data-kt-dropdown="true" data-kt-dropdown-placement="right-start" data-kt-dropdown-trigger="hover" data-kt-dropdown-initialized="true">
+        <button class="kt-dropdown-menu-toggle py-1 flex flex-col items-start" data-kt-dropdown-toggle="true">
+            <span class="flex items-center gap-2 text-gray-600">
+            <i class="ki-filled ki-icon text-primary"></i>
+            Timezone
+            </span>
+            <span class="mt-1 kt-badge kt-badge-stroke shrink-0 text-xs items-center gap-1 text-gray-600" id="timeZone">
+            </span>
+        </button>
+        </li> -->
+          <li>
+           <div class="kt-dropdown-menu-separator">
+           </div>
+          </li>
+         </ul>
+         <div class="px-2.5 pt-1.5 mb-2.5 flex flex-col gap-3.5">
+          <div class="flex items-center gap-2 justify-between">
+           <span class="flex items-center gap-2">
+            <i class="ki-filled ki-moon text-base text-muted-foreground text-primary">
+            </i>
+            <span class="font-medium text-2sm text-gray-600">
+             Dark Mode
+            </span>
+           </span>
+           <input class="kt-switch" data-kt-theme-switch-state="dark" data-kt-theme-switch-toggle="true" name="check" type="checkbox" value="1">
+          </div>
+          <a class="kt-btn kt-btn-outline justify-center w-full text-primary" href="">
+           Log out
+          </a>
+         </div>
+        </div>
+       </div>
+       <!-- End of User -->
+      </div>
+      <!-- End of Topbar -->
+     </div>
+     <!-- End of Container -->
+    </header>

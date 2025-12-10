@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html class="h-full" data-kt-theme="true" data-kt-theme-mode="light" dir="ltr" lang="en">
+<head>
+    <base href="">
+    <meta charset="utf-8" />
+    <title>SutureNote</title>
+    <link href="../assets/css/app.css" rel="stylesheet" />
+    <link href="../assets/vendors/keenicons/styles.bundle.css" rel="stylesheet" />
+    <link href="../assets/vendors/toastr/toastr.css" rel="stylesheet">
+    <script src="../assets/vendors/jquery/jquery.min.js"></script>
+    <script src="../assets/vendors/toastr/toastr.js"></script>
+    <script src="../assets/js/config.js"></script>
+    <script src="../assets/js/common_script.js"></script>
+    <script src="../assets/js/include_html.js"></script>
+    <script src="../assets/js/socket.io.min.js"></script>
+    <script src="../assets/js/marked.min.js"></script>
+    <script src="../assets/js/patient_summary.js"></script>
+</head>
+<body class="font-poppins antialiased flex h-full text-base text-foreground bg-background demo1 kt-header-fixed background-color">
+
+    <!-- Page -->
+    <!-- Main -->
+    <div class="flex grow">
+        <!-- Page -->
+        <div id="header_menu"></div>
+        <!-- Page -->
+        <!-- Wrapper -->
+        <div class="kt-wrapper flex grow flex-col">
+
+            <!-- ROW : Sidebar + Content -->
+            <div class="flex flex-col lg:flex-row grow ms-2 me-2 mt-2 mb-2">
+
+                <!-- ============================= -->
+                <!-- SIDEBAR (30% desktop, 100% mobile) -->
+                <!-- ============================= -->
+                <div class="w-full lg:w-[20%] xl:w-[20%] bg-white" data-sticky="false" data-margin-top="140px"
+                    data-sticky-for="1023" data-sticky-class="sticky">
+
+                    <!-- Add Patient Button -->
+                    <div class="pt-5 pb-3">
+                        <div class="flex items-center justify-center px-3">
+                            <button
+                                class="w-full text-sm cursor-pointer text-gray-500 border border-gray-300 bg-transparent shadow-md font-medium rounded-md transition-all duration-200 py-2 px-4"
+                                onclick="showPatientModal('#add_patient_modal')">
+                                <i class="flaticon2-plus mr-2"></i> Add Patient
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Search Section -->
+                    <div class="px-3 pb-3">
+                        <div class="relative w-full flex items-center">
+                            <!-- Search and Filter Container -->
+                            <div class="flex items-center border rounded-md bg-white border-gray-300 lg:w-[80%] xl:w-[80%]">
+                            <!-- Search Input -->
+                            <div class="flex-1">
+                                <input type="text" id="patientSearch" class="w-full border-0 focus:outline-none px-3 py-2 text-sm" placeholder="Search" onkeyup="filterPatients();" maxlength="25" autocomplete="off">
+                            </div>
+
+                            <!-- Dropdown -->
+                            <div class="relative">
+                                <button id="filterDropdownButton" class="cursor-pointer flex items-center border border-gray-300 rounded-2xl justify-between px-3 py-2 text-gray-500 focus:outline-none mr-0.5">
+                                <span class="flex items-center whitespace-nowrap">
+                                    <span id="currentFilter" class="text-xs font-medium">Active</span>
+                                    <svg class="w-4 h-4 ml-2 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </span>
+                                </button>
+
+                                <!-- Dropdown Menu -->
+                                <div id="filterDropdown" class="w-100 absolute left-0 mt-1 bg-white border border-gray-300 rounded-2xl shadow-lg z-10 hidden" style="width: 118px;">
+                                <a href="#" class="filter-option flex items-center px-3 py-2 text-xs text-gray-600 rounded-2xl" data-filter="active">
+                                    <span id="activePatientCount" class="font-semibold text-gray-600">Active (0)</span>
+                                </a>
+                                <a href="#" class="filter-option flex items-center px-3 py-2 text-xs text-gray-600 rounded-2xl" data-filter="archive">
+                                    <span id="archivePatientCount" class="font-semibold text-gray-600">Archived (0)</span>
+                                </a>
+                                </div>
+                            </div>
+                            </div>
+
+                            <!-- Sort Icon - Placed next to the search container -->
+                            <div class="relative ml-2">
+                            <div id="sortIcon" class="flex items-center justify-center rounded-2xl bg-white px-1 py-1 text-gray-500 cursor-pointer">
+                                <i class="material-icons text-purple">sort</i>
+                            </div>
+                            </div>
+                        </div>
+
+                        <input type="hidden" id="getPatientNameFromList" name="getPatientNameFromList" value="">
+                    </div>
+                    <div id="loader-overlay">
+                        <div class="loader-container">
+                            <div class="loader_audio"></div>
+                            <div class="loader-text">Saving Audio, please wait...</div>
+                        </div>
+                    </div>
+
+                    <!-- Patient List -->
+                    <div class="p-2 max-h-[70vh] kt-scrollable-y-auto">
+                        <div id="patientListControls" class="hidden"></div>
+
+                        <ul class="navi space-y-2" id="patientListContainer">
+                            <div class="text-center py-4 text-gray-500">
+                                Loading patients...
+                            </div>
+                        </ul>
+                    </div>
+
+                </div>
+                <!-- END SIDEBAR -->
+
+                <!-- ============================= -->
+                <!-- MAIN CONTENT (70% desktop, 100% mobile) -->
+                <!-- ============================= -->
+                <main class="w-full lg:w-[60%] xl:w-[60%] pt-5 bg-white lg:ml-0.5 mt-3 lg:mt-0 summary-assess-section px-5 py-4" id="content" role="content">
+                    <div id="mainContentContainer">
+                        <div class="w-full border-b border-border pb-3 mb-6">
+                            <div class="flex">
+                                <div class="flex w-full text-lg text-name font-semibold tracking-wide mt-1 mb-6 leading-none patient-name">
+                                        
+                                </div>
+                                <div class="flex w-100 wave-timer"></div>
+                                <div class="flex w-80 nav-item render-patient-recording h-9 ml-auto justify-end">
+                                </div>
+                            </div>
+                            <div class="flex justify-between mt-3">
+                                <!-- Left Section -->
+                                <div class="flex gap-4">
+                                    <div class="relative">
+                                        <button id="noteTypeButton" class="cursor-pointer flex items-center border border-gray-300 rounded-2xl px-3 py-2 text-xs text-gray-800 hover:text-color bg-white focus:outline-none w-100">
+                                            <span class="flex justify-between items-center w-full">
+                                                <span id="currentNoteType" class="text-xs font-medium"  data-value="SOAP">SOAP</span>
+                                                <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                                </svg>
+                                            </span>
+                                        </button>
+
+                                        <!-- Dropdown --> 
+                                        <div id="navTabsDropdown" class="noteTypeDropdown absolute left-0 mt-1 bg-white border border-gray-300 rounded-2xl shadow-lg z-10 hidden w-100">
+                                            <!-- ACTIVE -->
+                                            <a class="nav-linkDropdown active note-option flex items-center px-3 py-2 text-xs text-gray-600 rounded-2xl 
+                                                    bg-[rgb(240,248,255)] font-semibold text-color" data-value="SOAP">SOAP</a>
+
+                                            <a class="nav-linkDropdown note-option flex items-center px-3 py-2 text-xs text-gray-600 rounded-2xl 
+                                                    hover:bg-[rgb(240,248,255)]" data-value="H&P">H&P</a>
+
+                                            <a class="nav-linkDropdown note-option flex items-center px-3 py-2 text-xs text-gray-600 rounded-2xl 
+                                                    hover:bg-[rgb(240,248,255)]" data-value="Discharge">Discharge</a>
+                                        </div>
+                                    </div>
+                                    <!-- Actions -->
+                                    <div class="flex items-center gap-3 text-sm text-secondary-foreground">
+                                        <span>|</span>
+                                        <!-- Transcript -->
+                                        <button class="cursor-pointer flex items-center gap-2 hover:text-primary" id="transcript_drawer" data-kt-drawer-toggle="#drawer_1" type="button">
+                                            <i class="ki-outline ki-message-text"></i>
+                                            Transcript
+                                        </button>
+                                        <span>|</span>
+                                        <!-- Upload -->
+                                        <button class=" cursor-pointer flex items-center gap-2 hover:text-primary" id="open_upload_drawer" data-kt-drawer-toggle="#drawer_end">
+                                            <i class="ki-outline ki-file-up"></i>
+                                            Upload
+                                        </button>
+                                        <span>|</span>
+                                        <!-- Phrase -->
+                                        <button class="cursor-pointer flex items-center gap-2 hover:text-primary">
+                                            <i class="ki-outline ki-note"></i>
+                                            Phrase
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="flex mr-10">
+                                    <button class="cursor-pointer flex items-center gap-2 ml-auto w-100 bg-transparent text-xs text-color rounded-2xl shadow-md py-2 px-2 justify-center recording-section suture-btn mr-2" data-type="SOAP" id="onDemandSummaryCall" onclick="onDemandSummaryCall()">
+                                        Suture
+                                    </button>
+                                    <button class="cursor-pointer flex items-center gap-2 ml-auto w-100 bg-transparent text-xs text-color rounded-2xl shadow-md py-2 px-2 justify-center recording-section suture-btn mr-2 hidden" data-type="HP" id="onDemandHpCall" onclick="onDemandHpCall()">
+                                        Suture
+                                    </button>
+                                    <button class="cursor-pointer flex items-center gap-2 ml-auto w-100 bg-transparent text-xs text-color rounded-2xl shadow-md py-2 px-2 justify-center recording-section suture-btn mr-2 hidden" data-type="Discharge" id="onDemandDsCall" onclick="onDemandDsCall()">
+                                        Suture
+                                    </button>
+                                    <button class="cursor-pointer flex items-center gap-2 ml-auto w-100 bg-transparent text-xs text-color rounded-2xl shadow-md py-2 px-2 justify-center recording-section" id="dropdownMenuButton" onclick="copyAllPlainText()">
+                                        Copy All
+                                    </button>
+                                </div>
+
+                                <!-- Right Section -->
+                                <!-- <button
+                                    class="flex items-center gap-2 px-4 py-2 rounded-xl bg-primary text-white font-medium hover:bg-primary/80">
+                                    <i class="ki-filled ki-microphone text-base"></i>
+                                    Record
+                                </button> -->
+
+                            </div>
+                        </div>
+                        <div class ="overall-patient-details">
+                            <input type="hidden" id="hd_soap_url" name="hd_soap_url" />
+                            <div class="accordion-scroll-wrapper max-h-[70vh]" style="overflow-y: auto;">
+                            <div data-kt-accordion="true" data-kt-accordion-expand-all="true"
+                                class="kt-accordion kt-accordion-outline">
+                                <div data-kt-accordion-item="true" class="kt-accordion-item active">
+                                    <div id="accordion_toggle_0" data-kt-accordion-toggle="true"
+                                        aria-controls="accordion_content_0" class="kt-accordion-toggle">
+                                        <span class="kt-accordion-title text-sm text-color" data-copy="true">Summary</span>
+                                        <button class="flex ml-auto w-100 justify-center border border-gray-300 bg-transparent text-xs cursor-pointer text-color rounded-2xl shadow-md py-2 px-5 recording-section" onclick="copyPlainText('accordion_content_0', event)" type="button">Copy</button>
+                                        <span aria-hidden="true"
+                                            class="kt-accordion-indicator"><svg xmlns="http://www.w3.org/2000/svg"
+                                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-plus kt-accordion-indicator-on" aria-hidden="true">
+                                                <path d="M5 12h14"></path>
+                                                <path d="M12 5v14"></path>
+                                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-minus kt-accordion-indicator-off" aria-hidden="true">
+                                                <path d="M5 12h14"></path>
+                                            </svg></span>
+                                    </div>
+                                    <div class="kt-accordion-content" aria-labelledby="accordion_toggle_0"
+                                        id="accordion_content_0">
+                                        <div class="kt-accordion-wrapper text-xs summary-container clear-content" data-copy="true">
+                                            <div class="inside-summary-section">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-kt-accordion-item="true" class="kt-accordion-item active">
+                                    <div id="accordion_toggle_1" data-kt-accordion-toggle="true"
+                                        aria-controls="accordion_content_1" class="kt-accordion-toggle">
+                                        <span class="kt-accordion-title text-sm text-color" data-copy="true">Interval Events</span>
+                                        <button class="flex ml-auto w-100 justify-center border border-gray-300 bg-transparent text-xs cursor-pointer text-color rounded-2xl shadow-md py-2 px-5 recording-section" onclick="copyPlainText('accordion_content_1', event)" type="button">Copy</button>
+                                        <span aria-hidden="true"
+                                            class="kt-accordion-indicator"><svg xmlns="http://www.w3.org/2000/svg"
+                                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-plus kt-accordion-indicator-on" aria-hidden="true">
+                                                <path d="M5 12h14"></path>
+                                                <path d="M12 5v14"></path>
+                                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-minus kt-accordion-indicator-off" aria-hidden="true">
+                                                <path d="M5 12h14"></path>
+                                            </svg></span>
+                                    </div>
+                                    <div class="kt-accordion-content" aria-labelledby="accordion_toggle_1"
+                                        id="accordion_content_1">
+                                        <div class="kt-accordion-wrapper text-xs assessment-container clear-content inside-assess-section" data-copy="true">
+                                            <div class="inside-assess-section">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-kt-accordion-item="true" class="kt-accordion-item active">
+                                    <div id="accordion_toggle_2" data-kt-accordion-toggle="true"
+                                        aria-controls="accordion_content_2" class="kt-accordion-toggle">
+                                        <span class="kt-accordion-title text-sm text-color" data-copy="true">Review of Systems</span>
+                                        <button class="flex ml-auto w-100 justify-center border border-gray-300 bg-transparent text-xs cursor-pointer text-color rounded-2xl shadow-md py-2 px-5 recording-section" onclick="copyPlainText('accordion_content_2', event)" type="button">Copy</button>
+                                        <span aria-hidden="true"
+                                            class="kt-accordion-indicator"><svg xmlns="http://www.w3.org/2000/svg"
+                                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-plus kt-accordion-indicator-on" aria-hidden="true">
+                                                <path d="M5 12h14"></path>
+                                                <path d="M12 5v14"></path>
+                                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-minus kt-accordion-indicator-off" aria-hidden="true">
+                                                <path d="M5 12h14"></path>
+                                            </svg></span>
+                                    </div>
+                                    <div class="kt-accordion-content" aria-labelledby="accordion_toggle_2"
+                                        id="accordion_content_2">
+                                        <div class="kt-accordion-wrapper text-xs review-of-system-id clear-content" data-copy="true">
+                                           <div class="inside-review-system-section">
+
+                                           </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-kt-accordion-item="true" class="kt-accordion-item active">
+                                    <div id="accordion_toggle_3" data-kt-accordion-toggle="true"
+                                        aria-controls="accordion_content_3" class="kt-accordion-toggle">
+                                        <span class="kt-accordion-title text-sm text-color" data-copy="true">Physical Examination</span>
+                                        <button class="flex ml-auto w-100 justify-center border border-gray-300 bg-transparent text-xs cursor-pointer text-color rounded-2xl shadow-md py-2 px-5 recording-section" onclick="copyPlainText('accordion_content_3', event)" type="button">Copy</button>
+                                        <span aria-hidden="true"
+                                            class="kt-accordion-indicator"><svg xmlns="http://www.w3.org/2000/svg"
+                                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-plus kt-accordion-indicator-on" aria-hidden="true">
+                                                <path d="M5 12h14"></path>
+                                                <path d="M12 5v14"></path>
+                                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-minus kt-accordion-indicator-off" aria-hidden="true">
+                                                <path d="M5 12h14"></path>
+                                            </svg></span>
+                                    </div>
+                                    <div class="kt-accordion-content" aria-labelledby="accordion_toggle_3"
+                                        id="accordion_content_3">
+                                        <div class="kt-accordion-wrapper text-xs physical-exam-id clear-content" data-copy="true">
+                                            <div class="inside-physical-exam-section">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-kt-accordion-item="true" class="kt-accordion-item active">
+                                    <div id="accordion_toggle_4" data-kt-accordion-toggle="true"
+                                        aria-controls="accordion_content_4" class="kt-accordion-toggle">
+                                        <span class="kt-accordion-title text-sm text-color" data-copy="true">Assessment and Plan</span>
+                                        <button class="flex ml-auto w-100 justify-center border border-gray-300 bg-transparent text-xs cursor-pointer text-color rounded-2xl shadow-md py-2 px-5 recording-section" onclick="copyPlainText('accordion_content_4', event)" type="button">Copy</button>
+                                        <span aria-hidden="true"
+                                            class="kt-accordion-indicator"><svg xmlns="http://www.w3.org/2000/svg"
+                                                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-plus kt-accordion-indicator-on" aria-hidden="true">
+                                                <path d="M5 12h14"></path>
+                                                <path d="M12 5v14"></path>
+                                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-minus kt-accordion-indicator-off" aria-hidden="true">
+                                                <path d="M5 12h14"></path>
+                                            </svg></span>
+                                    </div>
+                                    <div class="kt-accordion-content" aria-labelledby="accordion_toggle_4"
+                                        id="accordion_content_4">
+                                        <div class="kt-accordion-wrapper text-xs assessment-plan-container clear-content" data-copy="true">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>  
+                        </div>
+                        <div class ="overall-handp-details">
+                            <input type="hidden" id="hd_hp_url" name="hd_hp_url" />
+                            <div class="accordion-scroll-wrapper" style="max-height: 480px; overflow-y: auto;">
+                                <div data-kt-accordion="true" data-kt-accordion-expand-all="true"
+                                    class="kt-accordion kt-accordion-outline">
+                                    <div data-kt-accordion-item="true" class="kt-accordion-item active">
+                                        <div id="accordion_toggle_h1" data-kt-accordion-toggle="true"
+                                            aria-controls="accordion_content_h1" class="kt-accordion-toggle">
+                                            <span class="kt-accordion-title text-sm text-color" data-copy="true-hp">Principal Diagnosis</span>
+                                            <button class="flex ml-auto w-100 justify-center border border-gray-300 bg-transparent text-xs cursor-pointer text-color rounded-2xl shadow-md py-2 px-5 recording-section" onclick="copyPlainText('accordion_content_h1', event)" type="button">Copy</button>
+                                            <span aria-hidden="true"
+                                                class="kt-accordion-indicator"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-plus kt-accordion-indicator-on" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                    <path d="M12 5v14"></path>
+                                                </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-minus kt-accordion-indicator-off" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                </svg></span>
+                                        </div>
+                                        <div class="kt-accordion-content" aria-labelledby="accordion_toggle_h1"
+                                            id="accordion_content_h1">
+                                            <div class="kt-accordion-wrapper text-xs principal-diagnosis" data-copy="true-hp">
+                                                <div class="inside-principal-diagnosis-section clear-content">
+                                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-kt-accordion-item="true" class="kt-accordion-item active">
+                                        <div id="accordion_toggle_h2" data-kt-accordion-toggle="true"
+                                            aria-controls="accordion_content_h2" class="kt-accordion-toggle">
+                                            <span class="kt-accordion-title text-sm text-color" data-copy="true-hp">Chief Complaint</span>
+                                            <button class="flex ml-auto w-100 justify-center border border-gray-300 bg-transparent text-xs cursor-pointer text-color rounded-2xl shadow-md py-2 px-5 recording-section" onclick="copyPlainText('accordion_content_h2', event)" type="button">Copy</button>
+                                            <span aria-hidden="true"
+                                                class="kt-accordion-indicator"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-plus kt-accordion-indicator-on" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                    <path d="M12 5v14"></path>
+                                                </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-minus kt-accordion-indicator-off" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                </svg></span>
+                                        </div>
+                                        <div class="kt-accordion-content" aria-labelledby="accordion_toggle_h2"
+                                            id="accordion_content_h2">
+                                            <div class="kt-accordion-wrapper text-xs chief-complaint-container" data-copy="true-hp">
+                                                <div class="inside-chief-complaint-section clear-content">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-kt-accordion-item="true" class="kt-accordion-item active">
+                                        <div id="accordion_toggle_h3" data-kt-accordion-toggle="true"
+                                            aria-controls="accordion_content_h3" class="kt-accordion-toggle">
+                                            <span class="kt-accordion-title text-sm text-color" data-copy="true-hp">History of Present Illness</span>
+                                            <button class="flex ml-auto w-100 justify-center border border-gray-300 bg-transparent text-xs cursor-pointer text-color rounded-2xl shadow-md py-2 px-5 recording-section" onclick="copyPlainText('accordion_content_h3', event)" type="button">Copy</button>
+                                            <span aria-hidden="true"
+                                                class="kt-accordion-indicator"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-plus kt-accordion-indicator-on" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                    <path d="M12 5v14"></path>
+                                                </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-minus kt-accordion-indicator-off" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                </svg></span>
+                                        </div>
+                                        <div class="kt-accordion-content" aria-labelledby="accordion_toggle_h3"
+                                            id="accordion_content_h3">
+                                            <div class="kt-accordion-wrapper text-xs history-present-ill" data-copy="true-hp">
+                                                <div class="inside-history-present-ill-section clear-content">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-kt-accordion-item="true" class="kt-accordion-item active">
+                                        <div id="accordion_toggle_h4" data-kt-accordion-toggle="true"
+                                            aria-controls="accordion_content_h4" class="kt-accordion-toggle">
+                                            <span class="kt-accordion-title text-sm text-color" data-copy="true-hp">Past Medical History</span>
+                                            <button class="flex ml-auto w-100 justify-center border border-gray-300 bg-transparent text-xs cursor-pointer text-color rounded-2xl shadow-md py-2 px-5 recording-section" onclick="copyPlainText('accordion_content_h4', event)" type="button">Copy</button>
+                                            <span aria-hidden="true"
+                                                class="kt-accordion-indicator"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-plus kt-accordion-indicator-on" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                    <path d="M12 5v14"></path>
+                                                </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-minus kt-accordion-indicator-off" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                </svg></span>
+                                        </div>
+                                        <div class="kt-accordion-content" aria-labelledby="accordion_toggle_h4"
+                                            id="accordion_content_h4">
+                                            <div class="kt-accordion-wrapper text-xs past-med-hist" data-copy="true-hp">
+                                               <div class="inside-past-med-hist-section clear-content">
+
+                                               </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-kt-accordion-item="true" class="kt-accordion-item active">
+                                        <div id="accordion_toggle_h5" data-kt-accordion-toggle="true"
+                                            aria-controls="accordion_content_h5" class="kt-accordion-toggle">
+                                            <span class="kt-accordion-title text-sm text-color" data-copy="true-hp">Past Surgical History</span>
+                                            <button class="flex ml-auto w-100 justify-center border border-gray-300 bg-transparent text-xs cursor-pointer text-color rounded-2xl shadow-md py-2 px-5 recording-section" onclick="copyPlainText('accordion_content_h5', event)" type="button">Copy</button>
+                                            <span aria-hidden="true"
+                                                class="kt-accordion-indicator"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-plus kt-accordion-indicator-on" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                    <path d="M12 5v14"></path>
+                                                </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-minus kt-accordion-indicator-off" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                </svg></span>
+                                        </div>
+                                        <div class="kt-accordion-content" aria-labelledby="accordion_toggle_h5"
+                                            id="accordion_content_h5">
+                                            <div class="kt-accordion-wrapper text-xs past-surg-hist" data-copy="true-hp">
+                                                <div class="inside-past-surg-hist-section clear-content">
+                                                
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-kt-accordion-item="true" class="kt-accordion-item active">
+                                        <div id="accordion_toggle_h6" data-kt-accordion-toggle="true"
+                                            aria-controls="accordion_content_h6" class="kt-accordion-toggle">
+                                            <span class="kt-accordion-title text-sm text-color" data-copy="true-hp">Medications</span>
+                                            <button class="flex ml-auto w-100 justify-center border border-gray-300 bg-transparent text-xs cursor-pointer text-color rounded-2xl shadow-md py-2 px-5 recording-section" onclick="copyPlainText('accordion_content_h6', event)" type="button">Copy</button>
+                                            <span aria-hidden="true"
+                                                class="kt-accordion-indicator"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-plus kt-accordion-indicator-on" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                    <path d="M12 5v14"></path>
+                                                </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-minus kt-accordion-indicator-off" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                </svg></span>
+                                        </div>
+                                        <div class="kt-accordion-content" aria-labelledby="accordion_toggle_h6"
+                                            id="accordion_content_h6">
+                                            <div class="kt-accordion-wrapper text-xs medi-container" data-copy="true-hp">
+                                                <div class="inside-medi-container-section clear-content">
+                                                
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-kt-accordion-item="true" class="kt-accordion-item active">
+                                        <div id="accordion_toggle_h7" data-kt-accordion-toggle="true"
+                                            aria-controls="accordion_content_h7" class="kt-accordion-toggle">
+                                            <span class="kt-accordion-title text-sm text-color" data-copy="true-hp">Allergies</span>
+                                            <button class="flex ml-auto w-100 justify-center border border-gray-300 bg-transparent text-xs cursor-pointer text-color rounded-2xl shadow-md py-2 px-5 recording-section" onclick="copyPlainText('accordion_content_h7', event)" type="button">Copy</button>
+                                            <span aria-hidden="true"
+                                                class="kt-accordion-indicator"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-plus kt-accordion-indicator-on" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                    <path d="M12 5v14"></path>
+                                                </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-minus kt-accordion-indicator-off" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                </svg></span>
+                                        </div>
+                                        <div class="kt-accordion-content" aria-labelledby="accordion_toggle_h7"
+                                            id="accordion_content_h7">
+                                            <div class="kt-accordion-wrapper text-xs allergy-container" data-copy="true-hp">
+                                                <div class="inside-allergy-container-section clear-content">
+                                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-kt-accordion-item="true" class="kt-accordion-item active">
+                                        <div id="accordion_toggle_h8" data-kt-accordion-toggle="true"
+                                            aria-controls="accordion_content_h8" class="kt-accordion-toggle">
+                                            <span class="kt-accordion-title text-sm text-color" data-copy="true-hp">Family History</span>
+                                            <button class="flex ml-auto w-100 justify-center border border-gray-300 bg-transparent text-xs cursor-pointer text-color rounded-2xl shadow-md py-2 px-5 recording-section" onclick="copyPlainText('accordion_content_h8', event)" type="button">Copy</button>
+                                            <span aria-hidden="true"
+                                                class="kt-accordion-indicator"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-plus kt-accordion-indicator-on" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                    <path d="M12 5v14"></path>
+                                                </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-minus kt-accordion-indicator-off" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                </svg></span>
+                                        </div>
+                                        <div class="kt-accordion-content" aria-labelledby="accordion_toggle_h8"
+                                            id="accordion_content_h8">
+                                            <div class="kt-accordion-wrapper text-xs family-container" data-copy="true-hp">
+                                                <div class="inside-family-container-section clear-content">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-kt-accordion-item="true" class="kt-accordion-item active">
+                                        <div id="accordion_toggle_h9" data-kt-accordion-toggle="true"
+                                            aria-controls="accordion_content_h9" class="kt-accordion-toggle">
+                                            <span class="kt-accordion-title text-sm text-color" data-copy="true-hp">Social History</span>
+                                            <button class="flex ml-auto w-100 justify-center border border-gray-300 bg-transparent text-xs cursor-pointer text-color rounded-2xl shadow-md py-2 px-5 recording-section" onclick="copyPlainText('accordion_content_h9', event)" type="button">Copy</button>
+                                            <span aria-hidden="true"
+                                                class="kt-accordion-indicator"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-plus kt-accordion-indicator-on" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                    <path d="M12 5v14"></path>
+                                                </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-minus kt-accordion-indicator-off" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                </svg></span>
+                                        </div>
+                                        <div class="kt-accordion-content" aria-labelledby="accordion_toggle_h9"
+                                            id="accordion_content_h9">
+                                            <div class="kt-accordion-wrapper text-xs social-container" data-copy="true-hp">
+                                                <div class="inside-social-container-section clear-content">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-kt-accordion-item="true" class="kt-accordion-item active">
+                                        <div id="accordion_toggle_h10" data-kt-accordion-toggle="true"
+                                            aria-controls="accordion_content_h10" class="kt-accordion-toggle">
+                                            <span class="kt-accordion-title text-sm text-color" data-copy="true-hp">Review of Systems</span>
+                                            <button class="flex ml-auto w-100 justify-center border border-gray-300 bg-transparent text-xs cursor-pointer text-color rounded-2xl shadow-md py-2 px-5 recording-section" onclick="copyPlainText('accordion_content_h10', event)" type="button">Copy</button>
+                                            <span aria-hidden="true"
+                                                class="kt-accordion-indicator"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-plus kt-accordion-indicator-on" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                    <path d="M12 5v14"></path>
+                                                </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-minus kt-accordion-indicator-off" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                </svg></span>
+                                        </div>
+                                        <div class="kt-accordion-content" aria-labelledby="accordion_toggle_h10"
+                                            id="accordion_content_h10">
+                                            <div class="kt-accordion-wrapper text-xs hp-ros-container" data-copy="true-hp">
+                                                <div class="inside-hp-ros-container-section clear-content">
+                                                
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-kt-accordion-item="true" class="kt-accordion-item active">
+                                        <div id="accordion_toggle_h11" data-kt-accordion-toggle="true"
+                                            aria-controls="accordion_content_h11" class="kt-accordion-toggle">
+                                            <span class="kt-accordion-title text-sm text-color" data-copy="true-hp">Physical Examination</span>
+                                            <button class="flex ml-auto w-100 justify-center border border-gray-300 bg-transparent text-xs cursor-pointer text-color rounded-2xl shadow-md py-2 px-5 recording-section" onclick="copyPlainText('accordion_content_h11', event)" type="button">Copy</button>
+                                            <span aria-hidden="true"
+                                                class="kt-accordion-indicator"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-plus kt-accordion-indicator-on" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                    <path d="M12 5v14"></path>
+                                                </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-minus kt-accordion-indicator-off" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                </svg></span>
+                                        </div>
+                                        <div class="kt-accordion-content" aria-labelledby="accordion_toggle_h11"
+                                            id="accordion_content_h11">
+                                            <div class="kt-accordion-wrapper text-xs phy-exam-container" data-copy="true-hp">
+                                                <div class="inside-phy-exam-section clear-content">
+                                                
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-kt-accordion-item="true" class="kt-accordion-item active">
+                                        <div id="accordion_toggle_h12" data-kt-accordion-toggle="true"
+                                            aria-controls="accordion_content_h12" class="kt-accordion-toggle">
+                                            <span class="kt-accordion-title text-sm text-color" data-copy="true-hp">Assessment and Plan</span>
+                                            <button class="flex ml-auto w-100 justify-center border border-gray-300 bg-transparent text-xs cursor-pointer text-color rounded-2xl shadow-md py-2 px-5 recording-section" onclick="copyPlainText('accordion_content_h12', event)" type="button">Copy</button>
+                                            <span aria-hidden="true"
+                                                class="kt-accordion-indicator"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-plus kt-accordion-indicator-on" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                    <path d="M12 5v14"></path>
+                                                </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-minus kt-accordion-indicator-off" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                </svg></span>
+                                        </div>
+                                        <div class="kt-accordion-content" aria-labelledby="accordion_toggle_h12"
+                                            id="accordion_content_h12">
+                                            <div class="kt-accordion-wrapper text-xs assess-plan-container" data-copy="true-hp">
+                                                <div class="inside-assess-plan-container-section clear-content">
+                                                
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                        <div class ="overall-discharges-details">
+                            <input type="hidden" id="hd_ds_url" name="hd_ds_url" />
+                            <div class="accordion-scroll-wrapper" style="max-height: 480px; overflow-y: auto;">
+                                <div data-kt-accordion="true" data-kt-accordion-expand-all="true"
+                                    class="kt-accordion kt-accordion-outline">
+                                    <div data-kt-accordion-item="true" class="kt-accordion-item active active">
+                                        <div id="accordion_toggle_d1" data-kt-accordion-toggle="true" aria-controls="accordion_content_d1" class="kt-accordion-toggle">
+                                            <span class="kt-accordion-title text-sm text-color" data-copy="true-ds">Principal Diagnosis</span>
+                                            <button class="flex ml-auto w-100 justify-center border border-gray-300 bg-transparent text-xs cursor-pointer text-color rounded-2xl shadow-md py-2 px-5 recording-section" onclick="copyPlainText('accordion_content_d1', event)" type="button">Copy</button>
+                                            <span aria-hidden="true"
+                                                class="kt-accordion-indicator"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-plus kt-accordion-indicator-on" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                    <path d="M12 5v14"></path>
+                                                </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-minus kt-accordion-indicator-off" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="kt-accordion-content" aria-labelledby="accordion_toggle_d1" id="accordion_content_d1">
+                                            <div class="kt-accordion-wrapper text-xs principal-diagnosis-container" data-copy="true-ds">
+                                                <div class="inside-principal-diagnosis-container clear-content">
+                                                                                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-kt-accordion-item="true" class="kt-accordion-item active">
+                                        <div id="accordion_toggle_d2" data-kt-accordion-toggle="true"
+                                            aria-controls="accordion_content_d2" class="kt-accordion-toggle">
+                                            <span class="kt-accordion-title text-sm text-color" data-copy="true-ds">Discharge Summary</span>
+                                            <button class="flex ml-auto w-100 justify-center border border-gray-300 bg-transparent text-xs cursor-pointer text-color rounded-2xl shadow-md py-2 px-5 recording-section" onclick="copyPlainText('accordion_content_d2', event)" type="button">Copy</button>
+                                            <span aria-hidden="true"
+                                                class="kt-accordion-indicator"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-plus kt-accordion-indicator-on" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                    <path d="M12 5v14"></path>
+                                                </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-minus kt-accordion-indicator-off" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="kt-accordion-content" aria-labelledby="accordion_toggle_d2" id="accordion_content_d2">
+                                            <div class="kt-accordion-wrapper text-xs discharge-summary-container" data-copy="true-ds">
+                                                <div class="inside-discharge-summary-container clear-content">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-kt-accordion-item="true" class="kt-accordion-item active">
+                                        <div id="accordion_toggle_d3" data-kt-accordion-toggle="true"
+                                            aria-controls="accordion_content_d3" class="kt-accordion-toggle">
+                                            <span class="kt-accordion-title text-sm text-color" data-copy="true-ds">Discharge Diagnoses</span>
+                                            <button class="flex ml-auto w-100 justify-center border border-gray-300 bg-transparent text-xs cursor-pointer text-color rounded-2xl shadow-md py-2 px-5 recording-section" onclick="copyPlainText('accordion_content_d3', event)" type="button">Copy</button>
+                                            <span aria-hidden="true"
+                                                class="kt-accordion-indicator"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-plus kt-accordion-indicator-on" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                    <path d="M12 5v14"></path>
+                                                </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-minus kt-accordion-indicator-off" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="kt-accordion-content" aria-labelledby="accordion_toggle_d3" id="accordion_content_d3">
+                                            <div class="kt-accordion-wrapper text-xs discharge-diagnoses-container" data-copy="true-ds">
+                                                <div class="inside-discharge-diagnoses-container clear-content">
+                                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-kt-accordion-item="true" class="kt-accordion-item active">
+                                        <div id="accordion_toggle_d4" data-kt-accordion-toggle="true"
+                                            aria-controls="accordion_content_d4" class="kt-accordion-toggle">
+                                            <span class="kt-accordion-title text-sm text-color" data-copy="true-ds">Discharge Medications</span>
+                                            <button class="flex ml-auto w-100 justify-center border border-gray-300 bg-transparent text-xs cursor-pointer text-color rounded-2xl shadow-md py-2 px-5 recording-section" onclick="copyPlainText('accordion_content_d4', event)" type="button">Copy</button>
+                                            <span aria-hidden="true"
+                                                class="kt-accordion-indicator"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-plus kt-accordion-indicator-on" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                    <path d="M12 5v14"></path>
+                                                </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-minus kt-accordion-indicator-off" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="kt-accordion-content" aria-labelledby="accordion_toggle_d4" id="accordion_content_d4">
+                                            <div class="kt-accordion-wrapper text-xs discharge-medications-container" data-copy="true-ds">
+                                                <div class="inside-discharge-medications-container clear-content">
+                                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-kt-accordion-item="true" class="kt-accordion-item active">
+                                        <div id="accordion_toggle_d5" data-kt-accordion-toggle="true"
+                                            aria-controls="accordion_content_d5" class="kt-accordion-toggle">
+                                            <span class="kt-accordion-title text-sm text-color" data-copy="true-ds">Discharge Condition</span>
+                                            <button class="flex ml-auto w-100 justify-center border border-gray-300 bg-transparent text-xs cursor-pointer text-color rounded-2xl shadow-md py-2 px-5 recording-section" onclick="copyPlainText('accordion_content_d5', event)" type="button">Copy</button>
+                                            <span aria-hidden="true"
+                                                class="kt-accordion-indicator"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-plus kt-accordion-indicator-on" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                    <path d="M12 5v14"></path>
+                                                </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-minus kt-accordion-indicator-off" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="kt-accordion-content" aria-labelledby="accordion_toggle_d5" id="accordion_content_d5">
+                                            <div class="kt-accordion-wrapper text-xs discharge-condition-container" data-copy="true-ds">
+                                                <div class="inside-discharge-condition-container clear-content">
+                                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-kt-accordion-item="true" class="kt-accordion-item active">
+                                        <div id="accordion_toggle_d6" data-kt-accordion-toggle="true"
+                                            aria-controls="accordion_content_d6" class="kt-accordion-toggle">
+                                            <span class="kt-accordion-title text-sm text-color" data-copy="true-ds">Discharge Disposition</span>
+                                            <button class="flex ml-auto w-100 justify-center border border-gray-300 bg-transparent text-xs cursor-pointer text-color rounded-2xl shadow-md py-2 px-5 recording-section" onclick="copyPlainText('accordion_content_d6', event)" type="button">Copy</button>
+                                            <span aria-hidden="true"
+                                                class="kt-accordion-indicator"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-plus kt-accordion-indicator-on" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                    <path d="M12 5v14"></path>
+                                                </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-minus kt-accordion-indicator-off" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="kt-accordion-content" aria-labelledby="accordion_toggle_d6" id="accordion_content_d6">
+                                            <div class="kt-accordion-wrapper text-xs discharge-disposition-container" data-copy="true-ds">
+                                                <div class="inside-discharge-disposition-container clear-content">
+                                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-kt-accordion-item="true" class="kt-accordion-item active">
+                                        <div id="accordion_toggle_d7" data-kt-accordion-toggle="true"
+                                            aria-controls="accordion_content_d7" class="kt-accordion-toggle">
+                                            <span class="kt-accordion-title text-sm text-color" data-copy="true-ds">Discharge Instructions</span>
+                                            <button class="flex ml-auto w-100 justify-center border border-gray-300 bg-transparent text-xs cursor-pointer text-color rounded-2xl shadow-md py-2 px-5 recording-section" onclick="copyPlainText('accordion_content_d7', event)" type="button">Copy</button>
+                                            <span aria-hidden="true"
+                                                class="kt-accordion-indicator"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-plus kt-accordion-indicator-on" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                    <path d="M12 5v14"></path>
+                                                </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-minus kt-accordion-indicator-off" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="kt-accordion-content" aria-labelledby="accordion_toggle_d7" id="accordion_content_d7">
+                                            <div class="kt-accordion-wrapper text-xs discharge-instructions-container" data-copy="true-ds">
+                                                <div class="inside-discharge-instructions-container clear-content">
+                                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-kt-accordion-item="true" class="kt-accordion-item active">
+                                        <div id="accordion_toggle_d8" data-kt-accordion-toggle="true"
+                                            aria-controls="accordion_content_d8" class="kt-accordion-toggle">
+                                            <span class="kt-accordion-title text-sm text-color" data-copy="true-ds">Follow-up Care</span>
+                                            <button class="flex ml-auto w-100 justify-center border border-gray-300 bg-transparent text-xs cursor-pointer text-color rounded-2xl shadow-md py-2 px-5" onclick="copyPlainText('accordion_content_d8', event)" type="button">Copy</button>
+                                            <span aria-hidden="true"
+                                                class="kt-accordion-indicator"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-plus kt-accordion-indicator-on" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                    <path d="M12 5v14"></path>
+                                                </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-minus kt-accordion-indicator-off" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="kt-accordion-content" aria-labelledby="accordion_toggle_d8" id="accordion_content_d8">
+                                            <div class="kt-accordion-wrapper text-xs followup-care-container" data-copy="true-ds">
+                                                <div class="inside-followup-care-container clear-content">
+                                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                      
+                    </div>
+                </main>
+
+                <!-- ============================= -->
+                <!-- RIGHT CONTENT (20% desktop) -->
+                <!-- ============================= -->
+                <main class="w-full lg:w-[20%] xl:w-[20%] pt-5 bg-white lg:ml-0.5 mt-3 lg:mt-0" id="rightContent"
+                    role="content">
+                    <div class="kt-container-fixed" id="rightContentContainer">
+                        <!-- AJAX content here -->
+                    </div>
+                </main>
+
+            </div>
+            <!-- END ROW -->
+
+            <!-- FOOTER -->
+            <div id="footer-container"></div>
+
+        </div>
+        <!-- End Wrapper -->
+
+    </div>
+    <!-- End Main -->
+
+    <!-- Add Patient Modal -->
+    <div class="kt-modal kt-modal-center" data-kt-modal="true" id="add_patient_modal">
+        <div class="kt-modal-content max-w-[300px] w-full">
+            <div class="kt-modal-header pt-5" style="border-bottom: 1px solid var(--border);">
+                <h3 class="kt-modal-title text-sm">Add Patient Name</h3>
+                <button class="kt-btn kt-btn-sm kt-btn-icon kt-btn-outline" data-kt-modal-dismiss="true">
+                    <i class="ki-filled ki-cross"></i>
+                </button>
+            </div>
+            <div class="kt-modal-body flex flex-col items-center pt-5 pb-5">
+                <input type="text" id="patientName" onkeyup="capitalizeAndValidate(this);" placeholder="Enter Name"
+                    maxlength="25" autocomplete="off"
+                    class="text-sm mb-2 w-full px-3 py-2 mt-2 rounded-2xl border border-gray-300 rounded-2xl focus:ring-2 focus:ring-gray-200 outline-none transition">
+                <small id="patientNameError" class="form-text text-destructive text-xs"></small>
+            </div>
+            <div class="kt-modal-footer" style="border-top: 1px solid var(--border);">
+                <div></div>
+                <div class="flex gap-4">
+                    <button
+                        class="w-100 text-sm cursor-pointer text-gray-500 border border-gray-300 bg-transparent shadow-md font-medium rounded-2xl transition-all duration-200 py-2 px-4y"
+                        data-kt-modal-dismiss="#modal">Close</button>
+                    <button
+                        class="w-100 text-sm cursor-pointer text-gray-500 border border-gray-300 bg-transparent shadow-md font-medium rounded-2xl transition-all duration-200 py-2 px-4"
+                        onclick="addNewPatient()">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comment Modal -->
+    <div class="kt-modal kt-modal-center" data-kt-modal="true" id="commentModal">
+        <div class="kt-modal-content max-w-[300px] w-full">
+            <div class="kt-modal-header pt-5" style="border-bottom: 1px solid var(--border);">
+                <h3 class="kt-modal-title text-sm">Add Comment</h3>
+                <button class="kt-btn kt-btn-sm kt-btn-icon kt-btn-outline" data-kt-modal-dismiss="true">
+                    <i class="ki-filled ki-cross"></i>
+                </button>
+            </div>
+            <div class="kt-modal-body flex flex-col items-center pt-5 pb-5">
+                <textarea 
+                    id="commentText" 
+                    rows="3" 
+                    placeholder="Enter your comment"
+                    autocomplete="off"
+                    class="text-sm w-full px-3 py-2 rounded-2xl border border-gray-300 focus:ring-2 focus:ring-gray-200 outline-none transition resize-none"
+                ></textarea>
+                <small id="commentError" class="form-text text-destructive text-xs mt-2" style="display:none;">Comment is required</small>
+            </div>
+            <div class="kt-modal-footer" style="border-top: 1px solid var(--border);">
+                <div></div>
+                <div class="flex gap-4">
+                    <button
+                        class="w-100 text-sm cursor-pointer text-gray-500 border border-gray-300 bg-transparent shadow-md font-medium rounded-2xl transition-all duration-200 py-2 px-4"
+                        data-kt-modal-dismiss="#commentModal">Close</button>
+                    <button
+                        class="w-100 text-sm cursor-pointer text-gray-500 border border-gray-300 bg-transparent shadow-md font-medium rounded-2xl transition-all duration-200 py-2 px-4"
+                        id="saveCommentBtn">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Add upload Modal -->
+    <div id="drawer_end" class="kt-drawer kt-drawer-end hidden w-[450px]" data-kt-drawer="true" data-kt-drawer-backdrop-static="true">
+    <!-- Header -->
+        <div class="kt-drawer-header">
+            <div class="kt-drawer-title font-medium text-gray-600">Upload</div>
+
+            <button
+                class="kt-drawer-close"
+                aria-label="Close drawer"
+                data-kt-drawer-dismiss="true"
+            >
+                <i class="ki-outline ki-cross text-lg"></i>
+            </button>
+        </div>
+
+        <!-- Content -->
+        <div class="kt-drawer-content kt-scrollable px-6 py-4">
+            <div class="flex gap-3 items-center">
+                <input type="hidden" id="addModalPatientName" name="addModalPatientName" value="">
+                <!-- NEW Select Button -->
+               <span id="tab_enable" class="text-sm text-gray-600 px-1">
+                    Select
+               </span>
+
+                <!-- Past Admission -->
+                <button id="tab_pastAdmission"
+                    class="cursor-pointer flex-1 py-2 rounded-2xl text-center text-sm bg-white text-color border border-gray-300 shadow-md">
+                    Past Admission
+                </button>
+
+                <button id="tab_encounter"
+                    class="cursor-pointer flex-1 py-2 rounded-2xl text-center text-sm bg-white text-color border border-gray-300 shadow-md">
+                    Current Encounter
+                </button>
+            </div>
+            <!-- ERROR MESSAGE -->
+            <p id="tab_error" class="text-red-400 text-sm mt-2 hidden">
+            Select one option
+            </p>
+        <div class="py-4 flex gap-3">
+        <textarea
+            id="upload_textarea"
+            rows="27"
+            class="w-full border border-gray-300 rounded-2xl p-3 text-sm focus:ring-2 focus:ring-gray-200 focus:outline-none resize-none shadow-sm"
+            placeholder="Paste Note Here"></textarea>
+        </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="kt-drawer-footer p-4 border-t border-gray-200 gap-3">
+            <button id="upload_close"
+                class="cursor-pointer flex-1 py-2 rounded-2xl text-center text-sm bg-white text-color border border-gray-300 shadow-md">
+                Close
+            </button>
+
+            <button id="upload_submit"
+                class="cursor-pointer flex-1 py-2 rounded-2xl text-center text-sm text-color bg-white border border-gray-300 shadow-md">
+                Submit
+            </button>
+        </div>
+    </div>
+    <!-- Add transcript Modal -->
+   <div class="kt-drawer kt-drawer-end hidden w-[450px]" data-kt-drawer="true" id="drawer_1" data-kt-drawer-backdrop-static="true">
+        <div class="kt-drawer-header">
+        <div class="kt-drawer-title font-medium text-gray-600">Transcript</div>
+        <button
+                    class="kt-drawer-close"
+                    aria-label="Close drawer"
+                    data-kt-drawer-dismiss="true"
+                >
+                    <i class="ki-outline ki-cross text-lg"></i>
+                </button>
+        </div>
+        <div class="kt-drawer-content kt-scrollable px-6 py-4 border-b border-gray-200 ">
+            <div class="flex gap-3 items-center">
+                <button id="dictated"
+                    class="cursor-pointer flex-1 py-2 rounded-2xl text-center text-sm bg-[#dbeeff] text-color border border-gray-300 shadow-md"
+                    disabled>
+                    Dictated
+                </button>
+                <button id="uploaded"
+                    class="cursor-pointer flex-1 py-2 rounded-2xl text-center text-sm bg-white text-color border border-gray-300 shadow-md"
+                    disabled>
+                    Uploaded
+                </button>
+            </div>
+         </div>
+         <div class="px-6 py-4 overflow-y-auto"
+     id="transcript_container"
+     style="height: calc(100% - 125px);">
+
+    <!-- INITIAL LISTING -->
+    <div id="dictated_listing">
+        
+    </div>
+    <!-- UPLOADED LIST -->
+<div id="uploaded_listing" class="hidden">
+    
+</div>
+
+    <!-- FULL-SCREEN EDITOR SECTION (NO BUTTONS HERE) -->
+    <div id="editor_section" class="hidden h-full">
+        <textarea id="editor_textarea"
+                  class="w-full h-full p-3 border rounded-lg text-sm resize-none"></textarea>
+    </div>
+
+</div>
+
+
+<!-- FOOTER SECTION OF THE DRAWER -->
+<div class="kt-drawer-footer p-4 border-t border-gray-200 flex justify-end gap-3">
+
+    <!-- NORMAL FOOTER (Shown when listing is visible) -->
+    <div id="footer_normal" class="flex gap-3">
+        <button class="cursor-pointer flex-1 py-2 px-4 rounded-2xl text-center text-sm bg-white text-color border border-gray-300 shadow-md"
+                    aria-label="Close drawer"
+                    data-kt-drawer-dismiss="true"
+                >Close</button>
+    </div>
+
+    <!-- EDIT MODE FOOTER (Hidden by default) -->
+    <div id="footer_edit" class="hidden flex gap-3">
+        <button class="cancel-edit cursor-pointer flex-1 py-2 px-4 rounded-2xl text-center text-sm bg-white text-color border border-gray-300 shadow-md">Cancel</button>
+        <button class="process-edit cursor-pointer flex-1 py-2 px-4 rounded-2xl text-center text-sm bg-white text-color border border-gray-300 shadow-md">Process</button>
+    </div>
+
+</div>
+
+
+
+</div> 
+
+
+    <script>
+        // Forbidden patterns
+        const BLOCKED_NAMES = ['admin','root','support','null','undefined','administrator','qa','tester','uat','staging','sandbox','tem','dns','ftp','mail','smtp','relay','proxy','firewall','vpn','router','switch','service','services','api','apiuser','automation','bot','daemon','monitor','backup','restore','reporting','scheduler','cron','ceo','coo','cfo','founder','president','chairman','director','vp','hr','finance','accounting','payroll','securityteam','infosec','blue','redteam','soc','secops','forensics','incident','dev','developer','devops','engineer','architect','cto','cio','ciso','itstaff','techsupport','technician','sa','oracle','postgres','mysql','dbowner','dba','schemaadmin','user','rootuser','default','test','administrator1','admin1','admin123','cloudadmin','awsadmin','azureadmin','gcpadmin','platformadmin','tenantadmin','system','sysadmin','supervisor','manager','owner','operator','poweruser','helpdesk','itadmin','netadmin','secadmin', 'superuser', 'superadmin'];
+        const BLOCKED_WORDS = ['badword1', 'offensive2']; // Add more offensive words
+
+        function capitalizeAndValidate(inputElement) {
+            let originalName = inputElement.value;
+
+            // Remove unwanted characters immediately (only allow letters, numbers, spaces, dot, dash, underscore)
+            let cleaned = originalName.replace(/[^a-zA-Z0-9 ._'-]/g, '');
+
+
+            // Capitalize first letter of each word
+            cleaned = cleaned.replace(/\b\w/g, c => c.toUpperCase());
+
+            inputElement.value = cleaned;
+
+            const error = validatePatientName(cleaned);
+            const inputErrorSpan = document.getElementById('patientNameError');
+
+            if (error) {
+                inputErrorSpan.textContent = error;
+                inputElement.classList.add("is-invalid");
+            } else {
+                inputErrorSpan.textContent = '';
+                inputElement.classList.remove("is-invalid");
+            }
+        }
+
+        function validatePatientName(name) {
+            const pattern = /^[a-zA-Z0-9]+(?:[ ._'-][a-zA-Z0-9]+)*$/;
+
+            if (name.length < 3 || name.length > 25) {
+                return "Name must be between 3 and 25 characters.";
+            }
+
+            if (!pattern.test(name)) {
+                return "Only letters, numbers, _, -, and . allowed. No leading/trailing or repeated special characters.";
+            }
+
+            const lowerName = name.toLowerCase();
+            if (BLOCKED_NAMES.includes(lowerName)) {
+                return "This name is reserved.";
+            }
+
+            if (BLOCKED_WORDS.some(word => lowerName.includes(word))) {
+                return "Inappropriate word in name.";
+            }
+
+            return '';
+        }
+        function showPatientModal(modalId) {
+            const modalEl = KTDom.getElement(modalId);
+            const modal = KTModal.getInstance(modalEl);
+            modal?.show();
+        }
+        async function addNewPatient() {
+
+            const inputElement = document.getElementById('patientName');
+            const name = inputElement.value.trim();
+            const error = validatePatientName(name);
+
+            const errorDisplay = document.getElementById('patientNameError');
+            if (error) {
+                errorDisplay.textContent = error;
+                toastr.warning(error); // Or display inline
+                return;
+            }
+
+            errorDisplay.textContent = '';
+            inputElement.classList.remove("is-invalid");
+
+            const token = localStorage.getItem('access_token');
+            // if (!token) {
+            //   window.location.href = '../index.html';
+            //   return;
+            // }
+
+            const getPatientName = document.getElementById('patientName').value.trim();
+            if (!getPatientName) {
+                toastr.warning("Patient Name is Empty");
+                return;
+            }
+
+            try {
+                const res = await fetch(`${BASE_URL}summary/add`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${token}`
+                },
+                body: JSON.stringify({ patientname: getPatientName })
+                });
+
+                const data = await res.json();
+
+                if (res.status === 200) {
+                toastr.success("Patient Added Successfully!");
+                setTimeout(() => location.reload(), 2000);
+                } else {
+                throw new Error(data.error || "Failed to add patient");
+                }
+
+            } catch (err) {
+                toastr.error(`Error: ${err.message}`);
+            }
+            }
+
+            document.addEventListener("DOMContentLoaded", () => {
+                const inputElement = document.getElementById('patientName');
+
+                if (inputElement) {
+                    inputElement.addEventListener("keydown", (event) => {
+                    if (event.key === "Enter") {
+                        event.preventDefault(); // Avoid default form submission
+                        addNewPatient();
+                    }
+                    });
+                }
+                $('#exampleModalCenter').on('shown.bs.modal', function () {
+                    $('#patientName').trigger('focus');
+                });
+            });
+            
+            
+    </script>
+    <script src="../assets/js/core.bundle.js"></script>
+    <script src="../assets/vendors/ktui/ktui.min.js"></script>
+</body>
+</html>

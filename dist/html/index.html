@@ -1,0 +1,437 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SutureNote – Secure Sign In</title>
+
+        <!-- Tailwind + Icons -->
+         
+        <link href="../assets/css/app.css" rel="stylesheet" />
+        <!-- <link href="assets/css/font.css" rel="stylesheet" />
+        <link href="assets/css/common.css" rel="stylesheet" />
+        <link href="assets/css/toastr.css" rel="stylesheet" /> -->
+        <link rel="stylesheet" href="../assets/vendors/toastr/toastr.css">
+        <link href="../assets/vendors/keenicons/styles.bundle.css" rel="stylesheet" />
+        
+        <style>
+            body,
+            html {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </head>
+
+    <body class="antialiased flex min-h-screen text-base bg-background overflow-y-auto">
+
+        <!-- 🟣 LEFT PANEL -->
+        <div class="flex items-center justify-center w-1/2">
+            <div class="text-center p-10">
+                <div class="flex justify-center mb-8">
+                    <div
+                        class="size-24 rounded-full bg-white/20 flex items-center justify-center border border-white/30 logoAlign">
+                        <img src="../assets/media/images/Suturenote_logo_BluePurple.png" alt="SutureNote Logo"
+                            class="h-auto" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 🟣 RIGHT PANEL -->
+        <div class="flex flex-col items-center justify-center w-1/2 bg-white">
+
+            <!-- AUTH CARD WRAPPER -->
+            <div
+                class="max-w-md w-full rounded-[11px] p-[1px] bg-[linear-gradient(135deg,#72bcef_0%,#ac68f7_100%)] shadow-[0_2px_5px_rgba(0,0,0,0.06),0_6px_12px_rgba(0,0,0,0.08),0_12px_20px_rgba(172,104,247,0.15)] mx-4">
+
+                <form class="bg-white rounded-[11px] p-8"id="kt_login_signin_form" style="display: block;">
+                    <div class="text-center mb-6">
+                        <h3 class="text-lg font-medium text-gray-800 mb-2">Sign In</h3>
+                    </div>
+
+                    <!-- 🟣 Sign In -->
+                    <div class="space-y-5">
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-normal text-gray-800">User Name</label>
+                            <input
+                                class="py-2 px-4 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-200 outline-none transition"
+                                id="username" type="text">
+                        </div>
+
+                        <div class="flex flex-col gap-2">
+                            <div class="flex items-center justify-between gap-1">
+                                <label class="text-sm font-normal text-gray-800">Password</label>
+                                <a class="text-sm font-medium text-color hover:underline" href="#"
+                                id="show_forgot_password_section">Forgot Password?</a>
+                            </div>
+                            <div class="relative">
+                                <input id="password"
+                                    class="py-2 px-4 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-200 outline-none transition w-full"
+                                    type="password">
+                                <button type="button"
+                                    class="absolute right-3 -translate-y-1/2 text-gray-500 hover:text-gray-700 eyeToggle" data-target="password">
+                                    <i class="ki-outline ki-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <button type="button" id="kt_login_signin_submit"
+                            class="signInButton bg-white border text-color text-sm hover:bg-white rounded-lg font- transition-all focus:ring-2 focus:ring-gray-200 shadow-[0_2px_4px_rgba(0,0,0,0.2)] hover:shadow-[0_4px_8px_rgba(0,0,0,0.25)] active:scale-[0.98]">
+                            Sign In
+                        </button>
+                    </div>
+                </form>
+
+                <!-- 🟣 Forgot Password -->
+                <form class="bg-white rounded-[11px] p-8" id="forgot_passwrod_form" style="display: none;">
+                    <div class="text-center mb-4">
+                        <h3 class="text-lg font-medium text-gray-800 mb-1">Forgot Password</h3>
+                        <p class="text-sm text-gray-500">Enter your username to reset password</p>
+                    </div>
+
+                    <div class="space-y-1">
+                        <div class="flex flex-col">
+                            <label class="text-sm font-normal text-gray-800">User Name</label>
+                            <input id="forgotUsername"
+                                class="py-2 px-4 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-200 outline-none transition"
+                                type="text">
+                        </div>
+
+                        <button type="button" id="forgot_password_submit"
+                            class="px-0 py-2 signInButton bg-white border text-sm text-color hover:bg-white rounded-lg font-normal transition-all focus:ring-2 focus:ring-gray-200 shadow-md">
+                            Continue
+                        </button>
+                    </div>
+                </form>
+
+                <!-- 🟣 Reset Password -->
+                <form class="bg-white rounded-[11px] p-8" id="reset_passwrod_form" style="display: none;">
+                    <div class="text-center mb-4">
+                        <h3 class="text-lg font-medium text-gray-800 mb-1">Reset Password</h3>
+                        <p class="text-sm text-gray-500">Verification Code Sent to your Registered Email</p>
+                    </div>
+
+                    <div class="space-y-5">
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-normal text-gray-800">Email Verification Code</label>
+                            <input
+                                class="text-sm py-2 px-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-200 outline-none transition"
+                                name="verificationCode" id="verificationCode" type="text">
+                            <a href="#" class="text-xs text-color hover:underline" onclick="triggerForgotPassword()">Resend Code?</a>
+                        </div>
+
+                        <div class="flex flex-col gap-2 relative">
+                            <label class="text-sm font-normal text-gray-800">New Password
+                                <span class="relative group cursor-pointer">
+                                    <i class="ki-filled ki-information-2 text-gray-500 text-base"></i>
+
+                                    <!-- Tooltip -->
+                                    <div class="absolute left-6 top-1/2 -translate-y-1/2 w-64 bg-white text-gray-500 text-xs rounded-md p-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 shadow-lg">
+                                        Passwords should be at least 12 characters long and include:
+                                        <br>• 1 uppercase
+                                        <br>• 1 lowercase
+                                        <br>• 1 number
+                                        <br>• 1 special character
+                                        <br><br>
+                                        Passwords are case sensitive.
+                                    </div>
+                                </span>
+                            </label>
+                            <input name="newPassword" id="newPassword"
+                                class="text-sm py-2 px-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-200 outline-none transition"
+                                type="password">
+                                 <button type="button"
+                            class="absolute right-3 -translate-y-1/2 text-gray-500 hover:text-gray-700 eyeToggle"
+                            data-target="newPassword" style="top: calc(var(--spacing) * 12);">
+                            <i class="ki-outline ki-eye"></i>
+                                </button>
+                                <p id="newPassword-error" class="text-red-500 text-xs mt-1 hidden"></p>
+                        </div>
+
+                        <div class="flex flex-col gap-2 relative">
+                            <label class="text-sm font-normal text-gray-800">Confirm Password</label>
+                            <input name="newConfirmPassword" id="newConfirmPassword"
+                                class=" text-sm py-2 px-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-200 outline-none transition"
+                                type="password">
+                                <button type="button"
+                            class="absolute right-3 -translate-y-1/2 text-gray-500 hover:text-gray-700 eyeToggle"
+                            data-target="newConfirmPassword" style="top: calc(var(--spacing) * 12);">
+                            <i class="ki-outline ki-eye"></i>
+                                </button>
+                        </div>
+
+                        <button type="button" id="reset_password_submit"
+                            class="signInButton bg-white border text-sm text-color hover:bg-white rounded-lg font-normal transition-all focus:ring-2 focus:ring-gray-200 shadow-md py-2 px-0">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+                <!-- 🟣 MFA Setup (QR Scan) -->
+                <form class="bg-white rounded-[11px] p-8" id="mfa-setup" style="display: none;">
+                    <div class="text-center">
+                        <h3 class="text-base font-medium text-gray-800">
+                            A virtual MFA device is an application running on your device that you can configure by scanning
+                            a QR code
+                        </h3>
+                    </div>
+
+                    <div class="flex flex-col gap-1">
+                        <div class="flex justify-center">
+                            <img class="h-[140px] pb-2" id="qrImage" 
+                                alt="QR Code" />
+                        </div>
+                        <h3 class="font-normal text-center text-gray-700 leading-5">
+                            Open your Authenticator app, choose
+                            <span class="font-medium text-color">Scan QR</span> on this page,
+                            then use the app to scan the code.
+                        </h3>
+                    </div>
+
+                    <div class="space-y-2">
+                        <div class="flex flex-col">
+                            <label class="text-sm font-normal text-gray-800">
+                                Enter a code from your virtual app below
+                            </label>
+                            <input name="setup-otp" id="setup-otp" autocomplete="off"
+                                class="text-sm py-2 px-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-200 outline-none transition" />
+                        </div>
+
+                        <div class="flex flex-col">
+                            <label class="text-sm font-normal text-gray-800">
+                                Wait 30 seconds, and enter a second code entry
+                            </label>
+                            <input name="setup-otp-1" id="setup-otp-1" autocomplete="off"
+                                class="text-sm py-2 px-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-200 outline-none transition" />
+                        </div>
+
+                        <div class="flex justify-flex-start pt-2">
+                            <button id="verify-setup"
+                                class="bg-white border text-sm text-color hover:bg-white rounded-lg font-normal transition-all focus:ring-2 focus:ring-gray-200 shadow-md py-2 px-5">
+                                Verify MFA
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- 🟣 Change Password -->
+                <form class="bg-white rounded-[11px] p-8" id="new-password-form" style="display: none;">
+                    <div class="text-center mb-4">
+                        <h3 class="text-lg font-medium text-gray-800 mb-2">Change Password</h3>
+                    </div>
+
+                    <div class="space-y-5">
+                        <div class="flex flex-col gap-2 relative">
+                            <label class="text-sm font-normal text-gray-800 flex items-center justify-between">
+                                New Password
+                                <span class="text-xs bg-gray-100 text-gray-600 rounded-full px-2 py-[2px] cursor-pointer"
+                                    title="Password should be at least 12 characters and include uppercase, lowercase, number, and special character.">i</span>
+                            </label>
+                            <div class="relative">
+                                <input id="new-password" name="new-password"
+                                    class="text-sm w-full py-2 px-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-200 outline-none transition"
+                                    type="password" maxlength="50" />
+                                <button type="button"
+                                    class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 eyeToggle">
+                                    <i class="far fa-eye" id="new-pass-eye"></i>
+                                </button>
+                            </div>
+                            <span id="new-password-error" class="text-red-500 text-xs hidden">Invalid password format</span>
+                        </div>
+
+                        <div class="flex flex-col gap-2 relative">
+                            <label class="text-sm font-normal text-gray-800">Confirm Password</label>
+                            <div class="relative">
+                                <input id="new-confirm-password"
+                                    class="text-sm w-full py-2 px-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-200 outline-none transition"
+                                    type="password" maxlength="50" />
+                                <button type="button"
+                                    class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 eyeToggle"
+                                    onclick="togglePassword('new-confirm-password','new-confirm-eye')">
+                                    <i class="far fa-eye" id="new-confirm-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-center pt-2">
+                            <button id="submit-new-password"
+                                class="signInButton bg-white border text-sm text-color hover:bg-white rounded-lg font-normal transition-all focus:ring-2 focus:ring-gray-200 shadow-md py-2 px-5">
+                                Submit
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- 🟣 MFA Verification -->
+                <form class="bg-white rounded-[11px] p-8" id="mfa-challenge" style="display: none;">
+                    <div class="text-center mb-4">
+                        <h3 class="text-lg font-medium text-gray-800 mb-1">MFA Verification</h3>
+                        <p class="text-sm text-gray-500">To finish signing in, enter the code from your MFA device below</p>
+                    </div>
+
+                    <div class="space-y-5">
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-normal text-gray-800">MFA Code</label>
+                            <input name="challenge-otp" id="challenge-otp"
+                                class="text-sm py-2 px-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-200 outline-none transition"
+                                type="text">
+                        </div>
+
+                        <button type="button"
+                            class="signInButton bg-white border text-sm text-color hover:bg-white rounded-lg font-normal transition-all focus:ring-2 focus:ring-gray-200 shadow-md py-2"
+                            id="submit-otp">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+
+            <!-- 🟣 Divider -->
+            <div class="flex items-center gap-3 my-6 w-full max-w-md px-4" id="divider">
+                <span class="border-t border-gray-300 w-full"></span>
+                <span class="text-xs text-gray-500 font-medium uppercase">Or</span>
+                <span class="border-t border-gray-300 w-full"></span>
+            </div>
+
+            <!-- 🟣 Google Button -->
+            <div class="grid grid-cols-1 gap-3 mb-6 w-full max-w-md px-4 google-signin-container"
+                id="google-signin-container">
+                <button
+                    class="flex items-center justify-center gap-2 py-2.5 px-4 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors shadow-md active:scale-[0.98]"
+                    onclick="handleGoogleSignIn()">
+                    <svg class="google-icon" viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                        <g transform="matrix(1, 0, 0, 1, 27.009001, -39.238998)">
+                            <path fill="#4285F4"
+                                d="M -3.264 51.509 C -3.264 50.719 -3.334 49.969 -3.454 49.239 L -14.754 49.239 L -14.754 53.749 L -8.284 53.749 C -8.574 55.229 -9.424 56.479 -10.684 57.329 L -10.684 60.329 L -6.824 60.329 C -4.564 58.239 -3.264 55.159 -3.264 51.509 Z">
+                            </path>
+                            <path fill="#34A853"
+                                d="M -14.754 63.239 C -11.514 63.239 -8.804 62.159 -6.824 60.329 L -10.684 57.329 C -11.764 58.049 -13.134 58.489 -14.754 58.489 C -17.884 58.489 -20.534 56.379 -21.484 53.529 L -25.464 53.529 L -25.464 56.619 C -23.494 60.539 -19.444 63.239 -14.754 63.239 Z">
+                            </path>
+                            <path fill="#FBBC05"
+                                d="M -21.484 53.529 C -21.734 52.809 -21.864 52.039 -21.864 51.239 C -21.864 50.439 -21.724 49.669 -21.484 48.949 L -21.484 45.859 L -25.464 45.859 C -26.284 47.479 -26.754 49.299 -26.754 51.239 C -26.754 53.179 -26.284 54.999 -25.464 56.619 L -21.484 53.529 Z">
+                            </path>
+                            <path fill="#EA4335"
+                                d="M -14.754 43.989 C -12.984 43.989 -11.404 44.599 -10.154 45.789 L -6.734 42.369 C -8.804 40.429 -11.514 39.239 -14.754 39.239 C -19.444 39.239 -23.494 41.939 -25.464 45.859 L -21.484 48.949 C -20.534 46.099 -17.884 43.989 -14.754 43.989 Z">
+                            </path>
+                        </g>
+                    </svg>
+                    <span class="text-sm font-medium text-gray-700">Sign in with Google</span>
+                </button>
+            </div>
+
+            <!-- 🟣 Need Account + HIPAA -->
+            <div class="flex flex-col items-center justify-center font-medium mb-6" id="hipaa-badgeCreate-account">
+                <div class="flex items-center justify-center font-medium mb-3">
+                    <span class="text-sm text-gray-600 mr-1.5">New to SutureNote?</span>
+                    <a class="text-sm hover:underline font-medium text-color" href="#">Create an account</a>
+                </div>
+                <div class="flex items-center justify-center gap-2">
+                    <span class="text-xs text-gray-500 font-medium">HIPAA Compliant</span>
+                    <img src="../assets/media/images/Vanta_Compliance_HIPAA.PNG" alt="HIPAA Compliant Logo"
+                        class="h-10 w-auto">
+                </div>
+            </div>
+        </div>
+        <!--begin::Modal - Password Expiry Warning-->
+<div id="passwordExpiryModal" class="fixed inset-0 z-[1050] items-center justify-center bg-black/50 backdrop-blur-sm" style="display: none;">
+    <!--begin::Modal dialog-->
+    <div class="bg-white rounded-2xl shadow-xl w-full max-w-sm mx-4 animate-fadeIn">
+        <!--begin::Modal header-->
+        <div class="px-6 pt-6 pb-2 border-b border-gray-200">
+            <h3 class="text-lg font-semibold text-color flex items-center gap-2">
+                Password Expiry Warning
+            </h3>
+        </div>
+        <!--end::Modal header-->
+
+        <!--begin::Modal body-->
+        <div class="px-6 py-4">
+            <p id="passwordExpiryMessage" class="text-gray-700 text-sm leading-relaxed">
+                Your password will expire soon. Please update it to ensure uninterrupted access.
+            </p>
+        </div>
+        <!--end::Modal body-->
+
+        <!--begin::Modal footer-->
+        <div class="px-6 py-4 flex justify-end gap-3 border-t border-gray-200">
+            <button id="skipForNowBtn"
+                class="kt-btn border  bg-white text-color hover:bg-white rounded-lg font-normal transition-all focus:ring-2 focus:ring-gray-200 shadow-md px-4 py-2 transition-all duration-200">
+                Continue
+            </button>
+            <button id="resetPasswordBtn"
+                class="kt-btn border  bg-white text-color hover:bg-white rounded-lg font-normal transition-all focus:ring-2 focus:ring-gray-200 shadow-md px-4 py-2 transition-all duration-200">
+                Change Password
+            </button>
+        </div>
+        <!--end::Modal footer-->
+    </div>
+    <!--end::Modal dialog-->
+</div>
+<!--end::Modal-->
+
+
+        <!-- FOOTER -->
+        <footer class="fixed bottom-2 left-0 w-full text-center py-2 bg-white text-gray-600 text-sm">
+            Copyright ©
+            <script>document.write(new Date().getFullYear())</script>
+            <span class="font-normal">Eaglebees, Inc.</span>
+        </footer>
+   
+
+        <script>
+            document.querySelectorAll('.eyeToggle').forEach(icon => {
+            icon.addEventListener('click', function () {
+                const targetId = this.getAttribute('data-target');
+                const input = document.getElementById(targetId);
+                const isPassword = input.type === 'password';
+
+                // Toggle input type
+                input.type = isPassword ? 'text' : 'password';
+
+                // Toggle eye icon (KeenIcons)
+                this.innerHTML = isPassword
+                ? `<i class="ki-outline ki-eye-slash"></i>`
+                : `<i class="ki-outline ki-eye"></i>`;
+            });
+            });
+
+            
+ 
+            function toggleHIPAA() {
+            const signinForm = document.getElementById("kt_login_signin_form");
+            const googleSignin = document.getElementById("google-signin-container");
+            const hipaaBadge = document.getElementById("hipaa-badgeCreate-account");
+            const divider = document.getElementById("divider");
+
+            if (!signinForm || !googleSignin || !hipaaBadge || !divider) return;
+
+            // ✅ Detect if the sign-in form is visible
+            const isVisible = signinForm.style.display !== "none";
+
+            // ✅ Show or hide the elements accordingly
+            googleSignin.style.display = isVisible ? "grid" : "none";
+            hipaaBadge.style.display = isVisible ? "flex" : "none";
+            divider.style.display = isVisible ? "flex" : "none";
+        }
+
+        // ✅ Run once when DOM is loaded
+        document.addEventListener("DOMContentLoaded", toggleHIPAA);
+
+        // ✅ Watch for form visibility changes dynamically
+        const observer = new MutationObserver(toggleHIPAA);
+        observer.observe(document.body, { attributes: true, childList: true, subtree: true });
+
+
+        </script>
+        <!-- <script src="assets/js/jquery-3.6.0.min.js"></script>
+        <script src="assets/js/toastr_min.js"></script>-->
+        <script src="../assets/js/config.js"></script>
+        <script src="../assets/vendors/jquery/jquery.min.js"></script>
+        <script src="../assets/vendors/toastr/toastr.js"></script>
+        <script src="../assets/js/login.js"></script>
+    </body>
+
+    </html>
