@@ -8770,7 +8770,7 @@ function handleTranscriptionFailure(data, socket) {
 function createIconRow(currentPatient, id) {
   var iconRow = document.createElement('div');
   iconRow.className = 'flex pt-5 feedback';
-  iconRow.textContent = "\n    <i class=\"material-icons mr-5 cursor-pointer thumb-up text-gray-300\" onclick=\"updateLikeAndDisLike('".concat(currentPatient, "', 'thumbs_up', '").concat(id, "')\">thumb_up</i>\n    <i class=\"material-icons mr-5 cursor-pointer thumb-down text-gray-300\" onclick=\"updateLikeAndDisLike('").concat(currentPatient, "', 'thumbs_down', '").concat(id, "')\">thumb_down</i>\n    <i class=\"material-icons cursor-pointer comment text-gray-300\" onclick=\"openCommentModal('").concat(currentPatient, "', '").concat(id, "')\">comment</i>\n  ");
+  iconRow.innerHTML = "\n    <i class=\"material-icons mr-5 cursor-pointer thumb-up text-gray-300\" onclick=\"updateLikeAndDisLike('".concat(currentPatient, "', 'thumbs_up', '").concat(id, "')\">thumb_up</i>\n    <i class=\"material-icons mr-5 cursor-pointer thumb-down text-gray-300\" onclick=\"updateLikeAndDisLike('").concat(currentPatient, "', 'thumbs_down', '").concat(id, "')\">thumb_down</i>\n    <i class=\"material-icons cursor-pointer comment text-gray-300\" onclick=\"openCommentModal('").concat(currentPatient, "', '").concat(id, "')\">comment</i>\n  ");
   return iconRow;
 }
 function displayFeedbackDesign(currentPatient) {
