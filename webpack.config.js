@@ -178,9 +178,12 @@ module.exports = (env) => {
       "js/common_script": [path.resolve(__dirname, "./src/assets/js/common_script.js")],
       "js/include_html": [path.resolve(__dirname, "./src/assets/js/include_html.js")],
       "js/login": [path.resolve(__dirname, "./src/assets/js/login.js")],
+      "js/sign_up": [path.resolve(__dirname, "./src/assets/js/sign_up.js")],
       "js/socket.io.min": [path.resolve(__dirname, "./src/assets/js/socket.io.min.js")],
       "js/marked.min": [path.resolve(__dirname, "./src/assets/js/marked.min.js")],
       "js/patient_summary": [path.resolve(__dirname, "./src/assets/js/patient_summary.js")],
+      "js/user-profile": [path.resolve(__dirname, "./src/assets/js/user-profile.js")],
+      "js/status": [path.resolve(__dirname, "./src/assets/js/status.js")],
       ...additionalEntries,
     },
     output: {

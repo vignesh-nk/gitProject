@@ -37,7 +37,7 @@ toastr.options = {
 document.addEventListener("DOMContentLoaded", function () {
   var token = localStorage.getItem('access_token');
   if (!token) {
-    // window.location.href = '../index.html';
+    // window.location.href = "./index.html";
   }
   fetch("".concat(BASE_URL, "authenticate/get-user-profile"), {
     method: "POST",
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
 window.copyAllPlainText = function () {
   var token = localStorage.getItem('access_token');
   if (!token) {
-    window.location.href = '../index.html';
+    window.location.href = "./index.html";
     return;
   }
   var nodes = Array.from(document.querySelectorAll('[data-copy="true"]'));
@@ -206,7 +206,7 @@ window.copyPlainText = function (elementId, event) {
 
   var token = localStorage.getItem('access_token');
   if (!token) {
-    window.location.href = '../index.html';
+    window.location.href = 'dist/html/index.htmll';
     return;
   }
 
@@ -300,7 +300,7 @@ window.copyPlainText = function (elementId, event) {
 window.copyAllPlainTextDshp = function (copyAttrValue) {
   var token = localStorage.getItem('access_token');
   if (!token) {
-    window.location.href = '../index.html';
+    window.location.href = 'dist/html/index.htmll';
     return;
   }
 
@@ -345,6 +345,30 @@ window.copyAllPlainTextDshp = function (copyAttrValue) {
     }
     if (line) result += indent + line.trim() + '\n';
     return result;
+  }
+
+  // NEW: Helper function to remove thumb-up/down and comment elements from HTML
+  function cleanHTML(html) {
+    if (!html) return '';
+
+    // Create a temporary div to parse HTML
+    var tempDiv = document.createElement('div');
+    tempDiv.innerHTML = html;
+
+    // Remove thumb-up, thumb-down, comment, and material icons
+    tempDiv.querySelectorAll('.thumb-up, .thumb-down, .comment, i.material-icons, p.text-xs').forEach(function (el) {
+      return el.remove();
+    });
+
+    // Also remove any elements with thumb/comment in class name
+    tempDiv.querySelectorAll('[class*="thumb"], [class*="comment"]').forEach(function (el) {
+      if (el.className.includes('thumb-up') || el.className.includes('thumb-down') || el.className.includes('comment')) {
+        el.remove();
+      }
+    });
+
+    // Return cleaned innerHTML
+    return tempDiv.innerHTML;
   }
   orderedSections.forEach(function (sectionTitle) {
     // Add section title with line break before (like first function)
@@ -399,19 +423,24 @@ window.copyAllPlainTextDshp = function (copyAttrValue) {
       children.forEach(function (child) {
         if (child.tagName === 'P') {
           // For paragraphs, preserve line breaks (same as first function)
-          var html = child.innerHTML.replace(/<br\s*\/?>/gi, '\n');
-          // const cleanText = html.replace(/<\/?[^>]+(>|$)/g, '').trim();
+          // UPDATED: Clean HTML first
+          var rawHtml = cleanHTML(child.innerHTML);
+          var html = rawHtml.replace(/<br\s*\/?>/gi, '\n');
           if (html.trim()) plainText += html + '\n';
         } else if (child.tagName === 'UL') {
           // For unordered lists - use wrapText like first function
           child.querySelectorAll('li').forEach(function (li) {
-            var text = li.innerHTML.replace(/<br\s*\/?>/gi, '\n').trim();
+            // UPDATED: Clean HTML first
+            var cleanLiHtml = cleanHTML(li.innerHTML);
+            var text = cleanLiHtml.replace(/<br\s*\/?>/gi, '\n').trim();
             if (!text.startsWith('•')) text = '• ' + text;
             plainText += wrapText(text, '        ', 80);
           });
         } else if (child.textContent && child.tagName !== 'UL' && child.tagName !== 'P') {
           // For other elements (like divs with direct text)
-          var raw = child.innerHTML.replace(/<br\s*\/?>/gi, '\n').trim();
+          // UPDATED: Clean HTML first
+          var cleanChildHtml = cleanHTML(child.innerHTML);
+          var raw = cleanChildHtml.replace(/<br\s*\/?>/gi, '\n').trim();
           if (raw) plainText += raw + '\n';
         }
       });
@@ -438,6 +467,64 @@ window.copyAllPlainTextDshp = function (copyAttrValue) {
     toastr.warning('Copy command failed: ' + err);
   }
   document.body.removeChild(tempTextArea);
+};
+window.logout = function () {
+  var token = localStorage.getItem("access_token");
+  if (!token) {
+    console.error("No token found. Cannot logout.");
+    toastr.error("No access token found.");
+    return;
+  }
+
+  // Handle WebSocket disconnection
+  if (typeof socket !== "undefined" && socket.connected) {
+    socket.disconnect();
+    console.log('WebSocket disconnected');
+  }
+  var refreshToken = localStorage.getItem("refresh_token");
+  if (!refreshToken) {
+    toastr.error("No refresh token found.");
+    return;
+  }
+
+  // Call logout API **before removing token**
+  fetch("".concat(BASE_URL, "authenticate/logout"), {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': "Bearer ".concat(token) // Must use token here
+    },
+    body: JSON.stringify({
+      refresh_token: refreshToken
+    })
+  }).then(function (response) {
+    return response.json();
+  }).then(function (data) {
+    if (data.message === "Logged out successfully") {
+      // ✅ Now it's safe to remove token
+      localStorage.removeItem("access_token");
+      localStorage.removeItem("access_token_time");
+      localStorage.removeItem("refresh_token");
+      document.cookie = "access_token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      toastr.success("Logged out successfully.");
+      window.location.href = "./index.html";
+    } else {
+      toastr.error("Error: " + (data.error || data.message));
+    }
+  })["catch"](function (error) {
+    console.error("Logout error:", error);
+    toastr.error("An error occurred during logout.");
+  });
+};
+window.redirectUserProfile = function () {
+  window.location.href = "user_profile.html";
+};
+window.redirectStatusPage = function (page) {
+  if (page === 'home') {
+    window.location.href = "patient_summary.html";
+  } else if (page === 'status_page') {
+    window.location.href = "status.html";
+  }
 };
 /******/ 	return __webpack_exports__;
 /******/ })()

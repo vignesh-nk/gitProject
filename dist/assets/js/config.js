@@ -21,10 +21,16 @@ window.BASE_URL = "https://apicr.suturenote.ai/";
 var BASE_URL = "https://apicr.suturenote.ai/";
 window.BASE_URL_KINESIS = "https://edacr.suturenote.ai/";
 var BASE_URL_KINESIS = "https://edacr.suturenote.ai/";
+window.BASE_PHRASE_URL = "https://create.suturenote.ai/dot_phrase/";
+var BASE_PHRASE_URL = "https://create.suturenote.ai/dot_phrase/";
+window.BASE_GOOGLE_REDIRECT_URL = "https://create.suturenote.ai/dist/html/patient_summary.html";
+var BASE_GOOGLE_REDIRECT_URL = "https://create.suturenote.ai/dist/html/patient_summary.html";
 if ( true && module.exports) {
   module.exports = {
     BASE_URL: window.BASE_URL,
-    BASE_URL_KINESIS: window.BASE_URL_KINESIS
+    BASE_URL_KINESIS: window.BASE_URL_KINESIS,
+    BASE_PHRASE_URL: window.BASE_PHRASE_URL,
+    BASE_GOOGLE_REDIRECT_URL: window.BASE_GOOGLE_REDIRECT_URL
   };
 }
 

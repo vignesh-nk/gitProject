@@ -1,0 +1,242 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SutureNote – Sign Up</title>
+
+        <!-- Tailwind + Icons -->
+         
+        <link href="../assets/css/app.css" rel="stylesheet" />
+        <!-- <link href="assets/css/font.css" rel="stylesheet" />
+        <link href="assets/css/common.css" rel="stylesheet" />
+        <link href="assets/css/toastr.css" rel="stylesheet" /> -->
+        <link rel="stylesheet" href="../assets/vendors/toastr/toastr.css">
+        <link href="../assets/vendors/keenicons/styles.bundle.css" rel="stylesheet" />
+        
+        <style>
+            body,
+            html {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </head>
+
+    <body class="antialiased flex min-h-screen text-base bg-background overflow-y-auto">
+
+        <!-- 🟣 LEFT PANEL -->
+        <div class="flex items-center justify-center w-1/2">
+            <div class="text-center p-10">
+                <div class="flex justify-center mb-8">
+                    <div
+                        class="size-24 rounded-full bg-white/20 flex items-center justify-center border border-white/30 logoAlign">
+                        <img src="../assets/media/images/Suturenote_logo_BluePurple.png" alt="SutureNote Logo"
+                            class="h-auto" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 🟣 RIGHT PANEL -->
+        <div class="flex flex-col items-center w-1/2 bg-white overflow-y-auto py-10">
+
+            <!-- AUTH CARD WRAPPER -->
+            <div
+                class="max-w-md w-full rounded-[11px] p-[1px] bg-[linear-gradient(135deg,#72bcef_0%,#ac68f7_100%)] shadow-[0_2px_5px_rgba(0,0,0,0.06),0_6px_12px_rgba(0,0,0,0.08),0_12px_20px_rgba(172,104,247,0.15)] mx-4">
+
+                <form class="bg-white rounded-[11px] p-8" id="kt_signup_form" novalidate="novalidate" style="display: block;">
+                    <div class="text-center mb-6">
+                        <h3 class="text-lg font-medium text-gray-800 mb-2">Sign up</h3>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-normal text-gray-800">User Name</label>
+                            <input class="py-2 px-4 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-200 outline-none transition"
+                                name="username" id="username" autocomplete="off" type="text" value="" onkeyup="handleUsernameKeyup()">
+                            <span id="username-error" style="color: red; display: none; font-size: 12px;"></span>
+                        </div>
+
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-normal text-gray-800">
+                                Password
+                                <span class="relative group cursor-pointer">
+                                    <i class="ki-filled ki-information-2 text-gray-500 text-base"></i>
+                                    <div class="absolute left-6 top-1/2 -translate-y-1/2 w-64 bg-white text-gray-500 text-xs rounded-md p-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 shadow-lg">
+                                        Passwords should be at least 12 characters long and include:<br>
+                                        • 1 uppercase<br>
+                                        • 1 lowercase<br>
+                                        • 1 number<br>
+                                        • 1 special character<br><br>
+                                        Passwords are case sensitive.
+                                    </div>
+                                </span>
+                            </label>
+                            <div class="relative">
+                                <input name="password" id="password" autocomplete="off" type="password" value="" maxlength="50"
+                                    class="py-2 px-4 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-200 outline-none transition w-full">
+                                <button type="button" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 eyeToggle" data-target="password">
+                                    <i class="ki-outline ki-eye"></i>
+                                </button>
+                            </div>
+                            <span id="password-error" style="color: red; display: none; font-size: 12px;"></span>
+                        </div>
+
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-normal text-gray-800">Confirm Password</label>
+                            <div class="relative">
+                                <input name="confirm_password" id="confirm_password" autocomplete="off" type="password" value="" maxlength="50"
+                                    class="py-2 px-4 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-200 outline-none transition w-full">
+                                <button type="button" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 eyeToggle" data-target="confirm_password">
+                                    <i class="ki-outline ki-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-normal text-gray-800">Gender</label>
+                            <select name="gender" id="gender" class="py-2 px-4 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-200 outline-none transition">
+                                <option value="" disabled selected>Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-normal text-gray-800">Phone Number</label>
+                            <div class="flex items-center gap-2 py-2 px-4 border border-gray-300 rounded-lg focus-within:ring-2 focus-within:ring-gray-200">
+                                <div class="relative flex items-center group">
+                                    <span class="absolute left-2 pointer-events-none text-gray-500">+</span>
+                                    <input type="text" name="country_code" id="country-code-input"
+                                        class="w-20 pl-6 pr-6 bg-transparent border-none focus:ring-0 focus:outline-none text-sm"
+                                        value="1" maxlength="3" placeholder="1" title="Country code">
+                                    <div class="absolute right-2 cursor-pointer" onclick="toggleCountryDropdown()">
+                                        <i class="ki-outline ki-down text-sm text-gray-400"></i>
+                                    </div>
+                                    <div id="country-dropdown" style="left: -13px;"
+                                        class="hidden absolute top-7 mt-1 w-48 bg-white rounded-md shadow-lg z-10 border border-gray-200 max-h-44 overflow-y-auto">
+                                        <div class="p-1">
+                                            <div class="flex p-2 border-b border-gray-100">
+                                                <input type="text" id="country-search" placeholder="Search..."
+                                                    class="text-sm w-full focus:outline-none">
+                                            </div>
+                                            <div class="country-options">
+                                                <div class="px-3 py-2 text-sm hover:bg-gray-100 cursor-pointer" onclick="selectCountry('1','US')">United States (+1)</div>
+                                                <div class="px-3 py-2 text-sm hover:bg-gray-100 cursor-pointer" onclick="selectCountry('44','UK')">United Kingdom (+44)</div>
+                                                <div class="px-3 py-2 text-sm hover:bg-gray-100 cursor-pointer" onclick="selectCountry('91','IN')">India (+91)</div>
+                                                <div class="px-3 py-2 text-sm hover:bg-gray-100 cursor-pointer" onclick="selectCountry('86','CN')">China (+86)</div>
+                                                <div class="px-3 py-2 text-sm hover:bg-gray-100 cursor-pointer" onclick="selectCountry('81','JP')">Japan (+81)</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="h-5 w-px bg-gray-300"></div>
+                                <input name="phone" id="phone" autocomplete="tel" type="tel" class="flex-1 border-none focus:ring-0 text-sm outline-none">
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-normal text-gray-800">Email</label>
+                            <input name="email" id="email" autocomplete="off" type="email" value=""
+                                class="py-2 px-4 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-200 outline-none transition">
+                        </div>
+
+                        <div class="flex items-center">
+                            <input type="checkbox" id="myCheckbox" class="mr-2">
+                            <label for="myCheckbox" class="text-sm font-normal text-gray-800">I accept the&nbsp;</label>
+                            <a href="#" id="openModalLink" data-bs-toggle="modal" target="_blank" class="text-sm text-color hover:underline">Terms and Conditions</a>
+                        </div>
+
+                        <button class="w-full signInButton bg-white border text-color text-sm hover:bg-white rounded-lg font-normal transition-all focus:ring-2 focus:ring-gray-200 shadow-[0_2px_4px_rgba(0,0,0,0.2)] hover:shadow-[0_4px_8px_rgba(0,0,0,0.25)] active:scale-[0.98] py-2" id="kt_signup_submit">
+                            Sign up
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Confirm Sign Up Form -->
+                <form class="bg-white rounded-[11px] p-8" novalidate="novalidate" id="kt_signup_confirm_form" style="display: none;">
+                    <div class="text-center mb-6">
+                        <h3 class="text-lg font-medium text-gray-800 mb-2">Confirm Sign Up</h3>
+                    </div>
+
+                    <div class="space-y-5">
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-normal text-gray-800">User Name</label>
+                            <input class="py-2 px-4 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-200 outline-none transition"
+                                name="confirmUserNmae" id="confirmUserNmae" autocomplete="off" type="text" value="">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-normal text-gray-800">Confirmation Code</label>
+                            <input name="confirmCode" id="confirmCode" autocomplete="off" type="text" value=""
+                                class="py-2 px-4 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-200 outline-none transition">
+                        </div>
+                        <button class="w-full signInButton bg-white border text-color text-sm hover:bg-white rounded-lg font-normal transition-all focus:ring-2 focus:ring-gray-200 shadow-[0_2px_4px_rgba(0,0,0,0.2)] hover:shadow-[0_4px_8px_rgba(0,0,0,0.25)] active:scale-[0.98] py-2" id="kt_confirmation_submit">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+
+
+
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="fixed bottom-2 left-0 w-full text-center py-2 bg-white text-gray-600 text-sm">
+            Copyright ©
+            <script>document.write(new Date().getFullYear())</script>
+            <span class="font-normal">Eaglebees, Inc.</span>
+        </footer>
+
+        <!-- Terms & Conditions Modal -->
+        <div class="modal fade" id="exampleModalSizeSm" tabindex="-1" role="dialog" aria-labelledby="exampleModalSizeSm" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-dialog-centered modal-xl custom-termsCondition" role="document">
+                <div style="background:#fff; padding:20px; border-radius:8px; margin:4% auto; width:80%; max-width:1200px; position:relative;">
+                    <button type="button" id="closeModalBtn" class="close" aria-label="Close" data-bs-dismiss="modal" style="position:absolute; top:5px; right:17px; font-size:24px; background:none; border:none; cursor:pointer;">×</button>
+                    <h2 style="font-weight: 500; font-size: large; color: #0277bd;">Terms &amp; Conditions</h2><br>
+                    <p>Your Agreement</p><br>
+                    <p style="font-size: smaller; font-weight: 500;">Effective Date: June 21, 2025</p>
+                    <p style="font-size: small;">Welcome to SutureNote.AI ("SutureNote," "we," "our," or "us"). These Terms &amp; Conditions ("Terms") govern your access to and use of the SutureNote mobile application, web platform, and related services (collectively, the "Services"). By signing up or subscribing, you agree to be bound by these Terms.</p><br>
+                    <div style="height:300px; overflow-y:auto; border:1px solid #ddd; padding:10px; margin-bottom:15px; font-size:14px; line-height:1.5;">
+                        <p><strong>1. Eligibility</strong><br>
+                        You must be a licensed healthcare provider, or authorized staff under the supervision of such a provider, to use SutureNote.</p>
+                        <p>By using the Services, you confirm that you meet these requirements.</p><br>
+                        <p><strong>2. Subscriptions &amp; Billing</strong><br>
+                        Subscription Plans: SutureNote offers paid subscription plans. Details of pricing, billing cycles, and features are disclosed at signup.<br>Auto-Renewal: Subscriptions automatically renew unless cancelled before the renewal date<br>Cancellations: You may cancel anytime via your account settings. Access will continue until the end of the billing cycle.<br>Refunds: Payments are non-refundable, except as required by law.</p><br>
+                        <p><strong>3. Use of Services</strong><br>
+                        You may use the Services solely for lawful purposes and in compliance with these Terms<br>You agree not to misuse or attempt to reverse-engineer the software, models, or infrastructure.<br>You are responsible for maintaining the confidentiality of your login credentials.</p><br>
+                        <p><strong>4. Protected Health Information (PHI) &amp; Privacy</strong><br>
+                        SutureNote is designed to help capture, transcribe, and structure clinical documentation.<br>We maintain safeguards in line with HIPAA and other applicable privacy laws.<br>You remain the Covered Entity or Authorized User responsible for ensuring compliance when entering patient data.<br>Please review our [Privacy Policy] for more information.</p><br>
+                        <p><strong>5. Intellectual Property</strong><br>
+                        All software, models, documentation, and branding are owned by SutureNote.AI.<br>You retain ownership of your own content, including patient documentation, subject to applicable privacy laws.<br>By using the Services, you grant us a limited license to process your content solely for the purpose of providing the Services</p><br>
+                        <p><strong>6. Medical Disclaimer</strong><br>
+                        SutureNote provides documentation assistance, not medical advice.<br>The Services are not intended to diagnose, treat, or replace professional medical judgment.<br>You remain solely responsible for clinical decisions and outcomes.</p><br>
+                        <p><strong>7. Limitation of Liability</strong><br>
+                        To the maximum extent permitted by law, SutureNote is not liable for any damages arising from your use of the Services, including but not limited to loss of data, downtime, or reliance on AI-generated documentation.</p><br>
+                        <p><strong>8. Termination</strong><br>
+                        We may suspend or terminate your account if you violate these Terms, misuse the Services, or engage in fraudulent activity.<br>Upon termination, your right to use the Services will cease immediately.</p><br>
+                        <p><strong>9. Governing Law</strong><br>
+                        These Terms are governed by the laws of the State of New Jersey, United States, without regard to conflict of laws principles.</p><br>
+                        <p><strong>10. Changes to Terms</strong><br>
+                        We may update these Terms from time to time. Continued use of the Services after changes take effect constitutes acceptance of the revised Terms.</p><br>
+                        <p><strong>11. Contact Us</strong><br>
+                        For questions about these Terms, please contact us at:<br>
+                        SutureNote.AI Legal<br>
+                        Email: legal.act@suturenote.AI<br>
+                        Address: 52 Glattly drive, Denville, NJ 07834.</p><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+        <script src="../assets/js/config.js"></script>
+        <script src="../assets/vendors/jquery/jquery.min.js"></script>
+        <script src="../assets/vendors/toastr/toastr.js"></script>
+        <script src="../assets/js/sign_up.js"></script>
+    </body>
+
+    </html>

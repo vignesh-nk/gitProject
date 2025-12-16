@@ -15,6 +15,8 @@
     <script src="../assets/js/socket.io.min.js"></script>
     <script src="../assets/js/marked.min.js"></script>
     <script src="../assets/js/patient_summary.js"></script>
+    <link href="../assets/vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <script src="../assets/vendors/swiper/swiper-bundle.min.js"></script>
 </head>
 <body class="font-poppins antialiased flex h-full text-base text-foreground bg-background demo1 kt-header-fixed background-color">
 
@@ -111,10 +113,193 @@
                 </div>
                 <!-- END SIDEBAR -->
 
+                <!-- START :: SLIDER -->
+                 <main class="w-full lg:w-[60%] xl:w-[60%] pt-5 bg-white lg:ml-0.5 mt-7 lg:mt-0 overflow-x-hidden visible" id="content-slider" role="content">
+                    <div class="kt-container-fixed" id="mainContentContainer" style="margin-top: 30px;">
+                        <div class="overflow-hidden">
+                       <div class="swiper mySlider w-full px-6 py-16">
+                                <div class="swiper-wrapper">
+                                            <div class="swiper-slide gap-6">
+                                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-full">
+
+                                                    <!-- CARD 1 -->
+                                                    <div class="sn-card">
+                                                        <img src="../assets/media/images/Suturenote_logo_BluePurple.png" class="h-10 mb-6 ml-auto" />
+                                                        <h2 class="text-2xl font-medium mb-4 leading-snug animate-slide-up delay-300">
+                                                            Chart smarter.<br> Not harder.
+                                                        </h2>
+                                                        <div class="sn-inner mt-12">
+                                                            <p class="text-base mb-3 mt-2">
+                                                                SutureNote is a voice-first tool built for hospital workflows.
+                                                            </p>
+                                                            <p class="text-base">
+                                                                You create infostreams – Infostreams are quick voice notes.
+                                                                No need to say the entire encounter at once.
+                                                                Drop clinical breadcrumbs as you go. We will suture them together.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- CARD 2 -->
+                                                    <div class="sn-card">
+                                                        <img src="../assets/media/images/Suturenote_logo_BluePurple.png" class="h-10 mb-6 ml-auto" />
+                                                        <h3 class="text-2xl font-medium mt-2 mb-4 leading-snug animate-slide-up delay-300">
+                                                            Inpatient care isn’t linear. Your input doesn’t have to be either.
+                                                        </h3>
+
+                                                        <div class="sn-inner mt-2">
+                                                            <p class="text-sm text-gray-700 mb-4">
+                                                                Record insights as they happen — during
+                                                            </p>
+
+                                                            <div class="space-y-3 shuffle-list animate-tags" id="shuffleList">
+                                                                <div class="sn-tag"><i class="ki-outline ki-message-text-2 text-purple text-xl mr-2"></i> Family Discussion</div>
+                                                                <div class="sn-tag"><i class="ki-outline ki-abstract-14 text-purple text-xl mr-2"></i> Pre-rounding</div>
+                                                                <div class="sn-tag"><i class="ki-outline ki-pulse text-purple text-xl mr-2"></i> Exam</div>
+                                                            </div>
+
+                                                            <div class="text-center mt-2">
+                                                                <i class="ki-outline ki-arrow-down text-purple text-xl"></i>
+                                                                <div class="font-sm mt-0">Note</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-full">
+
+                                                                <!-- CARD 3 -->
+                                                                <div class="sn-card">
+                                                                    <img src="../assets/media/images/Suturenote_logo_BluePurple.png" class="h-10 mb-6 ml-auto" />
+                                                                    <h2 class="text-2xl font-medium mb-4 animate-slide-up delay-300">Strong Day 1 = Smarter Notes Ahead</h2>
+
+                                                                    <div class="sn-inner mt-12">
+                                                                        <p class="text-base">The more you capture up front, the better your</p>
+                                                                        <ul class="list-circle pl-5 mt-3 space-y-2 animate-tags">
+                                                                            <li>- Daily progress notes</li>
+                                                                            <li>- Consults notes</li>
+                                                                            <li>- Discharge summary</li>
+                                                                        </ul>
+                                                                        <p class="mt-4">
+                                                                            SutureNote builds on your early thinking — so every subsequent note gets easier.
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- CARD 4 -->
+                                                                <div class="sn-card">
+                                                                    <img src="../assets/media/images/Suturenote_logo_BluePurple.png" class="h-10 mb-6 ml-auto" />
+                                                                    <h2 class="text-2xl font-medium mb-4 animate-slide-up delay-300">
+                                                                        The system remembers — just add what changed.
+                                                                    </h2>
+
+                                                                    <div class="sn-inner mt-12">
+                                                                        <p class="mb-2">No need to repeat.</p>
+
+                                                                        <p>SutureNote carries your story forward and updates notes intelligently.</p>
+
+                                                                        <div class="mt-3 space-y-3 text-sm animate-tags">
+                                                                            <div><i class="ki-outline ki-artificial-intelligence mr-2"></i>“Plan to stop Ceftriaxone”</div>
+                                                                            <div><i class="ki-outline ki-arrow-right mr-2"></i>Ceftriaxone was discontinued on 5/15/2025</div>
+
+                                                                            <div class="mt-1"><i class="ki-outline ki-artificial-intelligence  mr-2"></i>“Increase to Lasix 40mg IV BID”</div>
+                                                                            <div><i class="ki-outline ki-arrow-right mr-2"></i>Lasix increased from 20mg PO to 40mg IV BID on 5/15/2025</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-full">
+
+                                                    <!-- CARD 5 -->
+                                                    <div class="sn-card">
+                                                        <img src="../assets/media/images/Suturenote_logo_BluePurple.png" class="h-10 mb-6 ml-auto" />
+                                                        <h2 class="text-2xl font-medium mb-4 animate-slide-up delay-300">Capture clinical takeaways — when it happens.</h2>
+
+                                                        <div class="sn-inner mt-12">
+                                                            <p class="font-medium mb-3">Record:</p>
+                                                            <ul class="list-circle pl-5 space-y-2 animate-tags">
+                                                                <li>- While Pre-rounding</li>
+                                                                <li>- After Patient encounters</li>
+                                                                <li>- After responding to a page</li>
+                                                            </ul>
+
+                                                            <p class="mt-6">
+                                                                Just capture the clinical takeaway. Short and structured works best.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- CARD 6 -->
+                                                    <div class="sn-card">
+                                                        <img src="../assets/media/images/Suturenote_logo_BluePurple.png" class="h-10 mb-6 ml-auto" />
+                                                        <h2 class="text-2xl font-medium mb-4 animate-slide-up delay-300">Not ambient.<br> Not a chatbot.</h2>
+
+                                                        <div class="text-lg sn-inner mt-12">
+                                                            <p class="mb-6">
+                                                                You don't record the full conversation — only the clinical takeaway.
+                                                            </p>
+                                                            <p>
+                                                                SutureNote is built for capturing decisions, not distractions.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-full">
+
+                                                    <!-- CARD 7 -->
+                                                    <div class="sn-card">
+                                                        <img src="../assets/media/images/Suturenote_logo_BluePurple.png" class="h-10 mb-6 ml-auto" />
+                                                        <h2 class="text-2xl font-medium mb-4 animate-slide-up delay-300">
+                                                            You're ready <br>to round.
+                                                        </h2>
+
+                                                        <div class="sn-inner mt-12">
+                                                            <p class="mb-3">Add your first patient and begin capturing real care moments.</p>
+                                                            <p>Each infostream builds your note automatically.</p>
+
+                                                            <button class="mt-6 inline-block text-white px-2 py-2 rounded-md" style="background-color: #7A6FF0; width: 110px;">
+                                                                Add Patient
+                                                            </button>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- CARD 8 -->
+                                                    <div class="sn-card">
+                                                        <img src="../assets/media/images/Suturenote_logo_BluePurple.png" class="h-10 mb-6 ml-auto" />
+                                                        <h2 class="text-2xl font-medium mb-6 animate-slide-up delay-300">Evolving Memory.</h2><br>
+
+                                                        <div class="sn-inner mt-12">
+                                                            <p class="mb-6">
+                                                                Evolving memory architecture of patient stay over hours, days, weeks
+                                                                to improve billing and patient care.
+                                                            </p>
+
+                                                            <p>
+                                                                Agentic AI workflows to address documentation gaps and ease regulatory burden.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>                               
+                            </div>
+                            <div class="swiper-pagination mt-1"></div>
+                        </div>
+                    </div>
+                </main>
+                <!-- END :: SLIDER -->
+
                 <!-- ============================= -->
                 <!-- MAIN CONTENT (70% desktop, 100% mobile) -->
                 <!-- ============================= -->
-                <main class="w-full lg:w-[60%] xl:w-[60%] pt-5 bg-white lg:ml-0.5 mt-3 lg:mt-0 summary-assess-section px-5 py-4" id="content" role="content">
+                <main class="w-full lg:w-[60%] xl:w-[60%] pt-5 bg-white lg:ml-0.5 mt-3 lg:mt-0 summary-assess-section px-5 py-4 hidden" id="content" role="content">
                     <div id="mainContentContainer">
                         <div class="w-full border-b border-border pb-3 mb-6">
                             <div class="flex">
@@ -167,7 +352,7 @@
                                         </button>
                                         <span>|</span>
                                         <!-- Phrase -->
-                                        <button class="cursor-pointer flex items-center gap-2 hover:text-primary">
+                                        <button class="cursor-pointer flex items-center gap-2 hover:text-primary" id="phraseDrawer" data-kt-drawer-toggle="#drawer_phrase">
                                             <i class="ki-outline ki-note"></i>
                                             Phrase
                                         </button>
@@ -987,7 +1172,7 @@
                     autocomplete="off"
                     class="text-sm w-full px-3 py-2 rounded-2xl border border-gray-300 focus:ring-2 focus:ring-gray-200 outline-none transition resize-none"
                 ></textarea>
-                <small id="commentError" class="form-text text-destructive text-xs mt-2" style="display:none;">Comment is required</small>
+                <small id="commentError" class="form-text text-destructive text-xs mt-2 w-full" style="display:none;">Comment is required</small>
             </div>
             <div class="kt-modal-footer" style="border-top: 1px solid var(--border);">
                 <div></div>
@@ -997,7 +1182,7 @@
                         data-kt-modal-dismiss="#commentModal">Close</button>
                     <button
                         class="w-100 text-sm cursor-pointer text-gray-500 border border-gray-300 bg-transparent shadow-md font-medium rounded-2xl transition-all duration-200 py-2 px-4"
-                        id="saveCommentBtn">Save</button>
+                        id="saveCommentBtn" onclick="saveComment()">Save</button>
                 </div>
             </div>
         </div>
@@ -1045,7 +1230,7 @@
         <div class="py-4 flex gap-3">
         <textarea
             id="upload_textarea"
-            rows="27"
+            rows="25"
             class="w-full border border-gray-300 rounded-2xl p-3 text-sm focus:ring-2 focus:ring-gray-200 focus:outline-none resize-none shadow-sm"
             placeholder="Paste Note Here"></textarea>
         </div>
@@ -1134,7 +1319,131 @@
 
 
 </div> 
+    <!-- ============================================================
+     PHRASE DRAWER (METRONIC 9)
+=============================================================== -->
+    <div id="drawer_phrase" class="kt-drawer kt-drawer-end hidden w-[450px]" data-kt-drawer="true" data-kt-drawer-backdrop-static="true">
 
+        <!-- ================= HEADER ================= -->
+        <div class="kt-drawer-header flex justify-between items-center p-4 border-b border-gray-200">
+            <h3 class="kt-drawer-title font-medium text-gray-700">Phrases</h3>
+
+            <button class="kt-drawer-close" data-kt-drawer-dismiss="true">
+                <i class="ki-outline ki-cross text-lg"></i>
+            </button>
+        </div>
+
+        <!-- ================= CONTENT ================= -->
+        <div class="kt-drawer-content kt-scrollable px-5 py-4">
+            
+
+            <div id="drawer_phrase_list_wrapper">
+
+                <div class="flex items-center justify-between mb-3">
+            <div class="text-sm text-gray-600">Saved Phrases</div>
+
+            <!-- ADD BUTTON -->
+            <button id="addPhraseBtn"
+                class="cursor-pointer px-3 py-1.5 rounded-xl  bg-transparent text-color text-sm flex items-center gap-2 hover:bg-gray-100 cursor-pointer">
+                <i class="ki-solid ki-plus text-base"></i>
+                Create
+            </button>
+        </div>
+
+                <!-- Phrase list will be injected by JS -->
+                <div id="drawer_phrase_list"></div>
+
+            </div>
+
+            <div id="drawer_phrase_edit" class="hidden">
+
+                <label class="text-xs text-gray-500 mb-1 block">Key</label>
+                <input type="text"
+                    id="editPhraseKey"
+                    class="w-full border border-gray-300 rounded-xl bg-gray-100 p-2 text-sm"
+                    readonly>
+
+                <label class="text-xs text-gray-500 mt-4 mb-1 block">Value</label>
+                <textarea id="editPhraseValue" rows="25"
+                        class="w-full border border-gray-300 rounded-xl p-3 text-sm resize-none"
+                        placeholder="Enter phrase value..."></textarea>
+
+            </div>
+            
+            <div id="drawer_phrase_create" class="hidden">
+
+                <label class="text-xs text-gray-500 mb-1 block">Key</label>
+                <input type="text"
+                    id="createPhraseKey"
+                    class="w-full border border-gray-300 rounded-xl p-2 text-sm"
+                    placeholder="Enter phrase key...">
+                <div id="phraseKeyError" class="text-red-500 text-xs mt-1 hidden"></div>
+
+                <label class="text-xs text-gray-500 mt-4 mb-1 block">Value</label>
+                <textarea id="createPhraseValue" rows="25"
+                        class="w-full border border-gray-300 rounded-xl p-3 text-sm resize-none"
+                        placeholder="Enter phrase value..."></textarea>
+                <div id="phraseValueError" class="text-red-500 text-xs mt-1 hidden"></div>
+            </div>
+
+            <div id="drawer_phrase_view" class="hidden">
+                <label class="text-xs text-gray-500 mb-1 block">Key</label>
+                <input type="text"
+                    id="viewPhraseKey"
+                    class="w-full border border-gray-300 rounded-xl bg-gray-100 p-2 text-sm"
+                    readonly>
+
+                <label class="text-xs text-gray-500 mt-4 mb-1 block">Value</label>
+                <textarea id="viewPhraseValue" rows="25"
+                    class="w-full border border-gray-300 rounded-xl bg-gray-100 p-3 text-sm resize-none"
+                    readonly></textarea>
+            </div>
+
+
+        </div>
+
+        <!-- ================= FOOTER ================= -->
+        <div id="drawer_phrase_edit_footer"
+            class="hidden flex gap-3 border-t border-gray-200 p-4">
+
+            <button id="cancelEditPhrase"
+                    class="cursor-pointer flex-1 py-2 text-center rounded-xl bg-white border border-gray-300 text-color">
+                Cancel
+            </button>
+
+            <button id="saveEditPhrase"
+                    class="cursor-pointer flex-1 py-2 text-center rounded-xl bg-primary text-white">
+                Save
+            </button>
+
+        </div>
+        <div id="drawer_phrase_listing_footer"
+            class="flex gap-3 border-t border-gray-200 p-4">
+
+            <button id="cancelAddInfoPhrase"
+            aria-label="Close drawer"
+                    data-kt-drawer-dismiss="true"
+                    class="cursor-pointer flex-1 py-2 text-center rounded-xl bg-white border border-gray-300 text-color">
+                Cancel
+            </button>
+
+            <button id="saveAddInfoPhrase"
+                    class="cursor-pointer flex-1 py-2 text-center rounded-xl bg-primary text-white">
+                Suture
+            </button>
+
+        </div>
+        <div id="drawer_phrase_view_footer"
+            class="hidden flex gap-3 border-t border-gray-200 p-4">
+
+            <button id="closeViewModeBtn"
+                class="cursor-pointer flex-1 py-2 text-center rounded-xl bg-white border border-gray-300 text-color">
+                Close
+            </button>
+
+        </div>
+
+    </div>
 
     <script>
         // Forbidden patterns
@@ -1209,10 +1518,10 @@
             inputElement.classList.remove("is-invalid");
 
             const token = localStorage.getItem('access_token');
-            // if (!token) {
-            //   window.location.href = '../index.html';
-            //   return;
-            // }
+            if (!token) {
+              window.location.href = '../index.html';
+              return;
+            }
 
             const getPatientName = document.getElementById('patientName').value.trim();
             if (!getPatientName) {
@@ -1260,7 +1569,100 @@
                 });
             });
             
-            
+            // slider
+                const swiper = new Swiper('.mySlider', {
+                    loop: true,
+                    autoplay: { delay: 30000 },
+                    speed: 600,
+                    effect: "slide",
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    }
+                });
+                const lists = document.getElementsByClassName('shuffle-list');
+
+                Array.from(lists).forEach((list) => {
+                const originalItems = Array.from(list.children);
+
+                function animateBackToOriginalOrder() {
+                    // Step 1: Fade out all current items
+                    list.querySelectorAll('li').forEach(el => {
+                    el.style.transition = 'opacity 0.4s ease';
+                    el.style.opacity = '0';
+                    });
+
+                    // Step 2: After fade-out, reorder and fade in one-by-one
+                    setTimeout(() => {
+                    originalItems.forEach(item => {
+                        list.appendChild(item); // Restore original DOM order
+                        item.style.opacity = '0'; // Keep hidden for fade-in
+                    });
+
+                    originalItems.forEach((item, index) => {
+                        setTimeout(() => {
+                        item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                        }, index * 400);
+                    });
+                    }, 300);
+                }
+
+                function shuffleOneByOne(shuffledItems, index = 0) {
+                    if (index >= shuffledItems.length) {
+                    setTimeout(animateBackToOriginalOrder, 1000);
+                    return;
+                    }
+
+                    const item = shuffledItems[index];
+                    item.style.transition = 'transform 0.4s ease, opacity 0.4s ease';
+                    item.style.opacity = '0';
+                    item.style.transform = `translateY(${Math.random() > 0.5 ? -30 : 30}px) scale(0.95)`;
+
+                    setTimeout(() => {
+                    const newIndex = Math.floor(Math.random() * list.children.length);
+                    list.insertBefore(item, list.children[newIndex]);
+
+                    requestAnimationFrame(() => {
+                        item.style.transition = 'none';
+                        item.style.transform = 'translateY(30px) scale(1.05)';
+                        item.style.opacity = '0';
+
+                        requestAnimationFrame(() => {
+                        item.style.transition = 'transform 0.4s ease, opacity 0.4s ease';
+                        item.style.transform = 'translateY(0) scale(1)';
+                        item.style.opacity = '1';
+                        });
+                    });
+
+                    setTimeout(() => shuffleOneByOne(shuffledItems, index + 1), 500);
+                    }, 300);
+                }
+
+                function runSequence() {
+                    // Reset list to correct order
+                    originalItems.forEach(item => {
+                    list.appendChild(item);
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                    });
+
+                    setTimeout(() => {
+                    const shuffled = [...originalItems].sort(() => Math.random() - 0.5);
+                    shuffleOneByOne(shuffled);
+                    }, 3000);
+                }
+
+                runSequence();
+                setInterval(runSequence, 8000);
+                });
+
+                // slider end
     </script>
     <script src="../assets/js/core.bundle.js"></script>
     <script src="../assets/vendors/ktui/ktui.min.js"></script>

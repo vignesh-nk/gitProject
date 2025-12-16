@@ -2091,3 +2091,435 @@ Hippa slider :: End */
 .-ml-5 {
   margin-left: calc(var(--spacing) * -5);
 }
+
+/* slider */
+  /* ================================================
+   FIX SWIPER OVERFLOW + WIDTH ISSUES
+=================================================*/
+.mySlider {
+    max-width: 100%;
+    overflow: hidden !important;
+}
+
+.mySlider .swiper-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.mySlider .swiper-slide {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    display: flex;
+    justify-content: center;
+}
+
+/* ================================================
+   CARD STYLE — GRADIENT BORDER + FIXED HEIGHT
+=================================================*/
+.sn-card {
+    @apply bg-white rounded-3xl p-8 shadow-lg flex flex-col;
+    border-radius: 20px;
+
+    /* gradient border */
+    border: 2px solid transparent;
+    background-image:
+        linear-gradient(white, white),
+        linear-gradient(135deg, #41b1ff, #a055f3);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+
+    /* same height for all cards */
+    height: 500px;
+    padding: 15px;
+    /* 3D EMBOSSED BORDER */
+
+    /* inner + outer embossed shadows */
+    box-shadow:
+       inset -11px -3px 20px 0px rgba(0, 0, 0, 0.08), inset -2px 11px 19px 9px rgb(255 255 255 / 80%), 3px 3px 8px rgb(0 0 0 / 43%), -3px -3px 8px rgba(255, 255, 255, 0.7)
+}
+
+/* ================================================
+   INNER CONTENT AREA — NO GRADIENT, CLEAN WHITE
+=================================================*/
+.sn-inner {
+    @apply bg-white rounded-3xl p-8 shadow-lg flex flex-col;
+    border-radius: 20px;
+
+    /* gradient border */
+    border: 1px solid transparent;
+    background-image:
+        linear-gradient(white, white),
+        linear-gradient(135deg, #41b1ff, #a055f3);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    padding: 20px;
+    height: 280px;
+}
+
+/* ================================================
+   TAG STYLE
+=================================================*/
+.sn-tag {
+    @apply flex items-center rounded-xl px-4 py-2 font-medium;
+    background: #E9E7FF;
+    font-size: 15px;
+    color: #4b4b4b;
+    padding: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+}
+
+/* ================================================
+   SWIPER BUTTONS
+=================================================*/
+.swiper-button-next,
+.swiper-button-prev {
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 50%;
+    color: #7A6FF0 !important;
+}
+.swiper-button-prev{
+    left: 299px !important;
+}
+.swiper-button-next{
+    right: 299px !important;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background: #F3F0FF !important;
+}
+
+/* ================================================
+   SWIPER PAGINATION
+=================================================*/
+.swiper-pagination-bullet {
+    background: #c5c5c5 !important;
+    opacity: 1 !important;
+}
+.swiper-pagination{
+    top: 650px !important;
+
+}
+
+.swiper-pagination-bullet-active {
+    background: #7A6FF0 !important;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade In */
+.animate-fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Slide Up */
+.animate-slide-up {
+    opacity: 0;
+    animation: slideUp 0.5s ease-out forwards;
+}
+
+/* Slide Up Delays */
+.animate-slide-up.delay-100 { animation-delay: 0.1s; }
+.animate-slide-up.delay-200 { animation-delay: 0.2s; }
+.animate-slide-up.delay-300 { animation-delay: 0.3s; }
+.animate-slide-up.delay-400 { animation-delay: 0.4s; }
+.animate-slide-up.delay-500 { animation-delay: 0.5s; }
+
+/* Fade In Delays */
+.animate-fade-in.delay-200 { animation-delay: 0.2s; }
+.animate-fade-in.delay-300 { animation-delay: 0.3s; }
+.animate-fade-in.delay-400 { animation-delay: 0.4s; }
+.animate-fade-in.delay-500 { animation-delay: 0.5s; }
+
+.animate-tags{
+    opacity: 1;
+  transform: translateY(0);
+  animation: bounceIn 1.2s ease-out;
+}
+
+/* ================================================
+   PREVENT ROOT OVERFLOW
+=================================================*/
+body,
+html {
+    overflow-x: hidden;
+}
+
+.border-b-2 {
+    border-bottom-width: 2px;
+}
+
+.text-indigo-600 {
+    color:rgb(10, 109, 171);
+}
+
+.border-indigo-600 {
+    border-color: rgb(10, 109, 171);
+}
+
+.text-gray-500 {
+    color: #6b7280;
+}
+
+.hover\:text-gray-700:hover {
+    color: #374151;
+}
+
+/* For the tab switching functionality */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+/* CSS FOR status page :: start */
+/* Progress Container Styles */
+.progress-container {
+    position: relative;
+}
+
+/* Stage Markers (Trans, Seg, Job, Complete) */
+.stage-markers {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: -15px;
+    left: 0;
+    right: 0;
+    padding: 0 5px;
+}
+
+.stage-marker {
+    position: absolute;
+    top: -25px;
+    font-size: 11px;
+    font-weight: 500;
+    color: #6c757d;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.stage-marker:nth-child(1) { left: 10%; }  /* Trans */
+.stage-marker:nth-child(2) { left: 35%; }  /* Seg */
+.stage-marker:nth-child(3) { left: 60%; }  /* Job */
+.stage-marker:nth-child(4) { left: 85%; }  /* Complete */
+
+/* Progress Bar Container */
+.progress-1 {
+    height: 24px;
+    background-color: #f3f6f9;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #e9ecef;
+}
+
+/* Progress Bar Splits/Vertical Lines */
+.progress-split {
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #dee2e6;
+    z-index: 1;
+}
+
+.progress-split:nth-child(1) { left: 25%; }
+.progress-split:nth-child(2) { left: 50%; }
+.progress-split:nth-child(3) { left: 75%; }
+
+/* Progress Bar */
+.progress-bar-1 {
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    transition: width 0.6s ease;
+}
+
+/* Progress Sheen/Glow Effect */
+.progress-sheen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, 
+        rgba(255,255,255,0) 0%, 
+        rgba(255,255,255,0.3) 50%, 
+        rgba(255,255,255,0) 100%);
+    animation: sheen 2s infinite;
+    pointer-events: none;
+}
+
+@keyframes sheen {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Status Badges */
+.status-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.status-pending {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeaa7;
+}
+
+.status-processing {
+    background-color: #cce5ff;
+    color: #004085;
+    border: 1px solid #b8daff;
+}
+
+.status-completed {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.status-failed {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Progress Bar Colors */
+.bg-primary {
+    background-color: #3699ff !important;
+    background-image: linear-gradient(45deg, 
+        rgba(255,255,255,0.15) 25%, 
+        transparent 25%, 
+        transparent 50%, 
+        rgba(255,255,255,0.15) 50%, 
+        rgba(255,255,255,0.15) 75%, 
+        transparent 75%, 
+        transparent);
+    background-size: 1rem 1rem;
+}
+
+.bg-success {
+    background-color: #3699ff !important;
+    background-image: linear-gradient(45deg, 
+        rgba(255,255,255,0.15) 25%, 
+        transparent 25%, 
+        transparent 50%, 
+        rgba(255,255,255,0.15) 50%, 
+        rgba(255,255,255,0.15) 75%, 
+        transparent 75%, 
+        transparent);
+    background-size: 1rem 1rem;
+}
+
+.bg-warning {
+    background-color: #ffa800 !important;
+    background-image: linear-gradient(45deg, 
+        rgba(255,255,255,0.15) 25%, 
+        transparent 25%, 
+        transparent 50%, 
+        rgba(255,255,255,0.15) 50%, 
+        rgba(255,255,255,0.15) 75%, 
+        transparent 75%, 
+        transparent);
+    background-size: 1rem 1rem;
+}
+
+.bg-danger {
+    background-color: #f64e60 !important;
+    background-image: linear-gradient(45deg, 
+        rgba(255,255,255,0.15) 25%, 
+        transparent 25%, 
+        transparent 50%, 
+        rgba(255,255,255,0.15) 50%, 
+        rgba(255,255,255,0.15) 75%, 
+        transparent 75%, 
+        transparent);
+    background-size: 1rem 1rem;
+}
+
+/* Progress Bar Animation */
+.progress-bar-animated-1 {
+    animation: progress-bar-stripes 1s linear infinite;
+}
+
+@keyframes progress-bar-stripes {
+    0% { background-position: 1rem 0; }
+    100% { background-position: 0 0; }
+}
+
+/* Optional: Add some spacing for the entire table cell */
+.table td {
+    vertical-align: middle;
+    padding: 12px 8px;
+}
+
+/* Optional: For better mobile responsiveness */
+@media (max-width: 768px) {
+    .stage-marker {
+        font-size: 9px;
+        top: -22px;
+    }
+    
+    .progress {
+        height: 20px;
+    }
+    
+    .progress-bar {
+        font-size: 10px;
+    }
+    
+    .status-badge {
+        font-size: 10px;
+        padding: 3px 8px;
+    }
+}
+/* CSS FOR status page :: end */
+
+
+.phrase-item .phrase-select-label {
+opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+.phrase-item:hover .phrase-select-label {
+  opacity: 1;
+  pointer-events: auto;
+}

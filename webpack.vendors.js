@@ -71,5 +71,17 @@ module.exports = {
 				dist: "/assets/vendors/jquery/jquery.min.js"
 			}
 		],
+		swiper: [
+			{
+				src: ['node_modules/swiper/swiper-bundle.min.css'],
+				dist: '/assets/vendors/swiper/swiper-bundle.min.css',
+				bundle: true,
+			},
+			{
+				src: ['node_modules/swiper/swiper-bundle.min.js'],
+				dist: '/assets/vendors/swiper/swiper-bundle.min.js',
+				bundle: true,
+			}
+		],
 	},
 };

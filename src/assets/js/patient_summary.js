@@ -1,11 +1,11 @@
 import Swal from 'sweetalert2';
 window.Swal = Swal;
 
-// import Swiper from 'swiper';
-// import 'swiper/css';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
-// window.Swiper = Swiper;
+import Swiper from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+window.Swiper = Swiper;
 
 // Global toastr settings
 toastr.options = {
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Token is older than 24 hours
       localStorage.removeItem('access_token');
       localStorage.removeItem('access_token_time');
-      window.location.href = '../index.html';
+      window.location.href = "./index.html";
     } else {
       console.log('JWT token is still valid.');
     }
@@ -74,7 +74,7 @@ const urlUserName = params.get('user_name');
 function fetchPatientCounts() {
   const token = localStorage.getItem('access_token');
   if (!token) {
-    window.location.href = '../index.html';
+    window.location.href = "./index.html";
     return;
   }
 
@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const token = localStorage.getItem('access_token');
   if (!token) {
-    window.location.href = '../index.html';
+    window.location.href = "./index.html";
   }
   fetchPatientList(`${BASE_URL}patient-name-list`);
 });
@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function fetchArchivedPatientList(url) {
   const token = localStorage.getItem('access_token');
   if (!token) {
-    window.location.href = '../index.html';
+    window.location.href = "./index.html";
   }
  
   showLoadingMessage();
@@ -231,7 +231,7 @@ function updateArchivedPatientList(patients) {
 
       const token = localStorage.getItem("access_token");
       if (!token) {
-        window.location.href = '../index.html';
+        window.location.href = "./index.html";
         return;
       }
 
@@ -397,7 +397,7 @@ function updateArchivedPatientList(patients) {
     //   event.stopPropagation();
     //   const token = localStorage.getItem("access_token");
     //   if (!token) {
-    //     window.location.href = '../index.html';
+    //     window.location.href = "./index.html";
     //     return;
     //   }
     //   const patientName = noteMenu.dataset.patientName;
@@ -585,7 +585,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 globalAudio.currentTime = 0;
 
                 // Show loading spinner icon
-                this.innerHTML = `<i class="ki-filled ki-arrows-circle spinner-icon animate-spin rounded-full -ml-2 text-color"></i>`;
+                this.innerHTML = `<i class="ki-outline ki-arrows-circle spinner-icon animate-spin rounded-full -ml-2 text-color"></i>`;
                 currentPlayingBtn = this;
                 const token = localStorage.getItem("access_token");
 
@@ -646,7 +646,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // 🔄 Add spinner immediately
         processBtn.innerHTML = `
             <span class="flex items-center gap-2 justify-center">
-                <i class="ki-filled ki-arrows-circle animate-spin text-lg"></i>
+                <i class="ki-outline ki-arrows-circle animate-spin text-lg"></i>
                 Processing...
             </span>
         `;
@@ -693,7 +693,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // 3️⃣ Add spinner
         if (item) {
             const spinner = document.createElement("i");
-            spinner.className = "ki-filled ki-arrows-circle spinner-icon animate-spin rounded-full -ml-2";
+            spinner.className = "ki-outline ki-arrows-circle spinner-icon animate-spin rounded-full -ml-2";
             spinner.style.marginLeft = "10px";
             spinner.style.color = "#0b6fac";
             item.appendChild(spinner);
@@ -1003,8 +1003,657 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 // transcript drawer :: end
 
+// phrases drawer ::start
+document.addEventListener("DOMContentLoaded", function () {
+
+    const token = localStorage.getItem("access_token");
+
+    const phraseDrawerEl = document.getElementById("drawer_phrase");
+    const phraseDrawer = new KTDrawer(phraseDrawerEl);
+
+    // Drawer elements
+    const listWrapper = document.getElementById("drawer_phrase_list_wrapper");
+    const listContainer = document.getElementById("drawer_phrase_list");
+    const editView = document.getElementById("drawer_phrase_edit");
+    const editFooter = document.getElementById("drawer_phrase_edit_footer");
+    const viewMode = document.getElementById("drawer_phrase_view");
+    const createView = document.getElementById("drawer_phrase_create");
+    const createKey = document.getElementById("createPhraseKey");
+    const createValue = document.getElementById("createPhraseValue");
+
+
+    // Fields
+    const keyInput = document.getElementById("editPhraseKey");
+    const valueTextarea = document.getElementById("editPhraseValue");
+    const viewKey = document.getElementById("viewPhraseKey");
+    const viewValue = document.getElementById("viewPhraseValue");
+
+    const cancelBtn = document.getElementById("cancelEditPhrase");
+    const saveBtn = document.getElementById("saveEditPhrase");
+
+    const $errorEl = $("#phraseKeyError");       
+    const $valueError = $("#phraseValueError");  
+
+
+    let selectedKey = null;
+
+    window.loadPhrases = async function () {
+
+        listContainer.innerHTML = `
+            <p class="text-center text-gray-500 py-4 text-sm">Loading phrases...</p>
+        `;
+
+        try {
+            const res = await fetch(`${BASE_PHRASE_URL}fetch-all-phrase`, {
+                method: "GET",
+                headers: {
+                    "Authorization": `Bearer ${token}`,
+                    "Content-Type": "application/json",
+                },
+            });
+
+            const data = await res.json();
+            const phrases = data.phrases || {};
+
+            if ($.isEmptyObject(phrases)) {
+                listContainer.innerHTML = `
+                    <p class="text-center text-gray-500 py-4 text-sm">No Phrases Found</p>
+                `;
+                return;
+            }
+
+            let html = "";
+
+            Object.entries(phrases).forEach(([key, phraseObj]) => {
+                let value = phraseObj?.value ?? phraseObj ?? "";
+
+                if (value === "[object Object]") {
+                    value = JSON.stringify(value);
+                }
+
+                const displayValue = value.length > 23 ? value.substring(0, 23) + "..." : value;
+
+                html += `
+                    <div class="border border-gray-300 rounded-xl p-3 mb-3 shadow-sm transition-colors phrase-item">
+                        <div class="flex justify-between items-start w-full">
+                            <!-- Checkbox (hidden but functional) -->
+                            <input type="checkbox" 
+                                  name="addPhrase[]" 
+                                  id="addPhrase-${key}" 
+                                  value="${key}"
+                                  class="hidden">
+                            
+                            <!-- Phrase Content (clickable area) -->
+                            <div class="phrase-click cursor-pointer flex-1 mx-3"
+                                data-key="${key}"
+                                data-value="${value}">
+                                <div class="text-xs font-semibold text-color mb-1">${key}</div>
+                                <div class="text-xs text-gray-800">${displayValue}</div>
+                            </div>
+
+                            <!-- Action Buttons -->
+                            <div class="flex gap-2">
+                                <span class="flex phrase-select-label text-xs text-color font-medium cursor-pointer text-color items-center justify-center"
+                                      data-key="${key}">
+                                    Select
+                                </span>
+                                <button class="cursor-pointer p-1 rounded hover:bg-gray-200 edit-btn"
+                                        data-key="${key}"
+                                        data-value="${value}"
+                                        title="Edit Phrase">
+                                    <i class="ki-solid ki-pencil text-base text-color"></i>
+                                </button>
+                                <button class="cursor-pointer p-1 rounded hover:bg-red-100 delete-btn"
+                                        data-key="${key}"
+                                        title="Delete Phrase">
+                                    <i class="ki-solid ki-trash text-base text-color"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            listContainer.innerHTML = html;
+
+        } catch (err) {
+            console.error("Phrase Load Error:", err);
+            listContainer.innerHTML = `
+                <p class="text-center text-red-500 py-4 text-sm">Failed to load phrases</p>
+            `;
+        }
+    };
+
+    loadPhrases();
+
+  let selectedPhrases = [];  // GLOBAL ARRAY
+
+  document.addEventListener("click", function (e) {
+      const selectLabel = e.target.closest(".phrase-select-label");
+      if (!selectLabel) return;
+
+      const key = selectLabel.dataset.key;
+      const checkbox = document.getElementById('addPhrase-' + key);
+
+      if (!checkbox) return;
+
+      // Toggle checkbox
+      checkbox.checked = !checkbox.checked;
+
+      const phraseItem = selectLabel.closest(".phrase-item");
+
+      if (checkbox.checked) {
+          // Add key to selectedPhrases (avoid duplicates)
+          if (!selectedPhrases.includes(key)) {
+              selectedPhrases.push(key);
+          }
+
+          phraseItem.classList.add("bg-blue-50", "border-blue-300");
+          selectLabel.textContent = "Selected";
+          selectLabel.classList.add("text-color");
+          selectLabel.classList.remove("text-color");
+      } else {
+          // Remove key when un-selected
+          selectedPhrases = selectedPhrases.filter(k => k !== key);
+
+          phraseItem.classList.remove("bg-blue-50", "border-blue-300");
+          selectLabel.textContent = "Select";
+          selectLabel.classList.remove("text-color");
+          selectLabel.classList.add("text-color");
+      }
+
+      console.log("Selected phrases:", selectedPhrases);
+  });
+
+
+// ✅ Only ONE save click listener (outside the document click handler)
+$('#saveAddInfoPhrase').on('click', async function () {
+    const $btn = $(this);
+    const soap_url = document.getElementById('hd_soap_url').value;
+    const part = soap_url.split("/")[3];
+    const patientId = part.split("_")[1];
+
+    const token = localStorage.getItem('access_token');
+
+    // VALIDATION
+    if (!patientId) {
+        toastr.error('Please select a patient first.');
+        return;
+    }
+    if (selectedPhrases.length === 0) {
+        toastr.warning('Please select at least one phrase.');
+        return;
+    }
+    if (!token) {
+        toastr.error('Please login again.');
+        window.location.href = "./index.html";
+        return;
+    }
+
+    // SPINNER
+    $btn.prop('disabled', true)
+        .html('<span class="spinner-border spinner-border-sm mr-2"></span>Adding...');
+
+    try {
+        const response = await fetch(`${BASE_URL}add-phrases-to-infostream`, {
+            method: "POST",
+            headers: {
+                "Authorization": `Bearer ${token}`,
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                patient_id: patientId,
+                phrase_keys: selectedPhrases
+            }),
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+            toastr.success(data.message || 'Phrases added successfully!');
+
+            // Reset UI
+            selectedPhrases = [];
+            $(".phrase-checkbox").prop("checked", false);
+            setTimeout(() => {
+                  phraseDrawer.hide();
+              }, 300);
+        } else {
+            toastr.error(data.message || "Failed to add phrases.");
+        }
+    } catch (err) {
+        toastr.error("Something went wrong.");
+        console.error(err);
+    } finally {
+        $btn.prop("disabled", false)
+            .html('<i class="la la-external-link-alt mr-1"></i> Add to InfoStream');
+    }
+});
+
+
+
+    // Separate function for SOAP notification logic
+    async function triggerSoapNotification(patientId, token, BASE_URL) {
+        try {
+            const soap_notes = await fetch(`${BASE_URL}ondemand/pending-soap-notes?patient_id=${patientId}`, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                },
+            });
+
+            if (!soap_notes.ok) return;
+
+            const soap_response = await soap_notes.json();
+
+            // --- Find SOAP Tab (by text) ---
+            const allNavLinks = document.querySelectorAll('#navTabs .nav-link');
+            let soapTab = null;
+            allNavLinks.forEach(link => {
+                const textEl = link.querySelector('.nav-text');
+                if (textEl && textEl.textContent.trim() === 'SOAP') {
+                    soapTab = link;
+                }
+            });
+
+            // --- Button reference ---
+            const soapButton = document.getElementById('onDemandSummaryCall');
+
+            // --- Remove existing dots ---
+            if (soapTab) {
+                const oldDot = soapTab.querySelector('.notification-dot');
+                if (oldDot) oldDot.remove();
+            }
+            if (soapButton) {
+                const oldBtnDot = soapButton.querySelector('.notification-dot');
+                if (oldBtnDot) oldBtnDot.remove();
+            }
+
+            // --- Add new dots if needed ---
+            if (soap_response.needs_soap === true) {
+                if (soapTab) {
+                    const tabDot = document.createElement('span');
+                    tabDot.className = 'notification-dot';
+                    tabDot.style.cssText = `
+                        position: absolute;
+                        top: 2px;
+                        right: 2px;
+                        width: 8px;
+                        height: 8px;
+                        background-color: red;
+                        border-radius: 50%;
+                        display: inline-block;
+                    `;
+                    soapTab.style.position = 'relative';
+                    soapTab.appendChild(tabDot);
+                }
+
+                if (soapButton) {
+                    const btnDot = document.createElement('span');
+                    btnDot.className = 'notification-dot';
+                    btnDot.style.cssText = `
+                        position: absolute;
+                        top: 0px;
+                        right: 0px;
+                        width: 10px;
+                        height: 10px;
+                        background-color: red;
+                        border-radius: 50%;
+                        display: inline-block;
+                    `;
+                    soapButton.style.position = 'relative';
+                    soapButton.appendChild(btnDot);
+                }
+            }
+
+        } catch (err) {
+            console.error('SOAP notification check failed:', err);
+        }
+    }
+
+    // Also add click handler for the entire phrase item to toggle checkbox
+    document.addEventListener("click", function (e) {
+        const phraseClick = e.target.closest(".phrase-click");
+        if (!phraseClick) return;
+        
+        const key = phraseClick.dataset.key;
+        const checkbox = document.getElementById('addPhrase-' + key);
+        
+        if (checkbox) {
+            checkbox.checked = !checkbox.checked;
+            
+            // Update the select label text as well
+            const selectLabel = phraseClick.closest(".phrase-item").querySelector(".phrase-select-label");
+            if (selectLabel) {
+                selectLabel.textContent = checkbox.checked ? "Selected" : "Select";
+                if (checkbox.checked) {
+                    selectLabel.classList.add("text-color");
+                    selectLabel.classList.remove("text-color");
+                } else {
+                    selectLabel.classList.remove("text-color");
+                    selectLabel.classList.add("text-color");
+                }
+            }
+            
+            // Update item background
+            const phraseItem = phraseClick.closest(".phrase-item");
+            if (checkbox.checked) {
+                phraseItem.classList.add("bg-blue-50", "border-blue-300");
+            } else {
+                phraseItem.classList.remove("bg-blue-50", "border-blue-300");
+            }
+        }
+    });
+
+    document.getElementById("addPhraseBtn").addEventListener("click", function () {
+
+        // Hide list + hide other views
+        listWrapper.classList.add("hidden");
+        editView.classList.add("hidden");
+        viewMode.classList.add("hidden");
+
+        // Show create view
+        createView.classList.remove("hidden");
+        editFooter.classList.remove("hidden"); // reuse Save + Cancel footer
+        document.getElementById("drawer_phrase_listing_footer").classList.add("hidden");
+
+        // Reset fields
+        createKey.value = "";
+        createValue.value = "";
+    });
+
+
+    /* VIEW */
+
+    document.addEventListener("click", function (e) {
+        const item = e.target.closest(".phrase-click");
+        if (!item) return;
+        viewKey.value = item.getAttribute("data-key");
+        viewValue.value = item.getAttribute("data-value");
+
+        listWrapper.classList.add("hidden");
+        editView.classList.add("hidden");
+        editFooter.classList.add("hidden");
+        viewMode.classList.remove("hidden");
+        createView.classList.add("hidden");
+        document.getElementById("drawer_phrase_view_footer").classList.remove("hidden");
+        document.getElementById("drawer_phrase_listing_footer").classList.add("hidden");
+
+    });
+    document.getElementById("closeViewModeBtn").addEventListener("click", function () {
+
+        viewMode.classList.add("hidden");
+        document.getElementById("drawer_phrase_view_footer").classList.add("hidden");
+
+        // always return to list
+        listWrapper.classList.remove("hidden");
+        document.getElementById("drawer_phrase_listing_footer").classList.remove("hidden");
+    });
+  
+    document.addEventListener("click", function (e) {
+        const btn = e.target.closest(".edit-btn");
+        if (!btn) return;
+
+        selectedKey = btn.getAttribute("data-key");
+        const value = btn.getAttribute("data-value");
+
+        keyInput.value = selectedKey;
+        valueTextarea.value = value;
+
+        // Switch UI → Edit Mode
+        listWrapper.classList.add("hidden");
+        viewMode.classList.add("hidden");
+        editView.classList.remove("hidden");
+        editFooter.classList.remove("hidden");
+        document.getElementById("drawer_phrase_listing_footer").classList.add("hidden");
+
+    });
+
+    cancelBtn.addEventListener("click", function () {
+
+        // Hide all modes
+        editView.classList.add("hidden");
+        createView.classList.add("hidden");
+        viewMode.classList.add("hidden");
+        editFooter.classList.add("hidden");
+
+        // Show list
+        listWrapper.classList.remove("hidden");
+        document.getElementById("drawer_phrase_listing_footer").classList.remove("hidden");         
+        // Reset values
+        createKey.value = "";
+        createValue.value = "";
+        keyInput.value = "";
+        valueTextarea.value = "";
+    });
+
+    const phraseRegex = /^[A-Za-z0-9_\-\/]+$/;
+
+    saveBtn.addEventListener("click", async function () {
+
+        const isEdit = !editView.classList.contains("hidden");
+        const isCreate = !createView.classList.contains("hidden");
+
+        let key, value, url;
+
+        if (isCreate) {
+            key = createKey.value.trim();
+            value = createValue.value.trim();
+            url = `${BASE_PHRASE_URL}add-phrase`; // Your create API endpoint
+        } 
+        else if (isEdit) {
+            key = selectedKey;
+            value = valueTextarea.value.trim();
+            url = `${BASE_PHRASE_URL}edit-phrase`;
+        }
+
+        if (!key || !value) {
+            toastr.warning("Key and Value cannot be empty.");
+            return;
+        }
+        
+        saveBtn.disabled = true;
+        saveBtn.textContent = "Saving...";
+
+        try {
+            const res = await fetch(url, {
+                method: "POST",
+                headers: {
+                    "Authorization": `Bearer ${token}`,
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ key, value })
+            });
+
+            const data = await res.json();
+            if (!res.ok) throw data;
+
+            toastr.success(data.message || "Success!");
+            
+            // RESET UI
+            createView.classList.add("hidden");
+            editView.classList.add("hidden");
+            editFooter.classList.add("hidden");
+            viewMode.classList.add("hidden");
+
+            listWrapper.classList.remove("hidden");
+            document.getElementById("drawer_phrase_listing_footer").classList.remove("hidden");
+            setTimeout(() => {
+                  loadPhrases();
+              }, 50);
+
+        } catch (err) {
+            toastr.error(err.message || "Failed to save phrase.");
+        } finally {
+            saveBtn.disabled = false;
+            saveBtn.textContent = "Save";
+        }
+    });
+
+    function validatePhraseKeyOnType(input) {
+        const key = input.value.trim();
+        const pattern = /^[A-Za-z0-9_\-\/]+$/;
+        const err = document.getElementById("phraseKeyError");
+
+        err.classList.add("hidden");
+        err.innerHTML = "";
+
+        if (key.length === 0) return;
+
+        if (!pattern.test(key)) {
+            err.innerHTML = `
+                <strong>Invalid phrase format.</strong><br>
+                <ul class="pl-4">
+                    <li>Allowed: A–Z, a–z, 0–9, _, -, /</li>
+                    <li>No spaces or other symbols</li>
+                </ul>`;
+            err.classList.remove("hidden");
+        }
+    }
+
+     document.addEventListener("click", function (e) {
+        const btn = e.target.closest(".delete-btn");
+        if (!btn) return;
+
+        const selectedKey = btn.getAttribute("data-key");
+        const token = localStorage.getItem("access_token");
+
+        Swal.fire({
+            title: 'Delete Phrase',
+            html: `
+                <p class="font-medium text-gray-800">
+                    Are you sure you want to delete?
+                </p>
+            `,
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonText: 'Yes',
+            cancelButtonText: 'No',
+            allowOutsideClick: false,
+            reverseButtons: true,
+            customClass: {
+                confirmButton:
+                    'cursor-pointer border border-gray-300 bg-transparent shadow-md text-xs font-medium rounded-2xl py-2 px-8',
+                cancelButton:
+                    'cursor-pointer border border-gray-300 bg-transparent shadow-md text-xs font-medium rounded-2xl py-2 px-8 mr-2',
+                title: 'custom-swal-title'
+            },
+            buttonsStyling: false
+        }).then(async (result) => {
+
+            if (!result.isConfirmed) return;
+
+            Swal.fire({
+                title: 'Deleting...',
+                text: 'Please wait while the phrase is being deleted.',
+                allowOutsideClick: false,
+                didOpen: () => Swal.showLoading()
+            });
+
+            try {
+                const response = await fetch(`${BASE_PHRASE_URL}delete-phrase`, {
+                    method: "POST",
+                    headers: {
+                        "Authorization": `Bearer ${token}`,
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ key: selectedKey })
+                });
+
+                const data = await response.json();
+                Swal.close();
+
+                if (response.ok) {
+                    toastr.success(data.message || "Phrase deleted successfully!");
+                    loadPhrases();
+
+                    // Exit edit mode if editing
+                    editView.classList.add("hidden");
+                    editFooter.classList.add("hidden");
+                    listWrapper.classList.remove("hidden");
+
+                } else {
+                    toastr.error(data.message || "Failed to delete phrase.");
+                }
+
+            } catch (error) {
+                Swal.close();
+                console.error("Delete phrase error:", error);
+                toastr.error("An error occurred while deleting the phrase.");
+            }
+        });
+
+    });
+    createKey.addEventListener("input", function () {
+        validatePhraseKeyOnType(this);
+    });
+    valueTextarea.addEventListener("input", function () {
+        const max = 4096;
+        if (this.value.length > max) {
+            toastr.error("Limit exceeded (4096 characters max)");
+            this.value = this.value.substring(0, max);
+        }
+    });
+    createValue.addEventListener("input", function () {
+        if (this.value.length > 4096) {
+            toastr.error("Limit exceeded (4096 characters max)");
+            this.value = this.value.substring(0, 4096);
+        }
+    });
+    function resetPhraseDrawer() {
+
+        console.log("Resetting Phrase Drawer...");
+
+        // 1️⃣ Hide all modes
+        listWrapper.classList.remove("hidden");
+        editView.classList.add("hidden");
+        createView.classList.add("hidden");
+        viewMode.classList.add("hidden");
+
+        editFooter.classList.add("hidden");
+        document.getElementById("drawer_phrase_view_footer")?.classList.add("hidden");
+        document.getElementById("drawer_phrase_listing_footer").classList.remove("hidden");
+        // 2️⃣ Clear all inputs
+        createKey.value = "";
+        createValue.value = "";
+        keyInput.value = "";
+        valueTextarea.value = "";
+        viewKey.value = "";
+        viewValue.value = "";
+
+        // 3️⃣ Clear selected phrase array
+        selectedPhrases = [];
+
+        // 4️⃣ Reset all checkbox states + UI styles
+        document.querySelectorAll("#drawer_phrase_list input[type='checkbox']").forEach(cb => {
+            cb.checked = false;
+        });
+
+        document.querySelectorAll(".phrase-item").forEach(item => {
+            item.classList.remove("bg-blue-50", "border-blue-300");
+        });
+
+        document.querySelectorAll(".phrase-select-label").forEach(lbl => {
+            lbl.textContent = "Select";
+            lbl.classList.remove("text-color");
+            lbl.classList.add("text-color");
+        });
+
+        // 5️⃣ Reset scroll
+        phraseDrawerEl.querySelector(".kt-drawer-content").scrollTop = 0;
+    }
+    document.getElementById("phraseDrawer")
+    .addEventListener("click", () => {
+        resetPhraseDrawer();
+        loadPhrases(); // load fresh list
+    });
+
+});
+// phrases drawer :: end
+
 async function fetchArchivedPatientDetails(patientName, patientId, element) {
-  // toggleContent();
+  toggleContent();
   // const recordingBlock = document.querySelector('.patient-wise-recording');
   // if (recordingBlock) {
   //   recordingBlock.style.display = 'none';
@@ -1207,17 +1856,12 @@ async function fetchArchivedPatientDetails(patientName, patientId, element) {
   fetchArchivedPatientHpDetails(patientName);
   fetchArchivedPatientDsDetails(patientName);
   // loadTasks(patientName);
-
-  // loadSutureFix(patientName, 'archived');
-  // loadUploads(patientName, 'archived');      
-  // loadPhrases('archived');  
-
 }
 
 function fetchPatientList(url, isPending = false) {
   const token = localStorage.getItem('access_token');
   if (!token) {
-    window.location.href = '../index.html';
+    window.location.href = "./index.html";
   }
 
   showLoadingMessage(); // Show loading before fetching
@@ -1433,7 +2077,7 @@ async function updatePatientList(patientData, isPending, selectedSortValue=null)
 
       const token = localStorage.getItem("access_token");
       if (!token) {
-        window.location.href = '../index.html';
+        window.location.href = "./index.html";
         return;
       }
 
@@ -1770,7 +2414,7 @@ function fetchPendingPatientSegments(patientName, element) {
   selectedPatientName = patientName;
   const token = localStorage.getItem('access_token');
   if (!token) {
-    window.location.href = '../index.html';
+    window.location.href = "./index.html";
     return;
   }
 
@@ -1889,7 +2533,7 @@ async function handleSummaryAction(autoId, acceptStatus) {
   try {
     const token = localStorage.getItem('access_token');
     if (!token) {
-      window.location.href = '../index.html';
+      window.location.href = "./index.html";
       return;
     }
     const response = await fetch(`${BASE_URL}summary/accept_status`, {
@@ -2210,7 +2854,7 @@ function mergeBuffersFinal(chunks) {
 const callPauseBackendAPI = async (endpoint, method = 'POST', body = null) => {
   const token = localStorage.getItem('access_token');
   if (!token) {
-    window.location.href = '../index.html';
+    window.location.href = "./index.html";
     return null;
   }
 
@@ -2800,7 +3444,7 @@ function addRecIcon(patientName, patientId) {
       try {
         const token = localStorage.getItem('access_token');
         if (!token) {
-          window.location.href = '../index.html';
+          window.location.href = "./index.html";
           return;
         }
 
@@ -2856,7 +3500,7 @@ function addRecIcon(patientName, patientId) {
     const callBackendAPI = async (endpoint, method = 'POST', body = null) => {
       const token = localStorage.getItem('access_token');
       if (!token) {
-        window.location.href = '../index.html';
+        window.location.href = "./index.html";
         return null;
       }
 
@@ -3384,7 +4028,7 @@ function addRecIcon(patientName, patientId) {
                       if (existingSpinner) existingSpinner.remove();
 
                       const spinner = document.createElement("i");
-                      spinner.className = "ki-filled ki-arrows-circle spinner-icon animate-spin rounded-full -ml-2";
+                      spinner.className = "ki-outline ki-arrows-circle spinner-icon animate-spin rounded-full -ml-2";
                       spinner.style.color = "#0b6fac";
                       nameSpinner.parentNode.appendChild(spinner);
 
@@ -3699,7 +4343,7 @@ function addRecIcon(patientName, patientId) {
                         if (existingTick) existingTick.remove();
 
                         const spinner = document.createElement("i");
-                        spinner.className = "ki-filled ki-arrows-circle spinner-icon animate-spin rounded-full -ml-2";
+                        spinner.className = "ki-outline ki-arrows-circle spinner-icon animate-spin rounded-full -ml-2";
                         spinner.style.color = "#0b6fac";
                         nameSpinner.parentNode.appendChild(spinner);
 
@@ -3968,16 +4612,36 @@ function handleTranscriptionFailure(data, socket, ...intervals) {
   socket.disconnect();
 }
 
-function createIconRow(currentPatient, id) {
-  const iconRow = document.createElement('div');
-  iconRow.className = 'flex pt-5 feedback';
+// Helper to escape HTML special chars
+function escapeHTMLSet(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
 
-  iconRow.innerHTML = `
-    <i class="material-icons mr-5 cursor-pointer thumb-up text-gray-300" onclick="updateLikeAndDisLike('${currentPatient}', 'thumbs_up', '${id}')">thumb_up</i>
-    <i class="material-icons mr-5 cursor-pointer thumb-down text-gray-300" onclick="updateLikeAndDisLike('${currentPatient}', 'thumbs_down', '${id}')">thumb_down</i>
-    <i class="material-icons cursor-pointer comment text-gray-300" onclick="openCommentModal('${currentPatient}', '${id}')">comment</i>
-  `;
-  return iconRow;
+function createIconRow(currentPatient, id) {
+  // Protect against XSS by escaping user-controlled values before interpolating
+  var escapedPatient = escapeHTMLSet(currentPatient);
+  var escapedId = escapeHTMLSet(id);
+  var iconRow = document.createElement('div');	  var iconRow = document.createElement('div');
+  iconRow.className = 'flex pt-5 feedback';	
+  iconRow.innerHTML = "\n    <i class=\"material-icons mr-5 cursor-pointer thumb-up text-gray-300\" onclick=\"updateLikeAndDisLike('" +
+    escapedPatient +
+    "', 'thumbs_up', '" +
+    escapedId +
+    "')\">thumb_up</i>\n    <i class=\"material-icons mr-5 cursor-pointer thumb-down text-gray-300\" onclick=\"updateLikeAndDisLike('" +
+    escapedPatient +
+    "', 'thumbs_down', '" +
+    escapedId +
+    "')\">thumb_down</i>\n    <i class=\"material-icons cursor-pointer comment text-gray-300\" onclick=\"openCommentModal('" +
+    escapedPatient +
+    "', '" +
+    escapedId +
+    "')\">comment</i>\n  ";
+     return iconRow;
 }
 
 function displayFeedbackDesign(currentPatient) {
@@ -4035,7 +4699,7 @@ async function fetchActivePatientSegments(patientName, patientId, element) {
       await pauseCurrentRecording(id, currentPatientName);
     }
   }
-  // toggleContent();
+  toggleContent();
   // const recordingBlock = document.querySelector('.patient-wise-recording');
   // if (recordingBlock) {
   //   recordingBlock.style.display = 'block';
@@ -4136,7 +4800,7 @@ async function fetchActivePatientSegments(patientName, patientId, element) {
     icons.forEach(icon => icon.classList.remove('active'));
   });
 
-  // checkSoapNotification(patientId, token);
+  checkSoapNotification(patientId, token);
   try {
     const response = await fetch(apiUrl, {
       method: "GET",
@@ -4349,7 +5013,7 @@ async function fetchActivePatientSegments(patientName, patientId, element) {
 async function fetchPatientHpDetails(patientName) {
   const token = localStorage.getItem('access_token');
   if (!token) {
-    window.location.href = '../index.html';
+    window.location.href = "./index.html";
     return;
   }
   // Map JSON keys to class selectors
@@ -4426,7 +5090,7 @@ async function fetchPatientHpDetails(patientName) {
               //   container.innerHTML = marked.parse(formatToMarkdownSafe(value));
               // }
             } else {
-              container.innerHTML = '<p class="text-xs">No data available.</p>';
+              container.innerHTML = "<p class='text-xs'>No data available.</p>";
             }
           }
         } else {
@@ -4487,7 +5151,7 @@ async function fetchPatientHpDetails(patientName) {
 function fetchArchivedPatientHpDetails(patientName) {
   const token = localStorage.getItem('access_token');
   if (!token) {
-    window.location.href = '../index.html';
+    window.location.href = "./index.html";
     return;
   }
 
@@ -4542,7 +5206,7 @@ function fetchArchivedPatientHpDetails(patientName) {
               //   container.innerHTML = marked.parse(formatToMarkdownSafe(value));
               // }
             } else {
-              container.innerHTML = '<p class="text-xs">No data available.</p>';
+              container.innerHTML = "<p class='text-xs'>No data available.</p>";
             }
           }
         } else {
@@ -4559,7 +5223,7 @@ function fetchArchivedPatientHpDetails(patientName) {
 function fetchPatientDsDetails(patientName) {
   const token = localStorage.getItem('access_token');
   if (!token) {
-    window.location.href = '../index.html';
+    window.location.href = "./index.html";
     return;
   }
   // Map JSON keys to class selectors
@@ -4626,7 +5290,7 @@ function fetchPatientDsDetails(patientName) {
               const formattedText = value.replace(/\n/g, "<br>");
               container.innerHTML = `${formattedText}`;
             } else {
-              container.innerHTML = '<p class="text-xs">No data available.</p>';
+              container.innerHTML = "<p class='text-xs'>No data available.</p>";
             }
             // if (value && value.trim() !== '') {
             //   container.innerHTML = marked.parse(formatToMarkdownSafe(value));
@@ -4735,7 +5399,7 @@ function handleSuturePhraseButtonState(archiveState) {
 function fetchArchivedPatientDsDetails(patientName) {
   const token = localStorage.getItem('access_token');
   if (!token) {
-    window.location.href = '../index.html';
+    window.location.href = "./index.html";
     return;
   }
 
@@ -4785,7 +5449,7 @@ function fetchArchivedPatientDsDetails(patientName) {
               container.innerHTML = `${formattedText}`;
               // container.innerHTML = marked.parse(formatToMarkdownSafe(value));
             } else {
-              container.innerHTML = '<p class="text-xs">No data available.</p>';
+              container.innerHTML = "<p class='text-xs'>No data available.</p>";
             }
           }
         } else {
@@ -5110,7 +5774,7 @@ window.onDemandSummaryCall = function() {
   const token = localStorage.getItem('access_token');
 
   if (!token) {
-    window.location.href = '../index.html';
+    window.location.href = "./index.html";
     return;
   }
 
@@ -5151,7 +5815,7 @@ window.onDemandSummaryCall = function() {
         if (existingTick) existingTick.remove();
 
         const spinner = document.createElement("i");
-        spinner.className = "ki-filled ki-arrows-circle spinner-icon animate-spin rounded-full -ml-2";
+        spinner.className = "ki-outline ki-arrows-circle spinner-icon animate-spin rounded-full -ml-2";
         spinner.style.color = "#0b6fac";
         nameSpinner.parentNode.appendChild(spinner);
 
@@ -5376,7 +6040,7 @@ window.onDemandHpCall = function() {
   const token = localStorage.getItem('access_token');
 
   if (!token) {
-    window.location.href = '../index.html';
+    window.location.href = "./index.html";
     return;
   }
 
@@ -5401,7 +6065,7 @@ window.onDemandHpCall = function() {
         if (existingTick) existingTick.remove();
 
         const spinner = document.createElement("i");
-        spinner.className = "ki-filled ki-arrows-circle spinner-icon animate-spin rounded-full -ml-2";
+        spinner.className = "ki-outline ki-arrows-circle spinner-icon animate-spin rounded-full -ml-2";
         spinner.style.color = "#0b6fac";
         nameSpinner.parentNode.appendChild(spinner);
 
@@ -5636,7 +6300,7 @@ function injectHpContent(hpContent) {
         //   container.innerHTML = marked.parse(formatToMarkdownSafe(content));
         // }
       } else {
-        container.innerHTML = '<p class="text-xs">No data available.</p>';
+        container.innerHTML = "<p class='text-xs'>No data available.</p>";
       }
     }
   }
@@ -5652,7 +6316,7 @@ function formatToMarkdownSafe(text) {
 window.onDemandDsCall = function() {
   const token = localStorage.getItem('access_token');
   if (!token) {
-    window.location.href = '../index.html';
+    window.location.href = "./index.html";
     return;
   }
 
@@ -5677,7 +6341,7 @@ window.onDemandDsCall = function() {
         if (existingTick) existingTick.remove();
 
         const spinner = document.createElement("i");
-        spinner.className = "ki-filled ki-arrows-circle spinner-icon animate-spin rounded-full -ml-2";
+        spinner.className = "ki-outline ki-arrows-circle spinner-icon animate-spin rounded-full -ml-2";
         spinner.style.color = "#0b6fac";
         nameSpinner.parentNode.appendChild(spinner);
 
@@ -5893,7 +6557,7 @@ function injectDsContent(dsContent) {
         // const formatted = formatToMarkdownSafe(content);
         // container.innerHTML = marked.parse(formatted);
       } else {
-        container.innerHTML = '<p class="text-xs">No data available.</p>';
+        container.innerHTML = "<p class='text-xs'>No data available.</p>";
       }
     }
   }
@@ -5902,7 +6566,7 @@ function injectDsContent(dsContent) {
 // document.addEventListener("DOMContentLoaded", function () {
 //   const token = localStorage.getItem('access_token');
 //   if (!token) {
-//     window.location.href = '../index.html';
+//     window.location.href = "./index.html";
 //   }
 //   fetch(`${BASE_URL}authenticate/get-user-profile`, {
 //     method: "POST",
@@ -5950,7 +6614,7 @@ function injectDsContent(dsContent) {
 function copyAllRichText() {
   const token = localStorage.getItem('access_token');
   if (!token) {
-    window.location.href = '../index.html';
+    window.location.href = "./index.html";
     return;
   }
   fetch(`${BASE_URL}copy_count`, {
@@ -6073,8 +6737,8 @@ function copyAllRichText() {
 function copyAllRichTextDshp(copyAttrValue) {
   const token = localStorage.getItem('access_token');
   if (!token) {
-    // window.location.href = '../index.html';
-    // return;
+    window.location.href = "./index.html";
+    return;
   }
 
   fetch(`${BASE_URL}copy_count`, {
@@ -6240,7 +6904,7 @@ function copyRichText(id, event) {
   event.stopPropagation();
   const token = localStorage.getItem('access_token');
   if (!token) {
-    window.location.href = '../index.html';
+    window.location.href = "./index.html";
     return;
   }
   fetch(`${BASE_URL}copy_count`, {
@@ -6637,7 +7301,7 @@ async function updateProgressBarOnce(patientId) {
 document.addEventListener("DOMContentLoaded", function () {
   const token = localStorage.getItem("access_token");
   if (!token) {
-    window.location.href = '../index.html';
+    window.location.href = "./index.html";
     return;
   }
 
@@ -6813,7 +7477,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (existingSpinner) existingSpinner.remove();
 
         const spinner = document.createElement("i");
-        spinner.className = "ki-filled ki-arrows-circle spinner-icon animate-spin rounded-full -ml-2";
+        spinner.className = "ki-outline ki-arrows-circle spinner-icon animate-spin rounded-full -ml-2";
         spinner.style.color = "#0b6fac";
         if (nameSpinner) {
           nameSpinner.parentNode.appendChild(spinner);
@@ -6882,7 +7546,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function addExternalCounts(clickType) {
   const token = localStorage.getItem('access_token');
   if (!token) {
-    window.location.href = '../index.html';
+    window.location.href = "./index.html";
     return;
   }
 
@@ -7038,224 +7702,104 @@ window.openCommentModal = function(currentPatient, cardId) {
   }
 };
 
-// Save comment button event listener
-const saveCommentBtn = document.getElementById('saveCommentBtn');
-if (saveCommentBtn) {
-  saveCommentBtn.addEventListener('click', async function() {
-    const commentText = document.getElementById("commentText");
-    const errorEl = document.getElementById("commentError");
-    
-    if (!commentText) {
-      console.error("Comment textarea not found");
-      return;
+
+window.saveComment = async function() {
+  const comment = document.getElementById("commentText").value.trim();
+  const errorEl = document.getElementById("commentError");
+
+  if (!comment) {
+    errorEl.style.display = "block";
+    return;
+  }
+
+  errorEl.style.display = "none";
+  const currentNoteTypeElement = document.getElementById('currentNoteType');
+  const selectedTab = currentNoteTypeElement?.textContent.trim() || 'SOAP';
+
+  let responseUrl = "";
+  let responseType = "";
+
+  if (selectedTab == 'SOAP') {
+    responseUrl = document.getElementById('hd_soap_url').value;
+    responseType = 'SOAP';
+  } else if (selectedTab == 'H&P') {
+    responseUrl = document.getElementById('hd_hp_url').value;
+    responseType = 'HP';
+  } else if (selectedTab == 'Discharge Summary') {
+    responseUrl = document.getElementById('hd_ds_url').value;
+    responseType = 'DS';
+  }
+  
+  if (!responseUrl || !responseType || responseUrl === 'undefined') {
+    toastr.warning("There is no record for this patient");
+    $('#commentModal').modal('hide');
+    return;
+  }
+
+  const part = responseUrl.split("/")[3];
+  const crtPatient = part.split("_")[1];
+
+  const card = document.querySelector(`.${currentCardId}`).closest('.kt-accordion-content');
+
+  const accordionItem = card.parentElement;
+  const titleToggle = accordionItem.querySelector('.kt-accordion-toggle');
+  const titleSpan = titleToggle ? titleToggle.querySelector('span') : null;
+  const title = titleSpan ? titleSpan.textContent.trim() : '';
+  const token = localStorage.getItem('access_token');
+
+  const payload = {
+    patient_id: crtPatient,
+    response_type: responseType,
+    response_url: responseUrl,
+    fields: {
+      [title]: { comment: comment }
     }
-    
-    const comment = commentText.value.trim();
-    
-    if (!comment) {
-      if (errorEl) {
-        errorEl.style.display = "block"; // show error
-      }
-      return;
-    }
-    
-    if (errorEl) {
-      errorEl.style.display = "none"; // hide error
-    }
-    
-    const currentNoteTypeElement = document.getElementById('currentNoteType');
-    const selectedTab = currentNoteTypeElement?.textContent?.trim() || 'SOAP';
-    
-    let responseUrl = "";
-    let responseType = "";
-    
-    if (selectedTab === 'SOAP') {
-      const hdSoapUrl = document.getElementById('hd_soap_url');
-      responseUrl = hdSoapUrl ? hdSoapUrl.value : "";
-      responseType = 'SOAP';
-    } else if (selectedTab === 'H&P') {
-      const hdHpUrl = document.getElementById('hd_hp_url');
-      responseUrl = hdHpUrl ? hdHpUrl.value : "";
-      responseType = 'HP';
-    } else if (selectedTab === 'Discharge') {
-      const hdDsUrl = document.getElementById('hd_ds_url');
-      responseUrl = hdDsUrl ? hdDsUrl.value : "";
-      responseType = 'DS';
-    }
-    
-    // Validate response URL
-    if (!responseUrl || !responseType || responseUrl === 'undefined' || responseUrl === 'null') {
-      toastr.warning("There is no record for this patient");
-      
-      // Close KT modal properly
-      const modalEl = document.getElementById('commentModal');
-      if (modalEl) {
-        const modal = KTModal.getInstance(modalEl);
-        if (modal) {
-          modal.hide();
-        }
-      }
-      return;
-    }
-    
-    // Parse patient ID from response URL
-    let crtPatient = null;
-    try {
-      // Assuming responseUrl format like: /something/patient_123/...
-      const urlParts = responseUrl.split("/");
-      const patientPart = urlParts.find(part => part.includes("patient_"));
-      if (patientPart) {
-        crtPatient = patientPart.split("_")[1];
-      } else {
-        // Fallback: try to extract from the URL structure
-        const parts = responseUrl.split("/");
-        if (parts.length > 1) {
-          // Try to get patient ID from the path
-          for (let part of parts) {
-            if (part.startsWith("patient_")) {
-              crtPatient = part.split("_")[1];
-              break;
-            }
-          }
-        }
-      }
-    } catch (error) {
-      console.error("Error parsing patient ID:", error);
-      toastr.error("Error parsing patient information");
-      return;
-    }
-    
-    if (!crtPatient) {
-      toastr.error("Could not determine patient ID from the URL");
-      return;
-    }
-    
-    // Get the card element
-    let title = '';
-    let card = null;
-    
-    if (currentCardId) {
-      const cardElement = document.querySelector(`.${currentCardId}`);
-      if (cardElement) {
-        card = cardElement.closest('.kt-accordion-content');
-        if (card) {
-          const accordionItem = card.parentElement;
-          if (accordionItem) {
-            const titleToggle = accordionItem.querySelector('.kt-accordion-toggle');
-            if (titleToggle) {
-              const titleSpan = titleToggle.querySelector('span');
-              if (titleSpan) {
-                title = titleSpan.textContent.trim();
-              }
-            }
-          }
-        }
-      }
-    }
-    
-    if (!title) {
-      title = 'Unknown Section';
-    }
-    
-    const payload = {
-      patient_id: crtPatient,
-      response_type: responseType,
-      response_url: responseUrl,
-      fields: {
-        [title]: { comment: comment }
-      }
-    };
-    
-    const token = localStorage.getItem('access_token');
-    
-    if (!token) {
-      toastr.error("Authentication required. Please log in again.");
-      return;
-    }
-    
-    try {
-      const response = await fetch(`${BASE_URL}summary/user_rating`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`
-        },
-        body: JSON.stringify(payload)
-      });
-      
-      if (response.ok) {
-        let data = null;
-        try {
-          data = await response.json();
-        } catch (jsonError) {
-          console.warn("Response was OK but not valid JSON");
-        }
-        
-        toastr.success("Comment saved successfully!");
-        
-        // Close KT modal properly
-        const modalEl = document.getElementById('commentModal');
-        if (modalEl) {
-          const modal = KTModal.getInstance(modalEl);
-          if (modal) {
-            modal.hide();
-          }
-        }
-        
-        // Clear textarea
-        if (commentText) {
-          commentText.value = '';
-        }
-        
-        // Fetch updated ratings if data is available
-        if (data || true) { // Always try to fetch updated ratings
-          try {
-            const result = await fetch(`${BASE_URL}summary/display_user_rating?patient_id=${crtPatient}&response_type=${responseType}&response_url=${encodeURIComponent(responseUrl)}`, {
-              method: 'GET',
-              headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${token}`
-              },
-            });
-            
-            if (result.ok) {
-              const responseData = await result.json();
-              if (responseData.user_ratings && responseData.user_ratings.length > 0) {
-                const ratings = responseData.user_ratings[0].good_bad;
-                const ratingValue = ratings[title];
-                
-                // Update UI if card element exists
-                if (card) {
-                  // Remove existing active classes first
-                  const upIcon = card.querySelector('.thumb-up');
-                  const downIcon = card.querySelector('.thumb-down');
-                  
-                  if (upIcon) upIcon.classList.remove('active');
-                  if (downIcon) downIcon.classList.remove('active');
-                  
-                  // Set active based on API response
-                  if (ratingValue === "good") {
-                    if (upIcon) upIcon.classList.add('active');
-                  } else if (ratingValue === "bad") {
-                    if (downIcon) downIcon.classList.add('active');
-                  }
-                }
-              }
-            }
-          } catch (fetchError) {
-            console.error("Error fetching updated ratings:", fetchError);
-            // Don't show error toast for this - it's a secondary action
-          }
-        }
-      } else {
-        console.error("Failed to save comment. Status:", response.status);
-        toastr.error("Failed to save comment. Please try again.");
-      }
-    } catch (error) {
-      console.error("Error saving comment:", error);
-      toastr.error("An error occurred while saving the comment.");
-    }
+  };
+
+  const response = await fetch(`${BASE_URL}summary/user_rating`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    },
+    body: JSON.stringify(payload)
   });
+
+  if (response.ok) {
+    toastr.success("Comment saved successfully!");
+    const modal = document.getElementById('commentModal');
+    modal.style.display = 'none';
+    document.getElementById('commentText').value = '';
+
+    const data = await response.json();
+
+    if (data) {
+        const result = await fetch(`${BASE_URL}summary/display_user_rating?patient_id=${crtPatient}&response_type=${responseType}&response_url=${responseUrl}`, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+          },
+        });
+
+      const response_data = await result.json();
+      if (response_data.user_ratings && response_data.user_ratings.length > 0) {
+        const ratings = response_data.user_ratings[0].good_bad;
+        const ratingValue = ratings[title];
+
+        // set active based on API response
+        if (ratingValue === "good") {
+          const upIcon = card.querySelector('.thumb-up');
+          if (upIcon) upIcon.classList.add('active');
+        } else if (ratingValue === "bad") {
+          const downIcon = card.querySelector('.thumb-down');
+          if (downIcon) downIcon.classList.add('active');
+        }
+      }
+    }
+  } else {
+    console.error("Failed to save comment");
+  }
 }
 
 async function checkSoapNotification(patientId, token) {

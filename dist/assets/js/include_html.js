@@ -14,8 +14,8 @@ var __webpack_exports__ = {};
   !*** ./src/assets/js/include_html.js ***!
   \***************************************/
 document.addEventListener("DOMContentLoaded", function () {
-  includeHTML("footer-container", "../html/footer.html");
-  includeHTML("header_menu", "../html/header.html");
+  includeHTML("footer-container", "./footer.html");
+  includeHTML("header_menu", "./header.html");
 });
 function includeHTML(elementId, filePath) {
   fetch(filePath).then(function (response) {

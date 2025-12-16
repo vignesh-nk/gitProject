@@ -142,3 +142,7 @@ body {
   background: linear-gradient(#fff, #fff) padding-box, linear-gradient(135deg, #72bcef 0%, #ac68f7 100%) border-box;
   background-clip: padding-box, border-box;
 }
+
+.padding-block { padding: calc(var(--spacing) * 15);}
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }

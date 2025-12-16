@@ -1,10 +1,10 @@
 module.exports = {
   content: [
     "./src/html/**/*.html",
-    "./src/app/**/*.{js,ts,jsx,tsx}",
-    "./src/assets/js/**/*.{js,ts}",
-    "./src/core/**/*.{js,ts}",
-    "./node_modules/@keenthemes/ktui/**/*.{js,ts}"
+    "./src/app/**/*.js",
+    "./src/assets/js/**/*.js",
+    "./src/core/**/*.js",
+    "./node_modules/@keenthemes/ktui/**/*.js"
   ],
   theme: {
         extend: {

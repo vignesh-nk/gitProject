@@ -1,0 +1,2161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SutureNote - Design System & UI</title>
+    <link href="../assets/css/app.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- ===========================================
+         APP HEADER
+         =========================================== -->
+    <header data-component="AppHeader" class="app-header">
+        <div data-component="AppHeaderBrand" class="app-header-brand">
+            <img src="../UI references/SutureNote Logo.001.png" alt="SutureNote" class="app-header-logo">
+            <span class="app-header-title">SutureNote</span>
+        </div>
+        <div data-component="AppHeaderActions" class="app-header-actions">
+            <button data-component="SubscribeButton" class="btn btn-primary btn-web-sm" onclick="handleSubscribe()">
+                Subscribe
+            </button>
+            <div data-component="UserMenu" class="user-menu">
+                <button data-component="UserMenuBtn" class="user-menu-btn" onclick="toggleUserDropdown()">
+                    Hi, Prod01
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <div id="userDropdown" data-component="UserDropdown" class="user-dropdown">
+                    <button class="user-dropdown-item" onclick="handleAccount()">Account</button>
+                    <button class="user-dropdown-item" onclick="handleSettings()">Settings</button>
+                    <div class="user-dropdown-divider"></div>
+                    <button class="user-dropdown-item" onclick="handleLogout()">Logout</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===========================================
+         MAIN APPLICATION UI
+         =========================================== -->
+    <div id="appUI" class="flex bg-gray-50" style="height: calc(100vh - 56px); margin-top: 56px;">
+        <!-- Left Sidebar - Patient List -->
+        <div data-component="LeftPanel" class="w-72 bg-white border-r border-gray-200 flex flex-col">
+            <!-- Sidebar Header -->
+            <div data-component="SidebarHeader" class="p-4 border-b border-gray-200">
+                <!-- Add Patient Button -->
+                <button data-component="LeftPanelAddPatientButton" class="btn btn-primary btn-web w-full mb-4" style="border-radius: 10px;">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                    </svg>
+                    Add Patient
+                </button>
+                
+                <!-- Search Bar with Filter and Sort -->
+                <div class="search-sort-row">
+                    <div data-component="SearchFilterBar" class="search-filter-bar">
+                        <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                        </svg>
+                        <input data-component="LeftPanelSearchInput" type="text" placeholder="Search..." class="search-input" />
+                        <div class="relative">
+                            <button data-component="LeftPanelFilterButton" onclick="toggleFilterDropdown()" class="filter-pill-btn">
+                                <span id="filterLabel">Active</span>
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                </svg>
+                            </button>
+                            <div id="filterDropdown" class="filter-dropdown absolute top-full right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden z-10" style="min-width: 140px;">
+                                <button onclick="setFilter('active')" class="w-full px-4 py-2 text-left text-sm hover:bg-gray-50">Active</button>
+                                <button onclick="setFilter('all')" class="w-full px-4 py-2 text-left text-sm hover:bg-gray-50">All Patients</button>
+                                <button onclick="setFilter('archived')" class="w-full px-4 py-2 text-left text-sm hover:bg-gray-50">Archived</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <button data-component="LeftPanelSortButton" onclick="toggleSortDropdown()" class="sort-btn" title="Sort patients">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                            </svg>
+                        </button>
+                        <div id="sortDropdown" data-component="SortDropdown" class="sort-dropdown absolute top-full right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden z-10" style="min-width: 160px;">
+                            <button data-component="SortAscButton" onclick="setSort('asc')" class="sort-dropdown-item active">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13M3 8h9M3 12h5m4 0l4-4m0 0l4 4m-4-4v12"/>
+                                </svg>
+                                A → Z
+                            </button>
+                            <button data-component="SortDescButton" onclick="setSort('desc')" class="sort-dropdown-item">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13M3 8h9M3 12h5m4 0l4 4m0 0l4-4m-4 4V4"/>
+                                </svg>
+                                Z → A
+                            </button>
+                            <button data-component="SortRecentButton" onclick="setSort('recent')" class="sort-dropdown-item">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                Recent
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Select All Header (with integrated bulk actions) -->
+            <div id="patientListHeader" data-component="PatientListHeader" class="select-all-header">
+                <div class="select-all-left">
+                    <input type="checkbox" id="selectAllPatients" onchange="toggleSelectAll(this)">
+                    <span id="selectAllLabel">Select All</span>
+                </div>
+                <div id="bulkActions" class="bulk-actions hidden">
+                    <button id="bulkArchiveBtn" class="btn-archive" onclick="bulkArchive()">Archive</button>
+                    <button id="bulkUnarchiveBtn" class="btn-unarchive hidden" onclick="bulkUnarchive()">Unarchive</button>
+                    <button id="bulkDeleteBtn" class="btn-delete hidden" onclick="bulkDelete()">Delete</button>
+                </div>
+            </div>
+
+            <!-- Patient List -->
+            <div id="patientList" data-component="PatientList" class="flex-1 overflow-y-auto custom-scroll">
+                <div data-component="PatientItem" data-added-time="1702500000000" class="patient-item selected p-4 cursor-pointer flex items-center gap-3">
+                    <input type="checkbox" class="patient-checkbox" data-component="PatientItemCheckbox" onclick="event.stopPropagation(); togglePatientCheck(this)">
+                    <div class="flex-1 min-w-0" onclick="selectPatient(this.parentElement, 'Johnson, Robert')">
+                        <div data-component="PatientItemName" class="label">Johnson, Robert</div>
+                        <div data-component="PatientItemDiagnosis" class="caption">Bilateral AKA - POD 1</div>
+                    </div>
+                </div>
+                <div data-component="PatientItem" data-added-time="1702510000000" class="patient-item p-4 cursor-pointer flex items-center gap-3">
+                    <input type="checkbox" class="patient-checkbox" data-component="PatientItemCheckbox" onclick="event.stopPropagation(); togglePatientCheck(this)">
+                    <div class="flex-1 min-w-0" onclick="selectPatient(this.parentElement, 'Martinez, Elena')">
+                        <div data-component="PatientItemName" class="label">Martinez, Elena</div>
+                        <div data-component="PatientItemDiagnosis" class="caption">CHF Exacerbation</div>
+                    </div>
+                </div>
+                <div data-component="PatientItem" data-added-time="1702520000000" class="patient-item p-4 cursor-pointer flex items-center gap-3">
+                    <input type="checkbox" class="patient-checkbox" data-component="PatientItemCheckbox" onclick="event.stopPropagation(); togglePatientCheck(this)">
+                    <div class="flex-1 min-w-0" onclick="selectPatient(this.parentElement, 'Williams, James')">
+                        <div data-component="PatientItemName" class="label">Williams, James</div>
+                        <div data-component="PatientItemDiagnosis" class="caption">Pneumonia - Day 3</div>
+                    </div>
+                </div>
+                <div data-component="PatientItem" data-added-time="1702530000000" class="patient-item p-4 cursor-pointer flex items-center gap-3">
+                    <input type="checkbox" class="patient-checkbox" data-component="PatientItemCheckbox" onclick="event.stopPropagation(); togglePatientCheck(this)">
+                    <div class="flex-1 min-w-0" onclick="selectPatient(this.parentElement, 'Chen, Lisa')">
+                        <div data-component="PatientItemName" class="label">Chen, Lisa</div>
+                        <div data-component="PatientItemDiagnosis" class="caption">Post-op Appendectomy</div>
+                    </div>
+                </div>
+                <div data-component="PatientItem" data-added-time="1702540000000" class="patient-item p-4 cursor-pointer flex items-center gap-3">
+                    <input type="checkbox" class="patient-checkbox" data-component="PatientItemCheckbox" onclick="event.stopPropagation(); togglePatientCheck(this)">
+                    <div class="flex-1 min-w-0" onclick="selectPatient(this.parentElement, 'Thompson, David')">
+                        <div data-component="PatientItemName" class="label">Thompson, David</div>
+                        <div data-component="PatientItemDiagnosis" class="caption">DKA - Resolving</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div data-component="CenterPanel" class="flex-1 flex flex-col min-w-0">
+            <!-- Top Navigation Bar -->
+            <div class="bg-white border-b border-gray-200">
+                <div data-component="PatientHeaderBar" class="px-6 py-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex flex-col">
+                            <h1 data-component="PatientHeaderName" id="patientName" class="heading-2">Johnson, Robert</h1>
+                            <span data-component="PatientHeaderDiagnosis" id="diagnosis" class="body-text-sm">Bilateral AKA - POD 1</span>
+                        </div>
+                        <div data-component="RecordingControlsContainer" id="recordingContainer" class="recording-container">
+                            <!-- Idle State: Record Button -->
+                            <button data-component="PatientHeaderRecordButton" id="recordBtn" onclick="startRecording()" class="btn btn-record btn-web-sm">
+                                <div id="recordIcon" class="w-2 h-2 bg-white rounded-full"></div>
+                                <span id="recordText">Record</span>
+                            </button>
+
+                            <!-- Recording State: Stopwatch + Pause + Stop -->
+                            <div data-component="RecordingControls" id="recordingControls" class="recording-controls hidden">
+                                <div data-component="StopwatchDisplay" id="stopwatch" class="stopwatch">
+                                    <div id="audioWaveform" class="audio-waveform">
+                                        <div class="waveform-bar"></div>
+                                        <div class="waveform-bar"></div>
+                                        <div class="waveform-bar"></div>
+                                        <div class="waveform-bar"></div>
+                                        <div class="waveform-bar"></div>
+                                    </div>
+                                    <span id="stopwatchTime">00:00</span>
+                                </div>
+                                <button data-component="PauseResumeButton" id="pauseResumeBtn" onclick="togglePauseResume()" class="btn btn-pause btn-web-sm">
+                                    Pause
+                                </button>
+                                <button data-component="StopButton" id="stopBtn" onclick="stopRecording()" class="btn btn-stop btn-web-sm">
+                                    Stop
+                                </button>
+                            </div>
+
+                            <!-- Confirmation State: Discard + Save -->
+                            <div data-component="RecordingConfirmation" id="recordingConfirmation" class="recording-controls hidden">
+                                <button data-component="DiscardButton" id="discardBtn" onclick="discardRecording()" class="btn btn-discard btn-web-sm">
+                                    Discard
+                                </button>
+                                <button data-component="ConfirmSaveButton" id="confirmSaveBtn" onclick="confirmSaveRecording()" class="btn btn-confirm-save btn-web-sm">
+                                    Save
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Notification Bar -->
+                <div data-component="UniversalNotificationBar" id="notificationBar" class="notification-bar">
+                    <div class="notification-content">
+                        <svg id="statusIcon" class="notification-icon text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span id="statusText" class="notification-text">
+                            Note last updated: <span id="lastUpdatedTime" class="font-medium" style="color: var(--gray-700);">12/09/25 10:30 AM</span>
+                        </span>
+                    </div>
+                    <button id="dismissNotification" class="notification-dismiss">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Document Area -->
+            <div class="flex-1 overflow-auto">
+                <div class="bg-white h-full">
+                    <!-- Embedded Tools Bar - per Schematic 4.1 -->
+                    <div data-component="ActionToolbar" class="border-b border-gray-200 px-5 py-3 bg-white">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <!-- Note Type Dropdown -->
+                                <button data-component="ActionToolbarNoteTypeDropdown" class="note-type-dropdown">
+                                    <span>SOAP Note</span>
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                    </svg>
+                                </button>
+                                
+                                <div class="toolbar-divider"></div>
+                                
+                                <!-- Tool Button Group -->
+                                <div data-component="ToolButtonGroup" class="tool-group">
+                                    <button data-component="ActionToolbarUploadButton" onclick="openPanel('upload')" class="tool-button">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                                        </svg>
+                                        Upload
+                                    </button>
+                                    <button data-component="ActionToolbarTranscriptButton" onclick="openPanel('transcript')" class="tool-button">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                        </svg>
+                                        Transcript
+                                    </button>
+                                    <button data-component="ActionToolbarPhraseButton" onclick="openPanel('phrase')" class="tool-button">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path>
+                                        </svg>
+                                        Phrase
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="flex gap-2">
+                                <button data-component="ActionToolbarCopyAllButton" onclick="copyAllNote()" class="btn btn-primary btn-web-sm">Copy All</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Note Content -->
+                    <div data-component="NoteContentArea" class="p-8 space-y-6">
+                        <!-- Summary Section -->
+                        <div data-component="NoteSectionSummary">
+                            <div class="flex items-center justify-between mb-3">
+                                <h2 class="heading-3">Summary</h2>
+                                <div class="flex gap-2 items-center">
+                                    <div data-component="SummaryModeToggle" class="toggle-group-inline">
+                                        <button data-component="SummaryFullButton" onclick="toggleSummaryMode('full')" id="summaryFullBtn" class="toggle-btn-sm">Full</button>
+                                        <button data-component="SummaryConciseButton" onclick="toggleSummaryMode('concise')" id="summaryConciseBtn" class="toggle-btn-sm active">Concise</button>
+                                    </div>
+                                    <button data-component="SummaryCopyButton" onclick="copySection('NoteSectionSummary')" class="btn btn-primary btn-web-sm">Copy</button>
+                                </div>
+                            </div>
+                            <p class="body-text">
+                                68-year-old male with past medical history significant for diabetes mellitus type 2, peripheral vascular disease, and chronic kidney disease who presented on 12/05/2025 with worsening bilateral lower extremity wounds and signs of infection. Patient underwent bilateral above knee amputations on 12/06/2025 due to extensive gangrene and non-viable tissue.
+                            </p>
+                        </div>
+
+                        <!-- Interval Events -->
+                        <div data-component="NoteSectionIntervalEvents">
+                            <div class="flex items-center justify-between mb-3">
+                                <h2 class="heading-3">Interval Events</h2>
+                                <button data-component="IntervalEventsCopyButton" onclick="copySection('NoteSectionIntervalEvents')" class="btn btn-primary btn-web-sm">Copy</button>
+                            </div>
+                            <p class="body-text">
+                                Patient is post-operative day 1 from bilateral AKA. Overnight, patient remained hemodynamically stable. Pain well controlled with multimodal analgesia including PCA morphine and scheduled acetaminophen. No signs of acute bleeding from surgical sites. Drains with serosanguinous output totaling 150mL from both sites combined.
+                            </p>
+                        </div>
+
+                        <!-- Physical Exam -->
+                        <div data-component="NoteSectionPhysicalExam">
+                            <div class="flex items-center justify-between mb-3">
+                                <h2 class="heading-3">Physical Examination</h2>
+                                <button data-component="PhysicalExamCopyButton" onclick="copySection('NoteSectionPhysicalExam')" class="btn btn-primary btn-web-sm">Copy</button>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="body-text"><span class="label">Vitals:</span> T 98.6, HR 78, BP 132/76, RR 16, SpO2 98% on RA</div>
+                                <div class="body-text"><span class="label">General:</span> Alert and oriented x3, appears comfortable</div>
+                                <div class="body-text"><span class="label">Cardiac:</span> Regular rate and rhythm, no murmurs</div>
+                                <div class="body-text"><span class="label">Pulmonary:</span> Clear to auscultation bilaterally</div>
+                                <div class="body-text"><span class="label">Extremities:</span> Bilateral AKA sites with clean dressings, minimal drainage</div>
+                            </div>
+                        </div>
+
+                        <!-- Assessment and Plan -->
+                        <div data-component="NoteSectionAssessmentPlan">
+                            <div class="flex items-center justify-between mb-3">
+                                <h2 class="heading-3">Assessment and Plan</h2>
+                                <button data-component="AssessmentPlanCopyButton" onclick="copySection('NoteSectionAssessmentPlan')" class="btn btn-primary btn-web-sm">Copy</button>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="pl-4 assessment-primary">
+                                    <h3 class="label mb-1" style="color: var(--gray-900);">1. Bilateral Above Knee Amputations</h3>
+                                    <p class="body-text mb-2">Post-operative day 1, stable surgical sites without evidence of complications.</p>
+                                    <ul class="body-text space-y-1">
+                                        <li>- Continue current pain regimen</li>
+                                        <li>- Monitor drain output, remove when &lt;30mL/24h</li>
+                                        <li>- Daily dressing changes with wound assessment</li>
+                                        <li>- PT/OT evaluation for prosthetic planning</li>
+                                    </ul>
+                                </div>
+
+                                <div class="pl-4 assessment-secondary">
+                                    <h3 class="label mb-1" style="color: var(--gray-900);">2. Diabetes Mellitus Type 2</h3>
+                                    <p class="body-text mb-2">Blood glucose well controlled post-operatively.</p>
+                                    <ul class="body-text space-y-1">
+                                        <li>- Continue insulin sliding scale</li>
+                                        <li>- Endocrine consult for long-term management</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Panel - AI Insights (Static) -->
+        <div data-component="RightPanel" id="rightPanel" class="w-80 bg-white border-l border-gray-200 flex flex-col">
+            <!-- Task Manager Section - Top 50% -->
+            <div data-component="TasksContent" id="tasksContent" class="flex-1 flex flex-col relative border-b border-gray-200" style="max-height: 50%">
+                <!-- Task Header -->
+                <div data-component="TaskHeader" class="border-b border-gray-200 flex-shrink-0">
+                    <div class="px-3 py-2 flex items-center justify-between">
+                        <span data-component="TaskHeaderLabel" class="text-xs font-bold" style="color: var(--gray-700);">TASKS</span>
+
+                        <!-- Auto-Clear Dropdown Button -->
+                        <div class="relative">
+                            <button data-component="AutoClearDropdown" onclick="toggleTaskSettings()" id="autoClearBtn" class="auto-clear-btn">
+                                Auto-Clear <span id="autoClearValue">24</span>h
+                                <svg id="autoClearChevron" class="w-3 h-3 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+
+                            <!-- Settings Dropdown -->
+                            <div id="taskSettingsDropdown" class="hidden absolute top-full right-0 mt-1 bg-white rounded-lg shadow-lg border border-gray-200 p-2 z-50" style="min-width: 100px;">
+                                <button onclick="setAutoClear(24)" class="auto-clear-option block w-full text-left px-3 py-1.5 text-xs rounded hover:bg-gray-50" data-hours="24">24 hours</button>
+                                <button onclick="setAutoClear(48)" class="auto-clear-option block w-full text-left px-3 py-1.5 text-xs rounded hover:bg-gray-50" data-hours="48">48 hours</button>
+                                <button onclick="setAutoClear(72)" class="auto-clear-option block w-full text-left px-3 py-1.5 text-xs rounded hover:bg-gray-50" data-hours="72">72 hours</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Notification/Status Bar -->
+                    <div data-component="TaskStatusBar" class="px-3 py-1 text-xs" style="background-color: var(--gray-50); color: var(--gray-600);">
+                        <span id="taskNotification"><span id="taskReviewedCount">0</span>/<span id="taskTotalCount">6</span> • <span id="hoursRemaining">24</span>h</span>
+                    </div>
+                </div>
+
+                <!-- Task List (Scrollable Checklist) -->
+                <div class="flex-1 overflow-auto p-3 custom-scroll" id="taskList">
+                    <!-- Labs Section -->
+                    <div class="task-section-label">Labs</div>
+                    <label class="task-checkbox-item" data-component="TaskItem" data-task="CBC" data-type="labs">
+                        <input type="checkbox" onchange="handleTaskCheck(this, 'labs', 'CBC')">
+                        <span>CBC</span>
+                    </label>
+                    <label class="task-checkbox-item" data-component="TaskItem" data-task="BMP" data-type="labs">
+                        <input type="checkbox" onchange="handleTaskCheck(this, 'labs', 'BMP')">
+                        <span>BMP</span>
+                    </label>
+                    <label class="task-checkbox-item" data-component="TaskItem" data-task="Coag Panel" data-type="labs">
+                        <input type="checkbox" onchange="handleTaskCheck(this, 'labs', 'Coag Panel')">
+                        <span>Coag Panel</span>
+                    </label>
+                    <label class="task-checkbox-item" data-component="TaskItem" data-task="HbA1c" data-type="labs">
+                        <input type="checkbox" onchange="handleTaskCheck(this, 'labs', 'HbA1c')">
+                        <span>HbA1c</span>
+                    </label>
+                    <label class="task-checkbox-item" data-component="TaskItem" data-task="LFTs" data-type="labs">
+                        <input type="checkbox" onchange="handleTaskCheck(this, 'labs', 'LFTs')">
+                        <span>LFTs</span>
+                    </label>
+                    <label class="task-checkbox-item" data-component="TaskItem" data-task="Lipid Panel" data-type="labs">
+                        <input type="checkbox" onchange="handleTaskCheck(this, 'labs', 'Lipid Panel')">
+                        <span>Lipid Panel</span>
+                    </label>
+                    <label class="task-checkbox-item" data-component="TaskItem" data-task="TSH" data-type="labs">
+                        <input type="checkbox" onchange="handleTaskCheck(this, 'labs', 'TSH')">
+                        <span>TSH</span>
+                    </label>
+                    <label class="task-checkbox-item" data-component="TaskItem" data-task="UA" data-type="labs">
+                        <input type="checkbox" onchange="handleTaskCheck(this, 'labs', 'UA')">
+                        <span>UA</span>
+                    </label>
+
+                    <!-- Imaging Section -->
+                    <div class="task-section-label">Imaging</div>
+                    <label class="task-checkbox-item" data-component="TaskItem" data-task="CXR" data-type="imaging">
+                        <input type="checkbox" onchange="handleTaskCheck(this, 'imaging', 'CXR')">
+                        <span>CXR</span>
+                    </label>
+                    <label class="task-checkbox-item" data-component="TaskItem" data-task="Duplex US" data-type="imaging">
+                        <input type="checkbox" onchange="handleTaskCheck(this, 'imaging', 'Duplex US')">
+                        <span>Duplex US</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Feature Showcase Section - Future: paginated cards with animated GIFs/videos -->
+            <div data-component="FeatureShowcase" id="featureShowcase" class="flex-1 flex flex-col items-center justify-center p-4" style="min-height: 50%">
+                <!-- AI Disclaimer Placeholder -->
+                <div data-component="AIDisclaimer" class="rounded-lg flex items-center justify-center text-center" style="width: 80%; height: 80%; background-color: rgba(107, 114, 128, 0.1); border: 1px solid var(--gray-200);">
+                    <span class="text-xs" style="color: var(--gray-500);">SutureNote AI can make mistakes. Always check for accuracy.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===========================================
+         SLIDE-OVER PANELS
+         =========================================== -->
+
+    <!-- Panel Backdrop -->
+    <div id="panelBackdrop" class="panel-backdrop" onclick="closePanel()"></div>
+
+    <!-- Floating Slide Panel -->
+    <div data-component="SlideOverPanel" id="slidePanel" class="slide-panel">
+        <!-- Panel Header -->
+        <div data-component="SlideOverPanelHeader" class="panel-header">
+            <h2 data-component="SlideOverPanelTitle" id="panelTitle">Upload</h2>
+            <button data-component="SlideOverPanelCloseButton" class="panel-close-btn" onclick="closePanel()">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Upload Panel Content -->
+        <div data-component="UploadPanelContent" id="uploadContent" class="panel-content hidden">
+            <!-- Document Type -->
+            <div class="mb-5">
+                <label class="form-label">Document Type</label>
+                <div class="toggle-group">
+                    <button data-component="UploadDocTypePriorButton" onclick="selectDocType('prior')" id="docTypePrior" class="toggle-btn">
+                        Prior Admission
+                    </button>
+                    <button data-component="UploadDocTypeCurrentButton" onclick="selectDocType('current')" id="docTypeCurrent" class="toggle-btn">
+                        Current Encounter
+                    </button>
+                </div>
+            </div>
+
+            <!-- Context -->
+            <div class="mb-5">
+                <label class="form-label">
+                    Context <span class="form-label-optional">(optional)</span>
+                </label>
+                <input
+                    data-component="UploadContextInput"
+                    type="text"
+                    id="uploadContext"
+                    placeholder="H&P from 12/12/2025"
+                    class="form-input"
+                    maxlength="100"
+                />
+            </div>
+
+            <!-- Document Content -->
+            <div>
+                <div class="flex items-center justify-between mb-2">
+                    <label class="form-label" style="margin-bottom: 0;">Document</label>
+                    <span class="char-counter">
+                        <span id="charCount">0</span> / 15,000
+                    </span>
+                </div>
+                <textarea
+                    data-component="UploadDocumentTextarea"
+                    id="uploadDocument"
+                    placeholder="Select document type above..."
+                    class="form-input form-textarea"
+                    style="min-height: 320px;"
+                    maxlength="15000"
+                    oninput="updateCharCount(); updateUploadButtonState()"
+                ></textarea>
+            </div>
+        </div>
+
+        <!-- Transcript Panel Content -->
+        <div data-component="TranscriptPanelContent" id="transcriptContent" class="panel-content hidden" style="padding: 0;">
+            <!-- Tab Switcher -->
+            <div style="padding: var(--space-3) var(--space-5); border-bottom: 1px solid var(--gray-200);">
+                <div class="toggle-group">
+                    <button data-component="TranscriptDictatedTab" onclick="switchTranscriptTab('dictated')" id="tabDictated" class="toggle-btn active">
+                        Dictated
+                    </button>
+                    <button data-component="TranscriptUploadedTab" onclick="switchTranscriptTab('uploaded')" id="tabUploaded" class="toggle-btn">
+                        Uploaded
+                    </button>
+                </div>
+            </div>
+
+            <!-- Transcript Entries -->
+            <div class="flex-1 overflow-auto custom-scroll" style="padding: var(--space-5);">
+                <div id="dictatedTranscripts" class="space-y-3">
+                    <!-- Transcript Entry 1 -->
+                    <div data-component="TranscriptCard1" class="transcript-card">
+                        <div class="transcript-card-header">
+                            <span class="transcript-timestamp">12/09/25 8:30 AM</span>
+                            <button data-component="Transcript1EditButton" onclick="editTranscript(1)" id="editBtn1" class="btn btn-ghost btn-web-xs">
+                                Edit
+                            </button>
+                        </div>
+                        <p id="transcriptText1" class="body-text-sm">
+                            Patient stable overnight. Pain well controlled. Surgical sites clean and dry. Drains with minimal output.
+                        </p>
+                        <textarea id="transcriptEdit1" class="hidden form-input form-textarea" style="min-height: 120px;">Patient stable overnight. Pain well controlled. Surgical sites clean and dry. Drains with minimal output.</textarea>
+                    </div>
+
+                    <!-- Transcript Entry 2 -->
+                    <div data-component="TranscriptCard2" class="transcript-card">
+                        <div class="transcript-card-header">
+                            <span class="transcript-timestamp">12/09/25 2:15 PM</span>
+                            <button data-component="Transcript2EditButton" onclick="editTranscript(2)" id="editBtn2" class="btn btn-ghost btn-web-xs">
+                                Edit
+                            </button>
+                        </div>
+                        <p id="transcriptText2" class="body-text-sm">
+                            Endocrine consult completed. Recommend continuing insulin sliding scale with adjustments for improved glycemic control.
+                        </p>
+                        <textarea id="transcriptEdit2" class="hidden form-input form-textarea" style="min-height: 120px;">Endocrine consult completed. Recommend continuing insulin sliding scale with adjustments for improved glycemic control.</textarea>
+                    </div>
+                </div>
+
+                <div id="uploadedTranscripts" class="hidden space-y-3">
+                    <!-- Uploaded Transcript 1 -->
+                    <div class="transcript-card-row">
+                        <input type="checkbox" class="transcript-checkbox"
+                               data-component="UploadedTranscriptCheckbox"
+                               onchange="handleUploadedCheckboxChange()">
+                        <div class="transcript-card readonly">
+                            <div class="transcript-card-header">
+                                <span class="transcript-timestamp">H&P - 12/05/25</span>
+                                <span class="transcript-badge">View Only</span>
+                            </div>
+                            <p class="body-text-sm">
+                                68-year-old male with DM2, PVD presenting with bilateral lower extremity wounds. History of progressive claudication...
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Uploaded Transcript 2 -->
+                    <div class="transcript-card-row">
+                        <input type="checkbox" class="transcript-checkbox"
+                               data-component="UploadedTranscriptCheckbox"
+                               onchange="handleUploadedCheckboxChange()">
+                        <div class="transcript-card readonly">
+                            <div class="transcript-card-header">
+                                <span class="transcript-timestamp">Op Note - 12/06/25</span>
+                                <span class="transcript-badge">View Only</span>
+                            </div>
+                            <p class="body-text-sm">
+                                Procedure: Bilateral above knee amputations. Indication: Non-viable tissue, extensive gangrene...
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Uploaded Action Bar (Footer) -->
+            <div data-component="UploadedActionBar" id="uploadedActionBar" class="uploaded-action-bar hidden">
+                <button data-component="UploadedCancelButton" onclick="cancelUploadedSelection()" class="btn btn-secondary btn-web">
+                    Cancel
+                </button>
+                <button data-component="UploadedDeleteButton" onclick="deleteSelectedUploaded()" class="btn btn-danger btn-web">
+                    Delete
+                </button>
+            </div>
+        </div>
+
+        <!-- Phrase Panel Content -->
+        <div data-component="PhrasePanelContent" id="phraseContent" class="panel-content hidden">
+            <!-- Search bar with Create button -->
+            <div class="flex items-center gap-3 mb-5">
+                <div data-component="PhraseSearchBar" class="search-filter-bar" style="flex: 1;">
+                    <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                    </svg>
+                    <input data-component="PhraseSearchInput" type="text" placeholder="Search phrases..." class="search-input" />
+                </div>
+                <button data-component="PhraseCreateButton" onclick="openCreatePhrasePanel()" class="btn btn-primary btn-web-sm">+ Create</button>
+            </div>
+
+            <!-- Phrase List -->
+            <div class="space-y-3">
+                <!-- Phrase 1 -->
+                <div class="phrase-card-row">
+                    <input type="checkbox" class="phrase-checkbox"
+                           data-component="PhraseCheckbox">
+                    <div class="phrase-card">
+                        <div class="phrase-card-content">
+                            <div class="flex-1 min-w-0">
+                                <p class="phrase-title">Normal Physical Exam</p>
+                                <p class="phrase-preview">
+                                    Alert and oriented x3, NAD. Heart: RRR, no M/R/G. Lungs: CTAB. Abdomen: Soft, non-tender...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phrase 2 -->
+                <div class="phrase-card-row">
+                    <input type="checkbox" class="phrase-checkbox"
+                           data-component="PhraseCheckbox">
+                    <div class="phrase-card">
+                        <div class="phrase-card-content">
+                            <div class="flex-1 min-w-0">
+                                <p class="phrase-title">Post-Op Day 1 Assessment</p>
+                                <p class="phrase-preview">
+                                    Patient stable post-operatively. Vital signs within normal limits. Pain controlled with current regimen...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phrase 3 -->
+                <div class="phrase-card-row">
+                    <input type="checkbox" class="phrase-checkbox"
+                           data-component="PhraseCheckbox">
+                    <div class="phrase-card">
+                        <div class="phrase-card-content">
+                            <div class="flex-1 min-w-0">
+                                <p class="phrase-title">Diabetes Management</p>
+                                <p class="phrase-preview">
+                                    Continue insulin sliding scale. Monitor blood glucose QID. Endocrine to follow for optimization...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phrase 4 -->
+                <div class="phrase-card-row">
+                    <input type="checkbox" class="phrase-checkbox"
+                           data-component="PhraseCheckbox">
+                    <div class="phrase-card">
+                        <div class="phrase-card-content">
+                            <div class="flex-1 min-w-0">
+                                <p class="phrase-title">Wound Care Protocol</p>
+                                <p class="phrase-preview">
+                                    Daily dressing changes with assessment. Monitor for signs of infection. Keep surgical sites clean and dry...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Create Phrase Nested Panel -->
+        <div data-component="CreatePhrasePanel" id="createPhrasePanel" class="nested-panel">
+            <div class="panel-header">
+                <h2 class="panel-title">Create Phrase</h2>
+                <button data-component="CreatePhrasePanelCloseButton" onclick="closeCreatePhrasePanel()" class="panel-close-btn">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="nested-panel-content">
+                <!-- Phrase Input (like Context) -->
+                <div class="form-group">
+                    <label class="form-label">Phrase</label>
+                    <input
+                        data-component="CreatePhraseInput"
+                        type="text"
+                        id="createPhraseInput"
+                        placeholder="e.g., Admission Assessment"
+                        class="form-input"
+                    >
+                </div>
+
+                <!-- Description Textarea (like Document) -->
+                <div class="form-group">
+                    <label class="form-label">Description</label>
+                    <textarea
+                        data-component="CreatePhraseDescription"
+                        id="createPhraseDescription"
+                        placeholder="Enter your phrase template text..."
+                        class="form-input form-textarea"
+                    ></textarea>
+                </div>
+            </div>
+
+            <div class="panel-footer">
+                <button data-component="CreatePhraseCancelButton" onclick="closeCreatePhrasePanel()" class="btn btn-secondary btn-web">
+                    Cancel
+                </button>
+                <button data-component="CreatePhraseSaveButton" onclick="saveNewPhrase()" class="btn btn-primary btn-web">
+                    Save
+                </button>
+            </div>
+        </div>
+
+        <!-- Panel Footer -->
+        <div data-component="SlideOverPanelFooter" id="panelFooter" class="panel-footer">
+            <button data-component="PanelCancelButton" onclick="closePanel()" class="btn btn-secondary btn-web">
+                Cancel
+            </button>
+            <button data-component="PanelActionButton" id="panelActionBtn" onclick="handlePanelAction()" class="btn btn-primary btn-web">
+                Upload
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // ===========================================
+        // GLOBAL STATE
+        // ===========================================
+        let currentPanel = null;
+        let currentDocType = null;
+        let currentTranscriptTab = 'dictated';
+        let editingTranscriptId = null;
+        let lastUpdatedTime = '12/09/25 10:30 AM';
+        let isRecording = false;
+        let currentFilter = 'active';
+        let currentSort = 'asc'; // 'asc' | 'desc' | 'recent'
+
+        // Recording state management
+        let recordingState = 'idle'; // 'idle' | 'recording' | 'paused' | 'confirming'
+        let recordingStartTime = null;
+        let recordingElapsed = 0;
+        let stopwatchInterval = null;
+
+        // Audio visualization
+        let audioContext = null;
+        let analyser = null;
+        let microphone = null;
+        let mediaStream = null;
+        let animationFrameId = null;
+
+        // Cycling notification system state
+        let activeProcesses = new Map();      // processId → { message, startTime }
+        let pendingCompletions = [];          // [{ message, type, duration, undoCallback, undoLabel }]
+        let cycleInterval = null;             // setInterval ID
+        let completionTimeout = null;         // setTimeout ID
+        let currentProcessIndex = 0;          // For cycling through active processes
+        let currentUndoCallback = null;       // Currently displayed undo callback
+
+        // ===========================================
+        // NOTIFICATION SYSTEM (Cycling)
+        // ===========================================
+
+        // Icon SVG paths for each notification type
+        const notificationIcons = {
+            processing: {
+                svg: '<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none" stroke-dasharray="32" stroke-dashoffset="32"><animate attributeName="stroke-dashoffset" values="32;0" dur="1s" repeatCount="indefinite"/></circle>',
+                class: 'notification-icon animate-spin',
+                color: 'var(--blue-600)'
+            },
+            success: {
+                svg: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>',
+                class: 'notification-icon',
+                color: 'var(--green-600)'
+            },
+            error: {
+                svg: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>',
+                class: 'notification-icon',
+                color: 'var(--red-600)'
+            },
+            warning: {
+                svg: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>',
+                class: 'notification-icon',
+                color: 'var(--amber-600)'
+            },
+            info: {
+                svg: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>',
+                class: 'notification-icon',
+                color: 'var(--blue-600)'
+            }
+        };
+
+        // Start a processing notification (adds to cycling)
+        function startProcess(processId, message) {
+            activeProcesses.set(processId, { message, startTime: Date.now() });
+
+            // Start cycling if not already
+            if (!cycleInterval && activeProcesses.size > 0) {
+                displayNotification(message, 'processing');
+                cycleInterval = setInterval(cycleActiveProcesses, 2500);
+            } else if (activeProcesses.size === 1) {
+                // First process, display immediately
+                displayNotification(message, 'processing');
+            }
+        }
+
+        // Complete a process (removes from cycling, shows completion)
+        function completeProcess(processId, message, type = 'success', options = {}) {
+            activeProcesses.delete(processId);
+
+            const completion = {
+                message,
+                type,
+                duration: options.duration || 3000,
+                undoCallback: options.undoCallback || null,
+                undoLabel: options.undoLabel || 'Undo'
+            };
+
+            pendingCompletions.push(completion);
+
+            // If not currently showing a completion, show this one
+            if (!completionTimeout) {
+                processCompletions();
+            }
+        }
+
+        // Show instant notification (for non-process actions like copy)
+        function showNotification(message, type = 'success', options = {}) {
+            const duration = options.duration || 3000;
+            const undoCallback = options.undoCallback || null;
+            const undoLabel = options.undoLabel || 'Undo';
+
+            // Clear any completion timeout
+            if (completionTimeout) {
+                clearTimeout(completionTimeout);
+                completionTimeout = null;
+            }
+
+            // Pause cycling while showing this notification
+            if (cycleInterval) {
+                clearInterval(cycleInterval);
+                cycleInterval = null;
+            }
+
+            displayNotification(message, type, { undoCallback, undoLabel });
+
+            if (type !== 'processing' && duration > 0) {
+                completionTimeout = setTimeout(() => {
+                    completionTimeout = null;
+                    resumeAfterNotification();
+                }, duration);
+            }
+        }
+
+        // Internal: Display notification to DOM
+        function displayNotification(message, type, options = {}) {
+            const bar = document.getElementById('notificationBar');
+            const icon = document.getElementById('statusIcon');
+            const text = document.getElementById('statusText');
+            const dismissBtn = document.getElementById('dismissNotification');
+
+            const iconConfig = notificationIcons[type] || notificationIcons.info;
+
+            bar.className = 'notification-bar ' + type;
+            icon.innerHTML = iconConfig.svg;
+            icon.className = iconConfig.class;
+            icon.style.color = iconConfig.color;
+
+            // Build message with optional undo button
+            let messageHTML = message;
+            if (options.undoCallback) {
+                currentUndoCallback = options.undoCallback;
+                messageHTML += ` <button class="notification-undo" onclick="handleNotificationUndo()">${options.undoLabel}</button>`;
+            } else {
+                currentUndoCallback = null;
+            }
+            text.innerHTML = messageHTML;
+
+            // Show dismiss button for non-processing notifications
+            if (type !== 'processing') {
+                dismissBtn.classList.add('visible');
+            } else {
+                dismissBtn.classList.remove('visible');
+            }
+        }
+
+        // Internal: Cycle to next active process
+        function cycleActiveProcesses() {
+            if (activeProcesses.size === 0) {
+                clearInterval(cycleInterval);
+                cycleInterval = null;
+                showStaticStatus();
+                return;
+            }
+
+            const processes = Array.from(activeProcesses.values());
+            currentProcessIndex = (currentProcessIndex + 1) % processes.length;
+            const current = processes[currentProcessIndex];
+
+            displayNotification(current.message, 'processing');
+        }
+
+        // Internal: Process pending completions
+        function processCompletions() {
+            if (pendingCompletions.length === 0) {
+                resumeAfterNotification();
+                return;
+            }
+
+            // Pause cycling while showing completion
+            if (cycleInterval) {
+                clearInterval(cycleInterval);
+                cycleInterval = null;
+            }
+
+            const completion = pendingCompletions.shift();
+            displayNotification(completion.message, completion.type, {
+                undoCallback: completion.undoCallback,
+                undoLabel: completion.undoLabel
+            });
+
+            completionTimeout = setTimeout(() => {
+                completionTimeout = null;
+                processCompletions();
+            }, completion.duration);
+        }
+
+        // Resume cycling or show static after notification
+        function resumeAfterNotification() {
+            if (activeProcesses.size > 0) {
+                // Resume cycling
+                const processes = Array.from(activeProcesses.values());
+                currentProcessIndex = 0;
+                displayNotification(processes[0].message, 'processing');
+                cycleInterval = setInterval(cycleActiveProcesses, 2500);
+            } else if (pendingCompletions.length > 0) {
+                processCompletions();
+            } else {
+                showStaticStatus();
+            }
+        }
+
+        // Handle undo button click
+        function handleNotificationUndo() {
+            if (currentUndoCallback) {
+                const callback = currentUndoCallback;
+                currentUndoCallback = null;
+
+                // Clear current notification
+                if (completionTimeout) {
+                    clearTimeout(completionTimeout);
+                    completionTimeout = null;
+                }
+
+                // Execute undo
+                callback();
+
+                // Show undo confirmation
+                showNotification('Action undone', 'success', { duration: 2000 });
+            }
+        }
+
+        // Show static "last updated" status
+        function showStaticStatus() {
+            const bar = document.getElementById('notificationBar');
+            const icon = document.getElementById('statusIcon');
+            const text = document.getElementById('statusText');
+            const dismissBtn = document.getElementById('dismissNotification');
+
+            bar.className = 'notification-bar';
+            icon.className = 'notification-icon';
+            icon.style.color = 'var(--gray-400)';
+            icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>';
+            text.innerHTML = `Note last updated: <span class="font-medium" style="color: var(--gray-700);">${lastUpdatedTime}</span>`;
+            dismissBtn.classList.remove('visible');
+            currentUndoCallback = null;
+        }
+
+        // Update timestamp
+        function updateTimestamp() {
+            const now = new Date();
+            const month = (now.getMonth() + 1).toString().padStart(2, '0');
+            const day = now.getDate().toString().padStart(2, '0');
+            const year = now.getFullYear().toString().slice(-2);
+            const time = now.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
+            lastUpdatedTime = `${month}/${day}/${year} ${time}`;
+        }
+
+        document.getElementById('dismissNotification').onclick = function() {
+            if (completionTimeout) {
+                clearTimeout(completionTimeout);
+                completionTimeout = null;
+            }
+            resumeAfterNotification();
+        };
+
+        // ===========================================
+        // COPY FUNCTIONS
+        // ===========================================
+
+        // Copy text to clipboard with fallback for older browsers
+        async function copyToClipboard(text, successMessage = 'Copied to clipboard') {
+            try {
+                await navigator.clipboard.writeText(text);
+                showNotification(successMessage, 'success');
+                return true;
+            } catch (err) {
+                // Fallback for older browsers
+                const textarea = document.createElement('textarea');
+                textarea.value = text;
+                textarea.style.position = 'fixed';
+                textarea.style.opacity = '0';
+                document.body.appendChild(textarea);
+                textarea.select();
+                try {
+                    document.execCommand('copy');
+                    showNotification(successMessage, 'success');
+                    return true;
+                } catch (fallbackErr) {
+                    showNotification('Copy failed', 'error');
+                    return false;
+                } finally {
+                    document.body.removeChild(textarea);
+                }
+            }
+        }
+
+        // Copy a specific note section
+        function copySection(sectionComponent) {
+            const section = document.querySelector(`[data-component="${sectionComponent}"]`);
+            if (!section) {
+                showNotification('Section not found', 'error');
+                return;
+            }
+
+            // Get text content, excluding buttons and other interactive elements
+            const clone = section.cloneNode(true);
+            clone.querySelectorAll('button, .notification-undo').forEach(el => el.remove());
+
+            // Get section header and body text
+            const header = clone.querySelector('h2, h3');
+            const headerText = header ? header.textContent.trim() : '';
+
+            // Get body text (everything else)
+            if (header) header.remove();
+            const bodyText = clone.textContent.trim().replace(/\s+/g, ' ');
+
+            const fullText = headerText ? `${headerText}\n${bodyText}` : bodyText;
+
+            const sectionNames = {
+                'NoteSectionSummary': 'Summary',
+                'NoteSectionIntervalEvents': 'Interval Events',
+                'NoteSectionPhysicalExam': 'Physical Exam',
+                'NoteSectionAssessmentPlan': 'Assessment & Plan'
+            };
+
+            const sectionName = sectionNames[sectionComponent] || 'Section';
+            copyToClipboard(fullText, `${sectionName} copied`);
+        }
+
+        // Copy entire note content
+        function copyAllNote() {
+            const noteArea = document.querySelector('[data-component="NoteContentArea"]');
+            if (!noteArea) {
+                showNotification('Note content not found', 'error');
+                return;
+            }
+
+            const sections = [
+                'NoteSectionSummary',
+                'NoteSectionIntervalEvents',
+                'NoteSectionPhysicalExam',
+                'NoteSectionAssessmentPlan'
+            ];
+
+            let fullText = '';
+
+            sections.forEach(sectionComponent => {
+                const section = document.querySelector(`[data-component="${sectionComponent}"]`);
+                if (section) {
+                    const clone = section.cloneNode(true);
+                    clone.querySelectorAll('button, .notification-undo').forEach(el => el.remove());
+
+                    // Get header
+                    const header = clone.querySelector('h2, h3');
+                    const headerText = header ? header.textContent.trim() : '';
+
+                    // Get body
+                    if (header) header.remove();
+                    const bodyText = clone.textContent.trim().replace(/\s+/g, ' ');
+
+                    if (headerText) {
+                        fullText += `${headerText}\n${bodyText}\n\n`;
+                    } else if (bodyText) {
+                        fullText += `${bodyText}\n\n`;
+                    }
+                }
+            });
+
+            copyToClipboard(fullText.trim(), 'Full note copied');
+        }
+
+        // ===========================================
+        // SLIDE-OVER PANEL MANAGEMENT
+        // ===========================================
+        function openPanel(panelType) {
+            currentPanel = panelType;
+            
+            // Hide all content
+            document.querySelectorAll('#slidePanel .panel-content').forEach(el => el.classList.add('hidden'));
+            
+            // Show appropriate content
+            const contentMap = {
+                'upload': 'uploadContent',
+                'transcript': 'transcriptContent',
+                'phrase': 'phraseContent'
+            };
+            
+            document.getElementById(contentMap[panelType]).classList.remove('hidden');
+            
+            // Update title and action button
+            const titleMap = {
+                'upload': 'Upload Document',
+                'transcript': 'Transcripts',
+                'phrase': 'Saved Phrases'
+            };
+            
+            const actionMap = {
+                'upload': 'Upload',
+                'transcript': 'Suture',
+                'phrase': 'Suture'
+            };
+            
+            document.getElementById('panelTitle').textContent = titleMap[panelType];
+            document.getElementById('panelActionBtn').textContent = actionMap[panelType];
+            
+            // Show panel and backdrop
+            document.getElementById('panelBackdrop').classList.add('active');
+            document.getElementById('slidePanel').classList.add('active');
+            
+            // Show/hide footer based on panel type
+            const footer = document.getElementById('panelFooter');
+            if (panelType === 'transcript' && !editingTranscriptId) {
+                footer.style.display = 'none';
+            } else {
+                footer.style.display = 'flex';
+            }
+
+            // Reset upload panel state when opening
+            if (panelType === 'upload') {
+                // Reset to no selection
+                currentDocType = null;
+                document.getElementById('docTypePrior').classList.remove('active');
+                document.getElementById('docTypeCurrent').classList.remove('active');
+                document.getElementById('uploadDocument').placeholder = 'Select document type above...';
+                document.getElementById('uploadDocument').value = '';
+                document.getElementById('charCount').textContent = '0';
+                stopPlaceholderCycle();
+                updateUploadButtonState();
+            }
+        }
+
+        function closePanel() {
+            document.getElementById('panelBackdrop').classList.remove('active');
+            document.getElementById('slidePanel').classList.remove('active');
+            currentPanel = null;
+            editingTranscriptId = null;
+
+            // Stop placeholder cycling animation
+            stopPlaceholderCycle();
+
+            // Reset any editing states
+            for (let i = 1; i <= 2; i++) {
+                const textEl = document.getElementById(`transcriptText${i}`);
+                const editEl = document.getElementById(`transcriptEdit${i}`);
+                const btnEl = document.getElementById(`editBtn${i}`);
+                if (textEl && editEl && btnEl) {
+                    editEl.classList.add('hidden');
+                    textEl.classList.remove('hidden');
+                    btnEl.textContent = 'Edit';
+                }
+            }
+        }
+
+        // ===========================================
+        // CREATE PHRASE PANEL
+        // ===========================================
+        function openCreatePhrasePanel() {
+            document.getElementById('createPhrasePanel').classList.add('active');
+        }
+
+        function closeCreatePhrasePanel() {
+            document.getElementById('createPhrasePanel').classList.remove('active');
+            // Clear form
+            document.getElementById('createPhraseInput').value = '';
+            document.getElementById('createPhraseDescription').value = '';
+        }
+
+        function saveNewPhrase() {
+            const phrase = document.getElementById('createPhraseInput').value.trim();
+            const description = document.getElementById('createPhraseDescription').value.trim();
+
+            if (!phrase) {
+                // Could add validation feedback here
+                return;
+            }
+
+            // TODO: Add phrase to list (stub for now)
+            console.log('Saving phrase:', { phrase, description });
+
+            closeCreatePhrasePanel();
+            showNotification('Phrase saved', 'success');
+        }
+
+        // ===========================================
+        // SUMMARY MODE TOGGLE
+        // ===========================================
+        let currentSummaryMode = 'concise';
+
+        function toggleSummaryMode(mode) {
+            currentSummaryMode = mode;
+
+            const fullBtn = document.getElementById('summaryFullBtn');
+            const conciseBtn = document.getElementById('summaryConciseBtn');
+
+            if (mode === 'full') {
+                fullBtn.classList.add('active');
+                conciseBtn.classList.remove('active');
+                showNotification('Showing full summary', 'success');
+            } else {
+                conciseBtn.classList.add('active');
+                fullBtn.classList.remove('active');
+                showNotification('Showing concise summary', 'success');
+            }
+        }
+
+        // ===========================================
+        // UPLOAD PANEL FUNCTIONS
+        // ===========================================
+        // Placeholder cycling for document type education
+        let placeholderCycleInterval = null;
+        let currentCycleIndex = 0;
+
+        const priorAdmissionDocs = [
+            'Paste outpatient consult note...',
+            'Paste old discharge summary...',
+            'Paste historical admission records...',
+            'Paste home med list...'
+        ];
+
+        const currentEncounterDocs = [
+            'Paste progress note...',
+            'Paste H&P...',
+            'Paste current medication list...',
+            'Paste consult note from this admission...',
+            'Paste imaging report...'
+        ];
+
+        function startPlaceholderCycle(docArray) {
+            stopPlaceholderCycle();
+            currentCycleIndex = 0;
+            const textarea = document.getElementById('uploadDocument');
+            textarea.placeholder = docArray[0];
+
+            placeholderCycleInterval = setInterval(() => {
+                currentCycleIndex = (currentCycleIndex + 1) % docArray.length;
+                textarea.placeholder = docArray[currentCycleIndex];
+            }, 2000);
+        }
+
+        function stopPlaceholderCycle() {
+            if (placeholderCycleInterval) {
+                clearInterval(placeholderCycleInterval);
+                placeholderCycleInterval = null;
+            }
+        }
+
+        function updateUploadButtonState() {
+            const textarea = document.getElementById('uploadDocument');
+            const uploadBtn = document.getElementById('panelActionBtn');
+            const hasContent = textarea.value.trim().length > 0;
+            const hasDocType = currentDocType !== null;
+
+            uploadBtn.disabled = !(hasContent && hasDocType);
+        }
+
+        function selectDocType(type) {
+            currentDocType = type;
+
+            const priorBtn = document.getElementById('docTypePrior');
+            const currentBtn = document.getElementById('docTypeCurrent');
+
+            priorBtn.classList.toggle('active', type === 'prior');
+            currentBtn.classList.toggle('active', type === 'current');
+
+            if (type === 'prior') {
+                startPlaceholderCycle(priorAdmissionDocs);
+            } else {
+                startPlaceholderCycle(currentEncounterDocs);
+            }
+
+            updateUploadButtonState();
+        }
+
+        function updateCharCount() {
+            const textarea = document.getElementById('uploadDocument');
+            const counter = document.getElementById('charCount');
+            const counterParent = counter.parentElement;
+            
+            counter.textContent = textarea.value.length;
+            
+            counterParent.classList.remove('warning', 'danger');
+            if (textarea.value.length > 14000) {
+                counterParent.classList.add('danger');
+            } else if (textarea.value.length > 12000) {
+                counterParent.classList.add('warning');
+            }
+        }
+
+        // ===========================================
+        // TRANSCRIPT PANEL FUNCTIONS
+        // ===========================================
+        function switchTranscriptTab(tab) {
+            currentTranscriptTab = tab;
+            
+            const dictatedBtn = document.getElementById('tabDictated');
+            const uploadedBtn = document.getElementById('tabUploaded');
+            const dictatedContent = document.getElementById('dictatedTranscripts');
+            const uploadedContent = document.getElementById('uploadedTranscripts');
+            
+            if (tab === 'dictated') {
+                dictatedBtn.classList.add('active');
+                uploadedBtn.classList.remove('active');
+                dictatedContent.classList.remove('hidden');
+                uploadedContent.classList.add('hidden');
+            } else {
+                uploadedBtn.classList.add('active');
+                dictatedBtn.classList.remove('active');
+                uploadedContent.classList.remove('hidden');
+                dictatedContent.classList.add('hidden');
+            }
+        }
+
+        function editTranscript(id) {
+            editingTranscriptId = id;
+            
+            const textEl = document.getElementById(`transcriptText${id}`);
+            const editEl = document.getElementById(`transcriptEdit${id}`);
+            const btnEl = document.getElementById(`editBtn${id}`);
+            
+            textEl.classList.add('hidden');
+            editEl.classList.remove('hidden');
+            btnEl.textContent = 'Cancel';
+            btnEl.onclick = () => cancelEditTranscript(id);
+            
+            // Show footer
+            document.getElementById('panelFooter').style.display = 'flex';
+        }
+
+        function cancelEditTranscript(id) {
+            editingTranscriptId = null;
+            
+            const textEl = document.getElementById(`transcriptText${id}`);
+            const editEl = document.getElementById(`transcriptEdit${id}`);
+            const btnEl = document.getElementById(`editBtn${id}`);
+            
+            editEl.classList.add('hidden');
+            textEl.classList.remove('hidden');
+            btnEl.textContent = 'Edit';
+            btnEl.onclick = () => editTranscript(id);
+            
+            // Hide footer for transcript panel
+            if (currentPanel === 'transcript') {
+                document.getElementById('panelFooter').style.display = 'none';
+            }
+        }
+
+        // ===========================================
+        // PANEL ACTION HANDLERS
+        // ===========================================
+        function handlePanelAction() {
+            if (currentPanel === 'upload') {
+                handleUpload();
+            } else if (currentPanel === 'transcript') {
+                handleTranscriptSuture();
+            } else if (currentPanel === 'phrase') {
+                handlePhraseSuture();
+            }
+        }
+
+        function handleUpload() {
+            startProcess('upload', 'Uploading...');
+            closePanel();
+
+            setTimeout(() => {
+                updateTimestamp();
+                completeProcess('upload', 'Upload complete', 'success');
+            }, 2000);
+        }
+
+        // Uploaded Transcript Selection Functions
+        function handleUploadedCheckboxChange() {
+            const checkboxes = document.querySelectorAll('.transcript-checkbox:checked');
+            const actionBar = document.getElementById('uploadedActionBar');
+
+            if (checkboxes.length > 0) {
+                actionBar.classList.remove('hidden');
+            } else {
+                actionBar.classList.add('hidden');
+            }
+        }
+
+        function cancelUploadedSelection() {
+            const checkboxes = document.querySelectorAll('.transcript-checkbox');
+            checkboxes.forEach(cb => cb.checked = false);
+            document.getElementById('uploadedActionBar').classList.add('hidden');
+        }
+
+        function deleteSelectedUploaded() {
+            const checkboxes = document.querySelectorAll('.transcript-checkbox:checked');
+            checkboxes.forEach(cb => {
+                const row = cb.closest('.transcript-card-row');
+                if (row) row.remove();
+            });
+            document.getElementById('uploadedActionBar').classList.add('hidden');
+        }
+
+        function handleTranscriptSuture() {
+            startProcess('transcript', 'Saving...');
+
+            setTimeout(() => {
+                updateTimestamp();
+                completeProcess('transcript', 'Changes saved', 'success');
+                if (editingTranscriptId) {
+                    cancelEditTranscript(editingTranscriptId);
+                }
+            }, 1500);
+        }
+
+        function handlePhraseSuture() {
+            startProcess('phrase', 'Suturing Phrase...');
+            // Clear checkboxes
+            document.querySelectorAll('.phrase-checkbox').forEach(cb => cb.checked = false);
+            closePanel();
+
+            setTimeout(() => {
+                updateTimestamp();
+                completeProcess('phrase', 'Phrase added', 'success');
+            }, 1500);
+        }
+
+        // ===========================================
+        // RECORDING CONTROL
+        // ===========================================
+
+        // Format milliseconds to MM:SS
+        function formatTime(ms) {
+            const totalSeconds = Math.floor(ms / 1000);
+            const minutes = Math.floor(totalSeconds / 60);
+            const seconds = totalSeconds % 60;
+            return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+
+        // Update stopwatch display
+        function updateStopwatch() {
+            const now = Date.now();
+            const elapsed = recordingElapsed + (now - recordingStartTime);
+            document.getElementById('stopwatchTime').textContent = formatTime(elapsed);
+        }
+
+        // Start recording
+        async function startRecording() {
+            try {
+                // Request microphone access
+                mediaStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+
+                // Set up audio analysis
+                audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                analyser = audioContext.createAnalyser();
+                analyser.fftSize = 256;
+                analyser.smoothingTimeConstant = 0.3;
+
+                microphone = audioContext.createMediaStreamSource(mediaStream);
+                microphone.connect(analyser);
+
+                recordingState = 'recording';
+                isRecording = true;
+                recordingStartTime = Date.now();
+                recordingElapsed = 0;
+
+                // Hide record button, show recording controls
+                document.getElementById('recordBtn').classList.add('hidden');
+                document.getElementById('recordingControls').classList.remove('hidden');
+                document.getElementById('recordingConfirmation').classList.add('hidden');
+
+                // Reset pause/resume button to Pause state
+                const pauseResumeBtn = document.getElementById('pauseResumeBtn');
+                pauseResumeBtn.textContent = 'Pause';
+                pauseResumeBtn.classList.remove('btn-resume');
+                pauseResumeBtn.classList.add('btn-pause');
+
+                // Reset waveform
+                document.getElementById('audioWaveform').classList.remove('paused');
+
+                // Start stopwatch
+                stopwatchInterval = setInterval(updateStopwatch, 100);
+
+                // Start waveform visualization
+                updateWaveform();
+
+                showNotification('Recording started...', 'processing');
+            } catch (err) {
+                console.error('Microphone access denied:', err);
+                showNotification('Microphone access denied', 'error');
+            }
+        }
+
+        // Update waveform visualization based on audio amplitude
+        function updateWaveform() {
+            if (recordingState !== 'recording') return;
+
+            const dataArray = new Uint8Array(analyser.frequencyBinCount);
+            analyser.getByteFrequencyData(dataArray);
+
+            const bars = document.querySelectorAll('.waveform-bar');
+            const barCount = bars.length;
+            const segmentSize = Math.floor(dataArray.length / barCount);
+
+            bars.forEach((bar, index) => {
+                // Get average amplitude for this segment
+                let sum = 0;
+                for (let i = index * segmentSize; i < (index + 1) * segmentSize; i++) {
+                    sum += dataArray[i];
+                }
+                const average = sum / segmentSize;
+
+                // Scale to bar height (4px min, 16px max)
+                const height = Math.max(4, (average / 255) * 16);
+                bar.style.height = height + 'px';
+            });
+
+            animationFrameId = requestAnimationFrame(updateWaveform);
+        }
+
+        // Toggle between pause and resume
+        function togglePauseResume() {
+            const pauseResumeBtn = document.getElementById('pauseResumeBtn');
+            const audioWaveform = document.getElementById('audioWaveform');
+
+            if (recordingState === 'recording') {
+                // Pause recording
+                recordingState = 'paused';
+                recordingElapsed += Date.now() - recordingStartTime;
+                clearInterval(stopwatchInterval);
+                stopwatchInterval = null;
+
+                // Stop waveform animation
+                if (animationFrameId) {
+                    cancelAnimationFrame(animationFrameId);
+                    animationFrameId = null;
+                }
+
+                pauseResumeBtn.textContent = 'Resume';
+                pauseResumeBtn.classList.remove('btn-pause');
+                pauseResumeBtn.classList.add('btn-resume');
+                audioWaveform.classList.add('paused');
+
+                showNotification('Recording paused', 'success');
+            } else if (recordingState === 'paused') {
+                // Resume recording
+                recordingState = 'recording';
+                recordingStartTime = Date.now();
+                stopwatchInterval = setInterval(updateStopwatch, 100);
+
+                // Resume waveform animation
+                updateWaveform();
+
+                pauseResumeBtn.textContent = 'Pause';
+                pauseResumeBtn.classList.remove('btn-resume');
+                pauseResumeBtn.classList.add('btn-pause');
+                audioWaveform.classList.remove('paused');
+
+                showNotification('Recording resumed...', 'processing');
+            }
+        }
+
+        // Stop recording and show confirmation
+        function stopRecording() {
+            recordingState = 'confirming';
+
+            // Stop stopwatch
+            if (stopwatchInterval) {
+                recordingElapsed += Date.now() - recordingStartTime;
+                clearInterval(stopwatchInterval);
+                stopwatchInterval = null;
+            }
+
+            // Stop waveform animation
+            if (animationFrameId) {
+                cancelAnimationFrame(animationFrameId);
+                animationFrameId = null;
+            }
+
+            // Show confirmation controls
+            document.getElementById('recordingControls').classList.add('hidden');
+            document.getElementById('recordingConfirmation').classList.remove('hidden');
+
+            showNotification('Recording stopped. Save or discard?', 'success');
+        }
+
+        // Cleanup audio resources
+        function cleanupAudio() {
+            if (animationFrameId) {
+                cancelAnimationFrame(animationFrameId);
+                animationFrameId = null;
+            }
+            if (mediaStream) {
+                mediaStream.getTracks().forEach(track => track.stop());
+                mediaStream = null;
+            }
+            if (audioContext) {
+                audioContext.close();
+                audioContext = null;
+            }
+            analyser = null;
+            microphone = null;
+
+            // Reset waveform bars to minimum height
+            document.querySelectorAll('.waveform-bar').forEach(bar => {
+                bar.style.height = '4px';
+            });
+        }
+
+        // Confirm and save recording
+        function confirmSaveRecording() {
+            recordingState = 'idle';
+            isRecording = false;
+
+            // Cleanup audio resources
+            cleanupAudio();
+
+            // Reset to idle state
+            document.getElementById('recordBtn').classList.remove('hidden');
+            document.getElementById('recordingControls').classList.add('hidden');
+            document.getElementById('recordingConfirmation').classList.add('hidden');
+
+            // Reset stopwatch display
+            document.getElementById('stopwatchTime').textContent = '00:00';
+            recordingElapsed = 0;
+            recordingStartTime = null;
+
+            // Show recording saved, then start AI note generation
+            showNotification('Recording saved', 'success', { duration: 2000 });
+
+            // After a brief delay, start the "Suturing Note" process
+            setTimeout(() => {
+                startProcess('note-generation', 'Suturing Note...');
+
+                // Simulate AI processing (in production, this would be async)
+                setTimeout(() => {
+                    updateTimestamp();
+                    completeProcess('note-generation', 'Note complete', 'success');
+                }, 4000);
+            }, 2000);
+        }
+
+        // Discard recording
+        function discardRecording() {
+            recordingState = 'idle';
+            isRecording = false;
+
+            // Cleanup audio resources
+            cleanupAudio();
+
+            // Reset to idle state
+            document.getElementById('recordBtn').classList.remove('hidden');
+            document.getElementById('recordingControls').classList.add('hidden');
+            document.getElementById('recordingConfirmation').classList.add('hidden');
+
+            // Reset stopwatch display
+            document.getElementById('stopwatchTime').textContent = '00:00';
+            recordingElapsed = 0;
+            recordingStartTime = null;
+
+            showNotification('Recording discarded', 'success');
+        }
+
+        // Legacy function for backwards compatibility
+        function toggleRecording() {
+            if (recordingState === 'idle') {
+                startRecording();
+            } else {
+                stopRecording();
+            }
+        }
+
+        // ===========================================
+        // TASK TRACKER FUNCTIONS (Checklist)
+        // ===========================================
+        let taskReviewed = {
+            labs: new Set(),
+            imaging: new Set()
+        };
+        let autoClearHours = 24;
+        let lastClearTime = new Date();
+        let taskSettingsOpen = false;
+        let pendingMoveTimers = {}; // Track timers for delayed moves
+
+        function handleTaskCheck(checkbox, type, item) {
+            const label = checkbox.closest('.task-checkbox-item');
+
+            // Haptic feedback for mobile
+            if (window.navigator?.vibrate) {
+                window.navigator.vibrate(10);
+            }
+
+            if (checkbox.checked) {
+                taskReviewed[type].add(item);
+                label.classList.add('checked');
+                showTaskNotification(`✓ ${item}`);
+
+                // Clear any existing timer for this item
+                const timerId = `${type}-${item}`;
+                if (pendingMoveTimers[timerId]) {
+                    clearTimeout(pendingMoveTimers[timerId]);
+                }
+
+                // Remove after 4 seconds
+                pendingMoveTimers[timerId] = setTimeout(() => {
+                    removeCheckedItem(label);
+                    delete pendingMoveTimers[timerId];
+                }, 4000);
+
+            } else {
+                taskReviewed[type].delete(item);
+                label.classList.remove('checked');
+                showTaskNotification(`${item} pending`);
+
+                // Cancel pending move
+                const timerId = `${type}-${item}`;
+                if (pendingMoveTimers[timerId]) {
+                    clearTimeout(pendingMoveTimers[timerId]);
+                    delete pendingMoveTimers[timerId];
+                }
+            }
+
+            updateTaskStats();
+        }
+
+        function removeCheckedItem(label) {
+            // Fade out and remove
+            label.style.opacity = '0';
+            label.style.transform = 'translateX(-10px)';
+            setTimeout(() => {
+                label.remove();
+                updateTaskStats();
+            }, 200);
+        }
+
+        function showTaskNotification(message) {
+            const notifEl = document.getElementById('taskNotification');
+            notifEl.innerHTML = message;
+
+            setTimeout(() => {
+                updateTaskStats();
+            }, 1500);
+        }
+
+        function updateTaskStats() {
+            const totalReviewed = taskReviewed.labs.size + taskReviewed.imaging.size;
+            const totalTasks = document.querySelectorAll('#taskList .task-checkbox-item').length;
+            const hoursRemaining = Math.max(0,
+                autoClearHours - Math.floor((new Date() - lastClearTime) / (1000 * 60 * 60))
+            );
+
+            document.getElementById('taskReviewedCount').textContent = totalReviewed;
+            document.getElementById('taskTotalCount').textContent = totalTasks;
+            document.getElementById('hoursRemaining').textContent = hoursRemaining;
+
+            const notifEl = document.getElementById('taskNotification');
+            notifEl.innerHTML = `<span id="taskReviewedCount">${totalReviewed}</span>/<span id="taskTotalCount">${totalTasks}</span> • <span id="hoursRemaining">${hoursRemaining}</span>h`;
+        }
+
+        function toggleTaskSettings() {
+            taskSettingsOpen = !taskSettingsOpen;
+            const dropdown = document.getElementById('taskSettingsDropdown');
+            const chevron = document.getElementById('autoClearChevron');
+
+            if (taskSettingsOpen) {
+                dropdown.classList.remove('hidden');
+                chevron.style.transform = 'rotate(180deg)';
+            } else {
+                dropdown.classList.add('hidden');
+                chevron.style.transform = 'rotate(0deg)';
+            }
+
+            // Update active state on options
+            document.querySelectorAll('.auto-clear-option').forEach(opt => {
+                const hours = parseInt(opt.dataset.hours);
+                if (hours === autoClearHours) {
+                    opt.style.backgroundColor = 'var(--blue-50)';
+                    opt.style.color = 'var(--blue-700)';
+                } else {
+                    opt.style.backgroundColor = '';
+                    opt.style.color = '';
+                }
+            });
+        }
+
+        function setAutoClear(hours) {
+            autoClearHours = hours;
+            lastClearTime = new Date();
+            document.getElementById('autoClearValue').textContent = hours;
+            toggleTaskSettings();
+            showTaskNotification(`Auto-clear: ${hours}h`);
+        }
+
+        // Close task settings dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (taskSettingsOpen && !e.target.closest('#autoClearBtn') && !e.target.closest('#taskSettingsDropdown')) {
+                taskSettingsOpen = false;
+                document.getElementById('taskSettingsDropdown').classList.add('hidden');
+                document.getElementById('autoClearChevron').style.transform = 'rotate(0deg)';
+            }
+        });
+
+        // ===========================================
+        // PATIENT LIST FUNCTIONS
+        // ===========================================
+        function toggleFilterDropdown() {
+            const dropdown = document.getElementById('filterDropdown');
+            dropdown.classList.toggle('show');
+            // Close sort dropdown if open
+            document.getElementById('sortDropdown').classList.remove('show');
+        }
+
+        function toggleSortDropdown() {
+            const dropdown = document.getElementById('sortDropdown');
+            dropdown.classList.toggle('show');
+            // Close filter dropdown if open
+            document.getElementById('filterDropdown').classList.remove('show');
+        }
+
+        function setSort(sortType) {
+            currentSort = sortType;
+            document.getElementById('sortDropdown').classList.remove('show');
+
+            // Update active state on dropdown items
+            document.querySelectorAll('.sort-dropdown-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            event.target.closest('.sort-dropdown-item').classList.add('active');
+
+            // Sort the patient list
+            sortPatientList(sortType);
+        }
+
+        function sortPatientList(sortType) {
+            const patientList = document.getElementById('patientList');
+            const patients = Array.from(patientList.querySelectorAll('.patient-item'));
+
+            patients.sort((a, b) => {
+                if (sortType === 'asc') {
+                    const nameA = a.querySelector('.label').textContent.toLowerCase();
+                    const nameB = b.querySelector('.label').textContent.toLowerCase();
+                    return nameA.localeCompare(nameB);
+                } else if (sortType === 'desc') {
+                    const nameA = a.querySelector('.label').textContent.toLowerCase();
+                    const nameB = b.querySelector('.label').textContent.toLowerCase();
+                    return nameB.localeCompare(nameA);
+                } else if (sortType === 'recent') {
+                    // Sort by data-added-time attribute (most recent first)
+                    const timeA = parseInt(a.dataset.addedTime) || 0;
+                    const timeB = parseInt(b.dataset.addedTime) || 0;
+                    return timeB - timeA;
+                }
+                return 0;
+            });
+
+            // Re-append sorted patients
+            patients.forEach(patient => patientList.appendChild(patient));
+        }
+
+        // ===========================================
+        // USER MENU FUNCTIONS
+        // ===========================================
+        function toggleUserDropdown() {
+            const dropdown = document.getElementById('userDropdown');
+            dropdown.classList.toggle('show');
+        }
+
+        function handleSubscribe() {
+            console.log('Subscribe clicked');
+            // TODO: Implement subscription flow
+        }
+
+        function handleAccount() {
+            console.log('Account clicked');
+            document.getElementById('userDropdown').classList.remove('show');
+            // TODO: Implement account page navigation
+        }
+
+        function handleSettings() {
+            console.log('Settings clicked');
+            document.getElementById('userDropdown').classList.remove('show');
+            // TODO: Implement settings page navigation
+        }
+
+        function handleLogout() {
+            console.log('Logout clicked');
+            document.getElementById('userDropdown').classList.remove('show');
+            // TODO: Implement logout functionality
+        }
+
+        function setFilter(filter) {
+            clearAllChecks(); // Clear selections when switching views
+            currentFilter = filter;
+            const label = filter.charAt(0).toUpperCase() + filter.slice(1);
+            document.getElementById('filterLabel').textContent = label;
+            document.getElementById('filterDropdown').classList.remove('show');
+        }
+
+        function selectPatient(element, patientName) {
+            document.querySelectorAll('.patient-item').forEach(item => {
+                item.classList.remove('selected');
+            });
+
+            element.classList.add('selected');
+            document.getElementById('patientName').textContent = patientName;
+
+            const diagnosis = element.querySelector('.caption').textContent;
+            document.getElementById('diagnosis').textContent = diagnosis;
+        }
+
+        // ===========================================
+        // PATIENT CHECKBOX SELECTION
+        // ===========================================
+        let checkedPatients = new Set();
+
+        function togglePatientCheck(checkbox) {
+            const patientItem = checkbox.closest('.patient-item');
+            const patientName = patientItem.querySelector('[data-component="PatientItemName"]').textContent;
+
+            if (checkbox.checked) {
+                patientItem.classList.add('checked');
+                checkedPatients.add(patientName);
+            } else {
+                patientItem.classList.remove('checked');
+                checkedPatients.delete(patientName);
+            }
+            updateBulkActionBar();
+        }
+
+        function toggleSelectAll(selectAllCheckbox) {
+            const checkboxes = document.querySelectorAll('.patient-checkbox');
+            checkboxes.forEach(cb => {
+                cb.checked = selectAllCheckbox.checked;
+                togglePatientCheck(cb);
+            });
+        }
+
+        function updateBulkActionBar() {
+            const header = document.getElementById('patientListHeader');
+            const label = document.getElementById('selectAllLabel');
+            const bulkActions = document.getElementById('bulkActions');
+            const count = checkedPatients.size;
+
+            if (count > 0) {
+                // Enter selection mode
+                header.classList.add('selection-mode');
+                label.textContent = `${count} selected`;
+                bulkActions.classList.remove('hidden');
+
+                // Show appropriate buttons based on current filter
+                const isArchived = currentFilter === 'archived';
+                document.getElementById('bulkArchiveBtn').classList.toggle('hidden', isArchived);
+                document.getElementById('bulkUnarchiveBtn').classList.toggle('hidden', !isArchived);
+                document.getElementById('bulkDeleteBtn').classList.toggle('hidden', !isArchived);
+            } else {
+                // Exit selection mode
+                header.classList.remove('selection-mode');
+                label.textContent = 'Select All';
+                bulkActions.classList.add('hidden');
+            }
+
+            // Update Select All checkbox state
+            const allCheckboxes = document.querySelectorAll('.patient-checkbox');
+            const allChecked = [...allCheckboxes].every(cb => cb.checked);
+            document.getElementById('selectAllPatients').checked = allChecked && allCheckboxes.length > 0;
+        }
+
+        function bulkArchive() {
+            const count = checkedPatients.size;
+            if (count === 0) return;
+
+            // Store for potential undo
+            const archivedPatients = [...checkedPatients];
+
+            // Archive logic: mark patients as archived
+            archivedPatients.forEach(patientName => {
+                const items = document.querySelectorAll('.patient-item');
+                items.forEach(item => {
+                    const label = item.querySelector('.label');
+                    if (label && label.textContent === patientName) {
+                        item.dataset.archived = 'true';
+                        // Hide if current filter is 'active'
+                        if (currentFilter === 'active') {
+                            item.style.display = 'none';
+                        }
+                    }
+                });
+            });
+
+            clearAllChecks();
+
+            const message = count === 1 ? '1 patient archived' : `${count} patients archived`;
+            showNotification(message, 'success', {
+                duration: 5000,
+                undoCallback: () => undoBulkArchive(archivedPatients),
+                undoLabel: 'Undo'
+            });
+        }
+
+        function undoBulkArchive(patientNames) {
+            patientNames.forEach(patientName => {
+                const items = document.querySelectorAll('.patient-item');
+                items.forEach(item => {
+                    const label = item.querySelector('.label');
+                    if (label && label.textContent === patientName) {
+                        delete item.dataset.archived;
+                        item.style.display = '';
+                    }
+                });
+            });
+        }
+
+        function bulkUnarchive() {
+            const count = checkedPatients.size;
+            if (count === 0) return;
+
+            // Store for potential undo
+            const unarchivedPatients = [...checkedPatients];
+
+            // Unarchive logic: remove archived flag
+            unarchivedPatients.forEach(patientName => {
+                const items = document.querySelectorAll('.patient-item');
+                items.forEach(item => {
+                    const label = item.querySelector('.label');
+                    if (label && label.textContent === patientName) {
+                        delete item.dataset.archived;
+                        // Hide if current filter is 'archived'
+                        if (currentFilter === 'archived') {
+                            item.style.display = 'none';
+                        }
+                    }
+                });
+            });
+
+            clearAllChecks();
+
+            const message = count === 1 ? '1 patient restored' : `${count} patients restored`;
+            showNotification(message, 'success', {
+                duration: 5000,
+                undoCallback: () => undoBulkUnarchive(unarchivedPatients),
+                undoLabel: 'Undo'
+            });
+        }
+
+        function undoBulkUnarchive(patientNames) {
+            patientNames.forEach(patientName => {
+                const items = document.querySelectorAll('.patient-item');
+                items.forEach(item => {
+                    const label = item.querySelector('.label');
+                    if (label && label.textContent === patientName) {
+                        item.dataset.archived = 'true';
+                        item.style.display = '';
+                    }
+                });
+            });
+        }
+
+        function bulkDelete() {
+            const count = checkedPatients.size;
+            if (count === 0) return;
+
+            const confirmMsg = count === 1
+                ? 'Permanently delete 1 patient?'
+                : `Permanently delete ${count} patients?`;
+
+            if (confirm(confirmMsg)) {
+                const deletedPatients = [...checkedPatients];
+
+                // Delete patients from DOM
+                deletedPatients.forEach(patientName => {
+                    const items = document.querySelectorAll('.patient-item');
+                    items.forEach(item => {
+                        const label = item.querySelector('.label');
+                        if (label && label.textContent === patientName) {
+                            item.remove();
+                        }
+                    });
+                });
+
+                clearAllChecks();
+
+                const message = count === 1 ? '1 patient deleted' : `${count} patients deleted`;
+                showNotification(message, 'success');
+            }
+        }
+
+        function clearAllChecks() {
+            checkedPatients.clear();
+            document.querySelectorAll('.patient-checkbox').forEach(cb => {
+                cb.checked = false;
+                cb.closest('.patient-item').classList.remove('checked');
+            });
+            document.getElementById('selectAllPatients').checked = false;
+            updateBulkActionBar();
+        }
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', function(e) {
+            // Close filter dropdown
+            if (!e.target.closest('.relative')) {
+                document.getElementById('filterDropdown').classList.remove('show');
+                document.getElementById('sortDropdown').classList.remove('show');
+            }
+            // Close user dropdown
+            if (!e.target.closest('.user-menu')) {
+                document.getElementById('userDropdown').classList.remove('show');
+            }
+        });
+
+        // ===========================================
+        // INITIALIZE
+        // ===========================================
+        document.addEventListener('DOMContentLoaded', function() {
+            showStaticStatus();
+        });
+    </script>
+</body>
+</html>

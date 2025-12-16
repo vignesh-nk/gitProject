@@ -11,6 +11,461 @@
 return /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/swiper/modules/navigation.css":
+/*!**************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/swiper/modules/navigation.css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************/
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../css-loader/dist/runtime/noSourceMaps.js */ "./node_modules/css-loader/dist/runtime/noSourceMaps.js");
+/* harmony import */ var _css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "// extracted by mini-css-extract-plugin\nexport {};", ""]);
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/swiper/modules/pagination.css":
+/*!**************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/swiper/modules/pagination.css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************/
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../css-loader/dist/runtime/noSourceMaps.js */ "./node_modules/css-loader/dist/runtime/noSourceMaps.js");
+/* harmony import */ var _css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "// extracted by mini-css-extract-plugin\nexport {};", ""]);
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/swiper/swiper.css":
+/*!**************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/swiper/swiper.css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************/
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css-loader/dist/runtime/noSourceMaps.js */ "./node_modules/css-loader/dist/runtime/noSourceMaps.js");
+/* harmony import */ var _css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "// extracted by mini-css-extract-plugin\nexport {};", ""]);
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/api.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/api.js ***!
+  \*****************************************************/
+/***/ (function(module) {
+
+"use strict";
+
+
+/*
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
+*/
+module.exports = function (cssWithMappingToString) {
+  var list = [];
+
+  // return the list of modules as css string
+  list.toString = function toString() {
+    return this.map(function (item) {
+      var content = "";
+      var needLayer = typeof item[5] !== "undefined";
+      if (item[4]) {
+        content += "@supports (".concat(item[4], ") {");
+      }
+      if (item[2]) {
+        content += "@media ".concat(item[2], " {");
+      }
+      if (needLayer) {
+        content += "@layer".concat(item[5].length > 0 ? " ".concat(item[5]) : "", " {");
+      }
+      content += cssWithMappingToString(item);
+      if (needLayer) {
+        content += "}";
+      }
+      if (item[2]) {
+        content += "}";
+      }
+      if (item[4]) {
+        content += "}";
+      }
+      return content;
+    }).join("");
+  };
+
+  // import a list of modules into the list
+  list.i = function i(modules, media, dedupe, supports, layer) {
+    if (typeof modules === "string") {
+      modules = [[null, modules, undefined]];
+    }
+    var alreadyImportedModules = {};
+    if (dedupe) {
+      for (var k = 0; k < this.length; k++) {
+        var id = this[k][0];
+        if (id != null) {
+          alreadyImportedModules[id] = true;
+        }
+      }
+    }
+    for (var _k = 0; _k < modules.length; _k++) {
+      var item = [].concat(modules[_k]);
+      if (dedupe && alreadyImportedModules[item[0]]) {
+        continue;
+      }
+      if (typeof layer !== "undefined") {
+        if (typeof item[5] === "undefined") {
+          item[5] = layer;
+        } else {
+          item[1] = "@layer".concat(item[5].length > 0 ? " ".concat(item[5]) : "", " {").concat(item[1], "}");
+          item[5] = layer;
+        }
+      }
+      if (media) {
+        if (!item[2]) {
+          item[2] = media;
+        } else {
+          item[1] = "@media ".concat(item[2], " {").concat(item[1], "}");
+          item[2] = media;
+        }
+      }
+      if (supports) {
+        if (!item[4]) {
+          item[4] = "".concat(supports);
+        } else {
+          item[1] = "@supports (".concat(item[4], ") {").concat(item[1], "}");
+          item[4] = supports;
+        }
+      }
+      list.push(item);
+    }
+  };
+  return list;
+};
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/noSourceMaps.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/noSourceMaps.js ***!
+  \**************************************************************/
+/***/ (function(module) {
+
+"use strict";
+
+
+module.exports = function (i) {
+  return i[1];
+};
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
+  \****************************************************************************/
+/***/ (function(module) {
+
+"use strict";
+
+
+var stylesInDOM = [];
+function getIndexByIdentifier(identifier) {
+  var result = -1;
+  for (var i = 0; i < stylesInDOM.length; i++) {
+    if (stylesInDOM[i].identifier === identifier) {
+      result = i;
+      break;
+    }
+  }
+  return result;
+}
+function modulesToDom(list, options) {
+  var idCountMap = {};
+  var identifiers = [];
+  for (var i = 0; i < list.length; i++) {
+    var item = list[i];
+    var id = options.base ? item[0] + options.base : item[0];
+    var count = idCountMap[id] || 0;
+    var identifier = "".concat(id, " ").concat(count);
+    idCountMap[id] = count + 1;
+    var indexByIdentifier = getIndexByIdentifier(identifier);
+    var obj = {
+      css: item[1],
+      media: item[2],
+      sourceMap: item[3],
+      supports: item[4],
+      layer: item[5]
+    };
+    if (indexByIdentifier !== -1) {
+      stylesInDOM[indexByIdentifier].references++;
+      stylesInDOM[indexByIdentifier].updater(obj);
+    } else {
+      var updater = addElementStyle(obj, options);
+      options.byIndex = i;
+      stylesInDOM.splice(i, 0, {
+        identifier: identifier,
+        updater: updater,
+        references: 1
+      });
+    }
+    identifiers.push(identifier);
+  }
+  return identifiers;
+}
+function addElementStyle(obj, options) {
+  var api = options.domAPI(options);
+  api.update(obj);
+  var updater = function updater(newObj) {
+    if (newObj) {
+      if (newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap && newObj.supports === obj.supports && newObj.layer === obj.layer) {
+        return;
+      }
+      api.update(obj = newObj);
+    } else {
+      api.remove();
+    }
+  };
+  return updater;
+}
+module.exports = function (list, options) {
+  options = options || {};
+  list = list || [];
+  var lastIdentifiers = modulesToDom(list, options);
+  return function update(newList) {
+    newList = newList || [];
+    for (var i = 0; i < lastIdentifiers.length; i++) {
+      var identifier = lastIdentifiers[i];
+      var index = getIndexByIdentifier(identifier);
+      stylesInDOM[index].references--;
+    }
+    var newLastIdentifiers = modulesToDom(newList, options);
+    for (var _i = 0; _i < lastIdentifiers.length; _i++) {
+      var _identifier = lastIdentifiers[_i];
+      var _index = getIndexByIdentifier(_identifier);
+      if (stylesInDOM[_index].references === 0) {
+        stylesInDOM[_index].updater();
+        stylesInDOM.splice(_index, 1);
+      }
+    }
+    lastIdentifiers = newLastIdentifiers;
+  };
+};
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/insertBySelector.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/insertBySelector.js ***!
+  \********************************************************************/
+/***/ (function(module) {
+
+"use strict";
+
+
+var memo = {};
+
+/* istanbul ignore next  */
+function getTarget(target) {
+  if (typeof memo[target] === "undefined") {
+    var styleTarget = document.querySelector(target);
+
+    // Special case to return head of iframe instead of iframe itself
+    if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
+      try {
+        // This will throw an exception if access to iframe is blocked
+        // due to cross-origin restrictions
+        styleTarget = styleTarget.contentDocument.head;
+      } catch (e) {
+        // istanbul ignore next
+        styleTarget = null;
+      }
+    }
+    memo[target] = styleTarget;
+  }
+  return memo[target];
+}
+
+/* istanbul ignore next  */
+function insertBySelector(insert, style) {
+  var target = getTarget(insert);
+  if (!target) {
+    throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");
+  }
+  target.appendChild(style);
+}
+module.exports = insertBySelector;
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/insertStyleElement.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/insertStyleElement.js ***!
+  \**********************************************************************/
+/***/ (function(module) {
+
+"use strict";
+
+
+/* istanbul ignore next  */
+function insertStyleElement(options) {
+  var element = document.createElement("style");
+  options.setAttributes(element, options.attributes);
+  options.insert(element, options.options);
+  return element;
+}
+module.exports = insertStyleElement;
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js ***!
+  \**********************************************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+
+/* istanbul ignore next  */
+function setAttributesWithoutAttributes(styleElement) {
+  var nonce =  true ? __webpack_require__.nc : 0;
+  if (nonce) {
+    styleElement.setAttribute("nonce", nonce);
+  }
+}
+module.exports = setAttributesWithoutAttributes;
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/styleDomAPI.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/styleDomAPI.js ***!
+  \***************************************************************/
+/***/ (function(module) {
+
+"use strict";
+
+
+/* istanbul ignore next  */
+function apply(styleElement, options, obj) {
+  var css = "";
+  if (obj.supports) {
+    css += "@supports (".concat(obj.supports, ") {");
+  }
+  if (obj.media) {
+    css += "@media ".concat(obj.media, " {");
+  }
+  var needLayer = typeof obj.layer !== "undefined";
+  if (needLayer) {
+    css += "@layer".concat(obj.layer.length > 0 ? " ".concat(obj.layer) : "", " {");
+  }
+  css += obj.css;
+  if (needLayer) {
+    css += "}";
+  }
+  if (obj.media) {
+    css += "}";
+  }
+  if (obj.supports) {
+    css += "}";
+  }
+  var sourceMap = obj.sourceMap;
+  if (sourceMap && typeof btoa !== "undefined") {
+    css += "\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))), " */");
+  }
+
+  // For old IE
+  /* istanbul ignore if  */
+  options.styleTagTransform(css, styleElement, options.options);
+}
+function removeStyleElement(styleElement) {
+  // istanbul ignore if
+  if (styleElement.parentNode === null) {
+    return false;
+  }
+  styleElement.parentNode.removeChild(styleElement);
+}
+
+/* istanbul ignore next  */
+function domAPI(options) {
+  if (typeof document === "undefined") {
+    return {
+      update: function update() {},
+      remove: function remove() {}
+    };
+  }
+  var styleElement = options.insertStyleElement(options);
+  return {
+    update: function update(obj) {
+      apply(styleElement, options, obj);
+    },
+    remove: function remove() {
+      removeStyleElement(styleElement);
+    }
+  };
+}
+module.exports = domAPI;
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/styleTagTransform.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/styleTagTransform.js ***!
+  \*********************************************************************/
+/***/ (function(module) {
+
+"use strict";
+
+
+/* istanbul ignore next  */
+function styleTagTransform(css, styleElement) {
+  if (styleElement.styleSheet) {
+    styleElement.styleSheet.cssText = css;
+  } else {
+    while (styleElement.firstChild) {
+      styleElement.removeChild(styleElement.firstChild);
+    }
+    styleElement.appendChild(document.createTextNode(css));
+  }
+}
+module.exports = styleTagTransform;
+
+/***/ }),
+
 /***/ "./node_modules/sweetalert2/dist/sweetalert2.all.js":
 /*!**********************************************************!*\
   !*** ./node_modules/sweetalert2/dist/sweetalert2.all.js ***!
@@ -4638,6 +5093,4596 @@ return /******/ (function() { // webpackBootstrap
 if (typeof this !== 'undefined' && this.Sweetalert2){this.swal = this.sweetAlert = this.Swal = this.SweetAlert = this.Sweetalert2}
 "undefined"!=typeof document&&function(e,t){var n=e.createElement("style");if(e.getElementsByTagName("head")[0].appendChild(n),n.styleSheet)n.styleSheet.disabled||(n.styleSheet.cssText=t);else try{n.innerHTML=t}catch(e){n.innerText=t}}(document,":root{--swal2-outline: 0 0 0 3px rgba(100, 150, 200, 0.5);--swal2-container-padding: 0.625em;--swal2-backdrop: rgba(0, 0, 0, 0.4);--swal2-backdrop-transition: background-color 0.15s;--swal2-width: 32em;--swal2-padding: 0 0 1.25em;--swal2-border: none;--swal2-border-radius: 0.3125rem;--swal2-background: white;--swal2-color: #545454;--swal2-show-animation: swal2-show 0.3s;--swal2-hide-animation: swal2-hide 0.15s forwards;--swal2-icon-zoom: 1;--swal2-icon-animations: true;--swal2-title-padding: 0.8em 1em 0;--swal2-html-container-padding: 1em 1.6em 0.3em;--swal2-input-border: 1px solid #d9d9d9;--swal2-input-border-radius: 0.1875em;--swal2-input-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06), 0 0 0 3px transparent;--swal2-input-background: transparent;--swal2-input-transition: border-color 0.2s, box-shadow 0.2s;--swal2-input-hover-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06), 0 0 0 3px transparent;--swal2-input-focus-border: 1px solid #b4dbed;--swal2-input-focus-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06), 0 0 0 3px rgba(100, 150, 200, 0.5);--swal2-progress-step-background: #add8e6;--swal2-validation-message-background: #f0f0f0;--swal2-validation-message-color: #666;--swal2-footer-border-color: #eee;--swal2-footer-background: transparent;--swal2-footer-color: inherit;--swal2-timer-progress-bar-background: rgba(0, 0, 0, 0.3);--swal2-close-button-position: initial;--swal2-close-button-inset: auto;--swal2-close-button-font-size: 2.5em;--swal2-close-button-color: #ccc;--swal2-close-button-transition: color 0.2s, box-shadow 0.2s;--swal2-close-button-outline: initial;--swal2-close-button-box-shadow: inset 0 0 0 3px transparent;--swal2-close-button-focus-box-shadow: inset var(--swal2-outline);--swal2-close-button-hover-transform: none;--swal2-actions-justify-content: center;--swal2-actions-width: auto;--swal2-actions-margin: 1.25em auto 0;--swal2-actions-padding: 0;--swal2-actions-border-radius: 0;--swal2-actions-background: transparent;--swal2-action-button-transition: background-color 0.2s, box-shadow 0.2s;--swal2-action-button-hover: black 10%;--swal2-action-button-active: black 10%;--swal2-confirm-button-box-shadow: none;--swal2-confirm-button-border-radius: 0.25em;--swal2-confirm-button-background-color: #7066e0;--swal2-confirm-button-color: #fff;--swal2-deny-button-box-shadow: none;--swal2-deny-button-border-radius: 0.25em;--swal2-deny-button-background-color: #dc3741;--swal2-deny-button-color: #fff;--swal2-cancel-button-box-shadow: none;--swal2-cancel-button-border-radius: 0.25em;--swal2-cancel-button-background-color: #6e7881;--swal2-cancel-button-color: #fff;--swal2-toast-show-animation: swal2-toast-show 0.5s;--swal2-toast-hide-animation: swal2-toast-hide 0.1s forwards;--swal2-toast-border: none;--swal2-toast-box-shadow: 0 0 1px hsl(0deg 0% 0% / 0.075), 0 1px 2px hsl(0deg 0% 0% / 0.075), 1px 2px 4px hsl(0deg 0% 0% / 0.075), 1px 3px 8px hsl(0deg 0% 0% / 0.075), 2px 4px 16px hsl(0deg 0% 0% / 0.075)}[data-swal2-theme=dark]{--swal2-dark-theme-black: #19191a;--swal2-dark-theme-white: #e1e1e1;--swal2-background: var(--swal2-dark-theme-black);--swal2-color: var(--swal2-dark-theme-white);--swal2-footer-border-color: #555;--swal2-input-background: color-mix(in srgb, var(--swal2-dark-theme-black), var(--swal2-dark-theme-white) 10%);--swal2-validation-message-background: color-mix( in srgb, var(--swal2-dark-theme-black), var(--swal2-dark-theme-white) 10% );--swal2-validation-message-color: var(--swal2-dark-theme-white);--swal2-timer-progress-bar-background: rgba(255, 255, 255, 0.7)}@media(prefers-color-scheme: dark){[data-swal2-theme=auto]{--swal2-dark-theme-black: #19191a;--swal2-dark-theme-white: #e1e1e1;--swal2-background: var(--swal2-dark-theme-black);--swal2-color: var(--swal2-dark-theme-white);--swal2-footer-border-color: #555;--swal2-input-background: color-mix(in srgb, var(--swal2-dark-theme-black), var(--swal2-dark-theme-white) 10%);--swal2-validation-message-background: color-mix( in srgb, var(--swal2-dark-theme-black), var(--swal2-dark-theme-white) 10% );--swal2-validation-message-color: var(--swal2-dark-theme-white);--swal2-timer-progress-bar-background: rgba(255, 255, 255, 0.7)}}body.swal2-shown:not(.swal2-no-backdrop,.swal2-toast-shown){overflow:hidden}body.swal2-height-auto{height:auto !important}body.swal2-no-backdrop .swal2-container{background-color:rgba(0,0,0,0) !important;pointer-events:none}body.swal2-no-backdrop .swal2-container .swal2-popup{pointer-events:all}body.swal2-no-backdrop .swal2-container .swal2-modal{box-shadow:0 0 10px var(--swal2-backdrop)}body.swal2-toast-shown .swal2-container{box-sizing:border-box;width:360px;max-width:100%;background-color:rgba(0,0,0,0);pointer-events:none}body.swal2-toast-shown .swal2-container.swal2-top{inset:0 auto auto 50%;transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-top-end,body.swal2-toast-shown .swal2-container.swal2-top-right{inset:0 0 auto auto}body.swal2-toast-shown .swal2-container.swal2-top-start,body.swal2-toast-shown .swal2-container.swal2-top-left{inset:0 auto auto 0}body.swal2-toast-shown .swal2-container.swal2-center-start,body.swal2-toast-shown .swal2-container.swal2-center-left{inset:50% auto auto 0;transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-center{inset:50% auto auto 50%;transform:translate(-50%, -50%)}body.swal2-toast-shown .swal2-container.swal2-center-end,body.swal2-toast-shown .swal2-container.swal2-center-right{inset:50% 0 auto auto;transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-start,body.swal2-toast-shown .swal2-container.swal2-bottom-left{inset:auto auto 0 0}body.swal2-toast-shown .swal2-container.swal2-bottom{inset:auto auto 0 50%;transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-end,body.swal2-toast-shown .swal2-container.swal2-bottom-right{inset:auto 0 0 auto}@media print{body.swal2-shown:not(.swal2-no-backdrop,.swal2-toast-shown){overflow-y:scroll !important}body.swal2-shown:not(.swal2-no-backdrop,.swal2-toast-shown)>[aria-hidden=true]{display:none}body.swal2-shown:not(.swal2-no-backdrop,.swal2-toast-shown) .swal2-container{position:static !important}}div:where(.swal2-container){display:grid;position:fixed;z-index:1060;inset:0;box-sizing:border-box;grid-template-areas:\"top-start     top            top-end\" \"center-start  center         center-end\" \"bottom-start  bottom-center  bottom-end\";grid-template-rows:minmax(min-content, auto) minmax(min-content, auto) minmax(min-content, auto);height:100%;padding:var(--swal2-container-padding);overflow-x:hidden;transition:var(--swal2-backdrop-transition);-webkit-overflow-scrolling:touch}div:where(.swal2-container).swal2-backdrop-show,div:where(.swal2-container).swal2-noanimation{background:var(--swal2-backdrop)}div:where(.swal2-container).swal2-backdrop-hide{background:rgba(0,0,0,0) !important}div:where(.swal2-container).swal2-top-start,div:where(.swal2-container).swal2-center-start,div:where(.swal2-container).swal2-bottom-start{grid-template-columns:minmax(0, 1fr) auto auto}div:where(.swal2-container).swal2-top,div:where(.swal2-container).swal2-center,div:where(.swal2-container).swal2-bottom{grid-template-columns:auto minmax(0, 1fr) auto}div:where(.swal2-container).swal2-top-end,div:where(.swal2-container).swal2-center-end,div:where(.swal2-container).swal2-bottom-end{grid-template-columns:auto auto minmax(0, 1fr)}div:where(.swal2-container).swal2-top-start>.swal2-popup{align-self:start}div:where(.swal2-container).swal2-top>.swal2-popup{grid-column:2;place-self:start center}div:where(.swal2-container).swal2-top-end>.swal2-popup,div:where(.swal2-container).swal2-top-right>.swal2-popup{grid-column:3;place-self:start end}div:where(.swal2-container).swal2-center-start>.swal2-popup,div:where(.swal2-container).swal2-center-left>.swal2-popup{grid-row:2;align-self:center}div:where(.swal2-container).swal2-center>.swal2-popup{grid-column:2;grid-row:2;place-self:center center}div:where(.swal2-container).swal2-center-end>.swal2-popup,div:where(.swal2-container).swal2-center-right>.swal2-popup{grid-column:3;grid-row:2;place-self:center end}div:where(.swal2-container).swal2-bottom-start>.swal2-popup,div:where(.swal2-container).swal2-bottom-left>.swal2-popup{grid-column:1;grid-row:3;align-self:end}div:where(.swal2-container).swal2-bottom>.swal2-popup{grid-column:2;grid-row:3;place-self:end center}div:where(.swal2-container).swal2-bottom-end>.swal2-popup,div:where(.swal2-container).swal2-bottom-right>.swal2-popup{grid-column:3;grid-row:3;place-self:end end}div:where(.swal2-container).swal2-grow-row>.swal2-popup,div:where(.swal2-container).swal2-grow-fullscreen>.swal2-popup{grid-column:1/4;width:100%}div:where(.swal2-container).swal2-grow-column>.swal2-popup,div:where(.swal2-container).swal2-grow-fullscreen>.swal2-popup{grid-row:1/4;align-self:stretch}div:where(.swal2-container).swal2-no-transition{transition:none !important}div:where(.swal2-container)[popover]{width:auto;border:0}div:where(.swal2-container) div:where(.swal2-popup){display:none;position:relative;box-sizing:border-box;grid-template-columns:minmax(0, 100%);width:var(--swal2-width);max-width:100%;padding:var(--swal2-padding);border:var(--swal2-border);border-radius:var(--swal2-border-radius);background:var(--swal2-background);color:var(--swal2-color);font-family:inherit;font-size:1rem;container-name:swal2-popup}div:where(.swal2-container) div:where(.swal2-popup):focus{outline:none}div:where(.swal2-container) div:where(.swal2-popup).swal2-loading{overflow-y:hidden}div:where(.swal2-container) div:where(.swal2-popup).swal2-draggable{cursor:grab}div:where(.swal2-container) div:where(.swal2-popup).swal2-draggable div:where(.swal2-icon){cursor:grab}div:where(.swal2-container) div:where(.swal2-popup).swal2-dragging{cursor:grabbing}div:where(.swal2-container) div:where(.swal2-popup).swal2-dragging div:where(.swal2-icon){cursor:grabbing}div:where(.swal2-container) h2:where(.swal2-title){position:relative;max-width:100%;margin:0;padding:var(--swal2-title-padding);color:inherit;font-size:1.875em;font-weight:600;text-align:center;text-transform:none;overflow-wrap:break-word;cursor:initial}div:where(.swal2-container) div:where(.swal2-actions){display:flex;z-index:1;box-sizing:border-box;flex-wrap:wrap;align-items:center;justify-content:var(--swal2-actions-justify-content);width:var(--swal2-actions-width);margin:var(--swal2-actions-margin);padding:var(--swal2-actions-padding);border-radius:var(--swal2-actions-border-radius);background:var(--swal2-actions-background)}div:where(.swal2-container) div:where(.swal2-loader){display:none;align-items:center;justify-content:center;width:2.2em;height:2.2em;margin:0 1.875em;animation:swal2-rotate-loading 1.5s linear 0s infinite normal;border-width:.25em;border-style:solid;border-radius:100%;border-color:#2778c4 rgba(0,0,0,0) #2778c4 rgba(0,0,0,0)}div:where(.swal2-container) button:where(.swal2-styled){margin:.3125em;padding:.625em 1.1em;transition:var(--swal2-action-button-transition);border:none;box-shadow:0 0 0 3px rgba(0,0,0,0);font-weight:500}div:where(.swal2-container) button:where(.swal2-styled):not([disabled]){cursor:pointer}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm){border-radius:var(--swal2-confirm-button-border-radius);background:initial;background-color:var(--swal2-confirm-button-background-color);box-shadow:var(--swal2-confirm-button-box-shadow);color:var(--swal2-confirm-button-color);font-size:1em}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm):hover{background-color:color-mix(in srgb, var(--swal2-confirm-button-background-color), var(--swal2-action-button-hover))}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm):active{background-color:color-mix(in srgb, var(--swal2-confirm-button-background-color), var(--swal2-action-button-active))}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-deny){border-radius:var(--swal2-deny-button-border-radius);background:initial;background-color:var(--swal2-deny-button-background-color);box-shadow:var(--swal2-deny-button-box-shadow);color:var(--swal2-deny-button-color);font-size:1em}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-deny):hover{background-color:color-mix(in srgb, var(--swal2-deny-button-background-color), var(--swal2-action-button-hover))}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-deny):active{background-color:color-mix(in srgb, var(--swal2-deny-button-background-color), var(--swal2-action-button-active))}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-cancel){border-radius:var(--swal2-cancel-button-border-radius);background:initial;background-color:var(--swal2-cancel-button-background-color);box-shadow:var(--swal2-cancel-button-box-shadow);color:var(--swal2-cancel-button-color);font-size:1em}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-cancel):hover{background-color:color-mix(in srgb, var(--swal2-cancel-button-background-color), var(--swal2-action-button-hover))}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-cancel):active{background-color:color-mix(in srgb, var(--swal2-cancel-button-background-color), var(--swal2-action-button-active))}div:where(.swal2-container) button:where(.swal2-styled):focus-visible{outline:none;box-shadow:var(--swal2-action-button-focus-box-shadow)}div:where(.swal2-container) button:where(.swal2-styled)[disabled]:not(.swal2-loading){opacity:.4}div:where(.swal2-container) button:where(.swal2-styled)::-moz-focus-inner{border:0}div:where(.swal2-container) div:where(.swal2-footer){margin:1em 0 0;padding:1em 1em 0;border-top:1px solid var(--swal2-footer-border-color);background:var(--swal2-footer-background);color:var(--swal2-footer-color);font-size:1em;text-align:center;cursor:initial}div:where(.swal2-container) .swal2-timer-progress-bar-container{position:absolute;right:0;bottom:0;left:0;grid-column:auto !important;overflow:hidden;border-bottom-right-radius:var(--swal2-border-radius);border-bottom-left-radius:var(--swal2-border-radius)}div:where(.swal2-container) div:where(.swal2-timer-progress-bar){width:100%;height:.25em;background:var(--swal2-timer-progress-bar-background)}div:where(.swal2-container) img:where(.swal2-image){max-width:100%;margin:2em auto 1em;cursor:initial}div:where(.swal2-container) button:where(.swal2-close){position:var(--swal2-close-button-position);inset:var(--swal2-close-button-inset);z-index:2;align-items:center;justify-content:center;width:1.2em;height:1.2em;margin-top:0;margin-right:0;margin-bottom:-1.2em;padding:0;overflow:hidden;transition:var(--swal2-close-button-transition);border:none;border-radius:var(--swal2-border-radius);outline:var(--swal2-close-button-outline);background:rgba(0,0,0,0);color:var(--swal2-close-button-color);font-family:monospace;font-size:var(--swal2-close-button-font-size);cursor:pointer;justify-self:end}div:where(.swal2-container) button:where(.swal2-close):hover{transform:var(--swal2-close-button-hover-transform);background:rgba(0,0,0,0);color:#f27474}div:where(.swal2-container) button:where(.swal2-close):focus-visible{outline:none;box-shadow:var(--swal2-close-button-focus-box-shadow)}div:where(.swal2-container) button:where(.swal2-close)::-moz-focus-inner{border:0}div:where(.swal2-container) div:where(.swal2-html-container){z-index:1;justify-content:center;margin:0;padding:var(--swal2-html-container-padding);overflow:auto;color:inherit;font-size:1.125em;font-weight:normal;line-height:normal;text-align:center;overflow-wrap:break-word;word-break:break-word;cursor:initial}div:where(.swal2-container) input:where(.swal2-input),div:where(.swal2-container) input:where(.swal2-file),div:where(.swal2-container) textarea:where(.swal2-textarea),div:where(.swal2-container) select:where(.swal2-select),div:where(.swal2-container) div:where(.swal2-radio),div:where(.swal2-container) label:where(.swal2-checkbox){margin:1em 2em 3px}div:where(.swal2-container) input:where(.swal2-input),div:where(.swal2-container) input:where(.swal2-file),div:where(.swal2-container) textarea:where(.swal2-textarea){box-sizing:border-box;width:auto;transition:var(--swal2-input-transition);border:var(--swal2-input-border);border-radius:var(--swal2-input-border-radius);background:var(--swal2-input-background);box-shadow:var(--swal2-input-box-shadow);color:inherit;font-size:1.125em}div:where(.swal2-container) input:where(.swal2-input).swal2-inputerror,div:where(.swal2-container) input:where(.swal2-file).swal2-inputerror,div:where(.swal2-container) textarea:where(.swal2-textarea).swal2-inputerror{border-color:#f27474 !important;box-shadow:0 0 2px #f27474 !important}div:where(.swal2-container) input:where(.swal2-input):hover,div:where(.swal2-container) input:where(.swal2-file):hover,div:where(.swal2-container) textarea:where(.swal2-textarea):hover{box-shadow:var(--swal2-input-hover-box-shadow)}div:where(.swal2-container) input:where(.swal2-input):focus,div:where(.swal2-container) input:where(.swal2-file):focus,div:where(.swal2-container) textarea:where(.swal2-textarea):focus{border:var(--swal2-input-focus-border);outline:none;box-shadow:var(--swal2-input-focus-box-shadow)}div:where(.swal2-container) input:where(.swal2-input)::placeholder,div:where(.swal2-container) input:where(.swal2-file)::placeholder,div:where(.swal2-container) textarea:where(.swal2-textarea)::placeholder{color:#ccc}div:where(.swal2-container) .swal2-range{margin:1em 2em 3px;background:var(--swal2-background)}div:where(.swal2-container) .swal2-range input{width:80%}div:where(.swal2-container) .swal2-range output{width:20%;color:inherit;font-weight:600;text-align:center}div:where(.swal2-container) .swal2-range input,div:where(.swal2-container) .swal2-range output{height:2.625em;padding:0;font-size:1.125em;line-height:2.625em}div:where(.swal2-container) .swal2-input{height:2.625em;padding:0 .75em}div:where(.swal2-container) .swal2-file{width:75%;margin-right:auto;margin-left:auto;background:var(--swal2-input-background);font-size:1.125em}div:where(.swal2-container) .swal2-textarea{height:6.75em;padding:.75em}div:where(.swal2-container) .swal2-select{min-width:50%;max-width:100%;padding:.375em .625em;background:var(--swal2-input-background);color:inherit;font-size:1.125em}div:where(.swal2-container) .swal2-radio,div:where(.swal2-container) .swal2-checkbox{align-items:center;justify-content:center;background:var(--swal2-background);color:inherit}div:where(.swal2-container) .swal2-radio label,div:where(.swal2-container) .swal2-checkbox label{margin:0 .6em;font-size:1.125em}div:where(.swal2-container) .swal2-radio input,div:where(.swal2-container) .swal2-checkbox input{flex-shrink:0;margin:0 .4em}div:where(.swal2-container) label:where(.swal2-input-label){display:flex;justify-content:center;margin:1em auto 0}div:where(.swal2-container) div:where(.swal2-validation-message){align-items:center;justify-content:center;margin:1em 0 0;padding:.625em;overflow:hidden;background:var(--swal2-validation-message-background);color:var(--swal2-validation-message-color);font-size:1em;font-weight:300}div:where(.swal2-container) div:where(.swal2-validation-message)::before{content:\"!\";display:inline-block;width:1.5em;min-width:1.5em;height:1.5em;margin:0 .625em;border-radius:50%;background-color:#f27474;color:#fff;font-weight:600;line-height:1.5em;text-align:center}div:where(.swal2-container) .swal2-progress-steps{flex-wrap:wrap;align-items:center;max-width:100%;margin:1.25em auto;padding:0;background:rgba(0,0,0,0);font-weight:600}div:where(.swal2-container) .swal2-progress-steps li{display:inline-block;position:relative}div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step{z-index:20;flex-shrink:0;width:2em;height:2em;border-radius:2em;background:#2778c4;color:#fff;line-height:2em;text-align:center}div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step{background:#2778c4}div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step{background:var(--swal2-progress-step-background);color:#fff}div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step-line{background:var(--swal2-progress-step-background)}div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step-line{z-index:10;flex-shrink:0;width:2.5em;height:.4em;margin:0 -1px;background:#2778c4}div:where(.swal2-icon){position:relative;box-sizing:content-box;justify-content:center;width:5em;height:5em;margin:2.5em auto .6em;zoom:var(--swal2-icon-zoom);border:.25em solid rgba(0,0,0,0);border-radius:50%;border-color:#000;font-family:inherit;line-height:5em;cursor:default;user-select:none}div:where(.swal2-icon) .swal2-icon-content{display:flex;align-items:center;font-size:3.75em}div:where(.swal2-icon).swal2-error{border-color:#f27474;color:#f27474}div:where(.swal2-icon).swal2-error .swal2-x-mark{position:relative;flex-grow:1}div:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line]{display:block;position:absolute;top:2.3125em;width:2.9375em;height:.3125em;border-radius:.125em;background-color:#f27474}div:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line][class$=left]{left:1.0625em;transform:rotate(45deg)}div:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line][class$=right]{right:1em;transform:rotate(-45deg)}@container swal2-popup style(--swal2-icon-animations:true){div:where(.swal2-icon).swal2-error.swal2-icon-show{animation:swal2-animate-error-icon .5s}div:where(.swal2-icon).swal2-error.swal2-icon-show .swal2-x-mark{animation:swal2-animate-error-x-mark .5s}}div:where(.swal2-icon).swal2-warning{border-color:#f8bb86;color:#f8bb86}@container swal2-popup style(--swal2-icon-animations:true){div:where(.swal2-icon).swal2-warning.swal2-icon-show{animation:swal2-animate-error-icon .5s}div:where(.swal2-icon).swal2-warning.swal2-icon-show .swal2-icon-content{animation:swal2-animate-i-mark .5s}}div:where(.swal2-icon).swal2-info{border-color:#3fc3ee;color:#3fc3ee}@container swal2-popup style(--swal2-icon-animations:true){div:where(.swal2-icon).swal2-info.swal2-icon-show{animation:swal2-animate-error-icon .5s}div:where(.swal2-icon).swal2-info.swal2-icon-show .swal2-icon-content{animation:swal2-animate-i-mark .8s}}div:where(.swal2-icon).swal2-question{border-color:#87adbd;color:#87adbd}@container swal2-popup style(--swal2-icon-animations:true){div:where(.swal2-icon).swal2-question.swal2-icon-show{animation:swal2-animate-error-icon .5s}div:where(.swal2-icon).swal2-question.swal2-icon-show .swal2-icon-content{animation:swal2-animate-question-mark .8s}}div:where(.swal2-icon).swal2-success{border-color:#a5dc86;color:#a5dc86}div:where(.swal2-icon).swal2-success [class^=swal2-success-circular-line]{position:absolute;width:3.75em;height:7.5em;border-radius:50%}div:where(.swal2-icon).swal2-success [class^=swal2-success-circular-line][class$=left]{top:-0.4375em;left:-2.0635em;transform:rotate(-45deg);transform-origin:3.75em 3.75em;border-radius:7.5em 0 0 7.5em}div:where(.swal2-icon).swal2-success [class^=swal2-success-circular-line][class$=right]{top:-0.6875em;left:1.875em;transform:rotate(-45deg);transform-origin:0 3.75em;border-radius:0 7.5em 7.5em 0}div:where(.swal2-icon).swal2-success .swal2-success-ring{position:absolute;z-index:2;top:-0.25em;left:-0.25em;box-sizing:content-box;width:100%;height:100%;border:.25em solid rgba(165,220,134,.3);border-radius:50%}div:where(.swal2-icon).swal2-success .swal2-success-fix{position:absolute;z-index:1;top:.5em;left:1.625em;width:.4375em;height:5.625em;transform:rotate(-45deg)}div:where(.swal2-icon).swal2-success [class^=swal2-success-line]{display:block;position:absolute;z-index:2;height:.3125em;border-radius:.125em;background-color:#a5dc86}div:where(.swal2-icon).swal2-success [class^=swal2-success-line][class$=tip]{top:2.875em;left:.8125em;width:1.5625em;transform:rotate(45deg)}div:where(.swal2-icon).swal2-success [class^=swal2-success-line][class$=long]{top:2.375em;right:.5em;width:2.9375em;transform:rotate(-45deg)}@container swal2-popup style(--swal2-icon-animations:true){div:where(.swal2-icon).swal2-success.swal2-icon-show .swal2-success-line-tip{animation:swal2-animate-success-line-tip .75s}div:where(.swal2-icon).swal2-success.swal2-icon-show .swal2-success-line-long{animation:swal2-animate-success-line-long .75s}div:where(.swal2-icon).swal2-success.swal2-icon-show .swal2-success-circular-line-right{animation:swal2-rotate-success-circular-line 4.25s ease-in}}[class^=swal2]{-webkit-tap-highlight-color:rgba(0,0,0,0)}.swal2-show{animation:var(--swal2-show-animation)}.swal2-hide{animation:var(--swal2-hide-animation)}.swal2-noanimation{transition:none}.swal2-scrollbar-measure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}.swal2-rtl .swal2-close{margin-right:initial;margin-left:0}.swal2-rtl .swal2-timer-progress-bar{right:0;left:auto}.swal2-toast{box-sizing:border-box;grid-column:1/4 !important;grid-row:1/4 !important;grid-template-columns:min-content auto min-content;padding:1em;overflow-y:hidden;border:var(--swal2-toast-border);background:var(--swal2-background);box-shadow:var(--swal2-toast-box-shadow);pointer-events:all}.swal2-toast>*{grid-column:2}.swal2-toast h2:where(.swal2-title){margin:.5em 1em;padding:0;font-size:1em;text-align:initial}.swal2-toast .swal2-loading{justify-content:center}.swal2-toast input:where(.swal2-input){height:2em;margin:.5em;font-size:1em}.swal2-toast .swal2-validation-message{font-size:1em}.swal2-toast div:where(.swal2-footer){margin:.5em 0 0;padding:.5em 0 0;font-size:.8em}.swal2-toast button:where(.swal2-close){grid-column:3/3;grid-row:1/99;align-self:center;width:.8em;height:.8em;margin:0;font-size:2em}.swal2-toast div:where(.swal2-html-container){margin:.5em 1em;padding:0;overflow:initial;font-size:1em;text-align:initial}.swal2-toast div:where(.swal2-html-container):empty{padding:0}.swal2-toast .swal2-loader{grid-column:1;grid-row:1/99;align-self:center;width:2em;height:2em;margin:.25em}.swal2-toast .swal2-icon{grid-column:1;grid-row:1/99;align-self:center;width:2em;min-width:2em;height:2em;margin:0 .5em 0 0}.swal2-toast .swal2-icon .swal2-icon-content{display:flex;align-items:center;font-size:1.8em;font-weight:bold}.swal2-toast .swal2-icon.swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line]{top:.875em;width:1.375em}.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:.3125em}.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:.3125em}.swal2-toast div:where(.swal2-actions){justify-content:flex-start;height:auto;margin:0;margin-top:.5em;padding:0 .5em}.swal2-toast button:where(.swal2-styled){margin:.25em .5em;padding:.4em .6em;font-size:1em}.swal2-toast .swal2-success{border-color:#a5dc86}.swal2-toast .swal2-success [class^=swal2-success-circular-line]{position:absolute;width:1.6em;height:3em;border-radius:50%}.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=left]{top:-0.8em;left:-0.5em;transform:rotate(-45deg);transform-origin:2em 2em;border-radius:4em 0 0 4em}.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=right]{top:-0.25em;left:.9375em;transform-origin:0 1.5em;border-radius:0 4em 4em 0}.swal2-toast .swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-toast .swal2-success .swal2-success-fix{top:0;left:.4375em;width:.4375em;height:2.6875em}.swal2-toast .swal2-success [class^=swal2-success-line]{height:.3125em}.swal2-toast .swal2-success [class^=swal2-success-line][class$=tip]{top:1.125em;left:.1875em;width:.75em}.swal2-toast .swal2-success [class^=swal2-success-line][class$=long]{top:.9375em;right:.1875em;width:1.375em}@container swal2-popup style(--swal2-icon-animations:true){.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-tip{animation:swal2-toast-animate-success-line-tip .75s}.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-long{animation:swal2-toast-animate-success-line-long .75s}}.swal2-toast.swal2-show{animation:var(--swal2-toast-show-animation)}.swal2-toast.swal2-hide{animation:var(--swal2-toast-hide-animation)}@keyframes swal2-show{0%{transform:translate3d(0, -50px, 0) scale(0.9);opacity:0}100%{transform:translate3d(0, 0, 0) scale(1);opacity:1}}@keyframes swal2-hide{0%{transform:translate3d(0, 0, 0) scale(1);opacity:1}100%{transform:translate3d(0, -50px, 0) scale(0.9);opacity:0}}@keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-0.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.8125em;width:1.5625em}}@keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@keyframes swal2-rotate-success-circular-line{0%{transform:rotate(-45deg)}5%{transform:rotate(-45deg)}12%{transform:rotate(-405deg)}100%{transform:rotate(-405deg)}}@keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;transform:scale(0.4);opacity:0}50%{margin-top:1.625em;transform:scale(0.4);opacity:0}80%{margin-top:-0.375em;transform:scale(1.15)}100%{margin-top:0;transform:scale(1);opacity:1}}@keyframes swal2-animate-error-icon{0%{transform:rotateX(100deg);opacity:0}100%{transform:rotateX(0deg);opacity:1}}@keyframes swal2-rotate-loading{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}@keyframes swal2-animate-question-mark{0%{transform:rotateY(-360deg)}100%{transform:rotateY(0)}}@keyframes swal2-animate-i-mark{0%{transform:rotateZ(45deg);opacity:0}25%{transform:rotateZ(-25deg);opacity:.4}50%{transform:rotateZ(15deg);opacity:.8}75%{transform:rotateZ(-5deg);opacity:1}100%{transform:rotateX(0);opacity:1}}@keyframes swal2-toast-show{0%{transform:translateY(-0.625em) rotateZ(2deg)}33%{transform:translateY(0) rotateZ(-2deg)}66%{transform:translateY(0.3125em) rotateZ(2deg)}100%{transform:translateY(0) rotateZ(0deg)}}@keyframes swal2-toast-hide{100%{transform:rotateZ(1deg);opacity:0}}@keyframes swal2-toast-animate-success-line-tip{0%{top:.5625em;left:.0625em;width:0}54%{top:.125em;left:.125em;width:0}70%{top:.625em;left:-0.25em;width:1.625em}84%{top:1.0625em;left:.75em;width:.5em}100%{top:1.125em;left:.1875em;width:.75em}}@keyframes swal2-toast-animate-success-line-long{0%{top:1.625em;right:1.375em;width:0}65%{top:1.25em;right:.9375em;width:0}84%{top:.9375em;right:0;width:1.125em}100%{top:.9375em;right:.1875em;width:1.375em}}");
 
+/***/ }),
+
+/***/ "./node_modules/swiper/modules/navigation.css":
+/*!****************************************************!*\
+  !*** ./node_modules/swiper/modules/navigation.css ***!
+  \****************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _css_loader_dist_cjs_js_postcss_loader_dist_cjs_js_mini_css_extract_plugin_dist_loader_js_css_loader_dist_cjs_js_postcss_loader_dist_cjs_js_navigation_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../css-loader/dist/cjs.js!../../postcss-loader/dist/cjs.js!../../mini-css-extract-plugin/dist/loader.js!../../css-loader/dist/cjs.js!../../postcss-loader/dist/cjs.js!./navigation.css */ "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/swiper/modules/navigation.css");
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+options.insert = _style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+options.domAPI = (_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_css_loader_dist_cjs_js_postcss_loader_dist_cjs_js_mini_css_extract_plugin_dist_loader_js_css_loader_dist_cjs_js_postcss_loader_dist_cjs_js_navigation_css__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ __webpack_exports__["default"] = (_css_loader_dist_cjs_js_postcss_loader_dist_cjs_js_mini_css_extract_plugin_dist_loader_js_css_loader_dist_cjs_js_postcss_loader_dist_cjs_js_navigation_css__WEBPACK_IMPORTED_MODULE_6__["default"] && _css_loader_dist_cjs_js_postcss_loader_dist_cjs_js_mini_css_extract_plugin_dist_loader_js_css_loader_dist_cjs_js_postcss_loader_dist_cjs_js_navigation_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _css_loader_dist_cjs_js_postcss_loader_dist_cjs_js_mini_css_extract_plugin_dist_loader_js_css_loader_dist_cjs_js_postcss_loader_dist_cjs_js_navigation_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
+
+/***/ }),
+
+/***/ "./node_modules/swiper/modules/pagination.css":
+/*!****************************************************!*\
+  !*** ./node_modules/swiper/modules/pagination.css ***!
+  \****************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _css_loader_dist_cjs_js_postcss_loader_dist_cjs_js_mini_css_extract_plugin_dist_loader_js_css_loader_dist_cjs_js_postcss_loader_dist_cjs_js_pagination_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../css-loader/dist/cjs.js!../../postcss-loader/dist/cjs.js!../../mini-css-extract-plugin/dist/loader.js!../../css-loader/dist/cjs.js!../../postcss-loader/dist/cjs.js!./pagination.css */ "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/swiper/modules/pagination.css");
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+options.insert = _style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+options.domAPI = (_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_css_loader_dist_cjs_js_postcss_loader_dist_cjs_js_mini_css_extract_plugin_dist_loader_js_css_loader_dist_cjs_js_postcss_loader_dist_cjs_js_pagination_css__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ __webpack_exports__["default"] = (_css_loader_dist_cjs_js_postcss_loader_dist_cjs_js_mini_css_extract_plugin_dist_loader_js_css_loader_dist_cjs_js_postcss_loader_dist_cjs_js_pagination_css__WEBPACK_IMPORTED_MODULE_6__["default"] && _css_loader_dist_cjs_js_postcss_loader_dist_cjs_js_mini_css_extract_plugin_dist_loader_js_css_loader_dist_cjs_js_postcss_loader_dist_cjs_js_pagination_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _css_loader_dist_cjs_js_postcss_loader_dist_cjs_js_mini_css_extract_plugin_dist_loader_js_css_loader_dist_cjs_js_postcss_loader_dist_cjs_js_pagination_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
+
+/***/ }),
+
+/***/ "./node_modules/swiper/shared/ssr-window.esm.mjs":
+/*!*******************************************************!*\
+  !*** ./node_modules/swiper/shared/ssr-window.esm.mjs ***!
+  \*******************************************************/
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   a: function() { return /* binding */ getWindow; },
+/* harmony export */   g: function() { return /* binding */ getDocument; }
+/* harmony export */ });
+/**
+ * SSR Window 5.0.1
+ * Better handling for window object in SSR environment
+ * https://github.com/nolimits4web/ssr-window
+ *
+ * Copyright 2025, Vladimir Kharlampidi
+ *
+ * Licensed under MIT
+ *
+ * Released on: June 27, 2025
+ */
+/* eslint-disable no-param-reassign */
+function isObject(obj) {
+  return obj !== null && typeof obj === 'object' && 'constructor' in obj && obj.constructor === Object;
+}
+function extend(target = {}, src = {}) {
+  const noExtend = ['__proto__', 'constructor', 'prototype'];
+  Object.keys(src).filter(key => noExtend.indexOf(key) < 0).forEach(key => {
+    if (typeof target[key] === 'undefined') target[key] = src[key];else if (isObject(src[key]) && isObject(target[key]) && Object.keys(src[key]).length > 0) {
+      extend(target[key], src[key]);
+    }
+  });
+}
+const ssrDocument = {
+  body: {},
+  addEventListener() {},
+  removeEventListener() {},
+  activeElement: {
+    blur() {},
+    nodeName: ''
+  },
+  querySelector() {
+    return null;
+  },
+  querySelectorAll() {
+    return [];
+  },
+  getElementById() {
+    return null;
+  },
+  createEvent() {
+    return {
+      initEvent() {}
+    };
+  },
+  createElement() {
+    return {
+      children: [],
+      childNodes: [],
+      style: {},
+      setAttribute() {},
+      getElementsByTagName() {
+        return [];
+      }
+    };
+  },
+  createElementNS() {
+    return {};
+  },
+  importNode() {
+    return null;
+  },
+  location: {
+    hash: '',
+    host: '',
+    hostname: '',
+    href: '',
+    origin: '',
+    pathname: '',
+    protocol: '',
+    search: ''
+  }
+};
+function getDocument() {
+  const doc = typeof document !== 'undefined' ? document : {};
+  extend(doc, ssrDocument);
+  return doc;
+}
+const ssrWindow = {
+  document: ssrDocument,
+  navigator: {
+    userAgent: ''
+  },
+  location: {
+    hash: '',
+    host: '',
+    hostname: '',
+    href: '',
+    origin: '',
+    pathname: '',
+    protocol: '',
+    search: ''
+  },
+  history: {
+    replaceState() {},
+    pushState() {},
+    go() {},
+    back() {}
+  },
+  CustomEvent: function CustomEvent() {
+    return this;
+  },
+  addEventListener() {},
+  removeEventListener() {},
+  getComputedStyle() {
+    return {
+      getPropertyValue() {
+        return '';
+      }
+    };
+  },
+  Image() {},
+  Date() {},
+  screen: {},
+  setTimeout() {},
+  clearTimeout() {},
+  matchMedia() {
+    return {};
+  },
+  requestAnimationFrame(callback) {
+    if (typeof setTimeout === 'undefined') {
+      callback();
+      return null;
+    }
+    return setTimeout(callback, 0);
+  },
+  cancelAnimationFrame(id) {
+    if (typeof setTimeout === 'undefined') {
+      return;
+    }
+    clearTimeout(id);
+  }
+};
+function getWindow() {
+  const win = typeof window !== 'undefined' ? window : {};
+  extend(win, ssrWindow);
+  return win;
+}
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/swiper/shared/swiper-core.mjs":
+/*!****************************************************!*\
+  !*** ./node_modules/swiper/shared/swiper-core.mjs ***!
+  \****************************************************/
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   S: function() { return /* binding */ Swiper; },
+/* harmony export */   d: function() { return /* binding */ defaults; }
+/* harmony export */ });
+/* harmony import */ var _ssr_window_esm_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ssr-window.esm.mjs */ "./node_modules/swiper/shared/ssr-window.esm.mjs");
+/* harmony import */ var _utils_mjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils.mjs */ "./node_modules/swiper/shared/utils.mjs");
+
+
+
+let support;
+function calcSupport() {
+  const window = (0,_ssr_window_esm_mjs__WEBPACK_IMPORTED_MODULE_0__.a)();
+  const document = (0,_ssr_window_esm_mjs__WEBPACK_IMPORTED_MODULE_0__.g)();
+  return {
+    smoothScroll: document.documentElement && document.documentElement.style && 'scrollBehavior' in document.documentElement.style,
+    touch: !!('ontouchstart' in window || window.DocumentTouch && document instanceof window.DocumentTouch)
+  };
+}
+function getSupport() {
+  if (!support) {
+    support = calcSupport();
+  }
+  return support;
+}
+
+let deviceCached;
+function calcDevice({
+  userAgent
+} = {}) {
+  const support = getSupport();
+  const window = (0,_ssr_window_esm_mjs__WEBPACK_IMPORTED_MODULE_0__.a)();
+  const platform = window.navigator.platform;
+  const ua = userAgent || window.navigator.userAgent;
+  const device = {
+    ios: false,
+    android: false
+  };
+  const screenWidth = window.screen.width;
+  const screenHeight = window.screen.height;
+  const android = ua.match(/(Android);?[\s\/]+([\d.]+)?/); // eslint-disable-line
+  let ipad = ua.match(/(iPad)(?!\1).*OS\s([\d_]+)/);
+  const ipod = ua.match(/(iPod)(.*OS\s([\d_]+))?/);
+  const iphone = !ipad && ua.match(/(iPhone\sOS|iOS)\s([\d_]+)/);
+  const windows = platform === 'Win32';
+  let macos = platform === 'MacIntel';
+
+  // iPadOs 13 fix
+  const iPadScreens = ['1024x1366', '1366x1024', '834x1194', '1194x834', '834x1112', '1112x834', '768x1024', '1024x768', '820x1180', '1180x820', '810x1080', '1080x810'];
+  if (!ipad && macos && support.touch && iPadScreens.indexOf(`${screenWidth}x${screenHeight}`) >= 0) {
+    ipad = ua.match(/(Version)\/([\d.]+)/);
+    if (!ipad) ipad = [0, 1, '13_0_0'];
+    macos = false;
+  }
+
+  // Android
+  if (android && !windows) {
+    device.os = 'android';
+    device.android = true;
+  }
+  if (ipad || iphone || ipod) {
+    device.os = 'ios';
+    device.ios = true;
+  }
+
+  // Export object
+  return device;
+}
+function getDevice(overrides = {}) {
+  if (!deviceCached) {
+    deviceCached = calcDevice(overrides);
+  }
+  return deviceCached;
+}
+
+let browser;
+function calcBrowser() {
+  const window = (0,_ssr_window_esm_mjs__WEBPACK_IMPORTED_MODULE_0__.a)();
+  const device = getDevice();
+  let needPerspectiveFix = false;
+  function isSafari() {
+    const ua = window.navigator.userAgent.toLowerCase();
+    return ua.indexOf('safari') >= 0 && ua.indexOf('chrome') < 0 && ua.indexOf('android') < 0;
+  }
+  if (isSafari()) {
+    const ua = String(window.navigator.userAgent);
+    if (ua.includes('Version/')) {
+      const [major, minor] = ua.split('Version/')[1].split(' ')[0].split('.').map(num => Number(num));
+      needPerspectiveFix = major < 16 || major === 16 && minor < 2;
+    }
+  }
+  const isWebView = /(iPhone|iPod|iPad).*AppleWebKit(?!.*Safari)/i.test(window.navigator.userAgent);
+  const isSafariBrowser = isSafari();
+  const need3dFix = isSafariBrowser || isWebView && device.ios;
+  return {
+    isSafari: needPerspectiveFix || isSafariBrowser,
+    needPerspectiveFix,
+    need3dFix,
+    isWebView
+  };
+}
+function getBrowser() {
+  if (!browser) {
+    browser = calcBrowser();
+  }
+  return browser;
+}
+
+function Resize({
+  swiper,
+  on,
+  emit
+}) {
+  const window = (0,_ssr_window_esm_mjs__WEBPACK_IMPORTED_MODULE_0__.a)();
+  let observer = null;
+  let animationFrame = null;
+  const resizeHandler = () => {
+    if (!swiper || swiper.destroyed || !swiper.initialized) return;
+    emit('beforeResize');
+    emit('resize');
+  };
+  const createObserver = () => {
+    if (!swiper || swiper.destroyed || !swiper.initialized) return;
+    observer = new ResizeObserver(entries => {
+      animationFrame = window.requestAnimationFrame(() => {
+        const {
+          width,
+          height
+        } = swiper;
+        let newWidth = width;
+        let newHeight = height;
+        entries.forEach(({
+          contentBoxSize,
+          contentRect,
+          target
+        }) => {
+          if (target && target !== swiper.el) return;
+          newWidth = contentRect ? contentRect.width : (contentBoxSize[0] || contentBoxSize).inlineSize;
+          newHeight = contentRect ? contentRect.height : (contentBoxSize[0] || contentBoxSize).blockSize;
+        });
+        if (newWidth !== width || newHeight !== height) {
+          resizeHandler();
+        }
+      });
+    });
+    observer.observe(swiper.el);
+  };
+  const removeObserver = () => {
+    if (animationFrame) {
+      window.cancelAnimationFrame(animationFrame);
+    }
+    if (observer && observer.unobserve && swiper.el) {
+      observer.unobserve(swiper.el);
+      observer = null;
+    }
+  };
+  const orientationChangeHandler = () => {
+    if (!swiper || swiper.destroyed || !swiper.initialized) return;
+    emit('orientationchange');
+  };
+  on('init', () => {
+    if (swiper.params.resizeObserver && typeof window.ResizeObserver !== 'undefined') {
+      createObserver();
+      return;
+    }
+    window.addEventListener('resize', resizeHandler);
+    window.addEventListener('orientationchange', orientationChangeHandler);
+  });
+  on('destroy', () => {
+    removeObserver();
+    window.removeEventListener('resize', resizeHandler);
+    window.removeEventListener('orientationchange', orientationChangeHandler);
+  });
+}
+
+function Observer({
+  swiper,
+  extendParams,
+  on,
+  emit
+}) {
+  const observers = [];
+  const window = (0,_ssr_window_esm_mjs__WEBPACK_IMPORTED_MODULE_0__.a)();
+  const attach = (target, options = {}) => {
+    const ObserverFunc = window.MutationObserver || window.WebkitMutationObserver;
+    const observer = new ObserverFunc(mutations => {
+      // The observerUpdate event should only be triggered
+      // once despite the number of mutations.  Additional
+      // triggers are redundant and are very costly
+      if (swiper.__preventObserver__) return;
+      if (mutations.length === 1) {
+        emit('observerUpdate', mutations[0]);
+        return;
+      }
+      const observerUpdate = function observerUpdate() {
+        emit('observerUpdate', mutations[0]);
+      };
+      if (window.requestAnimationFrame) {
+        window.requestAnimationFrame(observerUpdate);
+      } else {
+        window.setTimeout(observerUpdate, 0);
+      }
+    });
+    observer.observe(target, {
+      attributes: typeof options.attributes === 'undefined' ? true : options.attributes,
+      childList: swiper.isElement || (typeof options.childList === 'undefined' ? true : options).childList,
+      characterData: typeof options.characterData === 'undefined' ? true : options.characterData
+    });
+    observers.push(observer);
+  };
+  const init = () => {
+    if (!swiper.params.observer) return;
+    if (swiper.params.observeParents) {
+      const containerParents = (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.d)(swiper.hostEl);
+      for (let i = 0; i < containerParents.length; i += 1) {
+        attach(containerParents[i]);
+      }
+    }
+    // Observe container
+    attach(swiper.hostEl, {
+      childList: swiper.params.observeSlideChildren
+    });
+
+    // Observe wrapper
+    attach(swiper.wrapperEl, {
+      attributes: false
+    });
+  };
+  const destroy = () => {
+    observers.forEach(observer => {
+      observer.disconnect();
+    });
+    observers.splice(0, observers.length);
+  };
+  extendParams({
+    observer: false,
+    observeParents: false,
+    observeSlideChildren: false
+  });
+  on('init', init);
+  on('destroy', destroy);
+}
+
+/* eslint-disable no-underscore-dangle */
+
+var eventsEmitter = {
+  on(events, handler, priority) {
+    const self = this;
+    if (!self.eventsListeners || self.destroyed) return self;
+    if (typeof handler !== 'function') return self;
+    const method = priority ? 'unshift' : 'push';
+    events.split(' ').forEach(event => {
+      if (!self.eventsListeners[event]) self.eventsListeners[event] = [];
+      self.eventsListeners[event][method](handler);
+    });
+    return self;
+  },
+  once(events, handler, priority) {
+    const self = this;
+    if (!self.eventsListeners || self.destroyed) return self;
+    if (typeof handler !== 'function') return self;
+    function onceHandler(...args) {
+      self.off(events, onceHandler);
+      if (onceHandler.__emitterProxy) {
+        delete onceHandler.__emitterProxy;
+      }
+      handler.apply(self, args);
+    }
+    onceHandler.__emitterProxy = handler;
+    return self.on(events, onceHandler, priority);
+  },
+  onAny(handler, priority) {
+    const self = this;
+    if (!self.eventsListeners || self.destroyed) return self;
+    if (typeof handler !== 'function') return self;
+    const method = priority ? 'unshift' : 'push';
+    if (self.eventsAnyListeners.indexOf(handler) < 0) {
+      self.eventsAnyListeners[method](handler);
+    }
+    return self;
+  },
+  offAny(handler) {
+    const self = this;
+    if (!self.eventsListeners || self.destroyed) return self;
+    if (!self.eventsAnyListeners) return self;
+    const index = self.eventsAnyListeners.indexOf(handler);
+    if (index >= 0) {
+      self.eventsAnyListeners.splice(index, 1);
+    }
+    return self;
+  },
+  off(events, handler) {
+    const self = this;
+    if (!self.eventsListeners || self.destroyed) return self;
+    if (!self.eventsListeners) return self;
+    events.split(' ').forEach(event => {
+      if (typeof handler === 'undefined') {
+        self.eventsListeners[event] = [];
+      } else if (self.eventsListeners[event]) {
+        self.eventsListeners[event].forEach((eventHandler, index) => {
+          if (eventHandler === handler || eventHandler.__emitterProxy && eventHandler.__emitterProxy === handler) {
+            self.eventsListeners[event].splice(index, 1);
+          }
+        });
+      }
+    });
+    return self;
+  },
+  emit(...args) {
+    const self = this;
+    if (!self.eventsListeners || self.destroyed) return self;
+    if (!self.eventsListeners) return self;
+    let events;
+    let data;
+    let context;
+    if (typeof args[0] === 'string' || Array.isArray(args[0])) {
+      events = args[0];
+      data = args.slice(1, args.length);
+      context = self;
+    } else {
+      events = args[0].events;
+      data = args[0].data;
+      context = args[0].context || self;
+    }
+    data.unshift(context);
+    const eventsArray = Array.isArray(events) ? events : events.split(' ');
+    eventsArray.forEach(event => {
+      if (self.eventsAnyListeners && self.eventsAnyListeners.length) {
+        self.eventsAnyListeners.forEach(eventHandler => {
+          eventHandler.apply(context, [event, ...data]);
+        });
+      }
+      if (self.eventsListeners && self.eventsListeners[event]) {
+        self.eventsListeners[event].forEach(eventHandler => {
+          eventHandler.apply(context, data);
+        });
+      }
+    });
+    return self;
+  }
+};
+
+function updateSize() {
+  const swiper = this;
+  let width;
+  let height;
+  const el = swiper.el;
+  if (typeof swiper.params.width !== 'undefined' && swiper.params.width !== null) {
+    width = swiper.params.width;
+  } else {
+    width = el.clientWidth;
+  }
+  if (typeof swiper.params.height !== 'undefined' && swiper.params.height !== null) {
+    height = swiper.params.height;
+  } else {
+    height = el.clientHeight;
+  }
+  if (width === 0 && swiper.isHorizontal() || height === 0 && swiper.isVertical()) {
+    return;
+  }
+
+  // Subtract paddings
+  width = width - parseInt((0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.q)(el, 'padding-left') || 0, 10) - parseInt((0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.q)(el, 'padding-right') || 0, 10);
+  height = height - parseInt((0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.q)(el, 'padding-top') || 0, 10) - parseInt((0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.q)(el, 'padding-bottom') || 0, 10);
+  if (Number.isNaN(width)) width = 0;
+  if (Number.isNaN(height)) height = 0;
+  Object.assign(swiper, {
+    width,
+    height,
+    size: swiper.isHorizontal() ? width : height
+  });
+}
+
+function updateSlides() {
+  const swiper = this;
+  function getDirectionPropertyValue(node, label) {
+    return parseFloat(node.getPropertyValue(swiper.getDirectionLabel(label)) || 0);
+  }
+  const params = swiper.params;
+  const {
+    wrapperEl,
+    slidesEl,
+    rtlTranslate: rtl,
+    wrongRTL
+  } = swiper;
+  const isVirtual = swiper.virtual && params.virtual.enabled;
+  const previousSlidesLength = isVirtual ? swiper.virtual.slides.length : swiper.slides.length;
+  const slides = (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.e)(slidesEl, `.${swiper.params.slideClass}, swiper-slide`);
+  const slidesLength = isVirtual ? swiper.virtual.slides.length : slides.length;
+  let snapGrid = [];
+  const slidesGrid = [];
+  const slidesSizesGrid = [];
+  let offsetBefore = params.slidesOffsetBefore;
+  if (typeof offsetBefore === 'function') {
+    offsetBefore = params.slidesOffsetBefore.call(swiper);
+  }
+  let offsetAfter = params.slidesOffsetAfter;
+  if (typeof offsetAfter === 'function') {
+    offsetAfter = params.slidesOffsetAfter.call(swiper);
+  }
+  const previousSnapGridLength = swiper.snapGrid.length;
+  const previousSlidesGridLength = swiper.slidesGrid.length;
+  const swiperSize = swiper.size - offsetBefore - offsetAfter;
+  let spaceBetween = params.spaceBetween;
+  let slidePosition = -offsetBefore;
+  let prevSlideSize = 0;
+  let index = 0;
+  if (typeof swiperSize === 'undefined') {
+    return;
+  }
+  if (typeof spaceBetween === 'string' && spaceBetween.indexOf('%') >= 0) {
+    spaceBetween = parseFloat(spaceBetween.replace('%', '')) / 100 * swiperSize;
+  } else if (typeof spaceBetween === 'string') {
+    spaceBetween = parseFloat(spaceBetween);
+  }
+  swiper.virtualSize = -spaceBetween - offsetBefore - offsetAfter;
+
+  // reset margins
+  slides.forEach(slideEl => {
+    if (rtl) {
+      slideEl.style.marginLeft = '';
+    } else {
+      slideEl.style.marginRight = '';
+    }
+    slideEl.style.marginBottom = '';
+    slideEl.style.marginTop = '';
+  });
+
+  // reset cssMode offsets
+  if (params.centeredSlides && params.cssMode) {
+    (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.b)(wrapperEl, '--swiper-centered-offset-before', '');
+    (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.b)(wrapperEl, '--swiper-centered-offset-after', '');
+  }
+  const gridEnabled = params.grid && params.grid.rows > 1 && swiper.grid;
+  if (gridEnabled) {
+    swiper.grid.initSlides(slides);
+  } else if (swiper.grid) {
+    swiper.grid.unsetSlides();
+  }
+
+  // Calc slides
+  let slideSize;
+  const shouldResetSlideSize = params.slidesPerView === 'auto' && params.breakpoints && Object.keys(params.breakpoints).filter(key => {
+    return typeof params.breakpoints[key].slidesPerView !== 'undefined';
+  }).length > 0;
+  for (let i = 0; i < slidesLength; i += 1) {
+    slideSize = 0;
+    const slide = slides[i];
+    if (slide) {
+      if (gridEnabled) {
+        swiper.grid.updateSlide(i, slide, slides);
+      }
+      if ((0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.q)(slide, 'display') === 'none') continue; // eslint-disable-line
+    }
+
+    if (isVirtual && params.slidesPerView === 'auto') {
+      if (params.virtual.slidesPerViewAutoSlideSize) {
+        slideSize = params.virtual.slidesPerViewAutoSlideSize;
+      }
+      if (slideSize && slide) {
+        if (params.roundLengths) slideSize = Math.floor(slideSize);
+        slide.style[swiper.getDirectionLabel('width')] = `${slideSize}px`;
+      }
+    } else if (params.slidesPerView === 'auto') {
+      if (shouldResetSlideSize) {
+        slide.style[swiper.getDirectionLabel('width')] = ``;
+      }
+      const slideStyles = getComputedStyle(slide);
+      const currentTransform = slide.style.transform;
+      const currentWebKitTransform = slide.style.webkitTransform;
+      if (currentTransform) {
+        slide.style.transform = 'none';
+      }
+      if (currentWebKitTransform) {
+        slide.style.webkitTransform = 'none';
+      }
+      if (params.roundLengths) {
+        slideSize = swiper.isHorizontal() ? (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.i)(slide, 'width', true) : (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.i)(slide, 'height', true);
+      } else {
+        // eslint-disable-next-line
+        const width = getDirectionPropertyValue(slideStyles, 'width');
+        const paddingLeft = getDirectionPropertyValue(slideStyles, 'padding-left');
+        const paddingRight = getDirectionPropertyValue(slideStyles, 'padding-right');
+        const marginLeft = getDirectionPropertyValue(slideStyles, 'margin-left');
+        const marginRight = getDirectionPropertyValue(slideStyles, 'margin-right');
+        const boxSizing = slideStyles.getPropertyValue('box-sizing');
+        if (boxSizing && boxSizing === 'border-box') {
+          slideSize = width + marginLeft + marginRight;
+        } else {
+          const {
+            clientWidth,
+            offsetWidth
+          } = slide;
+          slideSize = width + paddingLeft + paddingRight + marginLeft + marginRight + (offsetWidth - clientWidth);
+        }
+      }
+      if (currentTransform) {
+        slide.style.transform = currentTransform;
+      }
+      if (currentWebKitTransform) {
+        slide.style.webkitTransform = currentWebKitTransform;
+      }
+      if (params.roundLengths) slideSize = Math.floor(slideSize);
+    } else {
+      slideSize = (swiperSize - (params.slidesPerView - 1) * spaceBetween) / params.slidesPerView;
+      if (params.roundLengths) slideSize = Math.floor(slideSize);
+      if (slide) {
+        slide.style[swiper.getDirectionLabel('width')] = `${slideSize}px`;
+      }
+    }
+    if (slide) {
+      slide.swiperSlideSize = slideSize;
+    }
+    slidesSizesGrid.push(slideSize);
+    if (params.centeredSlides) {
+      slidePosition = slidePosition + slideSize / 2 + prevSlideSize / 2 + spaceBetween;
+      if (prevSlideSize === 0 && i !== 0) slidePosition = slidePosition - swiperSize / 2 - spaceBetween;
+      if (i === 0) slidePosition = slidePosition - swiperSize / 2 - spaceBetween;
+      if (Math.abs(slidePosition) < 1 / 1000) slidePosition = 0;
+      if (params.roundLengths) slidePosition = Math.floor(slidePosition);
+      if (index % params.slidesPerGroup === 0) snapGrid.push(slidePosition);
+      slidesGrid.push(slidePosition);
+    } else {
+      if (params.roundLengths) slidePosition = Math.floor(slidePosition);
+      if ((index - Math.min(swiper.params.slidesPerGroupSkip, index)) % swiper.params.slidesPerGroup === 0) snapGrid.push(slidePosition);
+      slidesGrid.push(slidePosition);
+      slidePosition = slidePosition + slideSize + spaceBetween;
+    }
+    swiper.virtualSize += slideSize + spaceBetween;
+    prevSlideSize = slideSize;
+    index += 1;
+  }
+  swiper.virtualSize = Math.max(swiper.virtualSize, swiperSize) + offsetAfter;
+  if (rtl && wrongRTL && (params.effect === 'slide' || params.effect === 'coverflow')) {
+    wrapperEl.style.width = `${swiper.virtualSize + spaceBetween}px`;
+  }
+  if (params.setWrapperSize) {
+    wrapperEl.style[swiper.getDirectionLabel('width')] = `${swiper.virtualSize + spaceBetween}px`;
+  }
+  if (gridEnabled) {
+    swiper.grid.updateWrapperSize(slideSize, snapGrid);
+  }
+
+  // Remove last grid elements depending on width
+  if (!params.centeredSlides) {
+    const newSlidesGrid = [];
+    for (let i = 0; i < snapGrid.length; i += 1) {
+      let slidesGridItem = snapGrid[i];
+      if (params.roundLengths) slidesGridItem = Math.floor(slidesGridItem);
+      if (snapGrid[i] <= swiper.virtualSize - swiperSize) {
+        newSlidesGrid.push(slidesGridItem);
+      }
+    }
+    snapGrid = newSlidesGrid;
+    if (Math.floor(swiper.virtualSize - swiperSize) - Math.floor(snapGrid[snapGrid.length - 1]) > 1) {
+      snapGrid.push(swiper.virtualSize - swiperSize);
+    }
+  }
+  if (isVirtual && params.loop) {
+    const size = slidesSizesGrid[0] + spaceBetween;
+    if (params.slidesPerGroup > 1) {
+      const groups = Math.ceil((swiper.virtual.slidesBefore + swiper.virtual.slidesAfter) / params.slidesPerGroup);
+      const groupSize = size * params.slidesPerGroup;
+      for (let i = 0; i < groups; i += 1) {
+        snapGrid.push(snapGrid[snapGrid.length - 1] + groupSize);
+      }
+    }
+    for (let i = 0; i < swiper.virtual.slidesBefore + swiper.virtual.slidesAfter; i += 1) {
+      if (params.slidesPerGroup === 1) {
+        snapGrid.push(snapGrid[snapGrid.length - 1] + size);
+      }
+      slidesGrid.push(slidesGrid[slidesGrid.length - 1] + size);
+      swiper.virtualSize += size;
+    }
+  }
+  if (snapGrid.length === 0) snapGrid = [0];
+  if (spaceBetween !== 0) {
+    const key = swiper.isHorizontal() && rtl ? 'marginLeft' : swiper.getDirectionLabel('marginRight');
+    slides.filter((_, slideIndex) => {
+      if (!params.cssMode || params.loop) return true;
+      if (slideIndex === slides.length - 1) {
+        return false;
+      }
+      return true;
+    }).forEach(slideEl => {
+      slideEl.style[key] = `${spaceBetween}px`;
+    });
+  }
+  if (params.centeredSlides && params.centeredSlidesBounds) {
+    let allSlidesSize = 0;
+    slidesSizesGrid.forEach(slideSizeValue => {
+      allSlidesSize += slideSizeValue + (spaceBetween || 0);
+    });
+    allSlidesSize -= spaceBetween;
+    const maxSnap = allSlidesSize > swiperSize ? allSlidesSize - swiperSize : 0;
+    snapGrid = snapGrid.map(snap => {
+      if (snap <= 0) return -offsetBefore;
+      if (snap > maxSnap) return maxSnap + offsetAfter;
+      return snap;
+    });
+  }
+  if (params.centerInsufficientSlides) {
+    let allSlidesSize = 0;
+    slidesSizesGrid.forEach(slideSizeValue => {
+      allSlidesSize += slideSizeValue + (spaceBetween || 0);
+    });
+    allSlidesSize -= spaceBetween;
+    const offsetSize = (offsetBefore || 0) + (offsetAfter || 0);
+    if (allSlidesSize + offsetSize < swiperSize) {
+      const allSlidesOffset = (swiperSize - allSlidesSize - offsetSize) / 2;
+      snapGrid.forEach((snap, snapIndex) => {
+        snapGrid[snapIndex] = snap - allSlidesOffset;
+      });
+      slidesGrid.forEach((snap, snapIndex) => {
+        slidesGrid[snapIndex] = snap + allSlidesOffset;
+      });
+    }
+  }
+  Object.assign(swiper, {
+    slides,
+    snapGrid,
+    slidesGrid,
+    slidesSizesGrid
+  });
+  if (params.centeredSlides && params.cssMode && !params.centeredSlidesBounds) {
+    (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.b)(wrapperEl, '--swiper-centered-offset-before', `${-snapGrid[0]}px`);
+    (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.b)(wrapperEl, '--swiper-centered-offset-after', `${swiper.size / 2 - slidesSizesGrid[slidesSizesGrid.length - 1] / 2}px`);
+    const addToSnapGrid = -swiper.snapGrid[0];
+    const addToSlidesGrid = -swiper.slidesGrid[0];
+    swiper.snapGrid = swiper.snapGrid.map(v => v + addToSnapGrid);
+    swiper.slidesGrid = swiper.slidesGrid.map(v => v + addToSlidesGrid);
+  }
+  if (slidesLength !== previousSlidesLength) {
+    swiper.emit('slidesLengthChange');
+  }
+  if (snapGrid.length !== previousSnapGridLength) {
+    if (swiper.params.watchOverflow) swiper.checkOverflow();
+    swiper.emit('snapGridLengthChange');
+  }
+  if (slidesGrid.length !== previousSlidesGridLength) {
+    swiper.emit('slidesGridLengthChange');
+  }
+  if (params.watchSlidesProgress) {
+    swiper.updateSlidesOffset();
+  }
+  swiper.emit('slidesUpdated');
+  if (!isVirtual && !params.cssMode && (params.effect === 'slide' || params.effect === 'fade')) {
+    const backFaceHiddenClass = `${params.containerModifierClass}backface-hidden`;
+    const hasClassBackfaceClassAdded = swiper.el.classList.contains(backFaceHiddenClass);
+    if (slidesLength <= params.maxBackfaceHiddenSlides) {
+      if (!hasClassBackfaceClassAdded) swiper.el.classList.add(backFaceHiddenClass);
+    } else if (hasClassBackfaceClassAdded) {
+      swiper.el.classList.remove(backFaceHiddenClass);
+    }
+  }
+}
+
+function updateAutoHeight(speed) {
+  const swiper = this;
+  const activeSlides = [];
+  const isVirtual = swiper.virtual && swiper.params.virtual.enabled;
+  let newHeight = 0;
+  let i;
+  if (typeof speed === 'number') {
+    swiper.setTransition(speed);
+  } else if (speed === true) {
+    swiper.setTransition(swiper.params.speed);
+  }
+  const getSlideByIndex = index => {
+    if (isVirtual) {
+      return swiper.slides[swiper.getSlideIndexByData(index)];
+    }
+    return swiper.slides[index];
+  };
+  // Find slides currently in view
+  if (swiper.params.slidesPerView !== 'auto' && swiper.params.slidesPerView > 1) {
+    if (swiper.params.centeredSlides) {
+      (swiper.visibleSlides || []).forEach(slide => {
+        activeSlides.push(slide);
+      });
+    } else {
+      for (i = 0; i < Math.ceil(swiper.params.slidesPerView); i += 1) {
+        const index = swiper.activeIndex + i;
+        if (index > swiper.slides.length && !isVirtual) break;
+        activeSlides.push(getSlideByIndex(index));
+      }
+    }
+  } else {
+    activeSlides.push(getSlideByIndex(swiper.activeIndex));
+  }
+
+  // Find new height from highest slide in view
+  for (i = 0; i < activeSlides.length; i += 1) {
+    if (typeof activeSlides[i] !== 'undefined') {
+      const height = activeSlides[i].offsetHeight;
+      newHeight = height > newHeight ? height : newHeight;
+    }
+  }
+
+  // Update Height
+  if (newHeight || newHeight === 0) swiper.wrapperEl.style.height = `${newHeight}px`;
+}
+
+function updateSlidesOffset() {
+  const swiper = this;
+  const slides = swiper.slides;
+  // eslint-disable-next-line
+  const minusOffset = swiper.isElement ? swiper.isHorizontal() ? swiper.wrapperEl.offsetLeft : swiper.wrapperEl.offsetTop : 0;
+  for (let i = 0; i < slides.length; i += 1) {
+    slides[i].swiperSlideOffset = (swiper.isHorizontal() ? slides[i].offsetLeft : slides[i].offsetTop) - minusOffset - swiper.cssOverflowAdjustment();
+  }
+}
+
+const toggleSlideClasses$1 = (slideEl, condition, className) => {
+  if (condition && !slideEl.classList.contains(className)) {
+    slideEl.classList.add(className);
+  } else if (!condition && slideEl.classList.contains(className)) {
+    slideEl.classList.remove(className);
+  }
+};
+function updateSlidesProgress(translate = this && this.translate || 0) {
+  const swiper = this;
+  const params = swiper.params;
+  const {
+    slides,
+    rtlTranslate: rtl,
+    snapGrid
+  } = swiper;
+  if (slides.length === 0) return;
+  if (typeof slides[0].swiperSlideOffset === 'undefined') swiper.updateSlidesOffset();
+  let offsetCenter = -translate;
+  if (rtl) offsetCenter = translate;
+  swiper.visibleSlidesIndexes = [];
+  swiper.visibleSlides = [];
+  let spaceBetween = params.spaceBetween;
+  if (typeof spaceBetween === 'string' && spaceBetween.indexOf('%') >= 0) {
+    spaceBetween = parseFloat(spaceBetween.replace('%', '')) / 100 * swiper.size;
+  } else if (typeof spaceBetween === 'string') {
+    spaceBetween = parseFloat(spaceBetween);
+  }
+  for (let i = 0; i < slides.length; i += 1) {
+    const slide = slides[i];
+    let slideOffset = slide.swiperSlideOffset;
+    if (params.cssMode && params.centeredSlides) {
+      slideOffset -= slides[0].swiperSlideOffset;
+    }
+    const slideProgress = (offsetCenter + (params.centeredSlides ? swiper.minTranslate() : 0) - slideOffset) / (slide.swiperSlideSize + spaceBetween);
+    const originalSlideProgress = (offsetCenter - snapGrid[0] + (params.centeredSlides ? swiper.minTranslate() : 0) - slideOffset) / (slide.swiperSlideSize + spaceBetween);
+    const slideBefore = -(offsetCenter - slideOffset);
+    const slideAfter = slideBefore + swiper.slidesSizesGrid[i];
+    const isFullyVisible = slideBefore >= 0 && slideBefore <= swiper.size - swiper.slidesSizesGrid[i];
+    const isVisible = slideBefore >= 0 && slideBefore < swiper.size - 1 || slideAfter > 1 && slideAfter <= swiper.size || slideBefore <= 0 && slideAfter >= swiper.size;
+    if (isVisible) {
+      swiper.visibleSlides.push(slide);
+      swiper.visibleSlidesIndexes.push(i);
+    }
+    toggleSlideClasses$1(slide, isVisible, params.slideVisibleClass);
+    toggleSlideClasses$1(slide, isFullyVisible, params.slideFullyVisibleClass);
+    slide.progress = rtl ? -slideProgress : slideProgress;
+    slide.originalProgress = rtl ? -originalSlideProgress : originalSlideProgress;
+  }
+}
+
+function updateProgress(translate) {
+  const swiper = this;
+  if (typeof translate === 'undefined') {
+    const multiplier = swiper.rtlTranslate ? -1 : 1;
+    // eslint-disable-next-line
+    translate = swiper && swiper.translate && swiper.translate * multiplier || 0;
+  }
+  const params = swiper.params;
+  const translatesDiff = swiper.maxTranslate() - swiper.minTranslate();
+  let {
+    progress,
+    isBeginning,
+    isEnd,
+    progressLoop
+  } = swiper;
+  const wasBeginning = isBeginning;
+  const wasEnd = isEnd;
+  if (translatesDiff === 0) {
+    progress = 0;
+    isBeginning = true;
+    isEnd = true;
+  } else {
+    progress = (translate - swiper.minTranslate()) / translatesDiff;
+    const isBeginningRounded = Math.abs(translate - swiper.minTranslate()) < 1;
+    const isEndRounded = Math.abs(translate - swiper.maxTranslate()) < 1;
+    isBeginning = isBeginningRounded || progress <= 0;
+    isEnd = isEndRounded || progress >= 1;
+    if (isBeginningRounded) progress = 0;
+    if (isEndRounded) progress = 1;
+  }
+  if (params.loop) {
+    const firstSlideIndex = swiper.getSlideIndexByData(0);
+    const lastSlideIndex = swiper.getSlideIndexByData(swiper.slides.length - 1);
+    const firstSlideTranslate = swiper.slidesGrid[firstSlideIndex];
+    const lastSlideTranslate = swiper.slidesGrid[lastSlideIndex];
+    const translateMax = swiper.slidesGrid[swiper.slidesGrid.length - 1];
+    const translateAbs = Math.abs(translate);
+    if (translateAbs >= firstSlideTranslate) {
+      progressLoop = (translateAbs - firstSlideTranslate) / translateMax;
+    } else {
+      progressLoop = (translateAbs + translateMax - lastSlideTranslate) / translateMax;
+    }
+    if (progressLoop > 1) progressLoop -= 1;
+  }
+  Object.assign(swiper, {
+    progress,
+    progressLoop,
+    isBeginning,
+    isEnd
+  });
+  if (params.watchSlidesProgress || params.centeredSlides && params.autoHeight) swiper.updateSlidesProgress(translate);
+  if (isBeginning && !wasBeginning) {
+    swiper.emit('reachBeginning toEdge');
+  }
+  if (isEnd && !wasEnd) {
+    swiper.emit('reachEnd toEdge');
+  }
+  if (wasBeginning && !isBeginning || wasEnd && !isEnd) {
+    swiper.emit('fromEdge');
+  }
+  swiper.emit('progress', progress);
+}
+
+const toggleSlideClasses = (slideEl, condition, className) => {
+  if (condition && !slideEl.classList.contains(className)) {
+    slideEl.classList.add(className);
+  } else if (!condition && slideEl.classList.contains(className)) {
+    slideEl.classList.remove(className);
+  }
+};
+function updateSlidesClasses() {
+  const swiper = this;
+  const {
+    slides,
+    params,
+    slidesEl,
+    activeIndex
+  } = swiper;
+  const isVirtual = swiper.virtual && params.virtual.enabled;
+  const gridEnabled = swiper.grid && params.grid && params.grid.rows > 1;
+  const getFilteredSlide = selector => {
+    return (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.e)(slidesEl, `.${params.slideClass}${selector}, swiper-slide${selector}`)[0];
+  };
+  let activeSlide;
+  let prevSlide;
+  let nextSlide;
+  if (isVirtual) {
+    if (params.loop) {
+      let slideIndex = activeIndex - swiper.virtual.slidesBefore;
+      if (slideIndex < 0) slideIndex = swiper.virtual.slides.length + slideIndex;
+      if (slideIndex >= swiper.virtual.slides.length) slideIndex -= swiper.virtual.slides.length;
+      activeSlide = getFilteredSlide(`[data-swiper-slide-index="${slideIndex}"]`);
+    } else {
+      activeSlide = getFilteredSlide(`[data-swiper-slide-index="${activeIndex}"]`);
+    }
+  } else {
+    if (gridEnabled) {
+      activeSlide = slides.find(slideEl => slideEl.column === activeIndex);
+      nextSlide = slides.find(slideEl => slideEl.column === activeIndex + 1);
+      prevSlide = slides.find(slideEl => slideEl.column === activeIndex - 1);
+    } else {
+      activeSlide = slides[activeIndex];
+    }
+  }
+  if (activeSlide) {
+    if (!gridEnabled) {
+      // Next Slide
+      nextSlide = (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.r)(activeSlide, `.${params.slideClass}, swiper-slide`)[0];
+      if (params.loop && !nextSlide) {
+        nextSlide = slides[0];
+      }
+
+      // Prev Slide
+      prevSlide = (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.t)(activeSlide, `.${params.slideClass}, swiper-slide`)[0];
+      if (params.loop && !prevSlide === 0) {
+        prevSlide = slides[slides.length - 1];
+      }
+    }
+  }
+  slides.forEach(slideEl => {
+    toggleSlideClasses(slideEl, slideEl === activeSlide, params.slideActiveClass);
+    toggleSlideClasses(slideEl, slideEl === nextSlide, params.slideNextClass);
+    toggleSlideClasses(slideEl, slideEl === prevSlide, params.slidePrevClass);
+  });
+  swiper.emitSlidesClasses();
+}
+
+const processLazyPreloader = (swiper, imageEl) => {
+  if (!swiper || swiper.destroyed || !swiper.params) return;
+  const slideSelector = () => swiper.isElement ? `swiper-slide` : `.${swiper.params.slideClass}`;
+  const slideEl = imageEl.closest(slideSelector());
+  if (slideEl) {
+    let lazyEl = slideEl.querySelector(`.${swiper.params.lazyPreloaderClass}`);
+    if (!lazyEl && swiper.isElement) {
+      if (slideEl.shadowRoot) {
+        lazyEl = slideEl.shadowRoot.querySelector(`.${swiper.params.lazyPreloaderClass}`);
+      } else {
+        // init later
+        requestAnimationFrame(() => {
+          if (slideEl.shadowRoot) {
+            lazyEl = slideEl.shadowRoot.querySelector(`.${swiper.params.lazyPreloaderClass}`);
+            if (lazyEl) lazyEl.remove();
+          }
+        });
+      }
+    }
+    if (lazyEl) lazyEl.remove();
+  }
+};
+const unlazy = (swiper, index) => {
+  if (!swiper.slides[index]) return;
+  const imageEl = swiper.slides[index].querySelector('[loading="lazy"]');
+  if (imageEl) imageEl.removeAttribute('loading');
+};
+const preload = swiper => {
+  if (!swiper || swiper.destroyed || !swiper.params) return;
+  let amount = swiper.params.lazyPreloadPrevNext;
+  const len = swiper.slides.length;
+  if (!len || !amount || amount < 0) return;
+  amount = Math.min(amount, len);
+  const slidesPerView = swiper.params.slidesPerView === 'auto' ? swiper.slidesPerViewDynamic() : Math.ceil(swiper.params.slidesPerView);
+  const activeIndex = swiper.activeIndex;
+  if (swiper.params.grid && swiper.params.grid.rows > 1) {
+    const activeColumn = activeIndex;
+    const preloadColumns = [activeColumn - amount];
+    preloadColumns.push(...Array.from({
+      length: amount
+    }).map((_, i) => {
+      return activeColumn + slidesPerView + i;
+    }));
+    swiper.slides.forEach((slideEl, i) => {
+      if (preloadColumns.includes(slideEl.column)) unlazy(swiper, i);
+    });
+    return;
+  }
+  const slideIndexLastInView = activeIndex + slidesPerView - 1;
+  if (swiper.params.rewind || swiper.params.loop) {
+    for (let i = activeIndex - amount; i <= slideIndexLastInView + amount; i += 1) {
+      const realIndex = (i % len + len) % len;
+      if (realIndex < activeIndex || realIndex > slideIndexLastInView) unlazy(swiper, realIndex);
+    }
+  } else {
+    for (let i = Math.max(activeIndex - amount, 0); i <= Math.min(slideIndexLastInView + amount, len - 1); i += 1) {
+      if (i !== activeIndex && (i > slideIndexLastInView || i < activeIndex)) {
+        unlazy(swiper, i);
+      }
+    }
+  }
+};
+
+function getActiveIndexByTranslate(swiper) {
+  const {
+    slidesGrid,
+    params
+  } = swiper;
+  const translate = swiper.rtlTranslate ? swiper.translate : -swiper.translate;
+  let activeIndex;
+  for (let i = 0; i < slidesGrid.length; i += 1) {
+    if (typeof slidesGrid[i + 1] !== 'undefined') {
+      if (translate >= slidesGrid[i] && translate < slidesGrid[i + 1] - (slidesGrid[i + 1] - slidesGrid[i]) / 2) {
+        activeIndex = i;
+      } else if (translate >= slidesGrid[i] && translate < slidesGrid[i + 1]) {
+        activeIndex = i + 1;
+      }
+    } else if (translate >= slidesGrid[i]) {
+      activeIndex = i;
+    }
+  }
+  // Normalize slideIndex
+  if (params.normalizeSlideIndex) {
+    if (activeIndex < 0 || typeof activeIndex === 'undefined') activeIndex = 0;
+  }
+  return activeIndex;
+}
+function updateActiveIndex(newActiveIndex) {
+  const swiper = this;
+  const translate = swiper.rtlTranslate ? swiper.translate : -swiper.translate;
+  const {
+    snapGrid,
+    params,
+    activeIndex: previousIndex,
+    realIndex: previousRealIndex,
+    snapIndex: previousSnapIndex
+  } = swiper;
+  let activeIndex = newActiveIndex;
+  let snapIndex;
+  const getVirtualRealIndex = aIndex => {
+    let realIndex = aIndex - swiper.virtual.slidesBefore;
+    if (realIndex < 0) {
+      realIndex = swiper.virtual.slides.length + realIndex;
+    }
+    if (realIndex >= swiper.virtual.slides.length) {
+      realIndex -= swiper.virtual.slides.length;
+    }
+    return realIndex;
+  };
+  if (typeof activeIndex === 'undefined') {
+    activeIndex = getActiveIndexByTranslate(swiper);
+  }
+  if (snapGrid.indexOf(translate) >= 0) {
+    snapIndex = snapGrid.indexOf(translate);
+  } else {
+    const skip = Math.min(params.slidesPerGroupSkip, activeIndex);
+    snapIndex = skip + Math.floor((activeIndex - skip) / params.slidesPerGroup);
+  }
+  if (snapIndex >= snapGrid.length) snapIndex = snapGrid.length - 1;
+  if (activeIndex === previousIndex && !swiper.params.loop) {
+    if (snapIndex !== previousSnapIndex) {
+      swiper.snapIndex = snapIndex;
+      swiper.emit('snapIndexChange');
+    }
+    return;
+  }
+  if (activeIndex === previousIndex && swiper.params.loop && swiper.virtual && swiper.params.virtual.enabled) {
+    swiper.realIndex = getVirtualRealIndex(activeIndex);
+    return;
+  }
+  const gridEnabled = swiper.grid && params.grid && params.grid.rows > 1;
+
+  // Get real index
+  let realIndex;
+  if (swiper.virtual && params.virtual.enabled && params.loop) {
+    realIndex = getVirtualRealIndex(activeIndex);
+  } else if (gridEnabled) {
+    const firstSlideInColumn = swiper.slides.find(slideEl => slideEl.column === activeIndex);
+    let activeSlideIndex = parseInt(firstSlideInColumn.getAttribute('data-swiper-slide-index'), 10);
+    if (Number.isNaN(activeSlideIndex)) {
+      activeSlideIndex = Math.max(swiper.slides.indexOf(firstSlideInColumn), 0);
+    }
+    realIndex = Math.floor(activeSlideIndex / params.grid.rows);
+  } else if (swiper.slides[activeIndex]) {
+    const slideIndex = swiper.slides[activeIndex].getAttribute('data-swiper-slide-index');
+    if (slideIndex) {
+      realIndex = parseInt(slideIndex, 10);
+    } else {
+      realIndex = activeIndex;
+    }
+  } else {
+    realIndex = activeIndex;
+  }
+  Object.assign(swiper, {
+    previousSnapIndex,
+    snapIndex,
+    previousRealIndex,
+    realIndex,
+    previousIndex,
+    activeIndex
+  });
+  if (swiper.initialized) {
+    preload(swiper);
+  }
+  swiper.emit('activeIndexChange');
+  swiper.emit('snapIndexChange');
+  if (swiper.initialized || swiper.params.runCallbacksOnInit) {
+    if (previousRealIndex !== realIndex) {
+      swiper.emit('realIndexChange');
+    }
+    swiper.emit('slideChange');
+  }
+}
+
+function updateClickedSlide(el, path) {
+  const swiper = this;
+  const params = swiper.params;
+  let slide = el.closest(`.${params.slideClass}, swiper-slide`);
+  if (!slide && swiper.isElement && path && path.length > 1 && path.includes(el)) {
+    [...path.slice(path.indexOf(el) + 1, path.length)].forEach(pathEl => {
+      if (!slide && pathEl.matches && pathEl.matches(`.${params.slideClass}, swiper-slide`)) {
+        slide = pathEl;
+      }
+    });
+  }
+  let slideFound = false;
+  let slideIndex;
+  if (slide) {
+    for (let i = 0; i < swiper.slides.length; i += 1) {
+      if (swiper.slides[i] === slide) {
+        slideFound = true;
+        slideIndex = i;
+        break;
+      }
+    }
+  }
+  if (slide && slideFound) {
+    swiper.clickedSlide = slide;
+    if (swiper.virtual && swiper.params.virtual.enabled) {
+      swiper.clickedIndex = parseInt(slide.getAttribute('data-swiper-slide-index'), 10);
+    } else {
+      swiper.clickedIndex = slideIndex;
+    }
+  } else {
+    swiper.clickedSlide = undefined;
+    swiper.clickedIndex = undefined;
+    return;
+  }
+  if (params.slideToClickedSlide && swiper.clickedIndex !== undefined && swiper.clickedIndex !== swiper.activeIndex) {
+    swiper.slideToClickedSlide();
+  }
+}
+
+var update = {
+  updateSize,
+  updateSlides,
+  updateAutoHeight,
+  updateSlidesOffset,
+  updateSlidesProgress,
+  updateProgress,
+  updateSlidesClasses,
+  updateActiveIndex,
+  updateClickedSlide
+};
+
+function getSwiperTranslate(axis = this.isHorizontal() ? 'x' : 'y') {
+  const swiper = this;
+  const {
+    params,
+    rtlTranslate: rtl,
+    translate,
+    wrapperEl
+  } = swiper;
+  if (params.virtualTranslate) {
+    return rtl ? -translate : translate;
+  }
+  if (params.cssMode) {
+    return translate;
+  }
+  let currentTranslate = (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.l)(wrapperEl, axis);
+  currentTranslate += swiper.cssOverflowAdjustment();
+  if (rtl) currentTranslate = -currentTranslate;
+  return currentTranslate || 0;
+}
+
+function setTranslate(translate, byController) {
+  const swiper = this;
+  const {
+    rtlTranslate: rtl,
+    params,
+    wrapperEl,
+    progress
+  } = swiper;
+  let x = 0;
+  let y = 0;
+  const z = 0;
+  if (swiper.isHorizontal()) {
+    x = rtl ? -translate : translate;
+  } else {
+    y = translate;
+  }
+  if (params.roundLengths) {
+    x = Math.floor(x);
+    y = Math.floor(y);
+  }
+  swiper.previousTranslate = swiper.translate;
+  swiper.translate = swiper.isHorizontal() ? x : y;
+  if (params.cssMode) {
+    wrapperEl[swiper.isHorizontal() ? 'scrollLeft' : 'scrollTop'] = swiper.isHorizontal() ? -x : -y;
+  } else if (!params.virtualTranslate) {
+    if (swiper.isHorizontal()) {
+      x -= swiper.cssOverflowAdjustment();
+    } else {
+      y -= swiper.cssOverflowAdjustment();
+    }
+    wrapperEl.style.transform = `translate3d(${x}px, ${y}px, ${z}px)`;
+  }
+
+  // Check if we need to update progress
+  let newProgress;
+  const translatesDiff = swiper.maxTranslate() - swiper.minTranslate();
+  if (translatesDiff === 0) {
+    newProgress = 0;
+  } else {
+    newProgress = (translate - swiper.minTranslate()) / translatesDiff;
+  }
+  if (newProgress !== progress) {
+    swiper.updateProgress(translate);
+  }
+  swiper.emit('setTranslate', swiper.translate, byController);
+}
+
+function minTranslate() {
+  return -this.snapGrid[0];
+}
+
+function maxTranslate() {
+  return -this.snapGrid[this.snapGrid.length - 1];
+}
+
+function translateTo(translate = 0, speed = this.params.speed, runCallbacks = true, translateBounds = true, internal) {
+  const swiper = this;
+  const {
+    params,
+    wrapperEl
+  } = swiper;
+  if (swiper.animating && params.preventInteractionOnTransition) {
+    return false;
+  }
+  const minTranslate = swiper.minTranslate();
+  const maxTranslate = swiper.maxTranslate();
+  let newTranslate;
+  if (translateBounds && translate > minTranslate) newTranslate = minTranslate;else if (translateBounds && translate < maxTranslate) newTranslate = maxTranslate;else newTranslate = translate;
+
+  // Update progress
+  swiper.updateProgress(newTranslate);
+  if (params.cssMode) {
+    const isH = swiper.isHorizontal();
+    if (speed === 0) {
+      wrapperEl[isH ? 'scrollLeft' : 'scrollTop'] = -newTranslate;
+    } else {
+      if (!swiper.support.smoothScroll) {
+        (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.u)({
+          swiper,
+          targetPosition: -newTranslate,
+          side: isH ? 'left' : 'top'
+        });
+        return true;
+      }
+      wrapperEl.scrollTo({
+        [isH ? 'left' : 'top']: -newTranslate,
+        behavior: 'smooth'
+      });
+    }
+    return true;
+  }
+  if (speed === 0) {
+    swiper.setTransition(0);
+    swiper.setTranslate(newTranslate);
+    if (runCallbacks) {
+      swiper.emit('beforeTransitionStart', speed, internal);
+      swiper.emit('transitionEnd');
+    }
+  } else {
+    swiper.setTransition(speed);
+    swiper.setTranslate(newTranslate);
+    if (runCallbacks) {
+      swiper.emit('beforeTransitionStart', speed, internal);
+      swiper.emit('transitionStart');
+    }
+    if (!swiper.animating) {
+      swiper.animating = true;
+      if (!swiper.onTranslateToWrapperTransitionEnd) {
+        swiper.onTranslateToWrapperTransitionEnd = function transitionEnd(e) {
+          if (!swiper || swiper.destroyed) return;
+          if (e.target !== this) return;
+          swiper.wrapperEl.removeEventListener('transitionend', swiper.onTranslateToWrapperTransitionEnd);
+          swiper.onTranslateToWrapperTransitionEnd = null;
+          delete swiper.onTranslateToWrapperTransitionEnd;
+          swiper.animating = false;
+          if (runCallbacks) {
+            swiper.emit('transitionEnd');
+          }
+        };
+      }
+      swiper.wrapperEl.addEventListener('transitionend', swiper.onTranslateToWrapperTransitionEnd);
+    }
+  }
+  return true;
+}
+
+var translate = {
+  getTranslate: getSwiperTranslate,
+  setTranslate,
+  minTranslate,
+  maxTranslate,
+  translateTo
+};
+
+function setTransition(duration, byController) {
+  const swiper = this;
+  if (!swiper.params.cssMode) {
+    swiper.wrapperEl.style.transitionDuration = `${duration}ms`;
+    swiper.wrapperEl.style.transitionDelay = duration === 0 ? `0ms` : '';
+  }
+  swiper.emit('setTransition', duration, byController);
+}
+
+function transitionEmit({
+  swiper,
+  runCallbacks,
+  direction,
+  step
+}) {
+  const {
+    activeIndex,
+    previousIndex
+  } = swiper;
+  let dir = direction;
+  if (!dir) {
+    if (activeIndex > previousIndex) dir = 'next';else if (activeIndex < previousIndex) dir = 'prev';else dir = 'reset';
+  }
+  swiper.emit(`transition${step}`);
+  if (runCallbacks && dir === 'reset') {
+    swiper.emit(`slideResetTransition${step}`);
+  } else if (runCallbacks && activeIndex !== previousIndex) {
+    swiper.emit(`slideChangeTransition${step}`);
+    if (dir === 'next') {
+      swiper.emit(`slideNextTransition${step}`);
+    } else {
+      swiper.emit(`slidePrevTransition${step}`);
+    }
+  }
+}
+
+function transitionStart(runCallbacks = true, direction) {
+  const swiper = this;
+  const {
+    params
+  } = swiper;
+  if (params.cssMode) return;
+  if (params.autoHeight) {
+    swiper.updateAutoHeight();
+  }
+  transitionEmit({
+    swiper,
+    runCallbacks,
+    direction,
+    step: 'Start'
+  });
+}
+
+function transitionEnd(runCallbacks = true, direction) {
+  const swiper = this;
+  const {
+    params
+  } = swiper;
+  swiper.animating = false;
+  if (params.cssMode) return;
+  swiper.setTransition(0);
+  transitionEmit({
+    swiper,
+    runCallbacks,
+    direction,
+    step: 'End'
+  });
+}
+
+var transition = {
+  setTransition,
+  transitionStart,
+  transitionEnd
+};
+
+function slideTo(index = 0, speed, runCallbacks = true, internal, initial) {
+  if (typeof index === 'string') {
+    index = parseInt(index, 10);
+  }
+  const swiper = this;
+  let slideIndex = index;
+  if (slideIndex < 0) slideIndex = 0;
+  const {
+    params,
+    snapGrid,
+    slidesGrid,
+    previousIndex,
+    activeIndex,
+    rtlTranslate: rtl,
+    wrapperEl,
+    enabled
+  } = swiper;
+  if (!enabled && !internal && !initial || swiper.destroyed || swiper.animating && params.preventInteractionOnTransition) {
+    return false;
+  }
+  if (typeof speed === 'undefined') {
+    speed = swiper.params.speed;
+  }
+  const skip = Math.min(swiper.params.slidesPerGroupSkip, slideIndex);
+  let snapIndex = skip + Math.floor((slideIndex - skip) / swiper.params.slidesPerGroup);
+  if (snapIndex >= snapGrid.length) snapIndex = snapGrid.length - 1;
+  const translate = -snapGrid[snapIndex];
+  // Normalize slideIndex
+  if (params.normalizeSlideIndex) {
+    for (let i = 0; i < slidesGrid.length; i += 1) {
+      const normalizedTranslate = -Math.floor(translate * 100);
+      const normalizedGrid = Math.floor(slidesGrid[i] * 100);
+      const normalizedGridNext = Math.floor(slidesGrid[i + 1] * 100);
+      if (typeof slidesGrid[i + 1] !== 'undefined') {
+        if (normalizedTranslate >= normalizedGrid && normalizedTranslate < normalizedGridNext - (normalizedGridNext - normalizedGrid) / 2) {
+          slideIndex = i;
+        } else if (normalizedTranslate >= normalizedGrid && normalizedTranslate < normalizedGridNext) {
+          slideIndex = i + 1;
+        }
+      } else if (normalizedTranslate >= normalizedGrid) {
+        slideIndex = i;
+      }
+    }
+  }
+  // Directions locks
+  if (swiper.initialized && slideIndex !== activeIndex) {
+    if (!swiper.allowSlideNext && (rtl ? translate > swiper.translate && translate > swiper.minTranslate() : translate < swiper.translate && translate < swiper.minTranslate())) {
+      return false;
+    }
+    if (!swiper.allowSlidePrev && translate > swiper.translate && translate > swiper.maxTranslate()) {
+      if ((activeIndex || 0) !== slideIndex) {
+        return false;
+      }
+    }
+  }
+  if (slideIndex !== (previousIndex || 0) && runCallbacks) {
+    swiper.emit('beforeSlideChangeStart');
+  }
+
+  // Update progress
+  swiper.updateProgress(translate);
+  let direction;
+  if (slideIndex > activeIndex) direction = 'next';else if (slideIndex < activeIndex) direction = 'prev';else direction = 'reset';
+
+  // initial virtual
+  const isVirtual = swiper.virtual && swiper.params.virtual.enabled;
+  const isInitialVirtual = isVirtual && initial;
+  // Update Index
+  if (!isInitialVirtual && (rtl && -translate === swiper.translate || !rtl && translate === swiper.translate)) {
+    swiper.updateActiveIndex(slideIndex);
+    // Update Height
+    if (params.autoHeight) {
+      swiper.updateAutoHeight();
+    }
+    swiper.updateSlidesClasses();
+    if (params.effect !== 'slide') {
+      swiper.setTranslate(translate);
+    }
+    if (direction !== 'reset') {
+      swiper.transitionStart(runCallbacks, direction);
+      swiper.transitionEnd(runCallbacks, direction);
+    }
+    return false;
+  }
+  if (params.cssMode) {
+    const isH = swiper.isHorizontal();
+    const t = rtl ? translate : -translate;
+    if (speed === 0) {
+      if (isVirtual) {
+        swiper.wrapperEl.style.scrollSnapType = 'none';
+        swiper._immediateVirtual = true;
+      }
+      if (isVirtual && !swiper._cssModeVirtualInitialSet && swiper.params.initialSlide > 0) {
+        swiper._cssModeVirtualInitialSet = true;
+        requestAnimationFrame(() => {
+          wrapperEl[isH ? 'scrollLeft' : 'scrollTop'] = t;
+        });
+      } else {
+        wrapperEl[isH ? 'scrollLeft' : 'scrollTop'] = t;
+      }
+      if (isVirtual) {
+        requestAnimationFrame(() => {
+          swiper.wrapperEl.style.scrollSnapType = '';
+          swiper._immediateVirtual = false;
+        });
+      }
+    } else {
+      if (!swiper.support.smoothScroll) {
+        (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.u)({
+          swiper,
+          targetPosition: t,
+          side: isH ? 'left' : 'top'
+        });
+        return true;
+      }
+      wrapperEl.scrollTo({
+        [isH ? 'left' : 'top']: t,
+        behavior: 'smooth'
+      });
+    }
+    return true;
+  }
+  const browser = getBrowser();
+  const isSafari = browser.isSafari;
+  if (isVirtual && !initial && isSafari && swiper.isElement) {
+    swiper.virtual.update(false, false, slideIndex);
+  }
+  swiper.setTransition(speed);
+  swiper.setTranslate(translate);
+  swiper.updateActiveIndex(slideIndex);
+  swiper.updateSlidesClasses();
+  swiper.emit('beforeTransitionStart', speed, internal);
+  swiper.transitionStart(runCallbacks, direction);
+  if (speed === 0) {
+    swiper.transitionEnd(runCallbacks, direction);
+  } else if (!swiper.animating) {
+    swiper.animating = true;
+    if (!swiper.onSlideToWrapperTransitionEnd) {
+      swiper.onSlideToWrapperTransitionEnd = function transitionEnd(e) {
+        if (!swiper || swiper.destroyed) return;
+        if (e.target !== this) return;
+        swiper.wrapperEl.removeEventListener('transitionend', swiper.onSlideToWrapperTransitionEnd);
+        swiper.onSlideToWrapperTransitionEnd = null;
+        delete swiper.onSlideToWrapperTransitionEnd;
+        swiper.transitionEnd(runCallbacks, direction);
+      };
+    }
+    swiper.wrapperEl.addEventListener('transitionend', swiper.onSlideToWrapperTransitionEnd);
+  }
+  return true;
+}
+
+function slideToLoop(index = 0, speed, runCallbacks = true, internal) {
+  if (typeof index === 'string') {
+    const indexAsNumber = parseInt(index, 10);
+    index = indexAsNumber;
+  }
+  const swiper = this;
+  if (swiper.destroyed) return;
+  if (typeof speed === 'undefined') {
+    speed = swiper.params.speed;
+  }
+  const gridEnabled = swiper.grid && swiper.params.grid && swiper.params.grid.rows > 1;
+  let newIndex = index;
+  if (swiper.params.loop) {
+    if (swiper.virtual && swiper.params.virtual.enabled) {
+      // eslint-disable-next-line
+      newIndex = newIndex + swiper.virtual.slidesBefore;
+    } else {
+      let targetSlideIndex;
+      if (gridEnabled) {
+        const slideIndex = newIndex * swiper.params.grid.rows;
+        targetSlideIndex = swiper.slides.find(slideEl => slideEl.getAttribute('data-swiper-slide-index') * 1 === slideIndex).column;
+      } else {
+        targetSlideIndex = swiper.getSlideIndexByData(newIndex);
+      }
+      const cols = gridEnabled ? Math.ceil(swiper.slides.length / swiper.params.grid.rows) : swiper.slides.length;
+      const {
+        centeredSlides,
+        slidesOffsetBefore,
+        slidesOffsetAfter
+      } = swiper.params;
+      const bothDirections = centeredSlides || !!slidesOffsetBefore || !!slidesOffsetAfter;
+      let slidesPerView = swiper.params.slidesPerView;
+      if (slidesPerView === 'auto') {
+        slidesPerView = swiper.slidesPerViewDynamic();
+      } else {
+        slidesPerView = Math.ceil(parseFloat(swiper.params.slidesPerView, 10));
+        if (bothDirections && slidesPerView % 2 === 0) {
+          slidesPerView = slidesPerView + 1;
+        }
+      }
+      let needLoopFix = cols - targetSlideIndex < slidesPerView;
+      if (bothDirections) {
+        needLoopFix = needLoopFix || targetSlideIndex < Math.ceil(slidesPerView / 2);
+      }
+      if (internal && bothDirections && swiper.params.slidesPerView !== 'auto' && !gridEnabled) {
+        needLoopFix = false;
+      }
+      if (needLoopFix) {
+        const direction = bothDirections ? targetSlideIndex < swiper.activeIndex ? 'prev' : 'next' : targetSlideIndex - swiper.activeIndex - 1 < swiper.params.slidesPerView ? 'next' : 'prev';
+        swiper.loopFix({
+          direction,
+          slideTo: true,
+          activeSlideIndex: direction === 'next' ? targetSlideIndex + 1 : targetSlideIndex - cols + 1,
+          slideRealIndex: direction === 'next' ? swiper.realIndex : undefined
+        });
+      }
+      if (gridEnabled) {
+        const slideIndex = newIndex * swiper.params.grid.rows;
+        newIndex = swiper.slides.find(slideEl => slideEl.getAttribute('data-swiper-slide-index') * 1 === slideIndex).column;
+      } else {
+        newIndex = swiper.getSlideIndexByData(newIndex);
+      }
+    }
+  }
+  requestAnimationFrame(() => {
+    swiper.slideTo(newIndex, speed, runCallbacks, internal);
+  });
+  return swiper;
+}
+
+/* eslint no-unused-vars: "off" */
+function slideNext(speed, runCallbacks = true, internal) {
+  const swiper = this;
+  const {
+    enabled,
+    params,
+    animating
+  } = swiper;
+  if (!enabled || swiper.destroyed) return swiper;
+  if (typeof speed === 'undefined') {
+    speed = swiper.params.speed;
+  }
+  let perGroup = params.slidesPerGroup;
+  if (params.slidesPerView === 'auto' && params.slidesPerGroup === 1 && params.slidesPerGroupAuto) {
+    perGroup = Math.max(swiper.slidesPerViewDynamic('current', true), 1);
+  }
+  const increment = swiper.activeIndex < params.slidesPerGroupSkip ? 1 : perGroup;
+  const isVirtual = swiper.virtual && params.virtual.enabled;
+  if (params.loop) {
+    if (animating && !isVirtual && params.loopPreventsSliding) return false;
+    swiper.loopFix({
+      direction: 'next'
+    });
+    // eslint-disable-next-line
+    swiper._clientLeft = swiper.wrapperEl.clientLeft;
+    if (swiper.activeIndex === swiper.slides.length - 1 && params.cssMode) {
+      requestAnimationFrame(() => {
+        swiper.slideTo(swiper.activeIndex + increment, speed, runCallbacks, internal);
+      });
+      return true;
+    }
+  }
+  if (params.rewind && swiper.isEnd) {
+    return swiper.slideTo(0, speed, runCallbacks, internal);
+  }
+  return swiper.slideTo(swiper.activeIndex + increment, speed, runCallbacks, internal);
+}
+
+/* eslint no-unused-vars: "off" */
+function slidePrev(speed, runCallbacks = true, internal) {
+  const swiper = this;
+  const {
+    params,
+    snapGrid,
+    slidesGrid,
+    rtlTranslate,
+    enabled,
+    animating
+  } = swiper;
+  if (!enabled || swiper.destroyed) return swiper;
+  if (typeof speed === 'undefined') {
+    speed = swiper.params.speed;
+  }
+  const isVirtual = swiper.virtual && params.virtual.enabled;
+  if (params.loop) {
+    if (animating && !isVirtual && params.loopPreventsSliding) return false;
+    swiper.loopFix({
+      direction: 'prev'
+    });
+    // eslint-disable-next-line
+    swiper._clientLeft = swiper.wrapperEl.clientLeft;
+  }
+  const translate = rtlTranslate ? swiper.translate : -swiper.translate;
+  function normalize(val) {
+    if (val < 0) return -Math.floor(Math.abs(val));
+    return Math.floor(val);
+  }
+  const normalizedTranslate = normalize(translate);
+  const normalizedSnapGrid = snapGrid.map(val => normalize(val));
+  const isFreeMode = params.freeMode && params.freeMode.enabled;
+  let prevSnap = snapGrid[normalizedSnapGrid.indexOf(normalizedTranslate) - 1];
+  if (typeof prevSnap === 'undefined' && (params.cssMode || isFreeMode)) {
+    let prevSnapIndex;
+    snapGrid.forEach((snap, snapIndex) => {
+      if (normalizedTranslate >= snap) {
+        // prevSnap = snap;
+        prevSnapIndex = snapIndex;
+      }
+    });
+    if (typeof prevSnapIndex !== 'undefined') {
+      prevSnap = isFreeMode ? snapGrid[prevSnapIndex] : snapGrid[prevSnapIndex > 0 ? prevSnapIndex - 1 : prevSnapIndex];
+    }
+  }
+  let prevIndex = 0;
+  if (typeof prevSnap !== 'undefined') {
+    prevIndex = slidesGrid.indexOf(prevSnap);
+    if (prevIndex < 0) prevIndex = swiper.activeIndex - 1;
+    if (params.slidesPerView === 'auto' && params.slidesPerGroup === 1 && params.slidesPerGroupAuto) {
+      prevIndex = prevIndex - swiper.slidesPerViewDynamic('previous', true) + 1;
+      prevIndex = Math.max(prevIndex, 0);
+    }
+  }
+  if (params.rewind && swiper.isBeginning) {
+    const lastIndex = swiper.params.virtual && swiper.params.virtual.enabled && swiper.virtual ? swiper.virtual.slides.length - 1 : swiper.slides.length - 1;
+    return swiper.slideTo(lastIndex, speed, runCallbacks, internal);
+  } else if (params.loop && swiper.activeIndex === 0 && params.cssMode) {
+    requestAnimationFrame(() => {
+      swiper.slideTo(prevIndex, speed, runCallbacks, internal);
+    });
+    return true;
+  }
+  return swiper.slideTo(prevIndex, speed, runCallbacks, internal);
+}
+
+/* eslint no-unused-vars: "off" */
+function slideReset(speed, runCallbacks = true, internal) {
+  const swiper = this;
+  if (swiper.destroyed) return;
+  if (typeof speed === 'undefined') {
+    speed = swiper.params.speed;
+  }
+  return swiper.slideTo(swiper.activeIndex, speed, runCallbacks, internal);
+}
+
+/* eslint no-unused-vars: "off" */
+function slideToClosest(speed, runCallbacks = true, internal, threshold = 0.5) {
+  const swiper = this;
+  if (swiper.destroyed) return;
+  if (typeof speed === 'undefined') {
+    speed = swiper.params.speed;
+  }
+  let index = swiper.activeIndex;
+  const skip = Math.min(swiper.params.slidesPerGroupSkip, index);
+  const snapIndex = skip + Math.floor((index - skip) / swiper.params.slidesPerGroup);
+  const translate = swiper.rtlTranslate ? swiper.translate : -swiper.translate;
+  if (translate >= swiper.snapGrid[snapIndex]) {
+    // The current translate is on or after the current snap index, so the choice
+    // is between the current index and the one after it.
+    const currentSnap = swiper.snapGrid[snapIndex];
+    const nextSnap = swiper.snapGrid[snapIndex + 1];
+    if (translate - currentSnap > (nextSnap - currentSnap) * threshold) {
+      index += swiper.params.slidesPerGroup;
+    }
+  } else {
+    // The current translate is before the current snap index, so the choice
+    // is between the current index and the one before it.
+    const prevSnap = swiper.snapGrid[snapIndex - 1];
+    const currentSnap = swiper.snapGrid[snapIndex];
+    if (translate - prevSnap <= (currentSnap - prevSnap) * threshold) {
+      index -= swiper.params.slidesPerGroup;
+    }
+  }
+  index = Math.max(index, 0);
+  index = Math.min(index, swiper.slidesGrid.length - 1);
+  return swiper.slideTo(index, speed, runCallbacks, internal);
+}
+
+function slideToClickedSlide() {
+  const swiper = this;
+  if (swiper.destroyed) return;
+  const {
+    params,
+    slidesEl
+  } = swiper;
+  const slidesPerView = params.slidesPerView === 'auto' ? swiper.slidesPerViewDynamic() : params.slidesPerView;
+  let slideToIndex = swiper.getSlideIndexWhenGrid(swiper.clickedIndex);
+  let realIndex;
+  const slideSelector = swiper.isElement ? `swiper-slide` : `.${params.slideClass}`;
+  const isGrid = swiper.grid && swiper.params.grid && swiper.params.grid.rows > 1;
+  if (params.loop) {
+    if (swiper.animating) return;
+    realIndex = parseInt(swiper.clickedSlide.getAttribute('data-swiper-slide-index'), 10);
+    if (params.centeredSlides) {
+      swiper.slideToLoop(realIndex);
+    } else if (slideToIndex > (isGrid ? (swiper.slides.length - slidesPerView) / 2 - (swiper.params.grid.rows - 1) : swiper.slides.length - slidesPerView)) {
+      swiper.loopFix();
+      slideToIndex = swiper.getSlideIndex((0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.e)(slidesEl, `${slideSelector}[data-swiper-slide-index="${realIndex}"]`)[0]);
+      (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.n)(() => {
+        swiper.slideTo(slideToIndex);
+      });
+    } else {
+      swiper.slideTo(slideToIndex);
+    }
+  } else {
+    swiper.slideTo(slideToIndex);
+  }
+}
+
+var slide = {
+  slideTo,
+  slideToLoop,
+  slideNext,
+  slidePrev,
+  slideReset,
+  slideToClosest,
+  slideToClickedSlide
+};
+
+function loopCreate(slideRealIndex, initial) {
+  const swiper = this;
+  const {
+    params,
+    slidesEl
+  } = swiper;
+  if (!params.loop || swiper.virtual && swiper.params.virtual.enabled) return;
+  const initSlides = () => {
+    const slides = (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.e)(slidesEl, `.${params.slideClass}, swiper-slide`);
+    slides.forEach((el, index) => {
+      el.setAttribute('data-swiper-slide-index', index);
+    });
+  };
+  const clearBlankSlides = () => {
+    const slides = (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.e)(slidesEl, `.${params.slideBlankClass}`);
+    slides.forEach(el => {
+      el.remove();
+    });
+    if (slides.length > 0) {
+      swiper.recalcSlides();
+      swiper.updateSlides();
+    }
+  };
+  const gridEnabled = swiper.grid && params.grid && params.grid.rows > 1;
+  if (params.loopAddBlankSlides && (params.slidesPerGroup > 1 || gridEnabled)) {
+    clearBlankSlides();
+  }
+  const slidesPerGroup = params.slidesPerGroup * (gridEnabled ? params.grid.rows : 1);
+  const shouldFillGroup = swiper.slides.length % slidesPerGroup !== 0;
+  const shouldFillGrid = gridEnabled && swiper.slides.length % params.grid.rows !== 0;
+  const addBlankSlides = amountOfSlides => {
+    for (let i = 0; i < amountOfSlides; i += 1) {
+      const slideEl = swiper.isElement ? (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.c)('swiper-slide', [params.slideBlankClass]) : (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.c)('div', [params.slideClass, params.slideBlankClass]);
+      swiper.slidesEl.append(slideEl);
+    }
+  };
+  if (shouldFillGroup) {
+    if (params.loopAddBlankSlides) {
+      const slidesToAdd = slidesPerGroup - swiper.slides.length % slidesPerGroup;
+      addBlankSlides(slidesToAdd);
+      swiper.recalcSlides();
+      swiper.updateSlides();
+    } else {
+      (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.v)('Swiper Loop Warning: The number of slides is not even to slidesPerGroup, loop mode may not function properly. You need to add more slides (or make duplicates, or empty slides)');
+    }
+    initSlides();
+  } else if (shouldFillGrid) {
+    if (params.loopAddBlankSlides) {
+      const slidesToAdd = params.grid.rows - swiper.slides.length % params.grid.rows;
+      addBlankSlides(slidesToAdd);
+      swiper.recalcSlides();
+      swiper.updateSlides();
+    } else {
+      (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.v)('Swiper Loop Warning: The number of slides is not even to grid.rows, loop mode may not function properly. You need to add more slides (or make duplicates, or empty slides)');
+    }
+    initSlides();
+  } else {
+    initSlides();
+  }
+  const bothDirections = params.centeredSlides || !!params.slidesOffsetBefore || !!params.slidesOffsetAfter;
+  swiper.loopFix({
+    slideRealIndex,
+    direction: bothDirections ? undefined : 'next',
+    initial
+  });
+}
+
+function loopFix({
+  slideRealIndex,
+  slideTo = true,
+  direction,
+  setTranslate,
+  activeSlideIndex,
+  initial,
+  byController,
+  byMousewheel
+} = {}) {
+  const swiper = this;
+  if (!swiper.params.loop) return;
+  swiper.emit('beforeLoopFix');
+  const {
+    slides,
+    allowSlidePrev,
+    allowSlideNext,
+    slidesEl,
+    params
+  } = swiper;
+  const {
+    centeredSlides,
+    slidesOffsetBefore,
+    slidesOffsetAfter,
+    initialSlide
+  } = params;
+  const bothDirections = centeredSlides || !!slidesOffsetBefore || !!slidesOffsetAfter;
+  swiper.allowSlidePrev = true;
+  swiper.allowSlideNext = true;
+  if (swiper.virtual && params.virtual.enabled) {
+    if (slideTo) {
+      if (!bothDirections && swiper.snapIndex === 0) {
+        swiper.slideTo(swiper.virtual.slides.length, 0, false, true);
+      } else if (bothDirections && swiper.snapIndex < params.slidesPerView) {
+        swiper.slideTo(swiper.virtual.slides.length + swiper.snapIndex, 0, false, true);
+      } else if (swiper.snapIndex === swiper.snapGrid.length - 1) {
+        swiper.slideTo(swiper.virtual.slidesBefore, 0, false, true);
+      }
+    }
+    swiper.allowSlidePrev = allowSlidePrev;
+    swiper.allowSlideNext = allowSlideNext;
+    swiper.emit('loopFix');
+    return;
+  }
+  let slidesPerView = params.slidesPerView;
+  if (slidesPerView === 'auto') {
+    slidesPerView = swiper.slidesPerViewDynamic();
+  } else {
+    slidesPerView = Math.ceil(parseFloat(params.slidesPerView, 10));
+    if (bothDirections && slidesPerView % 2 === 0) {
+      slidesPerView = slidesPerView + 1;
+    }
+  }
+  const slidesPerGroup = params.slidesPerGroupAuto ? slidesPerView : params.slidesPerGroup;
+  let loopedSlides = bothDirections ? Math.max(slidesPerGroup, Math.ceil(slidesPerView / 2)) : slidesPerGroup;
+  if (loopedSlides % slidesPerGroup !== 0) {
+    loopedSlides += slidesPerGroup - loopedSlides % slidesPerGroup;
+  }
+  loopedSlides += params.loopAdditionalSlides;
+  swiper.loopedSlides = loopedSlides;
+  const gridEnabled = swiper.grid && params.grid && params.grid.rows > 1;
+  if (slides.length < slidesPerView + loopedSlides || swiper.params.effect === 'cards' && slides.length < slidesPerView + loopedSlides * 2) {
+    (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.v)('Swiper Loop Warning: The number of slides is not enough for loop mode, it will be disabled or not function properly. You need to add more slides (or make duplicates) or lower the values of slidesPerView and slidesPerGroup parameters');
+  } else if (gridEnabled && params.grid.fill === 'row') {
+    (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.v)('Swiper Loop Warning: Loop mode is not compatible with grid.fill = `row`');
+  }
+  const prependSlidesIndexes = [];
+  const appendSlidesIndexes = [];
+  const cols = gridEnabled ? Math.ceil(slides.length / params.grid.rows) : slides.length;
+  const isInitialOverflow = initial && cols - initialSlide < slidesPerView && !bothDirections;
+  let activeIndex = isInitialOverflow ? initialSlide : swiper.activeIndex;
+  if (typeof activeSlideIndex === 'undefined') {
+    activeSlideIndex = swiper.getSlideIndex(slides.find(el => el.classList.contains(params.slideActiveClass)));
+  } else {
+    activeIndex = activeSlideIndex;
+  }
+  const isNext = direction === 'next' || !direction;
+  const isPrev = direction === 'prev' || !direction;
+  let slidesPrepended = 0;
+  let slidesAppended = 0;
+  const activeColIndex = gridEnabled ? slides[activeSlideIndex].column : activeSlideIndex;
+  const activeColIndexWithShift = activeColIndex + (bothDirections && typeof setTranslate === 'undefined' ? -slidesPerView / 2 + 0.5 : 0);
+  // prepend last slides before start
+  if (activeColIndexWithShift < loopedSlides) {
+    slidesPrepended = Math.max(loopedSlides - activeColIndexWithShift, slidesPerGroup);
+    for (let i = 0; i < loopedSlides - activeColIndexWithShift; i += 1) {
+      const index = i - Math.floor(i / cols) * cols;
+      if (gridEnabled) {
+        const colIndexToPrepend = cols - index - 1;
+        for (let i = slides.length - 1; i >= 0; i -= 1) {
+          if (slides[i].column === colIndexToPrepend) prependSlidesIndexes.push(i);
+        }
+        // slides.forEach((slide, slideIndex) => {
+        //   if (slide.column === colIndexToPrepend) prependSlidesIndexes.push(slideIndex);
+        // });
+      } else {
+        prependSlidesIndexes.push(cols - index - 1);
+      }
+    }
+  } else if (activeColIndexWithShift + slidesPerView > cols - loopedSlides) {
+    slidesAppended = Math.max(activeColIndexWithShift - (cols - loopedSlides * 2), slidesPerGroup);
+    if (isInitialOverflow) {
+      slidesAppended = Math.max(slidesAppended, slidesPerView - cols + initialSlide + 1);
+    }
+    for (let i = 0; i < slidesAppended; i += 1) {
+      const index = i - Math.floor(i / cols) * cols;
+      if (gridEnabled) {
+        slides.forEach((slide, slideIndex) => {
+          if (slide.column === index) appendSlidesIndexes.push(slideIndex);
+        });
+      } else {
+        appendSlidesIndexes.push(index);
+      }
+    }
+  }
+  swiper.__preventObserver__ = true;
+  requestAnimationFrame(() => {
+    swiper.__preventObserver__ = false;
+  });
+  if (swiper.params.effect === 'cards' && slides.length < slidesPerView + loopedSlides * 2) {
+    if (appendSlidesIndexes.includes(activeSlideIndex)) {
+      appendSlidesIndexes.splice(appendSlidesIndexes.indexOf(activeSlideIndex), 1);
+    }
+    if (prependSlidesIndexes.includes(activeSlideIndex)) {
+      prependSlidesIndexes.splice(prependSlidesIndexes.indexOf(activeSlideIndex), 1);
+    }
+  }
+  if (isPrev) {
+    prependSlidesIndexes.forEach(index => {
+      slides[index].swiperLoopMoveDOM = true;
+      slidesEl.prepend(slides[index]);
+      slides[index].swiperLoopMoveDOM = false;
+    });
+  }
+  if (isNext) {
+    appendSlidesIndexes.forEach(index => {
+      slides[index].swiperLoopMoveDOM = true;
+      slidesEl.append(slides[index]);
+      slides[index].swiperLoopMoveDOM = false;
+    });
+  }
+  swiper.recalcSlides();
+  if (params.slidesPerView === 'auto') {
+    swiper.updateSlides();
+  } else if (gridEnabled && (prependSlidesIndexes.length > 0 && isPrev || appendSlidesIndexes.length > 0 && isNext)) {
+    swiper.slides.forEach((slide, slideIndex) => {
+      swiper.grid.updateSlide(slideIndex, slide, swiper.slides);
+    });
+  }
+  if (params.watchSlidesProgress) {
+    swiper.updateSlidesOffset();
+  }
+  if (slideTo) {
+    if (prependSlidesIndexes.length > 0 && isPrev) {
+      if (typeof slideRealIndex === 'undefined') {
+        const currentSlideTranslate = swiper.slidesGrid[activeIndex];
+        const newSlideTranslate = swiper.slidesGrid[activeIndex + slidesPrepended];
+        const diff = newSlideTranslate - currentSlideTranslate;
+        if (byMousewheel) {
+          swiper.setTranslate(swiper.translate - diff);
+        } else {
+          swiper.slideTo(activeIndex + Math.ceil(slidesPrepended), 0, false, true);
+          if (setTranslate) {
+            swiper.touchEventsData.startTranslate = swiper.touchEventsData.startTranslate - diff;
+            swiper.touchEventsData.currentTranslate = swiper.touchEventsData.currentTranslate - diff;
+          }
+        }
+      } else {
+        if (setTranslate) {
+          const shift = gridEnabled ? prependSlidesIndexes.length / params.grid.rows : prependSlidesIndexes.length;
+          swiper.slideTo(swiper.activeIndex + shift, 0, false, true);
+          swiper.touchEventsData.currentTranslate = swiper.translate;
+        }
+      }
+    } else if (appendSlidesIndexes.length > 0 && isNext) {
+      if (typeof slideRealIndex === 'undefined') {
+        const currentSlideTranslate = swiper.slidesGrid[activeIndex];
+        const newSlideTranslate = swiper.slidesGrid[activeIndex - slidesAppended];
+        const diff = newSlideTranslate - currentSlideTranslate;
+        if (byMousewheel) {
+          swiper.setTranslate(swiper.translate - diff);
+        } else {
+          swiper.slideTo(activeIndex - slidesAppended, 0, false, true);
+          if (setTranslate) {
+            swiper.touchEventsData.startTranslate = swiper.touchEventsData.startTranslate - diff;
+            swiper.touchEventsData.currentTranslate = swiper.touchEventsData.currentTranslate - diff;
+          }
+        }
+      } else {
+        const shift = gridEnabled ? appendSlidesIndexes.length / params.grid.rows : appendSlidesIndexes.length;
+        swiper.slideTo(swiper.activeIndex - shift, 0, false, true);
+      }
+    }
+  }
+  swiper.allowSlidePrev = allowSlidePrev;
+  swiper.allowSlideNext = allowSlideNext;
+  if (swiper.controller && swiper.controller.control && !byController) {
+    const loopParams = {
+      slideRealIndex,
+      direction,
+      setTranslate,
+      activeSlideIndex,
+      byController: true
+    };
+    if (Array.isArray(swiper.controller.control)) {
+      swiper.controller.control.forEach(c => {
+        if (!c.destroyed && c.params.loop) c.loopFix({
+          ...loopParams,
+          slideTo: c.params.slidesPerView === params.slidesPerView ? slideTo : false
+        });
+      });
+    } else if (swiper.controller.control instanceof swiper.constructor && swiper.controller.control.params.loop) {
+      swiper.controller.control.loopFix({
+        ...loopParams,
+        slideTo: swiper.controller.control.params.slidesPerView === params.slidesPerView ? slideTo : false
+      });
+    }
+  }
+  swiper.emit('loopFix');
+}
+
+function loopDestroy() {
+  const swiper = this;
+  const {
+    params,
+    slidesEl
+  } = swiper;
+  if (!params.loop || !slidesEl || swiper.virtual && swiper.params.virtual.enabled) return;
+  swiper.recalcSlides();
+  const newSlidesOrder = [];
+  swiper.slides.forEach(slideEl => {
+    const index = typeof slideEl.swiperSlideIndex === 'undefined' ? slideEl.getAttribute('data-swiper-slide-index') * 1 : slideEl.swiperSlideIndex;
+    newSlidesOrder[index] = slideEl;
+  });
+  swiper.slides.forEach(slideEl => {
+    slideEl.removeAttribute('data-swiper-slide-index');
+  });
+  newSlidesOrder.forEach(slideEl => {
+    slidesEl.append(slideEl);
+  });
+  swiper.recalcSlides();
+  swiper.slideTo(swiper.realIndex, 0);
+}
+
+var loop = {
+  loopCreate,
+  loopFix,
+  loopDestroy
+};
+
+function setGrabCursor(moving) {
+  const swiper = this;
+  if (!swiper.params.simulateTouch || swiper.params.watchOverflow && swiper.isLocked || swiper.params.cssMode) return;
+  const el = swiper.params.touchEventsTarget === 'container' ? swiper.el : swiper.wrapperEl;
+  if (swiper.isElement) {
+    swiper.__preventObserver__ = true;
+  }
+  el.style.cursor = 'move';
+  el.style.cursor = moving ? 'grabbing' : 'grab';
+  if (swiper.isElement) {
+    requestAnimationFrame(() => {
+      swiper.__preventObserver__ = false;
+    });
+  }
+}
+
+function unsetGrabCursor() {
+  const swiper = this;
+  if (swiper.params.watchOverflow && swiper.isLocked || swiper.params.cssMode) {
+    return;
+  }
+  if (swiper.isElement) {
+    swiper.__preventObserver__ = true;
+  }
+  swiper[swiper.params.touchEventsTarget === 'container' ? 'el' : 'wrapperEl'].style.cursor = '';
+  if (swiper.isElement) {
+    requestAnimationFrame(() => {
+      swiper.__preventObserver__ = false;
+    });
+  }
+}
+
+var grabCursor = {
+  setGrabCursor,
+  unsetGrabCursor
+};
+
+// Modified from https://stackoverflow.com/questions/54520554/custom-element-getrootnode-closest-function-crossing-multiple-parent-shadowd
+function closestElement(selector, base = this) {
+  function __closestFrom(el) {
+    if (!el || el === (0,_ssr_window_esm_mjs__WEBPACK_IMPORTED_MODULE_0__.g)() || el === (0,_ssr_window_esm_mjs__WEBPACK_IMPORTED_MODULE_0__.a)()) return null;
+    if (el.assignedSlot) el = el.assignedSlot;
+    const found = el.closest(selector);
+    if (!found && !el.getRootNode) {
+      return null;
+    }
+    return found || __closestFrom(el.getRootNode().host);
+  }
+  return __closestFrom(base);
+}
+function preventEdgeSwipe(swiper, event, startX) {
+  const window = (0,_ssr_window_esm_mjs__WEBPACK_IMPORTED_MODULE_0__.a)();
+  const {
+    params
+  } = swiper;
+  const edgeSwipeDetection = params.edgeSwipeDetection;
+  const edgeSwipeThreshold = params.edgeSwipeThreshold;
+  if (edgeSwipeDetection && (startX <= edgeSwipeThreshold || startX >= window.innerWidth - edgeSwipeThreshold)) {
+    if (edgeSwipeDetection === 'prevent') {
+      event.preventDefault();
+      return true;
+    }
+    return false;
+  }
+  return true;
+}
+function onTouchStart(event) {
+  const swiper = this;
+  const document = (0,_ssr_window_esm_mjs__WEBPACK_IMPORTED_MODULE_0__.g)();
+  let e = event;
+  if (e.originalEvent) e = e.originalEvent;
+  const data = swiper.touchEventsData;
+  if (e.type === 'pointerdown') {
+    if (data.pointerId !== null && data.pointerId !== e.pointerId) {
+      return;
+    }
+    data.pointerId = e.pointerId;
+  } else if (e.type === 'touchstart' && e.targetTouches.length === 1) {
+    data.touchId = e.targetTouches[0].identifier;
+  }
+  if (e.type === 'touchstart') {
+    // don't proceed touch event
+    preventEdgeSwipe(swiper, e, e.targetTouches[0].pageX);
+    return;
+  }
+  const {
+    params,
+    touches,
+    enabled
+  } = swiper;
+  if (!enabled) return;
+  if (!params.simulateTouch && e.pointerType === 'mouse') return;
+  if (swiper.animating && params.preventInteractionOnTransition) {
+    return;
+  }
+  if (!swiper.animating && params.cssMode && params.loop) {
+    swiper.loopFix();
+  }
+  let targetEl = e.target;
+  if (params.touchEventsTarget === 'wrapper') {
+    if (!(0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.w)(targetEl, swiper.wrapperEl)) return;
+  }
+  if ('which' in e && e.which === 3) return;
+  if ('button' in e && e.button > 0) return;
+  if (data.isTouched && data.isMoved) return;
+
+  // change target el for shadow root component
+  const swipingClassHasValue = !!params.noSwipingClass && params.noSwipingClass !== '';
+  // eslint-disable-next-line
+  const eventPath = e.composedPath ? e.composedPath() : e.path;
+  if (swipingClassHasValue && e.target && e.target.shadowRoot && eventPath) {
+    targetEl = eventPath[0];
+  }
+  const noSwipingSelector = params.noSwipingSelector ? params.noSwipingSelector : `.${params.noSwipingClass}`;
+  const isTargetShadow = !!(e.target && e.target.shadowRoot);
+
+  // use closestElement for shadow root element to get the actual closest for nested shadow root element
+  if (params.noSwiping && (isTargetShadow ? closestElement(noSwipingSelector, targetEl) : targetEl.closest(noSwipingSelector))) {
+    swiper.allowClick = true;
+    return;
+  }
+  if (params.swipeHandler) {
+    if (!targetEl.closest(params.swipeHandler)) return;
+  }
+  touches.currentX = e.pageX;
+  touches.currentY = e.pageY;
+  const startX = touches.currentX;
+  const startY = touches.currentY;
+
+  // Do NOT start if iOS edge swipe is detected. Otherwise iOS app cannot swipe-to-go-back anymore
+
+  if (!preventEdgeSwipe(swiper, e, startX)) {
+    return;
+  }
+  Object.assign(data, {
+    isTouched: true,
+    isMoved: false,
+    allowTouchCallbacks: true,
+    isScrolling: undefined,
+    startMoving: undefined
+  });
+  touches.startX = startX;
+  touches.startY = startY;
+  data.touchStartTime = (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.h)();
+  swiper.allowClick = true;
+  swiper.updateSize();
+  swiper.swipeDirection = undefined;
+  if (params.threshold > 0) data.allowThresholdMove = false;
+  let preventDefault = true;
+  if (targetEl.matches(data.focusableElements)) {
+    preventDefault = false;
+    if (targetEl.nodeName === 'SELECT') {
+      data.isTouched = false;
+    }
+  }
+  if (document.activeElement && document.activeElement.matches(data.focusableElements) && document.activeElement !== targetEl && (e.pointerType === 'mouse' || e.pointerType !== 'mouse' && !targetEl.matches(data.focusableElements))) {
+    document.activeElement.blur();
+  }
+  const shouldPreventDefault = preventDefault && swiper.allowTouchMove && params.touchStartPreventDefault;
+  if ((params.touchStartForcePreventDefault || shouldPreventDefault) && !targetEl.isContentEditable) {
+    e.preventDefault();
+  }
+  if (params.freeMode && params.freeMode.enabled && swiper.freeMode && swiper.animating && !params.cssMode) {
+    swiper.freeMode.onTouchStart();
+  }
+  swiper.emit('touchStart', e);
+}
+
+function onTouchMove(event) {
+  const document = (0,_ssr_window_esm_mjs__WEBPACK_IMPORTED_MODULE_0__.g)();
+  const swiper = this;
+  const data = swiper.touchEventsData;
+  const {
+    params,
+    touches,
+    rtlTranslate: rtl,
+    enabled
+  } = swiper;
+  if (!enabled) return;
+  if (!params.simulateTouch && event.pointerType === 'mouse') return;
+  let e = event;
+  if (e.originalEvent) e = e.originalEvent;
+  if (e.type === 'pointermove') {
+    if (data.touchId !== null) return; // return from pointer if we use touch
+    const id = e.pointerId;
+    if (id !== data.pointerId) return;
+  }
+  let targetTouch;
+  if (e.type === 'touchmove') {
+    targetTouch = [...e.changedTouches].find(t => t.identifier === data.touchId);
+    if (!targetTouch || targetTouch.identifier !== data.touchId) return;
+  } else {
+    targetTouch = e;
+  }
+  if (!data.isTouched) {
+    if (data.startMoving && data.isScrolling) {
+      swiper.emit('touchMoveOpposite', e);
+    }
+    return;
+  }
+  const pageX = targetTouch.pageX;
+  const pageY = targetTouch.pageY;
+  if (e.preventedByNestedSwiper) {
+    touches.startX = pageX;
+    touches.startY = pageY;
+    return;
+  }
+  if (!swiper.allowTouchMove) {
+    if (!e.target.matches(data.focusableElements)) {
+      swiper.allowClick = false;
+    }
+    if (data.isTouched) {
+      Object.assign(touches, {
+        startX: pageX,
+        startY: pageY,
+        currentX: pageX,
+        currentY: pageY
+      });
+      data.touchStartTime = (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.h)();
+    }
+    return;
+  }
+  if (params.touchReleaseOnEdges && !params.loop) {
+    if (swiper.isVertical()) {
+      // Vertical
+      if (pageY < touches.startY && swiper.translate <= swiper.maxTranslate() || pageY > touches.startY && swiper.translate >= swiper.minTranslate()) {
+        data.isTouched = false;
+        data.isMoved = false;
+        return;
+      }
+    } else if (rtl && (pageX > touches.startX && -swiper.translate <= swiper.maxTranslate() || pageX < touches.startX && -swiper.translate >= swiper.minTranslate())) {
+      return;
+    } else if (!rtl && (pageX < touches.startX && swiper.translate <= swiper.maxTranslate() || pageX > touches.startX && swiper.translate >= swiper.minTranslate())) {
+      return;
+    }
+  }
+  if (document.activeElement && document.activeElement.matches(data.focusableElements) && document.activeElement !== e.target && e.pointerType !== 'mouse') {
+    document.activeElement.blur();
+  }
+  if (document.activeElement) {
+    if (e.target === document.activeElement && e.target.matches(data.focusableElements)) {
+      data.isMoved = true;
+      swiper.allowClick = false;
+      return;
+    }
+  }
+  if (data.allowTouchCallbacks) {
+    swiper.emit('touchMove', e);
+  }
+  touches.previousX = touches.currentX;
+  touches.previousY = touches.currentY;
+  touches.currentX = pageX;
+  touches.currentY = pageY;
+  const diffX = touches.currentX - touches.startX;
+  const diffY = touches.currentY - touches.startY;
+  if (swiper.params.threshold && Math.sqrt(diffX ** 2 + diffY ** 2) < swiper.params.threshold) return;
+  if (typeof data.isScrolling === 'undefined') {
+    let touchAngle;
+    if (swiper.isHorizontal() && touches.currentY === touches.startY || swiper.isVertical() && touches.currentX === touches.startX) {
+      data.isScrolling = false;
+    } else {
+      // eslint-disable-next-line
+      if (diffX * diffX + diffY * diffY >= 25) {
+        touchAngle = Math.atan2(Math.abs(diffY), Math.abs(diffX)) * 180 / Math.PI;
+        data.isScrolling = swiper.isHorizontal() ? touchAngle > params.touchAngle : 90 - touchAngle > params.touchAngle;
+      }
+    }
+  }
+  if (data.isScrolling) {
+    swiper.emit('touchMoveOpposite', e);
+  }
+  if (typeof data.startMoving === 'undefined') {
+    if (touches.currentX !== touches.startX || touches.currentY !== touches.startY) {
+      data.startMoving = true;
+    }
+  }
+  if (data.isScrolling || e.type === 'touchmove' && data.preventTouchMoveFromPointerMove) {
+    data.isTouched = false;
+    return;
+  }
+  if (!data.startMoving) {
+    return;
+  }
+  swiper.allowClick = false;
+  if (!params.cssMode && e.cancelable) {
+    e.preventDefault();
+  }
+  if (params.touchMoveStopPropagation && !params.nested) {
+    e.stopPropagation();
+  }
+  let diff = swiper.isHorizontal() ? diffX : diffY;
+  let touchesDiff = swiper.isHorizontal() ? touches.currentX - touches.previousX : touches.currentY - touches.previousY;
+  if (params.oneWayMovement) {
+    diff = Math.abs(diff) * (rtl ? 1 : -1);
+    touchesDiff = Math.abs(touchesDiff) * (rtl ? 1 : -1);
+  }
+  touches.diff = diff;
+  diff *= params.touchRatio;
+  if (rtl) {
+    diff = -diff;
+    touchesDiff = -touchesDiff;
+  }
+  const prevTouchesDirection = swiper.touchesDirection;
+  swiper.swipeDirection = diff > 0 ? 'prev' : 'next';
+  swiper.touchesDirection = touchesDiff > 0 ? 'prev' : 'next';
+  const isLoop = swiper.params.loop && !params.cssMode;
+  const allowLoopFix = swiper.touchesDirection === 'next' && swiper.allowSlideNext || swiper.touchesDirection === 'prev' && swiper.allowSlidePrev;
+  if (!data.isMoved) {
+    if (isLoop && allowLoopFix) {
+      swiper.loopFix({
+        direction: swiper.swipeDirection
+      });
+    }
+    data.startTranslate = swiper.getTranslate();
+    swiper.setTransition(0);
+    if (swiper.animating) {
+      const evt = new window.CustomEvent('transitionend', {
+        bubbles: true,
+        cancelable: true,
+        detail: {
+          bySwiperTouchMove: true
+        }
+      });
+      swiper.wrapperEl.dispatchEvent(evt);
+    }
+    data.allowMomentumBounce = false;
+    // Grab Cursor
+    if (params.grabCursor && (swiper.allowSlideNext === true || swiper.allowSlidePrev === true)) {
+      swiper.setGrabCursor(true);
+    }
+    swiper.emit('sliderFirstMove', e);
+  }
+  let loopFixed;
+  new Date().getTime();
+  if (params._loopSwapReset !== false && data.isMoved && data.allowThresholdMove && prevTouchesDirection !== swiper.touchesDirection && isLoop && allowLoopFix && Math.abs(diff) >= 1) {
+    Object.assign(touches, {
+      startX: pageX,
+      startY: pageY,
+      currentX: pageX,
+      currentY: pageY,
+      startTranslate: data.currentTranslate
+    });
+    data.loopSwapReset = true;
+    data.startTranslate = data.currentTranslate;
+    return;
+  }
+  swiper.emit('sliderMove', e);
+  data.isMoved = true;
+  data.currentTranslate = diff + data.startTranslate;
+  let disableParentSwiper = true;
+  let resistanceRatio = params.resistanceRatio;
+  if (params.touchReleaseOnEdges) {
+    resistanceRatio = 0;
+  }
+  if (diff > 0) {
+    if (isLoop && allowLoopFix && !loopFixed && data.allowThresholdMove && data.currentTranslate > (params.centeredSlides ? swiper.minTranslate() - swiper.slidesSizesGrid[swiper.activeIndex + 1] - (params.slidesPerView !== 'auto' && swiper.slides.length - params.slidesPerView >= 2 ? swiper.slidesSizesGrid[swiper.activeIndex + 1] + swiper.params.spaceBetween : 0) - swiper.params.spaceBetween : swiper.minTranslate())) {
+      swiper.loopFix({
+        direction: 'prev',
+        setTranslate: true,
+        activeSlideIndex: 0
+      });
+    }
+    if (data.currentTranslate > swiper.minTranslate()) {
+      disableParentSwiper = false;
+      if (params.resistance) {
+        data.currentTranslate = swiper.minTranslate() - 1 + (-swiper.minTranslate() + data.startTranslate + diff) ** resistanceRatio;
+      }
+    }
+  } else if (diff < 0) {
+    if (isLoop && allowLoopFix && !loopFixed && data.allowThresholdMove && data.currentTranslate < (params.centeredSlides ? swiper.maxTranslate() + swiper.slidesSizesGrid[swiper.slidesSizesGrid.length - 1] + swiper.params.spaceBetween + (params.slidesPerView !== 'auto' && swiper.slides.length - params.slidesPerView >= 2 ? swiper.slidesSizesGrid[swiper.slidesSizesGrid.length - 1] + swiper.params.spaceBetween : 0) : swiper.maxTranslate())) {
+      swiper.loopFix({
+        direction: 'next',
+        setTranslate: true,
+        activeSlideIndex: swiper.slides.length - (params.slidesPerView === 'auto' ? swiper.slidesPerViewDynamic() : Math.ceil(parseFloat(params.slidesPerView, 10)))
+      });
+    }
+    if (data.currentTranslate < swiper.maxTranslate()) {
+      disableParentSwiper = false;
+      if (params.resistance) {
+        data.currentTranslate = swiper.maxTranslate() + 1 - (swiper.maxTranslate() - data.startTranslate - diff) ** resistanceRatio;
+      }
+    }
+  }
+  if (disableParentSwiper) {
+    e.preventedByNestedSwiper = true;
+  }
+
+  // Directions locks
+  if (!swiper.allowSlideNext && swiper.swipeDirection === 'next' && data.currentTranslate < data.startTranslate) {
+    data.currentTranslate = data.startTranslate;
+  }
+  if (!swiper.allowSlidePrev && swiper.swipeDirection === 'prev' && data.currentTranslate > data.startTranslate) {
+    data.currentTranslate = data.startTranslate;
+  }
+  if (!swiper.allowSlidePrev && !swiper.allowSlideNext) {
+    data.currentTranslate = data.startTranslate;
+  }
+
+  // Threshold
+  if (params.threshold > 0) {
+    if (Math.abs(diff) > params.threshold || data.allowThresholdMove) {
+      if (!data.allowThresholdMove) {
+        data.allowThresholdMove = true;
+        touches.startX = touches.currentX;
+        touches.startY = touches.currentY;
+        data.currentTranslate = data.startTranslate;
+        touches.diff = swiper.isHorizontal() ? touches.currentX - touches.startX : touches.currentY - touches.startY;
+        return;
+      }
+    } else {
+      data.currentTranslate = data.startTranslate;
+      return;
+    }
+  }
+  if (!params.followFinger || params.cssMode) return;
+
+  // Update active index in free mode
+  if (params.freeMode && params.freeMode.enabled && swiper.freeMode || params.watchSlidesProgress) {
+    swiper.updateActiveIndex();
+    swiper.updateSlidesClasses();
+  }
+  if (params.freeMode && params.freeMode.enabled && swiper.freeMode) {
+    swiper.freeMode.onTouchMove();
+  }
+  // Update progress
+  swiper.updateProgress(data.currentTranslate);
+  // Update translate
+  swiper.setTranslate(data.currentTranslate);
+}
+
+function onTouchEnd(event) {
+  const swiper = this;
+  const data = swiper.touchEventsData;
+  let e = event;
+  if (e.originalEvent) e = e.originalEvent;
+  let targetTouch;
+  const isTouchEvent = e.type === 'touchend' || e.type === 'touchcancel';
+  if (!isTouchEvent) {
+    if (data.touchId !== null) return; // return from pointer if we use touch
+    if (e.pointerId !== data.pointerId) return;
+    targetTouch = e;
+  } else {
+    targetTouch = [...e.changedTouches].find(t => t.identifier === data.touchId);
+    if (!targetTouch || targetTouch.identifier !== data.touchId) return;
+  }
+  if (['pointercancel', 'pointerout', 'pointerleave', 'contextmenu'].includes(e.type)) {
+    const proceed = ['pointercancel', 'contextmenu'].includes(e.type) && (swiper.browser.isSafari || swiper.browser.isWebView);
+    if (!proceed) {
+      return;
+    }
+  }
+  data.pointerId = null;
+  data.touchId = null;
+  const {
+    params,
+    touches,
+    rtlTranslate: rtl,
+    slidesGrid,
+    enabled
+  } = swiper;
+  if (!enabled) return;
+  if (!params.simulateTouch && e.pointerType === 'mouse') return;
+  if (data.allowTouchCallbacks) {
+    swiper.emit('touchEnd', e);
+  }
+  data.allowTouchCallbacks = false;
+  if (!data.isTouched) {
+    if (data.isMoved && params.grabCursor) {
+      swiper.setGrabCursor(false);
+    }
+    data.isMoved = false;
+    data.startMoving = false;
+    return;
+  }
+
+  // Return Grab Cursor
+  if (params.grabCursor && data.isMoved && data.isTouched && (swiper.allowSlideNext === true || swiper.allowSlidePrev === true)) {
+    swiper.setGrabCursor(false);
+  }
+
+  // Time diff
+  const touchEndTime = (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.h)();
+  const timeDiff = touchEndTime - data.touchStartTime;
+
+  // Tap, doubleTap, Click
+  if (swiper.allowClick) {
+    const pathTree = e.path || e.composedPath && e.composedPath();
+    swiper.updateClickedSlide(pathTree && pathTree[0] || e.target, pathTree);
+    swiper.emit('tap click', e);
+    if (timeDiff < 300 && touchEndTime - data.lastClickTime < 300) {
+      swiper.emit('doubleTap doubleClick', e);
+    }
+  }
+  data.lastClickTime = (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.h)();
+  (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.n)(() => {
+    if (!swiper.destroyed) swiper.allowClick = true;
+  });
+  if (!data.isTouched || !data.isMoved || !swiper.swipeDirection || touches.diff === 0 && !data.loopSwapReset || data.currentTranslate === data.startTranslate && !data.loopSwapReset) {
+    data.isTouched = false;
+    data.isMoved = false;
+    data.startMoving = false;
+    return;
+  }
+  data.isTouched = false;
+  data.isMoved = false;
+  data.startMoving = false;
+  let currentPos;
+  if (params.followFinger) {
+    currentPos = rtl ? swiper.translate : -swiper.translate;
+  } else {
+    currentPos = -data.currentTranslate;
+  }
+  if (params.cssMode) {
+    return;
+  }
+  if (params.freeMode && params.freeMode.enabled) {
+    swiper.freeMode.onTouchEnd({
+      currentPos
+    });
+    return;
+  }
+
+  // Find current slide
+  const swipeToLast = currentPos >= -swiper.maxTranslate() && !swiper.params.loop;
+  let stopIndex = 0;
+  let groupSize = swiper.slidesSizesGrid[0];
+  for (let i = 0; i < slidesGrid.length; i += i < params.slidesPerGroupSkip ? 1 : params.slidesPerGroup) {
+    const increment = i < params.slidesPerGroupSkip - 1 ? 1 : params.slidesPerGroup;
+    if (typeof slidesGrid[i + increment] !== 'undefined') {
+      if (swipeToLast || currentPos >= slidesGrid[i] && currentPos < slidesGrid[i + increment]) {
+        stopIndex = i;
+        groupSize = slidesGrid[i + increment] - slidesGrid[i];
+      }
+    } else if (swipeToLast || currentPos >= slidesGrid[i]) {
+      stopIndex = i;
+      groupSize = slidesGrid[slidesGrid.length - 1] - slidesGrid[slidesGrid.length - 2];
+    }
+  }
+  let rewindFirstIndex = null;
+  let rewindLastIndex = null;
+  if (params.rewind) {
+    if (swiper.isBeginning) {
+      rewindLastIndex = params.virtual && params.virtual.enabled && swiper.virtual ? swiper.virtual.slides.length - 1 : swiper.slides.length - 1;
+    } else if (swiper.isEnd) {
+      rewindFirstIndex = 0;
+    }
+  }
+  // Find current slide size
+  const ratio = (currentPos - slidesGrid[stopIndex]) / groupSize;
+  const increment = stopIndex < params.slidesPerGroupSkip - 1 ? 1 : params.slidesPerGroup;
+  if (timeDiff > params.longSwipesMs) {
+    // Long touches
+    if (!params.longSwipes) {
+      swiper.slideTo(swiper.activeIndex);
+      return;
+    }
+    if (swiper.swipeDirection === 'next') {
+      if (ratio >= params.longSwipesRatio) swiper.slideTo(params.rewind && swiper.isEnd ? rewindFirstIndex : stopIndex + increment);else swiper.slideTo(stopIndex);
+    }
+    if (swiper.swipeDirection === 'prev') {
+      if (ratio > 1 - params.longSwipesRatio) {
+        swiper.slideTo(stopIndex + increment);
+      } else if (rewindLastIndex !== null && ratio < 0 && Math.abs(ratio) > params.longSwipesRatio) {
+        swiper.slideTo(rewindLastIndex);
+      } else {
+        swiper.slideTo(stopIndex);
+      }
+    }
+  } else {
+    // Short swipes
+    if (!params.shortSwipes) {
+      swiper.slideTo(swiper.activeIndex);
+      return;
+    }
+    const isNavButtonTarget = swiper.navigation && (e.target === swiper.navigation.nextEl || e.target === swiper.navigation.prevEl);
+    if (!isNavButtonTarget) {
+      if (swiper.swipeDirection === 'next') {
+        swiper.slideTo(rewindFirstIndex !== null ? rewindFirstIndex : stopIndex + increment);
+      }
+      if (swiper.swipeDirection === 'prev') {
+        swiper.slideTo(rewindLastIndex !== null ? rewindLastIndex : stopIndex);
+      }
+    } else if (e.target === swiper.navigation.nextEl) {
+      swiper.slideTo(stopIndex + increment);
+    } else {
+      swiper.slideTo(stopIndex);
+    }
+  }
+}
+
+function onResize() {
+  const swiper = this;
+  const {
+    params,
+    el
+  } = swiper;
+  if (el && el.offsetWidth === 0) return;
+
+  // Breakpoints
+  if (params.breakpoints) {
+    swiper.setBreakpoint();
+  }
+
+  // Save locks
+  const {
+    allowSlideNext,
+    allowSlidePrev,
+    snapGrid
+  } = swiper;
+  const isVirtual = swiper.virtual && swiper.params.virtual.enabled;
+
+  // Disable locks on resize
+  swiper.allowSlideNext = true;
+  swiper.allowSlidePrev = true;
+  swiper.updateSize();
+  swiper.updateSlides();
+  swiper.updateSlidesClasses();
+  const isVirtualLoop = isVirtual && params.loop;
+  if ((params.slidesPerView === 'auto' || params.slidesPerView > 1) && swiper.isEnd && !swiper.isBeginning && !swiper.params.centeredSlides && !isVirtualLoop) {
+    swiper.slideTo(swiper.slides.length - 1, 0, false, true);
+  } else {
+    if (swiper.params.loop && !isVirtual) {
+      swiper.slideToLoop(swiper.realIndex, 0, false, true);
+    } else {
+      swiper.slideTo(swiper.activeIndex, 0, false, true);
+    }
+  }
+  if (swiper.autoplay && swiper.autoplay.running && swiper.autoplay.paused) {
+    clearTimeout(swiper.autoplay.resizeTimeout);
+    swiper.autoplay.resizeTimeout = setTimeout(() => {
+      if (swiper.autoplay && swiper.autoplay.running && swiper.autoplay.paused) {
+        swiper.autoplay.resume();
+      }
+    }, 500);
+  }
+  // Return locks after resize
+  swiper.allowSlidePrev = allowSlidePrev;
+  swiper.allowSlideNext = allowSlideNext;
+  if (swiper.params.watchOverflow && snapGrid !== swiper.snapGrid) {
+    swiper.checkOverflow();
+  }
+}
+
+function onClick(e) {
+  const swiper = this;
+  if (!swiper.enabled) return;
+  if (!swiper.allowClick) {
+    if (swiper.params.preventClicks) e.preventDefault();
+    if (swiper.params.preventClicksPropagation && swiper.animating) {
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+    }
+  }
+}
+
+function onScroll() {
+  const swiper = this;
+  const {
+    wrapperEl,
+    rtlTranslate,
+    enabled
+  } = swiper;
+  if (!enabled) return;
+  swiper.previousTranslate = swiper.translate;
+  if (swiper.isHorizontal()) {
+    swiper.translate = -wrapperEl.scrollLeft;
+  } else {
+    swiper.translate = -wrapperEl.scrollTop;
+  }
+  // eslint-disable-next-line
+  if (swiper.translate === 0) swiper.translate = 0;
+  swiper.updateActiveIndex();
+  swiper.updateSlidesClasses();
+  let newProgress;
+  const translatesDiff = swiper.maxTranslate() - swiper.minTranslate();
+  if (translatesDiff === 0) {
+    newProgress = 0;
+  } else {
+    newProgress = (swiper.translate - swiper.minTranslate()) / translatesDiff;
+  }
+  if (newProgress !== swiper.progress) {
+    swiper.updateProgress(rtlTranslate ? -swiper.translate : swiper.translate);
+  }
+  swiper.emit('setTranslate', swiper.translate, false);
+}
+
+function onLoad(e) {
+  const swiper = this;
+  processLazyPreloader(swiper, e.target);
+  if (swiper.params.cssMode || swiper.params.slidesPerView !== 'auto' && !swiper.params.autoHeight) {
+    return;
+  }
+  swiper.update();
+}
+
+function onDocumentTouchStart() {
+  const swiper = this;
+  if (swiper.documentTouchHandlerProceeded) return;
+  swiper.documentTouchHandlerProceeded = true;
+  if (swiper.params.touchReleaseOnEdges) {
+    swiper.el.style.touchAction = 'auto';
+  }
+}
+
+const events = (swiper, method) => {
+  const document = (0,_ssr_window_esm_mjs__WEBPACK_IMPORTED_MODULE_0__.g)();
+  const {
+    params,
+    el,
+    wrapperEl,
+    device
+  } = swiper;
+  const capture = !!params.nested;
+  const domMethod = method === 'on' ? 'addEventListener' : 'removeEventListener';
+  const swiperMethod = method;
+  if (!el || typeof el === 'string') return;
+
+  // Touch Events
+  document[domMethod]('touchstart', swiper.onDocumentTouchStart, {
+    passive: false,
+    capture
+  });
+  el[domMethod]('touchstart', swiper.onTouchStart, {
+    passive: false
+  });
+  el[domMethod]('pointerdown', swiper.onTouchStart, {
+    passive: false
+  });
+  document[domMethod]('touchmove', swiper.onTouchMove, {
+    passive: false,
+    capture
+  });
+  document[domMethod]('pointermove', swiper.onTouchMove, {
+    passive: false,
+    capture
+  });
+  document[domMethod]('touchend', swiper.onTouchEnd, {
+    passive: true
+  });
+  document[domMethod]('pointerup', swiper.onTouchEnd, {
+    passive: true
+  });
+  document[domMethod]('pointercancel', swiper.onTouchEnd, {
+    passive: true
+  });
+  document[domMethod]('touchcancel', swiper.onTouchEnd, {
+    passive: true
+  });
+  document[domMethod]('pointerout', swiper.onTouchEnd, {
+    passive: true
+  });
+  document[domMethod]('pointerleave', swiper.onTouchEnd, {
+    passive: true
+  });
+  document[domMethod]('contextmenu', swiper.onTouchEnd, {
+    passive: true
+  });
+
+  // Prevent Links Clicks
+  if (params.preventClicks || params.preventClicksPropagation) {
+    el[domMethod]('click', swiper.onClick, true);
+  }
+  if (params.cssMode) {
+    wrapperEl[domMethod]('scroll', swiper.onScroll);
+  }
+
+  // Resize handler
+  if (params.updateOnWindowResize) {
+    swiper[swiperMethod](device.ios || device.android ? 'resize orientationchange observerUpdate' : 'resize observerUpdate', onResize, true);
+  } else {
+    swiper[swiperMethod]('observerUpdate', onResize, true);
+  }
+
+  // Images loader
+  el[domMethod]('load', swiper.onLoad, {
+    capture: true
+  });
+};
+function attachEvents() {
+  const swiper = this;
+  const {
+    params
+  } = swiper;
+  swiper.onTouchStart = onTouchStart.bind(swiper);
+  swiper.onTouchMove = onTouchMove.bind(swiper);
+  swiper.onTouchEnd = onTouchEnd.bind(swiper);
+  swiper.onDocumentTouchStart = onDocumentTouchStart.bind(swiper);
+  if (params.cssMode) {
+    swiper.onScroll = onScroll.bind(swiper);
+  }
+  swiper.onClick = onClick.bind(swiper);
+  swiper.onLoad = onLoad.bind(swiper);
+  events(swiper, 'on');
+}
+function detachEvents() {
+  const swiper = this;
+  events(swiper, 'off');
+}
+var events$1 = {
+  attachEvents,
+  detachEvents
+};
+
+const isGridEnabled = (swiper, params) => {
+  return swiper.grid && params.grid && params.grid.rows > 1;
+};
+function setBreakpoint() {
+  const swiper = this;
+  const {
+    realIndex,
+    initialized,
+    params,
+    el
+  } = swiper;
+  const breakpoints = params.breakpoints;
+  if (!breakpoints || breakpoints && Object.keys(breakpoints).length === 0) return;
+  const document = (0,_ssr_window_esm_mjs__WEBPACK_IMPORTED_MODULE_0__.g)();
+
+  // Get breakpoint for window/container width and update parameters
+  const breakpointsBase = params.breakpointsBase === 'window' || !params.breakpointsBase ? params.breakpointsBase : 'container';
+  const breakpointContainer = ['window', 'container'].includes(params.breakpointsBase) || !params.breakpointsBase ? swiper.el : document.querySelector(params.breakpointsBase);
+  const breakpoint = swiper.getBreakpoint(breakpoints, breakpointsBase, breakpointContainer);
+  if (!breakpoint || swiper.currentBreakpoint === breakpoint) return;
+  const breakpointOnlyParams = breakpoint in breakpoints ? breakpoints[breakpoint] : undefined;
+  const breakpointParams = breakpointOnlyParams || swiper.originalParams;
+  const wasMultiRow = isGridEnabled(swiper, params);
+  const isMultiRow = isGridEnabled(swiper, breakpointParams);
+  const wasGrabCursor = swiper.params.grabCursor;
+  const isGrabCursor = breakpointParams.grabCursor;
+  const wasEnabled = params.enabled;
+  if (wasMultiRow && !isMultiRow) {
+    el.classList.remove(`${params.containerModifierClass}grid`, `${params.containerModifierClass}grid-column`);
+    swiper.emitContainerClasses();
+  } else if (!wasMultiRow && isMultiRow) {
+    el.classList.add(`${params.containerModifierClass}grid`);
+    if (breakpointParams.grid.fill && breakpointParams.grid.fill === 'column' || !breakpointParams.grid.fill && params.grid.fill === 'column') {
+      el.classList.add(`${params.containerModifierClass}grid-column`);
+    }
+    swiper.emitContainerClasses();
+  }
+  if (wasGrabCursor && !isGrabCursor) {
+    swiper.unsetGrabCursor();
+  } else if (!wasGrabCursor && isGrabCursor) {
+    swiper.setGrabCursor();
+  }
+
+  // Toggle navigation, pagination, scrollbar
+  ['navigation', 'pagination', 'scrollbar'].forEach(prop => {
+    if (typeof breakpointParams[prop] === 'undefined') return;
+    const wasModuleEnabled = params[prop] && params[prop].enabled;
+    const isModuleEnabled = breakpointParams[prop] && breakpointParams[prop].enabled;
+    if (wasModuleEnabled && !isModuleEnabled) {
+      swiper[prop].disable();
+    }
+    if (!wasModuleEnabled && isModuleEnabled) {
+      swiper[prop].enable();
+    }
+  });
+  const directionChanged = breakpointParams.direction && breakpointParams.direction !== params.direction;
+  const needsReLoop = params.loop && (breakpointParams.slidesPerView !== params.slidesPerView || directionChanged);
+  const wasLoop = params.loop;
+  if (directionChanged && initialized) {
+    swiper.changeDirection();
+  }
+  (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.x)(swiper.params, breakpointParams);
+  const isEnabled = swiper.params.enabled;
+  const hasLoop = swiper.params.loop;
+  Object.assign(swiper, {
+    allowTouchMove: swiper.params.allowTouchMove,
+    allowSlideNext: swiper.params.allowSlideNext,
+    allowSlidePrev: swiper.params.allowSlidePrev
+  });
+  if (wasEnabled && !isEnabled) {
+    swiper.disable();
+  } else if (!wasEnabled && isEnabled) {
+    swiper.enable();
+  }
+  swiper.currentBreakpoint = breakpoint;
+  swiper.emit('_beforeBreakpoint', breakpointParams);
+  if (initialized) {
+    if (needsReLoop) {
+      swiper.loopDestroy();
+      swiper.loopCreate(realIndex);
+      swiper.updateSlides();
+    } else if (!wasLoop && hasLoop) {
+      swiper.loopCreate(realIndex);
+      swiper.updateSlides();
+    } else if (wasLoop && !hasLoop) {
+      swiper.loopDestroy();
+    }
+  }
+  swiper.emit('breakpoint', breakpointParams);
+}
+
+function getBreakpoint(breakpoints, base = 'window', containerEl) {
+  if (!breakpoints || base === 'container' && !containerEl) return undefined;
+  let breakpoint = false;
+  const window = (0,_ssr_window_esm_mjs__WEBPACK_IMPORTED_MODULE_0__.a)();
+  const currentHeight = base === 'window' ? window.innerHeight : containerEl.clientHeight;
+  const points = Object.keys(breakpoints).map(point => {
+    if (typeof point === 'string' && point.indexOf('@') === 0) {
+      const minRatio = parseFloat(point.substr(1));
+      const value = currentHeight * minRatio;
+      return {
+        value,
+        point
+      };
+    }
+    return {
+      value: point,
+      point
+    };
+  });
+  points.sort((a, b) => parseInt(a.value, 10) - parseInt(b.value, 10));
+  for (let i = 0; i < points.length; i += 1) {
+    const {
+      point,
+      value
+    } = points[i];
+    if (base === 'window') {
+      if (window.matchMedia(`(min-width: ${value}px)`).matches) {
+        breakpoint = point;
+      }
+    } else if (value <= containerEl.clientWidth) {
+      breakpoint = point;
+    }
+  }
+  return breakpoint || 'max';
+}
+
+var breakpoints = {
+  setBreakpoint,
+  getBreakpoint
+};
+
+function prepareClasses(entries, prefix) {
+  const resultClasses = [];
+  entries.forEach(item => {
+    if (typeof item === 'object') {
+      Object.keys(item).forEach(classNames => {
+        if (item[classNames]) {
+          resultClasses.push(prefix + classNames);
+        }
+      });
+    } else if (typeof item === 'string') {
+      resultClasses.push(prefix + item);
+    }
+  });
+  return resultClasses;
+}
+function addClasses() {
+  const swiper = this;
+  const {
+    classNames,
+    params,
+    rtl,
+    el,
+    device
+  } = swiper;
+  // prettier-ignore
+  const suffixes = prepareClasses(['initialized', params.direction, {
+    'free-mode': swiper.params.freeMode && params.freeMode.enabled
+  }, {
+    'autoheight': params.autoHeight
+  }, {
+    'rtl': rtl
+  }, {
+    'grid': params.grid && params.grid.rows > 1
+  }, {
+    'grid-column': params.grid && params.grid.rows > 1 && params.grid.fill === 'column'
+  }, {
+    'android': device.android
+  }, {
+    'ios': device.ios
+  }, {
+    'css-mode': params.cssMode
+  }, {
+    'centered': params.cssMode && params.centeredSlides
+  }, {
+    'watch-progress': params.watchSlidesProgress
+  }], params.containerModifierClass);
+  classNames.push(...suffixes);
+  el.classList.add(...classNames);
+  swiper.emitContainerClasses();
+}
+
+function removeClasses() {
+  const swiper = this;
+  const {
+    el,
+    classNames
+  } = swiper;
+  if (!el || typeof el === 'string') return;
+  el.classList.remove(...classNames);
+  swiper.emitContainerClasses();
+}
+
+var classes = {
+  addClasses,
+  removeClasses
+};
+
+function checkOverflow() {
+  const swiper = this;
+  const {
+    isLocked: wasLocked,
+    params
+  } = swiper;
+  const {
+    slidesOffsetBefore
+  } = params;
+  if (slidesOffsetBefore) {
+    const lastSlideIndex = swiper.slides.length - 1;
+    const lastSlideRightEdge = swiper.slidesGrid[lastSlideIndex] + swiper.slidesSizesGrid[lastSlideIndex] + slidesOffsetBefore * 2;
+    swiper.isLocked = swiper.size > lastSlideRightEdge;
+  } else {
+    swiper.isLocked = swiper.snapGrid.length === 1;
+  }
+  if (params.allowSlideNext === true) {
+    swiper.allowSlideNext = !swiper.isLocked;
+  }
+  if (params.allowSlidePrev === true) {
+    swiper.allowSlidePrev = !swiper.isLocked;
+  }
+  if (wasLocked && wasLocked !== swiper.isLocked) {
+    swiper.isEnd = false;
+  }
+  if (wasLocked !== swiper.isLocked) {
+    swiper.emit(swiper.isLocked ? 'lock' : 'unlock');
+  }
+}
+var checkOverflow$1 = {
+  checkOverflow
+};
+
+var defaults = {
+  init: true,
+  direction: 'horizontal',
+  oneWayMovement: false,
+  swiperElementNodeName: 'SWIPER-CONTAINER',
+  touchEventsTarget: 'wrapper',
+  initialSlide: 0,
+  speed: 300,
+  cssMode: false,
+  updateOnWindowResize: true,
+  resizeObserver: true,
+  nested: false,
+  createElements: false,
+  eventsPrefix: 'swiper',
+  enabled: true,
+  focusableElements: 'input, select, option, textarea, button, video, label',
+  // Overrides
+  width: null,
+  height: null,
+  //
+  preventInteractionOnTransition: false,
+  // ssr
+  userAgent: null,
+  url: null,
+  // To support iOS's swipe-to-go-back gesture (when being used in-app).
+  edgeSwipeDetection: false,
+  edgeSwipeThreshold: 20,
+  // Autoheight
+  autoHeight: false,
+  // Set wrapper width
+  setWrapperSize: false,
+  // Virtual Translate
+  virtualTranslate: false,
+  // Effects
+  effect: 'slide',
+  // 'slide' or 'fade' or 'cube' or 'coverflow' or 'flip'
+
+  // Breakpoints
+  breakpoints: undefined,
+  breakpointsBase: 'window',
+  // Slides grid
+  spaceBetween: 0,
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+  slidesPerGroupSkip: 0,
+  slidesPerGroupAuto: false,
+  centeredSlides: false,
+  centeredSlidesBounds: false,
+  slidesOffsetBefore: 0,
+  // in px
+  slidesOffsetAfter: 0,
+  // in px
+  normalizeSlideIndex: true,
+  centerInsufficientSlides: false,
+  // Disable swiper and hide navigation when container not overflow
+  watchOverflow: true,
+  // Round length
+  roundLengths: false,
+  // Touches
+  touchRatio: 1,
+  touchAngle: 45,
+  simulateTouch: true,
+  shortSwipes: true,
+  longSwipes: true,
+  longSwipesRatio: 0.5,
+  longSwipesMs: 300,
+  followFinger: true,
+  allowTouchMove: true,
+  threshold: 5,
+  touchMoveStopPropagation: false,
+  touchStartPreventDefault: true,
+  touchStartForcePreventDefault: false,
+  touchReleaseOnEdges: false,
+  // Unique Navigation Elements
+  uniqueNavElements: true,
+  // Resistance
+  resistance: true,
+  resistanceRatio: 0.85,
+  // Progress
+  watchSlidesProgress: false,
+  // Cursor
+  grabCursor: false,
+  // Clicks
+  preventClicks: true,
+  preventClicksPropagation: true,
+  slideToClickedSlide: false,
+  // loop
+  loop: false,
+  loopAddBlankSlides: true,
+  loopAdditionalSlides: 0,
+  loopPreventsSliding: true,
+  // rewind
+  rewind: false,
+  // Swiping/no swiping
+  allowSlidePrev: true,
+  allowSlideNext: true,
+  swipeHandler: null,
+  // '.swipe-handler',
+  noSwiping: true,
+  noSwipingClass: 'swiper-no-swiping',
+  noSwipingSelector: null,
+  // Passive Listeners
+  passiveListeners: true,
+  maxBackfaceHiddenSlides: 10,
+  // NS
+  containerModifierClass: 'swiper-',
+  // NEW
+  slideClass: 'swiper-slide',
+  slideBlankClass: 'swiper-slide-blank',
+  slideActiveClass: 'swiper-slide-active',
+  slideVisibleClass: 'swiper-slide-visible',
+  slideFullyVisibleClass: 'swiper-slide-fully-visible',
+  slideNextClass: 'swiper-slide-next',
+  slidePrevClass: 'swiper-slide-prev',
+  wrapperClass: 'swiper-wrapper',
+  lazyPreloaderClass: 'swiper-lazy-preloader',
+  lazyPreloadPrevNext: 0,
+  // Callbacks
+  runCallbacksOnInit: true,
+  // Internals
+  _emitClasses: false
+};
+
+function moduleExtendParams(params, allModulesParams) {
+  return function extendParams(obj = {}) {
+    const moduleParamName = Object.keys(obj)[0];
+    const moduleParams = obj[moduleParamName];
+    if (typeof moduleParams !== 'object' || moduleParams === null) {
+      (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.x)(allModulesParams, obj);
+      return;
+    }
+    if (params[moduleParamName] === true) {
+      params[moduleParamName] = {
+        enabled: true
+      };
+    }
+    if (moduleParamName === 'navigation' && params[moduleParamName] && params[moduleParamName].enabled && !params[moduleParamName].prevEl && !params[moduleParamName].nextEl) {
+      params[moduleParamName].auto = true;
+    }
+    if (['pagination', 'scrollbar'].indexOf(moduleParamName) >= 0 && params[moduleParamName] && params[moduleParamName].enabled && !params[moduleParamName].el) {
+      params[moduleParamName].auto = true;
+    }
+    if (!(moduleParamName in params && 'enabled' in moduleParams)) {
+      (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.x)(allModulesParams, obj);
+      return;
+    }
+    if (typeof params[moduleParamName] === 'object' && !('enabled' in params[moduleParamName])) {
+      params[moduleParamName].enabled = true;
+    }
+    if (!params[moduleParamName]) params[moduleParamName] = {
+      enabled: false
+    };
+    (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.x)(allModulesParams, obj);
+  };
+}
+
+/* eslint no-param-reassign: "off" */
+const prototypes = {
+  eventsEmitter,
+  update,
+  translate,
+  transition,
+  slide,
+  loop,
+  grabCursor,
+  events: events$1,
+  breakpoints,
+  checkOverflow: checkOverflow$1,
+  classes
+};
+const extendedDefaults = {};
+class Swiper {
+  constructor(...args) {
+    let el;
+    let params;
+    if (args.length === 1 && args[0].constructor && Object.prototype.toString.call(args[0]).slice(8, -1) === 'Object') {
+      params = args[0];
+    } else {
+      [el, params] = args;
+    }
+    if (!params) params = {};
+    params = (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.x)({}, params);
+    if (el && !params.el) params.el = el;
+    const document = (0,_ssr_window_esm_mjs__WEBPACK_IMPORTED_MODULE_0__.g)();
+    if (params.el && typeof params.el === 'string' && document.querySelectorAll(params.el).length > 1) {
+      const swipers = [];
+      document.querySelectorAll(params.el).forEach(containerEl => {
+        const newParams = (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.x)({}, params, {
+          el: containerEl
+        });
+        swipers.push(new Swiper(newParams));
+      });
+      // eslint-disable-next-line no-constructor-return
+      return swipers;
+    }
+
+    // Swiper Instance
+    const swiper = this;
+    swiper.__swiper__ = true;
+    swiper.support = getSupport();
+    swiper.device = getDevice({
+      userAgent: params.userAgent
+    });
+    swiper.browser = getBrowser();
+    swiper.eventsListeners = {};
+    swiper.eventsAnyListeners = [];
+    swiper.modules = [...swiper.__modules__];
+    if (params.modules && Array.isArray(params.modules)) {
+      swiper.modules.push(...params.modules);
+    }
+    const allModulesParams = {};
+    swiper.modules.forEach(mod => {
+      mod({
+        params,
+        swiper,
+        extendParams: moduleExtendParams(params, allModulesParams),
+        on: swiper.on.bind(swiper),
+        once: swiper.once.bind(swiper),
+        off: swiper.off.bind(swiper),
+        emit: swiper.emit.bind(swiper)
+      });
+    });
+
+    // Extend defaults with modules params
+    const swiperParams = (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.x)({}, defaults, allModulesParams);
+
+    // Extend defaults with passed params
+    swiper.params = (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.x)({}, swiperParams, extendedDefaults, params);
+    swiper.originalParams = (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.x)({}, swiper.params);
+    swiper.passedParams = (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.x)({}, params);
+
+    // add event listeners
+    if (swiper.params && swiper.params.on) {
+      Object.keys(swiper.params.on).forEach(eventName => {
+        swiper.on(eventName, swiper.params.on[eventName]);
+      });
+    }
+    if (swiper.params && swiper.params.onAny) {
+      swiper.onAny(swiper.params.onAny);
+    }
+
+    // Extend Swiper
+    Object.assign(swiper, {
+      enabled: swiper.params.enabled,
+      el,
+      // Classes
+      classNames: [],
+      // Slides
+      slides: [],
+      slidesGrid: [],
+      snapGrid: [],
+      slidesSizesGrid: [],
+      // isDirection
+      isHorizontal() {
+        return swiper.params.direction === 'horizontal';
+      },
+      isVertical() {
+        return swiper.params.direction === 'vertical';
+      },
+      // Indexes
+      activeIndex: 0,
+      realIndex: 0,
+      //
+      isBeginning: true,
+      isEnd: false,
+      // Props
+      translate: 0,
+      previousTranslate: 0,
+      progress: 0,
+      velocity: 0,
+      animating: false,
+      cssOverflowAdjustment() {
+        // Returns 0 unless `translate` is > 2**23
+        // Should be subtracted from css values to prevent overflow
+        return Math.trunc(this.translate / 2 ** 23) * 2 ** 23;
+      },
+      // Locks
+      allowSlideNext: swiper.params.allowSlideNext,
+      allowSlidePrev: swiper.params.allowSlidePrev,
+      // Touch Events
+      touchEventsData: {
+        isTouched: undefined,
+        isMoved: undefined,
+        allowTouchCallbacks: undefined,
+        touchStartTime: undefined,
+        isScrolling: undefined,
+        currentTranslate: undefined,
+        startTranslate: undefined,
+        allowThresholdMove: undefined,
+        // Form elements to match
+        focusableElements: swiper.params.focusableElements,
+        // Last click time
+        lastClickTime: 0,
+        clickTimeout: undefined,
+        // Velocities
+        velocities: [],
+        allowMomentumBounce: undefined,
+        startMoving: undefined,
+        pointerId: null,
+        touchId: null
+      },
+      // Clicks
+      allowClick: true,
+      // Touches
+      allowTouchMove: swiper.params.allowTouchMove,
+      touches: {
+        startX: 0,
+        startY: 0,
+        currentX: 0,
+        currentY: 0,
+        diff: 0
+      },
+      // Images
+      imagesToLoad: [],
+      imagesLoaded: 0
+    });
+    swiper.emit('_swiper');
+
+    // Init
+    if (swiper.params.init) {
+      swiper.init();
+    }
+
+    // Return app instance
+    // eslint-disable-next-line no-constructor-return
+    return swiper;
+  }
+  getDirectionLabel(property) {
+    if (this.isHorizontal()) {
+      return property;
+    }
+    // prettier-ignore
+    return {
+      'width': 'height',
+      'margin-top': 'margin-left',
+      'margin-bottom ': 'margin-right',
+      'margin-left': 'margin-top',
+      'margin-right': 'margin-bottom',
+      'padding-left': 'padding-top',
+      'padding-right': 'padding-bottom',
+      'marginRight': 'marginBottom'
+    }[property];
+  }
+  getSlideIndex(slideEl) {
+    const {
+      slidesEl,
+      params
+    } = this;
+    const slides = (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.e)(slidesEl, `.${params.slideClass}, swiper-slide`);
+    const firstSlideIndex = (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.j)(slides[0]);
+    return (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.j)(slideEl) - firstSlideIndex;
+  }
+  getSlideIndexByData(index) {
+    return this.getSlideIndex(this.slides.find(slideEl => slideEl.getAttribute('data-swiper-slide-index') * 1 === index));
+  }
+  getSlideIndexWhenGrid(index) {
+    if (this.grid && this.params.grid && this.params.grid.rows > 1) {
+      if (this.params.grid.fill === 'column') {
+        index = Math.floor(index / this.params.grid.rows);
+      } else if (this.params.grid.fill === 'row') {
+        index = index % Math.ceil(this.slides.length / this.params.grid.rows);
+      }
+    }
+    return index;
+  }
+  recalcSlides() {
+    const swiper = this;
+    const {
+      slidesEl,
+      params
+    } = swiper;
+    swiper.slides = (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.e)(slidesEl, `.${params.slideClass}, swiper-slide`);
+  }
+  enable() {
+    const swiper = this;
+    if (swiper.enabled) return;
+    swiper.enabled = true;
+    if (swiper.params.grabCursor) {
+      swiper.setGrabCursor();
+    }
+    swiper.emit('enable');
+  }
+  disable() {
+    const swiper = this;
+    if (!swiper.enabled) return;
+    swiper.enabled = false;
+    if (swiper.params.grabCursor) {
+      swiper.unsetGrabCursor();
+    }
+    swiper.emit('disable');
+  }
+  setProgress(progress, speed) {
+    const swiper = this;
+    progress = Math.min(Math.max(progress, 0), 1);
+    const min = swiper.minTranslate();
+    const max = swiper.maxTranslate();
+    const current = (max - min) * progress + min;
+    swiper.translateTo(current, typeof speed === 'undefined' ? 0 : speed);
+    swiper.updateActiveIndex();
+    swiper.updateSlidesClasses();
+  }
+  emitContainerClasses() {
+    const swiper = this;
+    if (!swiper.params._emitClasses || !swiper.el) return;
+    const cls = swiper.el.className.split(' ').filter(className => {
+      return className.indexOf('swiper') === 0 || className.indexOf(swiper.params.containerModifierClass) === 0;
+    });
+    swiper.emit('_containerClasses', cls.join(' '));
+  }
+  getSlideClasses(slideEl) {
+    const swiper = this;
+    if (swiper.destroyed) return '';
+    return slideEl.className.split(' ').filter(className => {
+      return className.indexOf('swiper-slide') === 0 || className.indexOf(swiper.params.slideClass) === 0;
+    }).join(' ');
+  }
+  emitSlidesClasses() {
+    const swiper = this;
+    if (!swiper.params._emitClasses || !swiper.el) return;
+    const updates = [];
+    swiper.slides.forEach(slideEl => {
+      const classNames = swiper.getSlideClasses(slideEl);
+      updates.push({
+        slideEl,
+        classNames
+      });
+      swiper.emit('_slideClass', slideEl, classNames);
+    });
+    swiper.emit('_slideClasses', updates);
+  }
+  slidesPerViewDynamic(view = 'current', exact = false) {
+    const swiper = this;
+    const {
+      params,
+      slides,
+      slidesGrid,
+      slidesSizesGrid,
+      size: swiperSize,
+      activeIndex
+    } = swiper;
+    let spv = 1;
+    if (typeof params.slidesPerView === 'number') return params.slidesPerView;
+    if (params.centeredSlides) {
+      let slideSize = slides[activeIndex] ? Math.ceil(slides[activeIndex].swiperSlideSize) : 0;
+      let breakLoop;
+      for (let i = activeIndex + 1; i < slides.length; i += 1) {
+        if (slides[i] && !breakLoop) {
+          slideSize += Math.ceil(slides[i].swiperSlideSize);
+          spv += 1;
+          if (slideSize > swiperSize) breakLoop = true;
+        }
+      }
+      for (let i = activeIndex - 1; i >= 0; i -= 1) {
+        if (slides[i] && !breakLoop) {
+          slideSize += slides[i].swiperSlideSize;
+          spv += 1;
+          if (slideSize > swiperSize) breakLoop = true;
+        }
+      }
+    } else {
+      // eslint-disable-next-line
+      if (view === 'current') {
+        for (let i = activeIndex + 1; i < slides.length; i += 1) {
+          const slideInView = exact ? slidesGrid[i] + slidesSizesGrid[i] - slidesGrid[activeIndex] < swiperSize : slidesGrid[i] - slidesGrid[activeIndex] < swiperSize;
+          if (slideInView) {
+            spv += 1;
+          }
+        }
+      } else {
+        // previous
+        for (let i = activeIndex - 1; i >= 0; i -= 1) {
+          const slideInView = slidesGrid[activeIndex] - slidesGrid[i] < swiperSize;
+          if (slideInView) {
+            spv += 1;
+          }
+        }
+      }
+    }
+    return spv;
+  }
+  update() {
+    const swiper = this;
+    if (!swiper || swiper.destroyed) return;
+    const {
+      snapGrid,
+      params
+    } = swiper;
+    // Breakpoints
+    if (params.breakpoints) {
+      swiper.setBreakpoint();
+    }
+    [...swiper.el.querySelectorAll('[loading="lazy"]')].forEach(imageEl => {
+      if (imageEl.complete) {
+        processLazyPreloader(swiper, imageEl);
+      }
+    });
+    swiper.updateSize();
+    swiper.updateSlides();
+    swiper.updateProgress();
+    swiper.updateSlidesClasses();
+    function setTranslate() {
+      const translateValue = swiper.rtlTranslate ? swiper.translate * -1 : swiper.translate;
+      const newTranslate = Math.min(Math.max(translateValue, swiper.maxTranslate()), swiper.minTranslate());
+      swiper.setTranslate(newTranslate);
+      swiper.updateActiveIndex();
+      swiper.updateSlidesClasses();
+    }
+    let translated;
+    if (params.freeMode && params.freeMode.enabled && !params.cssMode) {
+      setTranslate();
+      if (params.autoHeight) {
+        swiper.updateAutoHeight();
+      }
+    } else {
+      if ((params.slidesPerView === 'auto' || params.slidesPerView > 1) && swiper.isEnd && !params.centeredSlides) {
+        const slides = swiper.virtual && params.virtual.enabled ? swiper.virtual.slides : swiper.slides;
+        translated = swiper.slideTo(slides.length - 1, 0, false, true);
+      } else {
+        translated = swiper.slideTo(swiper.activeIndex, 0, false, true);
+      }
+      if (!translated) {
+        setTranslate();
+      }
+    }
+    if (params.watchOverflow && snapGrid !== swiper.snapGrid) {
+      swiper.checkOverflow();
+    }
+    swiper.emit('update');
+  }
+  changeDirection(newDirection, needUpdate = true) {
+    const swiper = this;
+    const currentDirection = swiper.params.direction;
+    if (!newDirection) {
+      // eslint-disable-next-line
+      newDirection = currentDirection === 'horizontal' ? 'vertical' : 'horizontal';
+    }
+    if (newDirection === currentDirection || newDirection !== 'horizontal' && newDirection !== 'vertical') {
+      return swiper;
+    }
+    swiper.el.classList.remove(`${swiper.params.containerModifierClass}${currentDirection}`);
+    swiper.el.classList.add(`${swiper.params.containerModifierClass}${newDirection}`);
+    swiper.emitContainerClasses();
+    swiper.params.direction = newDirection;
+    swiper.slides.forEach(slideEl => {
+      if (newDirection === 'vertical') {
+        slideEl.style.width = '';
+      } else {
+        slideEl.style.height = '';
+      }
+    });
+    swiper.emit('changeDirection');
+    if (needUpdate) swiper.update();
+    return swiper;
+  }
+  changeLanguageDirection(direction) {
+    const swiper = this;
+    if (swiper.rtl && direction === 'rtl' || !swiper.rtl && direction === 'ltr') return;
+    swiper.rtl = direction === 'rtl';
+    swiper.rtlTranslate = swiper.params.direction === 'horizontal' && swiper.rtl;
+    if (swiper.rtl) {
+      swiper.el.classList.add(`${swiper.params.containerModifierClass}rtl`);
+      swiper.el.dir = 'rtl';
+    } else {
+      swiper.el.classList.remove(`${swiper.params.containerModifierClass}rtl`);
+      swiper.el.dir = 'ltr';
+    }
+    swiper.update();
+  }
+  mount(element) {
+    const swiper = this;
+    if (swiper.mounted) return true;
+
+    // Find el
+    let el = element || swiper.params.el;
+    if (typeof el === 'string') {
+      el = document.querySelector(el);
+    }
+    if (!el) {
+      return false;
+    }
+    el.swiper = swiper;
+    if (el.parentNode && el.parentNode.host && el.parentNode.host.nodeName === swiper.params.swiperElementNodeName.toUpperCase()) {
+      swiper.isElement = true;
+    }
+    const getWrapperSelector = () => {
+      return `.${(swiper.params.wrapperClass || '').trim().split(' ').join('.')}`;
+    };
+    const getWrapper = () => {
+      if (el && el.shadowRoot && el.shadowRoot.querySelector) {
+        const res = el.shadowRoot.querySelector(getWrapperSelector());
+        // Children needs to return slot items
+        return res;
+      }
+      return (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.e)(el, getWrapperSelector())[0];
+    };
+    // Find Wrapper
+    let wrapperEl = getWrapper();
+    if (!wrapperEl && swiper.params.createElements) {
+      wrapperEl = (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.c)('div', swiper.params.wrapperClass);
+      el.append(wrapperEl);
+      (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.e)(el, `.${swiper.params.slideClass}`).forEach(slideEl => {
+        wrapperEl.append(slideEl);
+      });
+    }
+    Object.assign(swiper, {
+      el,
+      wrapperEl,
+      slidesEl: swiper.isElement && !el.parentNode.host.slideSlots ? el.parentNode.host : wrapperEl,
+      hostEl: swiper.isElement ? el.parentNode.host : el,
+      mounted: true,
+      // RTL
+      rtl: el.dir.toLowerCase() === 'rtl' || (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.q)(el, 'direction') === 'rtl',
+      rtlTranslate: swiper.params.direction === 'horizontal' && (el.dir.toLowerCase() === 'rtl' || (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.q)(el, 'direction') === 'rtl'),
+      wrongRTL: (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.q)(wrapperEl, 'display') === '-webkit-box'
+    });
+    return true;
+  }
+  init(el) {
+    const swiper = this;
+    if (swiper.initialized) return swiper;
+    const mounted = swiper.mount(el);
+    if (mounted === false) return swiper;
+    swiper.emit('beforeInit');
+
+    // Set breakpoint
+    if (swiper.params.breakpoints) {
+      swiper.setBreakpoint();
+    }
+
+    // Add Classes
+    swiper.addClasses();
+
+    // Update size
+    swiper.updateSize();
+
+    // Update slides
+    swiper.updateSlides();
+    if (swiper.params.watchOverflow) {
+      swiper.checkOverflow();
+    }
+
+    // Set Grab Cursor
+    if (swiper.params.grabCursor && swiper.enabled) {
+      swiper.setGrabCursor();
+    }
+
+    // Slide To Initial Slide
+    if (swiper.params.loop && swiper.virtual && swiper.params.virtual.enabled) {
+      swiper.slideTo(swiper.params.initialSlide + swiper.virtual.slidesBefore, 0, swiper.params.runCallbacksOnInit, false, true);
+    } else {
+      swiper.slideTo(swiper.params.initialSlide, 0, swiper.params.runCallbacksOnInit, false, true);
+    }
+
+    // Create loop
+    if (swiper.params.loop) {
+      swiper.loopCreate(undefined, true);
+    }
+
+    // Attach events
+    swiper.attachEvents();
+    const lazyElements = [...swiper.el.querySelectorAll('[loading="lazy"]')];
+    if (swiper.isElement) {
+      lazyElements.push(...swiper.hostEl.querySelectorAll('[loading="lazy"]'));
+    }
+    lazyElements.forEach(imageEl => {
+      if (imageEl.complete) {
+        processLazyPreloader(swiper, imageEl);
+      } else {
+        imageEl.addEventListener('load', e => {
+          processLazyPreloader(swiper, e.target);
+        });
+      }
+    });
+    preload(swiper);
+
+    // Init Flag
+    swiper.initialized = true;
+    preload(swiper);
+
+    // Emit
+    swiper.emit('init');
+    swiper.emit('afterInit');
+    return swiper;
+  }
+  destroy(deleteInstance = true, cleanStyles = true) {
+    const swiper = this;
+    const {
+      params,
+      el,
+      wrapperEl,
+      slides
+    } = swiper;
+    if (typeof swiper.params === 'undefined' || swiper.destroyed) {
+      return null;
+    }
+    swiper.emit('beforeDestroy');
+
+    // Init Flag
+    swiper.initialized = false;
+
+    // Detach events
+    swiper.detachEvents();
+
+    // Destroy loop
+    if (params.loop) {
+      swiper.loopDestroy();
+    }
+
+    // Cleanup styles
+    if (cleanStyles) {
+      swiper.removeClasses();
+      if (el && typeof el !== 'string') {
+        el.removeAttribute('style');
+      }
+      if (wrapperEl) {
+        wrapperEl.removeAttribute('style');
+      }
+      if (slides && slides.length) {
+        slides.forEach(slideEl => {
+          slideEl.classList.remove(params.slideVisibleClass, params.slideFullyVisibleClass, params.slideActiveClass, params.slideNextClass, params.slidePrevClass);
+          slideEl.removeAttribute('style');
+          slideEl.removeAttribute('data-swiper-slide-index');
+        });
+      }
+    }
+    swiper.emit('destroy');
+
+    // Detach emitter events
+    Object.keys(swiper.eventsListeners).forEach(eventName => {
+      swiper.off(eventName);
+    });
+    if (deleteInstance !== false) {
+      if (swiper.el && typeof swiper.el !== 'string') {
+        swiper.el.swiper = null;
+      }
+      (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.y)(swiper);
+    }
+    swiper.destroyed = true;
+    return null;
+  }
+  static extendDefaults(newDefaults) {
+    (0,_utils_mjs__WEBPACK_IMPORTED_MODULE_1__.x)(extendedDefaults, newDefaults);
+  }
+  static get extendedDefaults() {
+    return extendedDefaults;
+  }
+  static get defaults() {
+    return defaults;
+  }
+  static installModule(mod) {
+    if (!Swiper.prototype.__modules__) Swiper.prototype.__modules__ = [];
+    const modules = Swiper.prototype.__modules__;
+    if (typeof mod === 'function' && modules.indexOf(mod) < 0) {
+      modules.push(mod);
+    }
+  }
+  static use(module) {
+    if (Array.isArray(module)) {
+      module.forEach(m => Swiper.installModule(m));
+      return Swiper;
+    }
+    Swiper.installModule(module);
+    return Swiper;
+  }
+}
+Object.keys(prototypes).forEach(prototypeGroup => {
+  Object.keys(prototypes[prototypeGroup]).forEach(protoMethod => {
+    Swiper.prototype[protoMethod] = prototypes[prototypeGroup][protoMethod];
+  });
+});
+Swiper.use([Resize, Observer]);
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/swiper/shared/utils.mjs":
+/*!**********************************************!*\
+  !*** ./node_modules/swiper/shared/utils.mjs ***!
+  \**********************************************/
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   a: function() { return /* binding */ getRotateFix; },
+/* harmony export */   b: function() { return /* binding */ setCSSProperty; },
+/* harmony export */   c: function() { return /* binding */ createElement; },
+/* harmony export */   d: function() { return /* binding */ elementParents; },
+/* harmony export */   e: function() { return /* binding */ elementChildren; },
+/* harmony export */   f: function() { return /* binding */ elementOffset; },
+/* harmony export */   g: function() { return /* binding */ getSlideTransformEl; },
+/* harmony export */   h: function() { return /* binding */ now; },
+/* harmony export */   i: function() { return /* binding */ elementOuterSize; },
+/* harmony export */   j: function() { return /* binding */ elementIndex; },
+/* harmony export */   k: function() { return /* binding */ classesToTokens; },
+/* harmony export */   l: function() { return /* binding */ getTranslate; },
+/* harmony export */   m: function() { return /* binding */ makeElementsArray; },
+/* harmony export */   n: function() { return /* binding */ nextTick; },
+/* harmony export */   o: function() { return /* binding */ elementTransitionEnd; },
+/* harmony export */   p: function() { return /* binding */ isObject; },
+/* harmony export */   q: function() { return /* binding */ elementStyle; },
+/* harmony export */   r: function() { return /* binding */ elementNextAll; },
+/* harmony export */   s: function() { return /* binding */ setInnerHTML; },
+/* harmony export */   t: function() { return /* binding */ elementPrevAll; },
+/* harmony export */   u: function() { return /* binding */ animateCSSModeScroll; },
+/* harmony export */   v: function() { return /* binding */ showWarning; },
+/* harmony export */   w: function() { return /* binding */ elementIsChildOf; },
+/* harmony export */   x: function() { return /* binding */ extend; },
+/* harmony export */   y: function() { return /* binding */ deleteProps; }
+/* harmony export */ });
+/* harmony import */ var _ssr_window_esm_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ssr-window.esm.mjs */ "./node_modules/swiper/shared/ssr-window.esm.mjs");
+
+
+function classesToTokens(classes = '') {
+  return classes.trim().split(' ').filter(c => !!c.trim());
+}
+
+function deleteProps(obj) {
+  const object = obj;
+  Object.keys(object).forEach(key => {
+    try {
+      object[key] = null;
+    } catch (e) {
+      // no getter for object
+    }
+    try {
+      delete object[key];
+    } catch (e) {
+      // something got wrong
+    }
+  });
+}
+function nextTick(callback, delay = 0) {
+  return setTimeout(callback, delay);
+}
+function now() {
+  return Date.now();
+}
+function getComputedStyle(el) {
+  const window = (0,_ssr_window_esm_mjs__WEBPACK_IMPORTED_MODULE_0__.a)();
+  let style;
+  if (window.getComputedStyle) {
+    style = window.getComputedStyle(el, null);
+  }
+  if (!style && el.currentStyle) {
+    style = el.currentStyle;
+  }
+  if (!style) {
+    style = el.style;
+  }
+  return style;
+}
+function getTranslate(el, axis = 'x') {
+  const window = (0,_ssr_window_esm_mjs__WEBPACK_IMPORTED_MODULE_0__.a)();
+  let matrix;
+  let curTransform;
+  let transformMatrix;
+  const curStyle = getComputedStyle(el);
+  if (window.WebKitCSSMatrix) {
+    curTransform = curStyle.transform || curStyle.webkitTransform;
+    if (curTransform.split(',').length > 6) {
+      curTransform = curTransform.split(', ').map(a => a.replace(',', '.')).join(', ');
+    }
+    // Some old versions of Webkit choke when 'none' is passed; pass
+    // empty string instead in this case
+    transformMatrix = new window.WebKitCSSMatrix(curTransform === 'none' ? '' : curTransform);
+  } else {
+    transformMatrix = curStyle.MozTransform || curStyle.OTransform || curStyle.MsTransform || curStyle.msTransform || curStyle.transform || curStyle.getPropertyValue('transform').replace('translate(', 'matrix(1, 0, 0, 1,');
+    matrix = transformMatrix.toString().split(',');
+  }
+  if (axis === 'x') {
+    // Latest Chrome and webkits Fix
+    if (window.WebKitCSSMatrix) curTransform = transformMatrix.m41;
+    // Crazy IE10 Matrix
+    else if (matrix.length === 16) curTransform = parseFloat(matrix[12]);
+    // Normal Browsers
+    else curTransform = parseFloat(matrix[4]);
+  }
+  if (axis === 'y') {
+    // Latest Chrome and webkits Fix
+    if (window.WebKitCSSMatrix) curTransform = transformMatrix.m42;
+    // Crazy IE10 Matrix
+    else if (matrix.length === 16) curTransform = parseFloat(matrix[13]);
+    // Normal Browsers
+    else curTransform = parseFloat(matrix[5]);
+  }
+  return curTransform || 0;
+}
+function isObject(o) {
+  return typeof o === 'object' && o !== null && o.constructor && Object.prototype.toString.call(o).slice(8, -1) === 'Object';
+}
+function isNode(node) {
+  // eslint-disable-next-line
+  if (typeof window !== 'undefined' && typeof window.HTMLElement !== 'undefined') {
+    return node instanceof HTMLElement;
+  }
+  return node && (node.nodeType === 1 || node.nodeType === 11);
+}
+function extend(...args) {
+  const to = Object(args[0]);
+  const noExtend = ['__proto__', 'constructor', 'prototype'];
+  for (let i = 1; i < args.length; i += 1) {
+    const nextSource = args[i];
+    if (nextSource !== undefined && nextSource !== null && !isNode(nextSource)) {
+      const keysArray = Object.keys(Object(nextSource)).filter(key => noExtend.indexOf(key) < 0);
+      for (let nextIndex = 0, len = keysArray.length; nextIndex < len; nextIndex += 1) {
+        const nextKey = keysArray[nextIndex];
+        const desc = Object.getOwnPropertyDescriptor(nextSource, nextKey);
+        if (desc !== undefined && desc.enumerable) {
+          if (isObject(to[nextKey]) && isObject(nextSource[nextKey])) {
+            if (nextSource[nextKey].__swiper__) {
+              to[nextKey] = nextSource[nextKey];
+            } else {
+              extend(to[nextKey], nextSource[nextKey]);
+            }
+          } else if (!isObject(to[nextKey]) && isObject(nextSource[nextKey])) {
+            to[nextKey] = {};
+            if (nextSource[nextKey].__swiper__) {
+              to[nextKey] = nextSource[nextKey];
+            } else {
+              extend(to[nextKey], nextSource[nextKey]);
+            }
+          } else {
+            to[nextKey] = nextSource[nextKey];
+          }
+        }
+      }
+    }
+  }
+  return to;
+}
+function setCSSProperty(el, varName, varValue) {
+  el.style.setProperty(varName, varValue);
+}
+function animateCSSModeScroll({
+  swiper,
+  targetPosition,
+  side
+}) {
+  const window = (0,_ssr_window_esm_mjs__WEBPACK_IMPORTED_MODULE_0__.a)();
+  const startPosition = -swiper.translate;
+  let startTime = null;
+  let time;
+  const duration = swiper.params.speed;
+  swiper.wrapperEl.style.scrollSnapType = 'none';
+  window.cancelAnimationFrame(swiper.cssModeFrameID);
+  const dir = targetPosition > startPosition ? 'next' : 'prev';
+  const isOutOfBound = (current, target) => {
+    return dir === 'next' && current >= target || dir === 'prev' && current <= target;
+  };
+  const animate = () => {
+    time = new Date().getTime();
+    if (startTime === null) {
+      startTime = time;
+    }
+    const progress = Math.max(Math.min((time - startTime) / duration, 1), 0);
+    const easeProgress = 0.5 - Math.cos(progress * Math.PI) / 2;
+    let currentPosition = startPosition + easeProgress * (targetPosition - startPosition);
+    if (isOutOfBound(currentPosition, targetPosition)) {
+      currentPosition = targetPosition;
+    }
+    swiper.wrapperEl.scrollTo({
+      [side]: currentPosition
+    });
+    if (isOutOfBound(currentPosition, targetPosition)) {
+      swiper.wrapperEl.style.overflow = 'hidden';
+      swiper.wrapperEl.style.scrollSnapType = '';
+      setTimeout(() => {
+        swiper.wrapperEl.style.overflow = '';
+        swiper.wrapperEl.scrollTo({
+          [side]: currentPosition
+        });
+      });
+      window.cancelAnimationFrame(swiper.cssModeFrameID);
+      return;
+    }
+    swiper.cssModeFrameID = window.requestAnimationFrame(animate);
+  };
+  animate();
+}
+function getSlideTransformEl(slideEl) {
+  return slideEl.querySelector('.swiper-slide-transform') || slideEl.shadowRoot && slideEl.shadowRoot.querySelector('.swiper-slide-transform') || slideEl;
+}
+function elementChildren(element, selector = '') {
+  const window = (0,_ssr_window_esm_mjs__WEBPACK_IMPORTED_MODULE_0__.a)();
+  const children = [...element.children];
+  if (window.HTMLSlotElement && element instanceof HTMLSlotElement) {
+    children.push(...element.assignedElements());
+  }
+  if (!selector) {
+    return children;
+  }
+  return children.filter(el => el.matches(selector));
+}
+function elementIsChildOfSlot(el, slot) {
+  // Breadth-first search through all parent's children and assigned elements
+  const elementsQueue = [slot];
+  while (elementsQueue.length > 0) {
+    const elementToCheck = elementsQueue.shift();
+    if (el === elementToCheck) {
+      return true;
+    }
+    elementsQueue.push(...elementToCheck.children, ...(elementToCheck.shadowRoot ? elementToCheck.shadowRoot.children : []), ...(elementToCheck.assignedElements ? elementToCheck.assignedElements() : []));
+  }
+}
+function elementIsChildOf(el, parent) {
+  const window = (0,_ssr_window_esm_mjs__WEBPACK_IMPORTED_MODULE_0__.a)();
+  let isChild = parent.contains(el);
+  if (!isChild && window.HTMLSlotElement && parent instanceof HTMLSlotElement) {
+    const children = [...parent.assignedElements()];
+    isChild = children.includes(el);
+    if (!isChild) {
+      isChild = elementIsChildOfSlot(el, parent);
+    }
+  }
+  return isChild;
+}
+function showWarning(text) {
+  try {
+    console.warn(text);
+    return;
+  } catch (err) {
+    // err
+  }
+}
+function createElement(tag, classes = []) {
+  const el = document.createElement(tag);
+  el.classList.add(...(Array.isArray(classes) ? classes : classesToTokens(classes)));
+  return el;
+}
+function elementOffset(el) {
+  const window = (0,_ssr_window_esm_mjs__WEBPACK_IMPORTED_MODULE_0__.a)();
+  const document = (0,_ssr_window_esm_mjs__WEBPACK_IMPORTED_MODULE_0__.g)();
+  const box = el.getBoundingClientRect();
+  const body = document.body;
+  const clientTop = el.clientTop || body.clientTop || 0;
+  const clientLeft = el.clientLeft || body.clientLeft || 0;
+  const scrollTop = el === window ? window.scrollY : el.scrollTop;
+  const scrollLeft = el === window ? window.scrollX : el.scrollLeft;
+  return {
+    top: box.top + scrollTop - clientTop,
+    left: box.left + scrollLeft - clientLeft
+  };
+}
+function elementPrevAll(el, selector) {
+  const prevEls = [];
+  while (el.previousElementSibling) {
+    const prev = el.previousElementSibling; // eslint-disable-line
+    if (selector) {
+      if (prev.matches(selector)) prevEls.push(prev);
+    } else prevEls.push(prev);
+    el = prev;
+  }
+  return prevEls;
+}
+function elementNextAll(el, selector) {
+  const nextEls = [];
+  while (el.nextElementSibling) {
+    const next = el.nextElementSibling; // eslint-disable-line
+    if (selector) {
+      if (next.matches(selector)) nextEls.push(next);
+    } else nextEls.push(next);
+    el = next;
+  }
+  return nextEls;
+}
+function elementStyle(el, prop) {
+  const window = (0,_ssr_window_esm_mjs__WEBPACK_IMPORTED_MODULE_0__.a)();
+  return window.getComputedStyle(el, null).getPropertyValue(prop);
+}
+function elementIndex(el) {
+  let child = el;
+  let i;
+  if (child) {
+    i = 0;
+    // eslint-disable-next-line
+    while ((child = child.previousSibling) !== null) {
+      if (child.nodeType === 1) i += 1;
+    }
+    return i;
+  }
+  return undefined;
+}
+function elementParents(el, selector) {
+  const parents = []; // eslint-disable-line
+  let parent = el.parentElement; // eslint-disable-line
+  while (parent) {
+    if (selector) {
+      if (parent.matches(selector)) parents.push(parent);
+    } else {
+      parents.push(parent);
+    }
+    parent = parent.parentElement;
+  }
+  return parents;
+}
+function elementTransitionEnd(el, callback) {
+  function fireCallBack(e) {
+    if (e.target !== el) return;
+    callback.call(el, e);
+    el.removeEventListener('transitionend', fireCallBack);
+  }
+  if (callback) {
+    el.addEventListener('transitionend', fireCallBack);
+  }
+}
+function elementOuterSize(el, size, includeMargins) {
+  const window = (0,_ssr_window_esm_mjs__WEBPACK_IMPORTED_MODULE_0__.a)();
+  if (includeMargins) {
+    return el[size === 'width' ? 'offsetWidth' : 'offsetHeight'] + parseFloat(window.getComputedStyle(el, null).getPropertyValue(size === 'width' ? 'margin-right' : 'margin-top')) + parseFloat(window.getComputedStyle(el, null).getPropertyValue(size === 'width' ? 'margin-left' : 'margin-bottom'));
+  }
+  return el.offsetWidth;
+}
+function makeElementsArray(el) {
+  return (Array.isArray(el) ? el : [el]).filter(e => !!e);
+}
+function getRotateFix(swiper) {
+  return v => {
+    if (Math.abs(v) > 0 && swiper.browser && swiper.browser.need3dFix && Math.abs(v) % 90 === 0) {
+      return v + 0.001;
+    }
+    return v;
+  };
+}
+function setInnerHTML(el, html = '') {
+  if (typeof trustedTypes !== 'undefined') {
+    el.innerHTML = trustedTypes.createPolicy('html', {
+      createHTML: s => s
+    }).createHTML(html);
+  } else {
+    el.innerHTML = html;
+  }
+}
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/swiper/swiper.css":
+/*!****************************************!*\
+  !*** ./node_modules/swiper/swiper.css ***!
+  \****************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _css_loader_dist_cjs_js_postcss_loader_dist_cjs_js_mini_css_extract_plugin_dist_loader_js_css_loader_dist_cjs_js_postcss_loader_dist_cjs_js_swiper_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../css-loader/dist/cjs.js!../postcss-loader/dist/cjs.js!../mini-css-extract-plugin/dist/loader.js!../css-loader/dist/cjs.js!../postcss-loader/dist/cjs.js!./swiper.css */ "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/swiper/swiper.css");
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+options.insert = _style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+options.domAPI = (_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_css_loader_dist_cjs_js_postcss_loader_dist_cjs_js_mini_css_extract_plugin_dist_loader_js_css_loader_dist_cjs_js_postcss_loader_dist_cjs_js_swiper_css__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ __webpack_exports__["default"] = (_css_loader_dist_cjs_js_postcss_loader_dist_cjs_js_mini_css_extract_plugin_dist_loader_js_css_loader_dist_cjs_js_postcss_loader_dist_cjs_js_swiper_css__WEBPACK_IMPORTED_MODULE_6__["default"] && _css_loader_dist_cjs_js_postcss_loader_dist_cjs_js_mini_css_extract_plugin_dist_loader_js_css_loader_dist_cjs_js_postcss_loader_dist_cjs_js_swiper_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _css_loader_dist_cjs_js_postcss_loader_dist_cjs_js_mini_css_extract_plugin_dist_loader_js_css_loader_dist_cjs_js_postcss_loader_dist_cjs_js_swiper_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
+
+/***/ }),
+
+/***/ "./node_modules/swiper/swiper.mjs":
+/*!****************************************!*\
+  !*** ./node_modules/swiper/swiper.mjs ***!
+  \****************************************/
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Swiper: function() { return /* reexport safe */ _shared_swiper_core_mjs__WEBPACK_IMPORTED_MODULE_0__.S; },
+/* harmony export */   "default": function() { return /* reexport safe */ _shared_swiper_core_mjs__WEBPACK_IMPORTED_MODULE_0__.S; }
+/* harmony export */ });
+/* harmony import */ var _shared_swiper_core_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./shared/swiper-core.mjs */ "./node_modules/swiper/shared/swiper-core.mjs");
+/**
+ * Swiper 12.0.3
+ * Most modern mobile touch slider and framework with hardware accelerated transitions
+ * https://swiperjs.com
+ *
+ * Copyright 2014-2025 Vladimir Kharlampidi
+ *
+ * Released under the MIT License
+ *
+ * Released on: October 21, 2025
+ */
+
+
+
+
 /***/ })
 
 /******/ 	});
@@ -4654,7 +9699,7 @@ if (typeof this !== 'undefined' && this.Sweetalert2){this.swal = this.sweetAlert
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
+/******/ 			id: moduleId,
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};
@@ -4707,6 +9752,11 @@ if (typeof this !== 'undefined' && this.Sweetalert2){this.swal = this.sweetAlert
 /******/ 		};
 /******/ 	}();
 /******/ 	
+/******/ 	/* webpack/runtime/nonce */
+/******/ 	!function() {
+/******/ 		__webpack_require__.nc = undefined;
+/******/ 	}();
+/******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry needs to be wrapped in an IIFE because it needs to be in strict mode.
@@ -4718,6 +9768,10 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.mjs");
+/* harmony import */ var swiper_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper/css */ "./node_modules/swiper/swiper.css");
+/* harmony import */ var swiper_css_navigation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! swiper/css/navigation */ "./node_modules/swiper/modules/navigation.css");
+/* harmony import */ var swiper_css_pagination__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! swiper/css/pagination */ "./node_modules/swiper/modules/pagination.css");
 function _regeneratorKeys(e) { var n = Object(e), r = []; for (var t in n) r.unshift(t); return function e() { for (; r.length;) if ((t = r.pop()) in n) return e.value = t, e.done = !1, e; return e.done = !0, e; }; }
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
@@ -4740,11 +9794,10 @@ function _asyncToGenerator(n) { return function () { var t = this, e = arguments
 
 window.Swal = (sweetalert2__WEBPACK_IMPORTED_MODULE_0___default());
 
-// import Swiper from 'swiper';
-// import 'swiper/css';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
-// window.Swiper = Swiper;
+
+
+
+window.Swiper = swiper__WEBPACK_IMPORTED_MODULE_1__["default"];
 
 // Global toastr settings
 toastr.options = {
@@ -4775,7 +9828,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // Token is older than 24 hours
       localStorage.removeItem('access_token');
       localStorage.removeItem('access_token_time');
-      window.location.href = '../index.html';
+      window.location.href = "./index.html";
     } else {
       console.log('JWT token is still valid.');
     }
@@ -4806,7 +9859,7 @@ var urlUserName = params.get('user_name');
 function fetchPatientCounts() {
   var token = localStorage.getItem('access_token');
   if (!token) {
-    window.location.href = '../index.html';
+    window.location.href = "./index.html";
     return;
   }
 
@@ -4852,14 +9905,14 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   var token = localStorage.getItem('access_token');
   if (!token) {
-    window.location.href = '../index.html';
+    window.location.href = "./index.html";
   }
   fetchPatientList("".concat(BASE_URL, "patient-name-list"));
 });
 function fetchArchivedPatientList(url) {
   var token = localStorage.getItem('access_token');
   if (!token) {
-    window.location.href = '../index.html';
+    window.location.href = "./index.html";
   }
   showLoadingMessage();
   fetch(url, {
@@ -4953,7 +10006,7 @@ function updateArchivedPatientList(patients) {
       if (selectedPatients.length === 0) return;
       var token = localStorage.getItem("access_token");
       if (!token) {
-        window.location.href = '../index.html';
+        window.location.href = "./index.html";
         return;
       }
       sweetalert2__WEBPACK_IMPORTED_MODULE_0___default().fire({
@@ -5118,7 +10171,7 @@ function updateArchivedPatientList(patients) {
     //   event.stopPropagation();
     //   const token = localStorage.getItem("access_token");
     //   if (!token) {
-    //     window.location.href = '../index.html';
+    //     window.location.href = "./index.html";
     //     return;
     //   }
     //   const patientName = noteMenu.dataset.patientName;
@@ -5281,7 +10334,7 @@ document.addEventListener("DOMContentLoaded", function () {
               globalAudio.currentTime = 0;
 
               // Show loading spinner icon
-              this.innerHTML = "<i class=\"ki-filled ki-arrows-circle spinner-icon animate-spin rounded-full -ml-2 text-color\"></i>";
+              this.innerHTML = "<i class=\"ki-outline ki-arrows-circle spinner-icon animate-spin rounded-full -ml-2 text-color\"></i>";
               currentPlayingBtn = this;
               token = localStorage.getItem("access_token");
               _context3.p = 2;
@@ -5342,7 +10395,7 @@ document.addEventListener("DOMContentLoaded", function () {
           processBtn.disabled = true;
 
           // 🔄 Add spinner immediately
-          processBtn.innerHTML = "\n            <span class=\"flex items-center gap-2 justify-center\">\n                <i class=\"ki-filled ki-arrows-circle animate-spin text-lg\"></i>\n                Processing...\n            </span>\n        ";
+          processBtn.innerHTML = "\n            <span class=\"flex items-center gap-2 justify-center\">\n                <i class=\"ki-outline ki-arrows-circle animate-spin text-lg\"></i>\n                Processing...\n            </span>\n        ";
 
           // 🔥 CLOSE DRAWER IMMEDIATELY (do NOT wait for API)
           drawer = KTDrawer.getInstance(document.querySelector("#drawer_1"));
@@ -5389,7 +10442,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // 3️⃣ Add spinner
             if (item) {
               spinner = document.createElement("i");
-              spinner.className = "ki-filled ki-arrows-circle spinner-icon animate-spin rounded-full -ml-2";
+              spinner.className = "ki-outline ki-arrows-circle spinner-icon animate-spin rounded-full -ml-2";
               spinner.style.marginLeft = "10px";
               spinner.style.color = "#0b6fac";
               item.appendChild(spinner);
@@ -5672,16 +10725,638 @@ document.addEventListener("DOMContentLoaded", function () {
   initTranscriptDrawer();
 });
 // transcript drawer :: end
-function fetchArchivedPatientDetails(_x8, _x9, _x0) {
+
+// phrases drawer ::start
+document.addEventListener("DOMContentLoaded", function () {
+  var token = localStorage.getItem("access_token");
+  var phraseDrawerEl = document.getElementById("drawer_phrase");
+  var phraseDrawer = new KTDrawer(phraseDrawerEl);
+
+  // Drawer elements
+  var listWrapper = document.getElementById("drawer_phrase_list_wrapper");
+  var listContainer = document.getElementById("drawer_phrase_list");
+  var editView = document.getElementById("drawer_phrase_edit");
+  var editFooter = document.getElementById("drawer_phrase_edit_footer");
+  var viewMode = document.getElementById("drawer_phrase_view");
+  var createView = document.getElementById("drawer_phrase_create");
+  var createKey = document.getElementById("createPhraseKey");
+  var createValue = document.getElementById("createPhraseValue");
+
+  // Fields
+  var keyInput = document.getElementById("editPhraseKey");
+  var valueTextarea = document.getElementById("editPhraseValue");
+  var viewKey = document.getElementById("viewPhraseKey");
+  var viewValue = document.getElementById("viewPhraseValue");
+  var cancelBtn = document.getElementById("cancelEditPhrase");
+  var saveBtn = document.getElementById("saveEditPhrase");
+  var $errorEl = $("#phraseKeyError");
+  var $valueError = $("#phraseValueError");
+  var selectedKey = null;
+  window.loadPhrases = /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee7() {
+    var res, data, phrases, html, _t6;
+    return _regenerator().w(function (_context7) {
+      while (1) switch (_context7.p = _context7.n) {
+        case 0:
+          listContainer.innerHTML = "\n            <p class=\"text-center text-gray-500 py-4 text-sm\">Loading phrases...</p>\n        ";
+          _context7.p = 1;
+          _context7.n = 2;
+          return fetch("".concat(BASE_PHRASE_URL, "fetch-all-phrase"), {
+            method: "GET",
+            headers: {
+              "Authorization": "Bearer ".concat(token),
+              "Content-Type": "application/json"
+            }
+          });
+        case 2:
+          res = _context7.v;
+          _context7.n = 3;
+          return res.json();
+        case 3:
+          data = _context7.v;
+          phrases = data.phrases || {};
+          if (!$.isEmptyObject(phrases)) {
+            _context7.n = 4;
+            break;
+          }
+          listContainer.innerHTML = "\n                    <p class=\"text-center text-gray-500 py-4 text-sm\">No Phrases Found</p>\n                ";
+          return _context7.a(2);
+        case 4:
+          html = "";
+          Object.entries(phrases).forEach(function (_ref7) {
+            var _ref9, _phraseObj$value;
+            var _ref8 = _slicedToArray(_ref7, 2),
+              key = _ref8[0],
+              phraseObj = _ref8[1];
+            var value = (_ref9 = (_phraseObj$value = phraseObj === null || phraseObj === void 0 ? void 0 : phraseObj.value) !== null && _phraseObj$value !== void 0 ? _phraseObj$value : phraseObj) !== null && _ref9 !== void 0 ? _ref9 : "";
+            if (value === "[object Object]") {
+              value = JSON.stringify(value);
+            }
+            var displayValue = value.length > 23 ? value.substring(0, 23) + "..." : value;
+            html += "\n                    <div class=\"border border-gray-300 rounded-xl p-3 mb-3 shadow-sm transition-colors phrase-item\">\n                        <div class=\"flex justify-between items-start w-full\">\n                            <!-- Checkbox (hidden but functional) -->\n                            <input type=\"checkbox\" \n                                  name=\"addPhrase[]\" \n                                  id=\"addPhrase-".concat(key, "\" \n                                  value=\"").concat(key, "\"\n                                  class=\"hidden\">\n                            \n                            <!-- Phrase Content (clickable area) -->\n                            <div class=\"phrase-click cursor-pointer flex-1 mx-3\"\n                                data-key=\"").concat(key, "\"\n                                data-value=\"").concat(value, "\">\n                                <div class=\"text-xs font-semibold text-color mb-1\">").concat(key, "</div>\n                                <div class=\"text-xs text-gray-800\">").concat(displayValue, "</div>\n                            </div>\n\n                            <!-- Action Buttons -->\n                            <div class=\"flex gap-2\">\n                                <span class=\"flex phrase-select-label text-xs text-color font-medium cursor-pointer text-color items-center justify-center\"\n                                      data-key=\"").concat(key, "\">\n                                    Select\n                                </span>\n                                <button class=\"cursor-pointer p-1 rounded hover:bg-gray-200 edit-btn\"\n                                        data-key=\"").concat(key, "\"\n                                        data-value=\"").concat(value, "\"\n                                        title=\"Edit Phrase\">\n                                    <i class=\"ki-solid ki-pencil text-base text-color\"></i>\n                                </button>\n                                <button class=\"cursor-pointer p-1 rounded hover:bg-red-100 delete-btn\"\n                                        data-key=\"").concat(key, "\"\n                                        title=\"Delete Phrase\">\n                                    <i class=\"ki-solid ki-trash text-base text-color\"></i>\n                                </button>\n                            </div>\n                        </div>\n                    </div>\n                ");
+          });
+          listContainer.innerHTML = html;
+          _context7.n = 6;
+          break;
+        case 5:
+          _context7.p = 5;
+          _t6 = _context7.v;
+          console.error("Phrase Load Error:", _t6);
+          listContainer.innerHTML = "\n                <p class=\"text-center text-red-500 py-4 text-sm\">Failed to load phrases</p>\n            ";
+        case 6:
+          return _context7.a(2);
+      }
+    }, _callee7, null, [[1, 5]]);
+  }));
+  loadPhrases();
+  var selectedPhrases = []; // GLOBAL ARRAY
+
+  document.addEventListener("click", function (e) {
+    var selectLabel = e.target.closest(".phrase-select-label");
+    if (!selectLabel) return;
+    var key = selectLabel.dataset.key;
+    var checkbox = document.getElementById('addPhrase-' + key);
+    if (!checkbox) return;
+
+    // Toggle checkbox
+    checkbox.checked = !checkbox.checked;
+    var phraseItem = selectLabel.closest(".phrase-item");
+    if (checkbox.checked) {
+      // Add key to selectedPhrases (avoid duplicates)
+      if (!selectedPhrases.includes(key)) {
+        selectedPhrases.push(key);
+      }
+      phraseItem.classList.add("bg-blue-50", "border-blue-300");
+      selectLabel.textContent = "Selected";
+      selectLabel.classList.add("text-color");
+      selectLabel.classList.remove("text-color");
+    } else {
+      // Remove key when un-selected
+      selectedPhrases = selectedPhrases.filter(function (k) {
+        return k !== key;
+      });
+      phraseItem.classList.remove("bg-blue-50", "border-blue-300");
+      selectLabel.textContent = "Select";
+      selectLabel.classList.remove("text-color");
+      selectLabel.classList.add("text-color");
+    }
+    console.log("Selected phrases:", selectedPhrases);
+  });
+
+  // ✅ Only ONE save click listener (outside the document click handler)
+  $('#saveAddInfoPhrase').on('click', /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee8() {
+    var $btn, soap_url, part, patientId, token, response, data, _t7;
+    return _regenerator().w(function (_context8) {
+      while (1) switch (_context8.p = _context8.n) {
+        case 0:
+          $btn = $(this);
+          soap_url = document.getElementById('hd_soap_url').value;
+          part = soap_url.split("/")[3];
+          patientId = part.split("_")[1];
+          token = localStorage.getItem('access_token'); // VALIDATION
+          if (patientId) {
+            _context8.n = 1;
+            break;
+          }
+          toastr.error('Please select a patient first.');
+          return _context8.a(2);
+        case 1:
+          if (!(selectedPhrases.length === 0)) {
+            _context8.n = 2;
+            break;
+          }
+          toastr.warning('Please select at least one phrase.');
+          return _context8.a(2);
+        case 2:
+          if (token) {
+            _context8.n = 3;
+            break;
+          }
+          toastr.error('Please login again.');
+          window.location.href = "./index.html";
+          return _context8.a(2);
+        case 3:
+          // SPINNER
+          $btn.prop('disabled', true).html('<span class="spinner-border spinner-border-sm mr-2"></span>Adding...');
+          _context8.p = 4;
+          _context8.n = 5;
+          return fetch("".concat(BASE_URL, "add-phrases-to-infostream"), {
+            method: "POST",
+            headers: {
+              "Authorization": "Bearer ".concat(token),
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+              patient_id: patientId,
+              phrase_keys: selectedPhrases
+            })
+          });
+        case 5:
+          response = _context8.v;
+          _context8.n = 6;
+          return response.json();
+        case 6:
+          data = _context8.v;
+          if (response.ok) {
+            toastr.success(data.message || 'Phrases added successfully!');
+
+            // Reset UI
+            selectedPhrases = [];
+            $(".phrase-checkbox").prop("checked", false);
+            setTimeout(function () {
+              phraseDrawer.hide();
+            }, 300);
+          } else {
+            toastr.error(data.message || "Failed to add phrases.");
+          }
+          _context8.n = 8;
+          break;
+        case 7:
+          _context8.p = 7;
+          _t7 = _context8.v;
+          toastr.error("Something went wrong.");
+          console.error(_t7);
+        case 8:
+          _context8.p = 8;
+          $btn.prop("disabled", false).html('<i class="la la-external-link-alt mr-1"></i> Add to InfoStream');
+          return _context8.f(8);
+        case 9:
+          return _context8.a(2);
+      }
+    }, _callee8, this, [[4, 7, 8, 9]]);
+  })));
+
+  // Separate function for SOAP notification logic
+  function triggerSoapNotification(_x8, _x9, _x0) {
+    return _triggerSoapNotification.apply(this, arguments);
+  } // Also add click handler for the entire phrase item to toggle checkbox
+  function _triggerSoapNotification() {
+    _triggerSoapNotification = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee1(patientId, token, BASE_URL) {
+      var soap_notes, soap_response, allNavLinks, soapTab, soapButton, oldDot, oldBtnDot, tabDot, btnDot, _t0;
+      return _regenerator().w(function (_context1) {
+        while (1) switch (_context1.p = _context1.n) {
+          case 0:
+            _context1.p = 0;
+            _context1.n = 1;
+            return fetch("".concat(BASE_URL, "ondemand/pending-soap-notes?patient_id=").concat(patientId), {
+              method: 'GET',
+              headers: {
+                'Content-Type': 'application/json',
+                'Authorization': "Bearer ".concat(token)
+              }
+            });
+          case 1:
+            soap_notes = _context1.v;
+            if (soap_notes.ok) {
+              _context1.n = 2;
+              break;
+            }
+            return _context1.a(2);
+          case 2:
+            _context1.n = 3;
+            return soap_notes.json();
+          case 3:
+            soap_response = _context1.v;
+            // --- Find SOAP Tab (by text) ---
+            allNavLinks = document.querySelectorAll('#navTabs .nav-link');
+            soapTab = null;
+            allNavLinks.forEach(function (link) {
+              var textEl = link.querySelector('.nav-text');
+              if (textEl && textEl.textContent.trim() === 'SOAP') {
+                soapTab = link;
+              }
+            });
+
+            // --- Button reference ---
+            soapButton = document.getElementById('onDemandSummaryCall'); // --- Remove existing dots ---
+            if (soapTab) {
+              oldDot = soapTab.querySelector('.notification-dot');
+              if (oldDot) oldDot.remove();
+            }
+            if (soapButton) {
+              oldBtnDot = soapButton.querySelector('.notification-dot');
+              if (oldBtnDot) oldBtnDot.remove();
+            }
+
+            // --- Add new dots if needed ---
+            if (soap_response.needs_soap === true) {
+              if (soapTab) {
+                tabDot = document.createElement('span');
+                tabDot.className = 'notification-dot';
+                tabDot.style.cssText = "\n                        position: absolute;\n                        top: 2px;\n                        right: 2px;\n                        width: 8px;\n                        height: 8px;\n                        background-color: red;\n                        border-radius: 50%;\n                        display: inline-block;\n                    ";
+                soapTab.style.position = 'relative';
+                soapTab.appendChild(tabDot);
+              }
+              if (soapButton) {
+                btnDot = document.createElement('span');
+                btnDot.className = 'notification-dot';
+                btnDot.style.cssText = "\n                        position: absolute;\n                        top: 0px;\n                        right: 0px;\n                        width: 10px;\n                        height: 10px;\n                        background-color: red;\n                        border-radius: 50%;\n                        display: inline-block;\n                    ";
+                soapButton.style.position = 'relative';
+                soapButton.appendChild(btnDot);
+              }
+            }
+            _context1.n = 5;
+            break;
+          case 4:
+            _context1.p = 4;
+            _t0 = _context1.v;
+            console.error('SOAP notification check failed:', _t0);
+          case 5:
+            return _context1.a(2);
+        }
+      }, _callee1, null, [[0, 4]]);
+    }));
+    return _triggerSoapNotification.apply(this, arguments);
+  }
+  document.addEventListener("click", function (e) {
+    var phraseClick = e.target.closest(".phrase-click");
+    if (!phraseClick) return;
+    var key = phraseClick.dataset.key;
+    var checkbox = document.getElementById('addPhrase-' + key);
+    if (checkbox) {
+      checkbox.checked = !checkbox.checked;
+
+      // Update the select label text as well
+      var selectLabel = phraseClick.closest(".phrase-item").querySelector(".phrase-select-label");
+      if (selectLabel) {
+        selectLabel.textContent = checkbox.checked ? "Selected" : "Select";
+        if (checkbox.checked) {
+          selectLabel.classList.add("text-color");
+          selectLabel.classList.remove("text-color");
+        } else {
+          selectLabel.classList.remove("text-color");
+          selectLabel.classList.add("text-color");
+        }
+      }
+
+      // Update item background
+      var phraseItem = phraseClick.closest(".phrase-item");
+      if (checkbox.checked) {
+        phraseItem.classList.add("bg-blue-50", "border-blue-300");
+      } else {
+        phraseItem.classList.remove("bg-blue-50", "border-blue-300");
+      }
+    }
+  });
+  document.getElementById("addPhraseBtn").addEventListener("click", function () {
+    // Hide list + hide other views
+    listWrapper.classList.add("hidden");
+    editView.classList.add("hidden");
+    viewMode.classList.add("hidden");
+
+    // Show create view
+    createView.classList.remove("hidden");
+    editFooter.classList.remove("hidden"); // reuse Save + Cancel footer
+    document.getElementById("drawer_phrase_listing_footer").classList.add("hidden");
+
+    // Reset fields
+    createKey.value = "";
+    createValue.value = "";
+  });
+
+  /* VIEW */
+
+  document.addEventListener("click", function (e) {
+    var item = e.target.closest(".phrase-click");
+    if (!item) return;
+    viewKey.value = item.getAttribute("data-key");
+    viewValue.value = item.getAttribute("data-value");
+    listWrapper.classList.add("hidden");
+    editView.classList.add("hidden");
+    editFooter.classList.add("hidden");
+    viewMode.classList.remove("hidden");
+    createView.classList.add("hidden");
+    document.getElementById("drawer_phrase_view_footer").classList.remove("hidden");
+    document.getElementById("drawer_phrase_listing_footer").classList.add("hidden");
+  });
+  document.getElementById("closeViewModeBtn").addEventListener("click", function () {
+    viewMode.classList.add("hidden");
+    document.getElementById("drawer_phrase_view_footer").classList.add("hidden");
+
+    // always return to list
+    listWrapper.classList.remove("hidden");
+    document.getElementById("drawer_phrase_listing_footer").classList.remove("hidden");
+  });
+  document.addEventListener("click", function (e) {
+    var btn = e.target.closest(".edit-btn");
+    if (!btn) return;
+    selectedKey = btn.getAttribute("data-key");
+    var value = btn.getAttribute("data-value");
+    keyInput.value = selectedKey;
+    valueTextarea.value = value;
+
+    // Switch UI → Edit Mode
+    listWrapper.classList.add("hidden");
+    viewMode.classList.add("hidden");
+    editView.classList.remove("hidden");
+    editFooter.classList.remove("hidden");
+    document.getElementById("drawer_phrase_listing_footer").classList.add("hidden");
+  });
+  cancelBtn.addEventListener("click", function () {
+    // Hide all modes
+    editView.classList.add("hidden");
+    createView.classList.add("hidden");
+    viewMode.classList.add("hidden");
+    editFooter.classList.add("hidden");
+
+    // Show list
+    listWrapper.classList.remove("hidden");
+    document.getElementById("drawer_phrase_listing_footer").classList.remove("hidden");
+    // Reset values
+    createKey.value = "";
+    createValue.value = "";
+    keyInput.value = "";
+    valueTextarea.value = "";
+  });
+  var phraseRegex = /^[A-Za-z0-9_\-\/]+$/;
+  saveBtn.addEventListener("click", /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee9() {
+    var isEdit, isCreate, key, value, url, res, data, _t8;
+    return _regenerator().w(function (_context9) {
+      while (1) switch (_context9.p = _context9.n) {
+        case 0:
+          isEdit = !editView.classList.contains("hidden");
+          isCreate = !createView.classList.contains("hidden");
+          if (isCreate) {
+            key = createKey.value.trim();
+            value = createValue.value.trim();
+            url = "".concat(BASE_PHRASE_URL, "add-phrase"); // Your create API endpoint
+          } else if (isEdit) {
+            key = selectedKey;
+            value = valueTextarea.value.trim();
+            url = "".concat(BASE_PHRASE_URL, "edit-phrase");
+          }
+          if (!(!key || !value)) {
+            _context9.n = 1;
+            break;
+          }
+          toastr.warning("Key and Value cannot be empty.");
+          return _context9.a(2);
+        case 1:
+          saveBtn.disabled = true;
+          saveBtn.textContent = "Saving...";
+          _context9.p = 2;
+          _context9.n = 3;
+          return fetch(url, {
+            method: "POST",
+            headers: {
+              "Authorization": "Bearer ".concat(token),
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+              key: key,
+              value: value
+            })
+          });
+        case 3:
+          res = _context9.v;
+          _context9.n = 4;
+          return res.json();
+        case 4:
+          data = _context9.v;
+          if (res.ok) {
+            _context9.n = 5;
+            break;
+          }
+          throw data;
+        case 5:
+          toastr.success(data.message || "Success!");
+
+          // RESET UI
+          createView.classList.add("hidden");
+          editView.classList.add("hidden");
+          editFooter.classList.add("hidden");
+          viewMode.classList.add("hidden");
+          listWrapper.classList.remove("hidden");
+          document.getElementById("drawer_phrase_listing_footer").classList.remove("hidden");
+          setTimeout(function () {
+            loadPhrases();
+          }, 50);
+          _context9.n = 7;
+          break;
+        case 6:
+          _context9.p = 6;
+          _t8 = _context9.v;
+          toastr.error(_t8.message || "Failed to save phrase.");
+        case 7:
+          _context9.p = 7;
+          saveBtn.disabled = false;
+          saveBtn.textContent = "Save";
+          return _context9.f(7);
+        case 8:
+          return _context9.a(2);
+      }
+    }, _callee9, null, [[2, 6, 7, 8]]);
+  })));
+  function validatePhraseKeyOnType(input) {
+    var key = input.value.trim();
+    var pattern = /^[A-Za-z0-9_\-\/]+$/;
+    var err = document.getElementById("phraseKeyError");
+    err.classList.add("hidden");
+    err.innerHTML = "";
+    if (key.length === 0) return;
+    if (!pattern.test(key)) {
+      err.innerHTML = "\n                <strong>Invalid phrase format.</strong><br>\n                <ul class=\"pl-4\">\n                    <li>Allowed: A\u2013Z, a\u2013z, 0\u20139, _, -, /</li>\n                    <li>No spaces or other symbols</li>\n                </ul>";
+      err.classList.remove("hidden");
+    }
+  }
+  document.addEventListener("click", function (e) {
+    var btn = e.target.closest(".delete-btn");
+    if (!btn) return;
+    var selectedKey = btn.getAttribute("data-key");
+    var token = localStorage.getItem("access_token");
+    sweetalert2__WEBPACK_IMPORTED_MODULE_0___default().fire({
+      title: 'Delete Phrase',
+      html: "\n                <p class=\"font-medium text-gray-800\">\n                    Are you sure you want to delete?\n                </p>\n            ",
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonText: 'Yes',
+      cancelButtonText: 'No',
+      allowOutsideClick: false,
+      reverseButtons: true,
+      customClass: {
+        confirmButton: 'cursor-pointer border border-gray-300 bg-transparent shadow-md text-xs font-medium rounded-2xl py-2 px-8',
+        cancelButton: 'cursor-pointer border border-gray-300 bg-transparent shadow-md text-xs font-medium rounded-2xl py-2 px-8 mr-2',
+        title: 'custom-swal-title'
+      },
+      buttonsStyling: false
+    }).then(/*#__PURE__*/function () {
+      var _ref10 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee0(result) {
+        var response, data, _t9;
+        return _regenerator().w(function (_context0) {
+          while (1) switch (_context0.p = _context0.n) {
+            case 0:
+              if (result.isConfirmed) {
+                _context0.n = 1;
+                break;
+              }
+              return _context0.a(2);
+            case 1:
+              sweetalert2__WEBPACK_IMPORTED_MODULE_0___default().fire({
+                title: 'Deleting...',
+                text: 'Please wait while the phrase is being deleted.',
+                allowOutsideClick: false,
+                didOpen: function didOpen() {
+                  return sweetalert2__WEBPACK_IMPORTED_MODULE_0___default().showLoading();
+                }
+              });
+              _context0.p = 2;
+              _context0.n = 3;
+              return fetch("".concat(BASE_PHRASE_URL, "delete-phrase"), {
+                method: "POST",
+                headers: {
+                  "Authorization": "Bearer ".concat(token),
+                  "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                  key: selectedKey
+                })
+              });
+            case 3:
+              response = _context0.v;
+              _context0.n = 4;
+              return response.json();
+            case 4:
+              data = _context0.v;
+              sweetalert2__WEBPACK_IMPORTED_MODULE_0___default().close();
+              if (response.ok) {
+                toastr.success(data.message || "Phrase deleted successfully!");
+                loadPhrases();
+
+                // Exit edit mode if editing
+                editView.classList.add("hidden");
+                editFooter.classList.add("hidden");
+                listWrapper.classList.remove("hidden");
+              } else {
+                toastr.error(data.message || "Failed to delete phrase.");
+              }
+              _context0.n = 6;
+              break;
+            case 5:
+              _context0.p = 5;
+              _t9 = _context0.v;
+              sweetalert2__WEBPACK_IMPORTED_MODULE_0___default().close();
+              console.error("Delete phrase error:", _t9);
+              toastr.error("An error occurred while deleting the phrase.");
+            case 6:
+              return _context0.a(2);
+          }
+        }, _callee0, null, [[2, 5]]);
+      }));
+      return function (_x1) {
+        return _ref10.apply(this, arguments);
+      };
+    }());
+  });
+  createKey.addEventListener("input", function () {
+    validatePhraseKeyOnType(this);
+  });
+  valueTextarea.addEventListener("input", function () {
+    var max = 4096;
+    if (this.value.length > max) {
+      toastr.error("Limit exceeded (4096 characters max)");
+      this.value = this.value.substring(0, max);
+    }
+  });
+  createValue.addEventListener("input", function () {
+    if (this.value.length > 4096) {
+      toastr.error("Limit exceeded (4096 characters max)");
+      this.value = this.value.substring(0, 4096);
+    }
+  });
+  function resetPhraseDrawer() {
+    var _document$getElementB;
+    console.log("Resetting Phrase Drawer...");
+
+    // 1️⃣ Hide all modes
+    listWrapper.classList.remove("hidden");
+    editView.classList.add("hidden");
+    createView.classList.add("hidden");
+    viewMode.classList.add("hidden");
+    editFooter.classList.add("hidden");
+    (_document$getElementB = document.getElementById("drawer_phrase_view_footer")) === null || _document$getElementB === void 0 || _document$getElementB.classList.add("hidden");
+    document.getElementById("drawer_phrase_listing_footer").classList.remove("hidden");
+    // 2️⃣ Clear all inputs
+    createKey.value = "";
+    createValue.value = "";
+    keyInput.value = "";
+    valueTextarea.value = "";
+    viewKey.value = "";
+    viewValue.value = "";
+
+    // 3️⃣ Clear selected phrase array
+    selectedPhrases = [];
+
+    // 4️⃣ Reset all checkbox states + UI styles
+    document.querySelectorAll("#drawer_phrase_list input[type='checkbox']").forEach(function (cb) {
+      cb.checked = false;
+    });
+    document.querySelectorAll(".phrase-item").forEach(function (item) {
+      item.classList.remove("bg-blue-50", "border-blue-300");
+    });
+    document.querySelectorAll(".phrase-select-label").forEach(function (lbl) {
+      lbl.textContent = "Select";
+      lbl.classList.remove("text-color");
+      lbl.classList.add("text-color");
+    });
+
+    // 5️⃣ Reset scroll
+    phraseDrawerEl.querySelector(".kt-drawer-content").scrollTop = 0;
+  }
+  document.getElementById("phraseDrawer").addEventListener("click", function () {
+    resetPhraseDrawer();
+    loadPhrases(); // load fresh list
+  });
+});
+// phrases drawer :: end
+function fetchArchivedPatientDetails(_x10, _x11, _x12) {
   return _fetchArchivedPatientDetails.apply(this, arguments);
 }
 function _fetchArchivedPatientDetails() {
-  _fetchArchivedPatientDetails = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee24(patientName, patientId, element) {
+  _fetchArchivedPatientDetails = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee29(patientName, patientId, element) {
     var passPatientName, addModalPatientName, getPatientNameFromList, patientDetails, nameSpan, apiUrl, apiUrl_raw, summaryDiv, assessmentDiv, planDiv, rawTransDiv, reviewDiv, phyExamDiv, token, summarySeconds, assessmentSeconds, summaryTimer, assessmentTimer, response, data, file_content, jsonArray, jsonString, newObj, key, newKey, formattedText, _formattedText9, _formattedText0, _formattedText1, _formattedText10, diagnosis, diagnosisItems, _t25;
-    return _regenerator().w(function (_context24) {
-      while (1) switch (_context24.p = _context24.n) {
+    return _regenerator().w(function (_context29) {
+      while (1) switch (_context29.p = _context29.n) {
         case 0:
-          // toggleContent();
+          toggleContent();
           // const recordingBlock = document.querySelector('.patient-wise-recording');
           // if (recordingBlock) {
           //   recordingBlock.style.display = 'none';
@@ -5746,8 +11421,8 @@ function _fetchArchivedPatientDetails() {
             assessmentSeconds++;
             document.getElementById("assessment-timer").innerText = assessmentSeconds;
           }, 1000);
-          _context24.p = 1;
-          _context24.n = 2;
+          _context29.p = 1;
+          _context29.n = 2;
           return fetch(apiUrl, {
             method: "GET",
             headers: {
@@ -5756,13 +11431,13 @@ function _fetchArchivedPatientDetails() {
             }
           });
         case 2:
-          response = _context24.v;
+          response = _context29.v;
           clearInterval(summaryTimer);
           clearInterval(assessmentTimer);
-          _context24.n = 3;
+          _context29.n = 3;
           return response.json();
         case 3:
-          data = _context24.v;
+          data = _context29.v;
           // Update Summary
           file_content = data.file_content;
           jsonArray = [file_content];
@@ -5827,11 +11502,11 @@ function _fetchArchivedPatientDetails() {
               diagnosisSpan.textContent = truncatedDiagnosis;
             }
           });
-          _context24.n = 5;
+          _context29.n = 5;
           break;
         case 4:
-          _context24.p = 4;
-          _t25 = _context24.v;
+          _context29.p = 4;
+          _t25 = _context29.v;
           console.error("Error fetching data:", _t25);
           summaryDiv.innerHTML = "<p class='text-xs'>Error loading summary</p>";
           assessmentDiv.innerHTML = "<p class='text-xs'>Error loading assessment</p>";
@@ -5842,14 +11517,10 @@ function _fetchArchivedPatientDetails() {
           fetchArchivedPatientHpDetails(patientName);
           fetchArchivedPatientDsDetails(patientName);
           // loadTasks(patientName);
-
-          // loadSutureFix(patientName, 'archived');
-          // loadUploads(patientName, 'archived');      
-          // loadPhrases('archived');  
         case 6:
-          return _context24.a(2);
+          return _context29.a(2);
       }
-    }, _callee24, null, [[1, 4]]);
+    }, _callee29, null, [[1, 4]]);
   }));
   return _fetchArchivedPatientDetails.apply(this, arguments);
 }
@@ -5857,7 +11528,7 @@ function fetchPatientList(url) {
   var isPending = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
   var token = localStorage.getItem('access_token');
   if (!token) {
-    window.location.href = '../index.html';
+    window.location.href = "./index.html";
   }
   showLoadingMessage(); // Show loading before fetching
 
@@ -5916,11 +11587,11 @@ function showLoadingMessage() {
   loadingItem.innerHTML = "<h4 class=\"navi-text text-xs\">Loading...</h4>";
   patientList.appendChild(loadingItem);
 }
-function updatePatientList(_x1, _x10) {
+function updatePatientList(_x13, _x14) {
   return _updatePatientList.apply(this, arguments);
 }
 function _updatePatientList() {
-  _updatePatientList = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee28(patientData, isPending) {
+  _updatePatientList = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee33(patientData, isPending) {
     var selectedSortValue,
       patientList,
       handleSort,
@@ -5940,12 +11611,12 @@ function _updatePatientList() {
       token,
       res,
       data,
-      _args28 = arguments,
+      _args33 = arguments,
       _t30;
-    return _regenerator().w(function (_context28) {
-      while (1) switch (_context28.p = _context28.n) {
+    return _regenerator().w(function (_context33) {
+      while (1) switch (_context33.p = _context33.n) {
         case 0:
-          selectedSortValue = _args28.length > 2 && _args28[2] !== undefined ? _args28[2] : null;
+          selectedSortValue = _args33.length > 2 && _args33[2] !== undefined ? _args33[2] : null;
           patientList = document.querySelector(".navi");
           patientList.innerHTML = "";
 
@@ -5953,15 +11624,15 @@ function _updatePatientList() {
           if (patientData.length > 0) {
             // === Sorting function ===
             handleSort = /*#__PURE__*/function () {
-              var _ref30 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee26(value) {
+              var _ref37 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee31(value) {
                 var apiUrl, requestBody, token, response, sortedData, patientsKey, _patientData, _selectedSortValue, _t27, _t28;
-                return _regenerator().w(function (_context26) {
-                  while (1) switch (_context26.p = _context26.n) {
+                return _regenerator().w(function (_context31) {
+                  while (1) switch (_context31.p = _context31.n) {
                     case 0:
                       apiUrl = "";
                       requestBody = {};
                       _t27 = value;
-                      _context26.n = _t27 === "usage_asc" ? 1 : _t27 === "usage_desc" ? 2 : _t27 === "name_asc" ? 3 : _t27 === "name_desc" ? 4 : 5;
+                      _context31.n = _t27 === "usage_asc" ? 1 : _t27 === "usage_desc" ? 2 : _t27 === "name_asc" ? 3 : _t27 === "name_desc" ? 4 : 5;
                       break;
                     case 1:
                       apiUrl = "".concat(BASE_URL, "patient-name-list");
@@ -5969,35 +11640,35 @@ function _updatePatientList() {
                         sort_by: "usage",
                         sort_order: "asc"
                       };
-                      return _context26.a(3, 6);
+                      return _context31.a(3, 6);
                     case 2:
                       apiUrl = "".concat(BASE_URL, "patient-name-list");
                       requestBody = {
                         sort_by: "usage",
                         sort_order: "desc"
                       };
-                      return _context26.a(3, 6);
+                      return _context31.a(3, 6);
                     case 3:
                       apiUrl = "".concat(BASE_URL, "patient-name-list");
                       requestBody = {
                         sort_by: "name",
                         sort_order: "asc"
                       };
-                      return _context26.a(3, 6);
+                      return _context31.a(3, 6);
                     case 4:
                       apiUrl = "".concat(BASE_URL, "patient-name-list");
                       requestBody = {
                         sort_by: "name",
                         sort_order: "desc"
                       };
-                      return _context26.a(3, 6);
+                      return _context31.a(3, 6);
                     case 5:
                       apiUrl = "".concat(BASE_URL, "patient-name-list");
                       requestBody = {};
                     case 6:
-                      _context26.p = 6;
+                      _context31.p = 6;
                       token = localStorage.getItem("access_token");
-                      _context26.n = 7;
+                      _context31.n = 7;
                       return fetch(apiUrl, {
                         method: "POST",
                         headers: {
@@ -6007,11 +11678,11 @@ function _updatePatientList() {
                         body: JSON.stringify(requestBody)
                       });
                     case 7:
-                      response = _context26.v;
-                      _context26.n = 8;
+                      response = _context31.v;
+                      _context31.n = 8;
                       return response.json();
                     case 8:
-                      sortedData = _context26.v;
+                      sortedData = _context31.v;
                       patientsKey = "patients";
                       if (sortedData[patientsKey] && sortedData[patientsKey].length > 0) {
                         _patientData = sortedData[patientsKey].map(function (patient) {
@@ -6028,20 +11699,20 @@ function _updatePatientList() {
                         }
                         updatePatientList(_patientData, isPending, _selectedSortValue);
                       }
-                      _context26.n = 10;
+                      _context31.n = 10;
                       break;
                     case 9:
-                      _context26.p = 9;
-                      _t28 = _context26.v;
+                      _context31.p = 9;
+                      _t28 = _context31.v;
                       console.error("Sorting failed:", _t28);
                       toastr.error("Failed to sort patients");
                     case 10:
-                      return _context26.a(2);
+                      return _context31.a(2);
                   }
-                }, _callee26, null, [[6, 9]]);
+                }, _callee31, null, [[6, 9]]);
               }));
-              return function handleSort(_x33) {
-                return _ref30.apply(this, arguments);
+              return function handleSort(_x37) {
+                return _ref37.apply(this, arguments);
               };
             }();
             selectAllContainer = document.createElement("div");
@@ -6187,7 +11858,7 @@ function _updatePatientList() {
               if (selectedPatients.length === 0) return;
               var token = localStorage.getItem("access_token");
               if (!token) {
-                window.location.href = '../index.html';
+                window.location.href = "./index.html";
                 return;
               }
               sweetalert2__WEBPACK_IMPORTED_MODULE_0___default().fire({
@@ -6205,13 +11876,13 @@ function _updatePatientList() {
                 },
                 buttonsStyling: false
               }).then(/*#__PURE__*/function () {
-                var _ref29 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee25(result) {
+                var _ref36 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee30(result) {
                   var response, data, failed, _t26;
-                  return _regenerator().w(function (_context25) {
-                    while (1) switch (_context25.p = _context25.n) {
+                  return _regenerator().w(function (_context30) {
+                    while (1) switch (_context30.p = _context30.n) {
                       case 0:
                         if (!result.isConfirmed) {
-                          _context25.n = 5;
+                          _context30.n = 5;
                           break;
                         }
                         sweetalert2__WEBPACK_IMPORTED_MODULE_0___default().fire({
@@ -6222,8 +11893,8 @@ function _updatePatientList() {
                             sweetalert2__WEBPACK_IMPORTED_MODULE_0___default().showLoading();
                           }
                         });
-                        _context25.p = 1;
-                        _context25.n = 2;
+                        _context30.p = 1;
+                        _context30.n = 2;
                         return fetch("".concat(BASE_URL, "delete-patient"), {
                           method: 'POST',
                           headers: {
@@ -6235,11 +11906,11 @@ function _updatePatientList() {
                           })
                         });
                       case 2:
-                        response = _context25.v;
-                        _context25.n = 3;
+                        response = _context30.v;
+                        _context30.n = 3;
                         return response.json();
                       case 3:
-                        data = _context25.v;
+                        data = _context30.v;
                         sweetalert2__WEBPACK_IMPORTED_MODULE_0___default().close();
                         if (data.results && data.results.every(function (r) {
                           return r.status === "archived";
@@ -6253,21 +11924,21 @@ function _updatePatientList() {
                           });
                           toastr.error("".concat(failed.length, " Patient(s) Failed to Archive"));
                         }
-                        _context25.n = 5;
+                        _context30.n = 5;
                         break;
                       case 4:
-                        _context25.p = 4;
-                        _t26 = _context25.v;
+                        _context30.p = 4;
+                        _t26 = _context30.v;
                         sweetalert2__WEBPACK_IMPORTED_MODULE_0___default().close();
                         console.error('API Error:', _t26);
                         toastr.error('Failed to Archive Patients');
                       case 5:
-                        return _context25.a(2);
+                        return _context30.a(2);
                     }
-                  }, _callee25, null, [[1, 4]]);
+                  }, _callee30, null, [[1, 4]]);
                 }));
-                return function (_x32) {
-                  return _ref29.apply(this, arguments);
+                return function (_x36) {
+                  return _ref36.apply(this, arguments);
                 };
               }());
             });
@@ -6283,20 +11954,20 @@ function _updatePatientList() {
           }
           patientProgressMap = {};
           patientProgressCheck = true;
-          _context28.p = 1;
+          _context33.p = 1;
           token = localStorage.getItem("access_token");
-          _context28.n = 2;
+          _context33.n = 2;
           return fetch("".concat(BASE_URL, "patient-progress-bar-redis"), {
             headers: {
               "Authorization": "Bearer ".concat(token)
             }
           });
         case 2:
-          res = _context28.v;
-          _context28.n = 3;
+          res = _context33.v;
+          _context33.n = 3;
           return res.json();
         case 3:
-          data = _context28.v;
+          data = _context33.v;
           if (Array.isArray(data) && data.length) {
             data.forEach(function (entry) {
               if (entry.patient_id) {
@@ -6306,11 +11977,11 @@ function _updatePatientList() {
           } else {
             patientProgressCheck = false;
           }
-          _context28.n = 5;
+          _context33.n = 5;
           break;
         case 4:
-          _context28.p = 4;
-          _t30 = _context28.v;
+          _context33.p = 4;
+          _t30 = _context33.v;
           console.error("Progress check failed:", _t30);
           patientProgressCheck = false;
         case 5:
@@ -6384,25 +12055,25 @@ function _updatePatientList() {
             progressWrapper.appendChild(progressLabel);
             contentContainer.appendChild(progressWrapper);
             if (patientProgressCheck === true) {
-              _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee27() {
+              _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee32() {
                 var _token3, _res, _data3, progressInfo, progressPercentage, _t29;
-                return _regenerator().w(function (_context27) {
-                  while (1) switch (_context27.p = _context27.n) {
+                return _regenerator().w(function (_context32) {
+                  while (1) switch (_context32.p = _context32.n) {
                     case 0:
-                      _context27.p = 0;
+                      _context32.p = 0;
                       _token3 = localStorage.getItem("access_token");
-                      _context27.n = 1;
+                      _context32.n = 1;
                       return fetch("".concat(BASE_URL, "patient-progress-bar-redis"), {
                         headers: {
                           "Authorization": "Bearer ".concat(_token3)
                         }
                       });
                     case 1:
-                      _res = _context27.v;
-                      _context27.n = 2;
+                      _res = _context32.v;
+                      _context32.n = 2;
                       return _res.json();
                     case 2:
-                      _data3 = _context27.v;
+                      _data3 = _context32.v;
                       if (patientProgressMap[patientId]) {
                         progressInfo = patientProgressMap[patientId];
                         if (progressInfo && progressInfo.overall_status !== "completed") {
@@ -6430,16 +12101,16 @@ function _updatePatientList() {
                           progressLabel.style.display = "none";
                         }
                       }
-                      _context27.n = 4;
+                      _context32.n = 4;
                       break;
                     case 3:
-                      _context27.p = 3;
-                      _t29 = _context27.v;
+                      _context32.p = 3;
+                      _t29 = _context32.v;
                       console.error("Progress check failed:", _t29);
                     case 4:
-                      return _context27.a(2);
+                      return _context32.a(2);
                   }
-                }, _callee27, null, [[0, 3]]);
+                }, _callee32, null, [[0, 3]]);
               }))();
             }
             // Progress bar :: END
@@ -6467,9 +12138,9 @@ function _updatePatientList() {
             patientList.appendChild(listItem);
           });
         case 6:
-          return _context28.a(2);
+          return _context33.a(2);
       }
-    }, _callee28, null, [[1, 4]]);
+    }, _callee33, null, [[1, 4]]);
   }));
   return _updatePatientList.apply(this, arguments);
 }
@@ -6495,7 +12166,7 @@ function fetchPendingPatientSegments(patientName, element) {
   selectedPatientName = patientName;
   var token = localStorage.getItem('access_token');
   if (!token) {
-    window.location.href = '../index.html';
+    window.location.href = "./index.html";
     return;
   }
   fetch("".concat(BASE_URL, "summary/pending-summary"), {
@@ -6595,26 +12266,26 @@ function displayPatientSegments() {
   insightsCard.innerHTML = content;
   insightsCard.innerHTML += generatePaginationControls();
 }
-function handleSummaryAction(_x11, _x12) {
+function handleSummaryAction(_x15, _x16) {
   return _handleSummaryAction.apply(this, arguments);
 } // Function to generate pagination controls
 function _handleSummaryAction() {
-  _handleSummaryAction = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee29(autoId, acceptStatus) {
+  _handleSummaryAction = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee34(autoId, acceptStatus) {
     var patientName, token, response, data, _t31;
-    return _regenerator().w(function (_context29) {
-      while (1) switch (_context29.p = _context29.n) {
+    return _regenerator().w(function (_context34) {
+      while (1) switch (_context34.p = _context34.n) {
         case 0:
           patientName = document.getElementById('getPatientNameFromList').value;
-          _context29.p = 1;
+          _context34.p = 1;
           token = localStorage.getItem('access_token');
           if (token) {
-            _context29.n = 2;
+            _context34.n = 2;
             break;
           }
-          window.location.href = '../index.html';
-          return _context29.a(2);
+          window.location.href = "./index.html";
+          return _context34.a(2);
         case 2:
-          _context29.n = 3;
+          _context34.n = 3;
           return fetch("".concat(BASE_URL, "summary/accept_status"), {
             method: "POST",
             headers: {
@@ -6628,11 +12299,11 @@ function _handleSummaryAction() {
             })
           });
         case 3:
-          response = _context29.v;
-          _context29.n = 4;
+          response = _context34.v;
+          _context34.n = 4;
           return response.json();
         case 4:
-          data = _context29.v;
+          data = _context34.v;
           if (response.ok) {
             toastr.success('Status Updated Successfully!');
             // Reload the page after 1 second
@@ -6643,17 +12314,17 @@ function _handleSummaryAction() {
             console.error("Error:", data.error);
             toastr.error("Error: ".concat(data.error));
           }
-          _context29.n = 6;
+          _context34.n = 6;
           break;
         case 5:
-          _context29.p = 5;
-          _t31 = _context29.v;
+          _context34.p = 5;
+          _t31 = _context34.v;
           console.error("Request failed:", _t31);
           toastr.error("An error occurred while updating the summary.");
         case 6:
-          return _context29.a(2);
+          return _context34.a(2);
       }
-    }, _callee29, null, [[1, 5]]);
+    }, _callee34, null, [[1, 5]]);
   }));
   return _handleSummaryAction.apply(this, arguments);
 }
@@ -6701,16 +12372,16 @@ var recordingStates = {};
 
 // Process upload queue to ensure sequential uploads
 var processUploadQueue = /*#__PURE__*/function () {
-  var _ref6 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee7(state) {
-    var chunk, formData, token, _t6;
-    return _regenerator().w(function (_context7) {
-      while (1) switch (_context7.p = _context7.n) {
+  var _ref11 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee10(state) {
+    var chunk, formData, token, _t1;
+    return _regenerator().w(function (_context10) {
+      while (1) switch (_context10.p = _context10.n) {
         case 0:
           if (!state.isUploading) {
-            _context7.n = 1;
+            _context10.n = 1;
             break;
           }
-          return _context7.a(2, new Promise(function (resolve) {
+          return _context10.a(2, new Promise(function (resolve) {
             var check = setInterval(function () {
               if (!state.isUploading) {
                 clearInterval(check);
@@ -6720,10 +12391,10 @@ var processUploadQueue = /*#__PURE__*/function () {
           }));
         case 1:
           if (!(state.uploadQueue.length === 0)) {
-            _context7.n = 2;
+            _context10.n = 2;
             break;
           }
-          return _context7.a(2);
+          return _context10.a(2);
         case 2:
           state.isUploading = true;
 
@@ -6733,16 +12404,16 @@ var processUploadQueue = /*#__PURE__*/function () {
           });
         case 3:
           if (!(state.uploadQueue.length > 0)) {
-            _context7.n = 8;
+            _context10.n = 8;
             break;
           }
           chunk = state.uploadQueue.shift();
           formData = new FormData();
           formData.append('audio_data', chunk.blob, "chunk_".concat(chunk.sequence, ".pcm"));
           formData.append('session_id', chunk.sessionId);
-          _context7.p = 4;
+          _context10.p = 4;
           token = localStorage.getItem('access_token');
-          _context7.n = 5;
+          _context10.n = 5;
           return fetch("".concat(BASE_URL_KINESIS, "upload"), {
             method: 'POST',
             headers: {
@@ -6752,26 +12423,26 @@ var processUploadQueue = /*#__PURE__*/function () {
           });
         case 5:
           console.log("\u2705 Uploaded chunk ".concat(chunk.sequence, " successfully"));
-          _context7.n = 7;
+          _context10.n = 7;
           break;
         case 6:
-          _context7.p = 6;
-          _t6 = _context7.v;
-          console.error("\u274C Error uploading chunk ".concat(chunk.sequence, ":"), _t6);
+          _context10.p = 6;
+          _t1 = _context10.v;
+          console.error("\u274C Error uploading chunk ".concat(chunk.sequence, ":"), _t1);
           state.uploadQueue.unshift(chunk);
-          return _context7.a(3, 8);
+          return _context10.a(3, 8);
         case 7:
-          _context7.n = 3;
+          _context10.n = 3;
           break;
         case 8:
           state.isUploading = false;
         case 9:
-          return _context7.a(2);
+          return _context10.a(2);
       }
-    }, _callee7, null, [[4, 6]]);
+    }, _callee10, null, [[4, 6]]);
   }));
-  return function processUploadQueue(_x13) {
-    return _ref6.apply(this, arguments);
+  return function processUploadQueue(_x17) {
+    return _ref11.apply(this, arguments);
   };
 }();
 function floatTo16BitPCM(float32Array) {
@@ -6785,22 +12456,22 @@ function floatTo16BitPCM(float32Array) {
   return buffer;
 }
 var stopCurrentRecording = /*#__PURE__*/function () {
-  var _ref7 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee8(patientId) {
-    var state, flat, pcm16, blob, formData, _token, token, response, sendResponse, stateSession, jobResponse, data, pauseIcon, renderPatientRecording, renderWaveTimer, _t7, _t8, _t9, _t0;
-    return _regenerator().w(function (_context8) {
-      while (1) switch (_context8.p = _context8.n) {
+  var _ref12 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee11(patientId) {
+    var state, flat, pcm16, blob, formData, _token, token, response, sendResponse, stateSession, jobResponse, data, pauseIcon, renderPatientRecording, renderWaveTimer, _t10, _t11, _t12, _t13;
+    return _regenerator().w(function (_context11) {
+      while (1) switch (_context11.p = _context11.n) {
         case 0:
           state = recordingStates[patientId];
           console.log('Current recording state for', patientId, state);
           console.log('pcmchunk recording state for', patientId, state.pcmChunks);
           if (state) {
-            _context8.n = 1;
+            _context11.n = 1;
             break;
           }
-          return _context8.a(2);
+          return _context11.a(2);
         case 1:
           console.log('🛑 Stopping PCM16 recording for:', patientId);
-          _context8.p = 2;
+          _context11.p = 2;
           // Stop periodic PCM uploads (20s chunks)
           state.isStopping = true;
           if (state.chunkTimer) clearInterval(state.chunkTimer);
@@ -6810,7 +12481,7 @@ var stopCurrentRecording = /*#__PURE__*/function () {
 
           // ✅ Upload the final PCM chunk (if any)
           if (!(state.pcmChunks && state.pcmChunks.length > 0)) {
-            _context8.n = 7;
+            _context11.n = 7;
             break;
           }
           console.log('📤 Uploading final PCM16 chunk...');
@@ -6822,9 +12493,9 @@ var stopCurrentRecording = /*#__PURE__*/function () {
           formData = new FormData();
           formData.append('audio_data', blob, 'final_recording.pcm');
           formData.append('session_id', state.sessionId);
-          _context8.p = 3;
+          _context11.p = 3;
           _token = localStorage.getItem('access_token');
-          _context8.n = 4;
+          _context11.n = 4;
           return fetch("".concat(BASE_URL_KINESIS, "upload"), {
             method: 'POST',
             headers: {
@@ -6834,12 +12505,12 @@ var stopCurrentRecording = /*#__PURE__*/function () {
           });
         case 4:
           console.log('✅ Final PCM chunk uploaded successfully');
-          _context8.n = 6;
+          _context11.n = 6;
           break;
         case 5:
-          _context8.p = 5;
-          _t7 = _context8.v;
-          console.error('❌ Error uploading final PCM chunk:', _t7);
+          _context11.p = 5;
+          _t10 = _context11.v;
+          console.error('❌ Error uploading final PCM chunk:', _t10);
         case 6:
           // Clear PCM chunks from memory
           state.pcmChunks = [];
@@ -6869,21 +12540,21 @@ var stopCurrentRecording = /*#__PURE__*/function () {
 
           // If we used an AudioContext, close it
           if (!(state.audioContext && state.audioContext.state !== 'closed')) {
-            _context8.n = 8;
+            _context11.n = 8;
             break;
           }
-          _context8.n = 8;
+          _context11.n = 8;
           return state.audioContext.close();
         case 8:
           // ✅ Send stop command to backend
           token = localStorage.getItem('access_token');
           if (!(token && state.sessionId)) {
-            _context8.n = 18;
+            _context11.n = 18;
             break;
           }
-          _context8.p = 9;
+          _context11.p = 9;
           console.log('📡 Sending stop command...');
-          _context8.n = 10;
+          _context11.n = 10;
           return fetch("".concat(BASE_URL_KINESIS, "send-command"), {
             method: 'POST',
             headers: {
@@ -6896,17 +12567,17 @@ var stopCurrentRecording = /*#__PURE__*/function () {
             })
           });
         case 10:
-          response = _context8.v;
+          response = _context11.v;
           if (!response.ok) {
-            _context8.n = 14;
+            _context11.n = 14;
             break;
           }
-          _context8.n = 11;
+          _context11.n = 11;
           return response.json();
         case 11:
-          sendResponse = _context8.v;
+          sendResponse = _context11.v;
           stateSession = sendResponse.job_id;
-          _context8.n = 12;
+          _context11.n = 12;
           return fetch("".concat(BASE_URL_KINESIS, "job-status/").concat(stateSession), {
             method: 'GET',
             headers: {
@@ -6915,11 +12586,11 @@ var stopCurrentRecording = /*#__PURE__*/function () {
             }
           });
         case 12:
-          jobResponse = _context8.v;
-          _context8.n = 13;
+          jobResponse = _context11.v;
+          _context11.n = 13;
           return jobResponse.json();
         case 13:
-          data = _context8.v;
+          data = _context11.v;
           if (jobResponse.ok && data.status !== 'completed') {
             setTimeout(function () {
               fetch("".concat(BASE_URL_KINESIS, "job-status/").concat(stateSession), {
@@ -6931,21 +12602,21 @@ var stopCurrentRecording = /*#__PURE__*/function () {
               });
             }, 30000);
           }
-          _context8.n = 16;
+          _context11.n = 16;
           break;
         case 14:
-          _t8 = console;
-          _context8.n = 15;
+          _t11 = console;
+          _context11.n = 15;
           return response.text();
         case 15:
-          _t8.error.call(_t8, '❌ Stop command failed:', _context8.v);
+          _t11.error.call(_t11, '❌ Stop command failed:', _context11.v);
         case 16:
-          _context8.n = 18;
+          _context11.n = 18;
           break;
         case 17:
-          _context8.p = 17;
-          _t9 = _context8.v;
-          console.error('❌ Failed to call send-command:', _t9);
+          _context11.p = 17;
+          _t12 = _context11.v;
+          console.error('❌ Failed to call send-command:', _t12);
         case 18:
           // ✅ UI updates
           pauseIcon = document.querySelector(".pause-icon.".concat(patientId));
@@ -6978,17 +12649,17 @@ var stopCurrentRecording = /*#__PURE__*/function () {
           if (state.uploadQueue) state.uploadQueue = [];
           if (state.isUploading !== undefined) state.isUploading = false;
           console.log('✅ Recording stopped and cleaned up.');
-          return _context8.a(2, true);
+          return _context11.a(2, true);
         case 19:
-          _context8.p = 19;
-          _t0 = _context8.v;
-          console.error("❌ Error stopping PCM16 recording:", _t0);
-          return _context8.a(2, false);
+          _context11.p = 19;
+          _t13 = _context11.v;
+          console.error("❌ Error stopping PCM16 recording:", _t13);
+          return _context11.a(2, false);
       }
-    }, _callee8, null, [[9, 17], [3, 5], [2, 19]]);
+    }, _callee11, null, [[9, 17], [3, 5], [2, 19]]);
   }));
-  return function stopCurrentRecording(_x14) {
-    return _ref7.apply(this, arguments);
+  return function stopCurrentRecording(_x18) {
+    return _ref12.apply(this, arguments);
   };
 }();
 function mergeBuffersFinal(chunks) {
@@ -7013,28 +12684,28 @@ function mergeBuffersFinal(chunks) {
   return result;
 }
 var callPauseBackendAPI = /*#__PURE__*/function () {
-  var _ref8 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee9(endpoint) {
+  var _ref13 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee12(endpoint) {
     var method,
       body,
       token,
       response,
-      _args9 = arguments,
-      _t1;
-    return _regenerator().w(function (_context9) {
-      while (1) switch (_context9.p = _context9.n) {
+      _args12 = arguments,
+      _t14;
+    return _regenerator().w(function (_context12) {
+      while (1) switch (_context12.p = _context12.n) {
         case 0:
-          method = _args9.length > 1 && _args9[1] !== undefined ? _args9[1] : 'POST';
-          body = _args9.length > 2 && _args9[2] !== undefined ? _args9[2] : null;
+          method = _args12.length > 1 && _args12[1] !== undefined ? _args12[1] : 'POST';
+          body = _args12.length > 2 && _args12[2] !== undefined ? _args12[2] : null;
           token = localStorage.getItem('access_token');
           if (token) {
-            _context9.n = 1;
+            _context12.n = 1;
             break;
           }
-          window.location.href = '../index.html';
-          return _context9.a(2, null);
+          window.location.href = "./index.html";
+          return _context12.a(2, null);
         case 1:
-          _context9.p = 1;
-          _context9.n = 2;
+          _context12.p = 1;
+          _context12.n = 2;
           return fetch("".concat(BASE_URL_KINESIS).concat(endpoint), {
             method: method,
             headers: {
@@ -7044,38 +12715,38 @@ var callPauseBackendAPI = /*#__PURE__*/function () {
             body: body ? JSON.stringify(body) : null
           });
         case 2:
-          response = _context9.v;
-          _context9.n = 3;
+          response = _context12.v;
+          _context12.n = 3;
           return response.json();
         case 3:
-          return _context9.a(2, _context9.v);
+          return _context12.a(2, _context12.v);
         case 4:
-          _context9.p = 4;
-          _t1 = _context9.v;
-          console.error("API call failed: ".concat(_t1));
+          _context12.p = 4;
+          _t14 = _context12.v;
+          console.error("API call failed: ".concat(_t14));
           toastr.error("Failed to ".concat(method, " ").concat(endpoint));
-          return _context9.a(2, null);
+          return _context12.a(2, null);
       }
-    }, _callee9, null, [[1, 4]]);
+    }, _callee12, null, [[1, 4]]);
   }));
-  return function callPauseBackendAPI(_x15) {
-    return _ref8.apply(this, arguments);
+  return function callPauseBackendAPI(_x19) {
+    return _ref13.apply(this, arguments);
   };
 }();
 var pauseCurrentRecording = /*#__PURE__*/function () {
-  var _ref9 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee0(patientId, currentPatientName) {
-    var state, flat, pcm16, blob, pauseIcon, _t10;
-    return _regenerator().w(function (_context0) {
-      while (1) switch (_context0.p = _context0.n) {
+  var _ref14 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee13(patientId, currentPatientName) {
+    var state, flat, pcm16, blob, pauseIcon, _t15;
+    return _regenerator().w(function (_context13) {
+      while (1) switch (_context13.p = _context13.n) {
         case 0:
           state = recordingStates[patientId];
           if (!(!state || !state.stream)) {
-            _context0.n = 1;
+            _context13.n = 1;
             break;
           }
-          return _context0.a(2);
+          return _context13.a(2);
         case 1:
-          _context0.p = 1;
+          _context13.p = 1;
           // Stop chunk timer
           if (state.chunkTimer) {
             clearInterval(state.chunkTimer);
@@ -7084,7 +12755,7 @@ var pauseCurrentRecording = /*#__PURE__*/function () {
 
           // Upload remaining chunks
           if (!(state.pcmChunks && state.pcmChunks.length > 0)) {
-            _context0.n = 2;
+            _context13.n = 2;
             break;
           }
           flat = mergeBuffersFinal(state.pcmChunks);
@@ -7099,14 +12770,14 @@ var pauseCurrentRecording = /*#__PURE__*/function () {
             timestamp: Date.now()
           });
           state.pcmChunks = [];
-          _context0.n = 2;
+          _context13.n = 2;
           return processUploadQueue(state);
         case 2:
           if (!(state.audioContext && state.audioContext.state === 'running')) {
-            _context0.n = 3;
+            _context13.n = 3;
             break;
           }
-          _context0.n = 3;
+          _context13.n = 3;
           return state.audioContext.suspend();
         case 3:
           // Clear UI timer
@@ -7114,7 +12785,7 @@ var pauseCurrentRecording = /*#__PURE__*/function () {
 
           // Send pause command to backend
           state.lastPauseTime = new Date();
-          _context0.n = 4;
+          _context13.n = 4;
           return callPauseBackendAPI('send-command', 'POST', {
             command: 'pause',
             session_id: state.sessionId,
@@ -7127,19 +12798,19 @@ var pauseCurrentRecording = /*#__PURE__*/function () {
           // Update pause icon in patient list
           pauseIcon = document.querySelector(".pause-icon.".concat(patientId));
           if (pauseIcon) togglePauseIcon(patientId, true);
-          _context0.n = 6;
+          _context13.n = 6;
           break;
         case 5:
-          _context0.p = 5;
-          _t10 = _context0.v;
-          console.error("Pause error:", _t10);
+          _context13.p = 5;
+          _t15 = _context13.v;
+          console.error("Pause error:", _t15);
         case 6:
-          return _context0.a(2);
+          return _context13.a(2);
       }
-    }, _callee0, null, [[1, 5]]);
+    }, _callee13, null, [[1, 5]]);
   }));
-  return function pauseCurrentRecording(_x16, _x17) {
-    return _ref9.apply(this, arguments);
+  return function pauseCurrentRecording(_x20, _x21) {
+    return _ref14.apply(this, arguments);
   };
 }();
 function getRecordingState(patientId) {
@@ -7370,21 +13041,21 @@ function addRecIcon(patientName, patientId) {
 
     // Check for existing session
     var checkExistingSession = /*#__PURE__*/function () {
-      var _ref0 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee1() {
-        var token, response, data, duration, total_seconds, mins, secs, _mins, _secs, _t11;
-        return _regenerator().w(function (_context1) {
-          while (1) switch (_context1.p = _context1.n) {
+      var _ref15 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee14() {
+        var token, response, data, duration, total_seconds, mins, secs, _mins, _secs, _t16;
+        return _regenerator().w(function (_context14) {
+          while (1) switch (_context14.p = _context14.n) {
             case 0:
-              _context1.p = 0;
+              _context14.p = 0;
               token = localStorage.getItem('access_token');
               if (token) {
-                _context1.n = 1;
+                _context14.n = 1;
                 break;
               }
-              window.location.href = '../index.html';
-              return _context1.a(2);
+              window.location.href = "./index.html";
+              return _context14.a(2);
             case 1:
-              _context1.n = 2;
+              _context14.n = 2;
               return fetch("".concat(BASE_URL_KINESIS, "check-session"), {
                 method: 'POST',
                 headers: {
@@ -7396,15 +13067,15 @@ function addRecIcon(patientName, patientId) {
                 })
               });
             case 2:
-              response = _context1.v;
+              response = _context14.v;
               if (!response.ok) {
-                _context1.n = 4;
+                _context14.n = 4;
                 break;
               }
-              _context1.n = 3;
+              _context14.n = 3;
               return response.json();
             case 3:
-              data = _context1.v;
+              data = _context14.v;
               if (data.session_id) {
                 state.sessionId = data.session_id;
                 state.pausedDuration = data.pause_duration || 0;
@@ -7432,47 +13103,47 @@ function addRecIcon(patientName, patientId) {
                 }
               }
             case 4:
-              _context1.n = 6;
+              _context14.n = 6;
               break;
             case 5:
-              _context1.p = 5;
-              _t11 = _context1.v;
-              console.error('Error checking session:', _t11);
+              _context14.p = 5;
+              _t16 = _context14.v;
+              console.error('Error checking session:', _t16);
             case 6:
-              return _context1.a(2);
+              return _context14.a(2);
           }
-        }, _callee1, null, [[0, 5]]);
+        }, _callee14, null, [[0, 5]]);
       }));
       return function checkExistingSession() {
-        return _ref0.apply(this, arguments);
+        return _ref15.apply(this, arguments);
       };
     }();
     checkExistingSession();
 
     // API helper
     var callBackendAPI = /*#__PURE__*/function () {
-      var _ref1 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee10(endpoint) {
+      var _ref16 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee15(endpoint) {
         var method,
           body,
           token,
           response,
-          _args10 = arguments,
-          _t12;
-        return _regenerator().w(function (_context10) {
-          while (1) switch (_context10.p = _context10.n) {
+          _args15 = arguments,
+          _t17;
+        return _regenerator().w(function (_context15) {
+          while (1) switch (_context15.p = _context15.n) {
             case 0:
-              method = _args10.length > 1 && _args10[1] !== undefined ? _args10[1] : 'POST';
-              body = _args10.length > 2 && _args10[2] !== undefined ? _args10[2] : null;
+              method = _args15.length > 1 && _args15[1] !== undefined ? _args15[1] : 'POST';
+              body = _args15.length > 2 && _args15[2] !== undefined ? _args15[2] : null;
               token = localStorage.getItem('access_token');
               if (token) {
-                _context10.n = 1;
+                _context15.n = 1;
                 break;
               }
-              window.location.href = '../index.html';
-              return _context10.a(2, null);
+              window.location.href = "./index.html";
+              return _context15.a(2, null);
             case 1:
-              _context10.p = 1;
-              _context10.n = 2;
+              _context15.p = 1;
+              _context15.n = 2;
               return fetch("".concat(BASE_URL_KINESIS).concat(endpoint), {
                 method: method,
                 headers: {
@@ -7482,41 +13153,41 @@ function addRecIcon(patientName, patientId) {
                 body: body ? JSON.stringify(body) : null
               });
             case 2:
-              response = _context10.v;
-              _context10.n = 3;
+              response = _context15.v;
+              _context15.n = 3;
               return response.json();
             case 3:
-              return _context10.a(2, _context10.v);
+              return _context15.a(2, _context15.v);
             case 4:
-              _context10.p = 4;
-              _t12 = _context10.v;
-              console.error("API call failed: ".concat(_t12));
+              _context15.p = 4;
+              _t17 = _context15.v;
+              console.error("API call failed: ".concat(_t17));
               toastr.error("Failed to ".concat(method, " ").concat(endpoint));
-              return _context10.a(2, null);
+              return _context15.a(2, null);
           }
-        }, _callee10, null, [[1, 4]]);
+        }, _callee15, null, [[1, 4]]);
       }));
-      return function callBackendAPI(_x18) {
-        return _ref1.apply(this, arguments);
+      return function callBackendAPI(_x22) {
+        return _ref16.apply(this, arguments);
       };
     }();
 
     // Start recording
-    micWrapper.addEventListener('click', /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee13() {
-      var uniqueId, _floatTo16BitPCM, mergeBuffers, uploadPCMChunk, startResponse, _wave, container, audioCtx, source, processor, _t14;
-      return _regenerator().w(function (_context13) {
-        while (1) switch (_context13.p = _context13.n) {
+    micWrapper.addEventListener('click', /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee18() {
+      var uniqueId, _floatTo16BitPCM, mergeBuffers, uploadPCMChunk, startResponse, _wave, container, audioCtx, source, processor, _t19;
+      return _regenerator().w(function (_context18) {
+        while (1) switch (_context18.p = _context18.n) {
           case 0:
             if (!state.isRecording) {
-              _context13.n = 1;
+              _context18.n = 1;
               break;
             }
             console.warn('Recording already started');
-            return _context13.a(2);
+            return _context18.a(2);
           case 1:
             state.isRecording = true; // mark recording in progress
             uniqueId = generateUniqueId();
-            _context13.p = 2;
+            _context18.p = 2;
             _floatTo16BitPCM = function _floatTo16BitPCM(float32Array) {
               var buffer = new ArrayBuffer(float32Array.length * 2);
               var view = new DataView(buffer);
@@ -7549,16 +13220,16 @@ function addRecIcon(patientName, patientId) {
               return result;
             };
             uploadPCMChunk = /*#__PURE__*/function () {
-              var _ref11 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee11() {
-                var flat, pcm16, blob, formData, token, _t13;
-                return _regenerator().w(function (_context11) {
-                  while (1) switch (_context11.p = _context11.n) {
+              var _ref18 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee16() {
+                var flat, pcm16, blob, formData, token, _t18;
+                return _regenerator().w(function (_context16) {
+                  while (1) switch (_context16.p = _context16.n) {
                     case 0:
                       if (!(state.pcmChunks.length === 0)) {
-                        _context11.n = 1;
+                        _context16.n = 1;
                         break;
                       }
-                      return _context11.a(2);
+                      return _context16.a(2);
                     case 1:
                       flat = mergeBuffers(state.pcmChunks);
                       pcm16 = _floatTo16BitPCM(flat);
@@ -7569,10 +13240,10 @@ function addRecIcon(patientName, patientId) {
                       formData = new FormData();
                       formData.append('audio_data', blob, 'recording.pcm');
                       formData.append('session_id', state.sessionId);
-                      _context11.p = 2;
+                      _context16.p = 2;
                       console.log("micwrappeer pause");
                       token = localStorage.getItem('access_token');
-                      _context11.n = 3;
+                      _context16.n = 3;
                       return fetch("".concat(BASE_URL_KINESIS, "upload"), {
                         method: 'POST',
                         headers: {
@@ -7582,31 +13253,31 @@ function addRecIcon(patientName, patientId) {
                       });
                     case 3:
                       console.log('✅ Uploaded PCM chunk of', blob.size, 'bytes');
-                      _context11.n = 5;
+                      _context16.n = 5;
                       break;
                     case 4:
-                      _context11.p = 4;
-                      _t13 = _context11.v;
-                      console.error('Error uploading PCM chunk:', _t13);
+                      _context16.p = 4;
+                      _t18 = _context16.v;
+                      console.error('Error uploading PCM chunk:', _t18);
                     case 5:
-                      return _context11.a(2);
+                      return _context16.a(2);
                   }
-                }, _callee11, null, [[2, 4]]);
+                }, _callee16, null, [[2, 4]]);
               }));
               return function uploadPCMChunk() {
-                return _ref11.apply(this, arguments);
+                return _ref18.apply(this, arguments);
               };
             }();
-            _context13.n = 3;
+            _context18.n = 3;
             return callBackendAPI('start', 'POST', {
               patient_id: patientId,
               patient_name: patientName,
               recording_id: uniqueId
             });
           case 3:
-            startResponse = _context13.v;
+            startResponse = _context18.v;
             if (!(!startResponse || !startResponse.session_id)) {
-              _context13.n = 4;
+              _context18.n = 4;
               break;
             }
             throw new Error('Failed to start recording session');
@@ -7623,12 +13294,12 @@ function addRecIcon(patientName, patientId) {
             if (state.chunkTimer) clearInterval(state.chunkTimer); // safety
 
             // ✅ PCM16 capture replacement for MediaRecorder
-            _context13.n = 5;
+            _context18.n = 5;
             return navigator.mediaDevices.getUserMedia({
               audio: true
             });
           case 5:
-            state.stream = _context13.v;
+            state.stream = _context18.v;
             audioCtx = new AudioContext({
               sampleRate: 16000
             });
@@ -7653,13 +13324,13 @@ function addRecIcon(patientName, patientId) {
             // Upload every 20 seconds with sequencing
             state.isStopping = false;
             if (state.chunkTimer) clearInterval(state.chunkTimer);
-            state.chunkTimer = setInterval(/*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee12() {
+            state.chunkTimer = setInterval(/*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee17() {
               var flat, pcm16, blob;
-              return _regenerator().w(function (_context12) {
-                while (1) switch (_context12.n) {
+              return _regenerator().w(function (_context17) {
+                while (1) switch (_context17.n) {
                   case 0:
                     if (!(!state.isStopping && !state.isPaused && state.pcmChunks.length > 0)) {
-                      _context12.n = 1;
+                      _context17.n = 1;
                       break;
                     }
                     flat = mergeBuffers(state.pcmChunks);
@@ -7674,12 +13345,12 @@ function addRecIcon(patientName, patientId) {
                       timestamp: Date.now()
                     });
                     state.pcmChunks = [];
-                    _context12.n = 1;
+                    _context17.n = 1;
                     return processUploadQueue(state);
                   case 1:
-                    return _context12.a(2);
+                    return _context17.a(2);
                 }
-              }, _callee12);
+              }, _callee17);
             })), 20000);
             micWrapper.style.display = 'none';
             pauseWrapper.style.display = 'inline-flex';
@@ -7693,47 +13364,47 @@ function addRecIcon(patientName, patientId) {
             state.isPaused = false;
             state.isRecording = false;
             updateMicrophoneIcon(true);
-            _context13.n = 7;
+            _context18.n = 7;
             break;
           case 6:
-            _context13.p = 6;
-            _t14 = _context13.v;
-            console.error("Error starting recording:", _t14);
-            if (_t14.name === 'NotAllowedError') {
+            _context18.p = 6;
+            _t19 = _context18.v;
+            console.error("Error starting recording:", _t19);
+            if (_t19.name === 'NotAllowedError') {
               toastr.error("Microphone access is blocked. Please allow mic permissions in your browser settings.");
-            } else if (_t14.name === 'NotFoundError') {
+            } else if (_t19.name === 'NotFoundError') {
               toastr.error("No microphone detected. Please connect a mic and try again.");
             } else {
-              toastr.error("Failed to start recording: " + _t14.message);
+              toastr.error("Failed to start recording: " + _t19.message);
             }
             resetUI(state);
             state.isRecording = false;
           case 7:
-            return _context13.a(2);
+            return _context18.a(2);
         }
-      }, _callee13, null, [[2, 6]]);
+      }, _callee18, null, [[2, 6]]);
     })));
 
     // Pause recording - FIXED
-    pauseWrapper.addEventListener('click', /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee14() {
-      var flat, pcm16, blob, pauseResponse, pauseIcon, _t15;
-      return _regenerator().w(function (_context14) {
-        while (1) switch (_context14.p = _context14.n) {
+    pauseWrapper.addEventListener('click', /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee19() {
+      var flat, pcm16, blob, pauseResponse, pauseIcon, _t20;
+      return _regenerator().w(function (_context19) {
+        while (1) switch (_context19.p = _context19.n) {
           case 0:
             if (!state.isProcessing) {
-              _context14.n = 1;
+              _context19.n = 1;
               break;
             }
-            return _context14.a(2);
+            return _context19.a(2);
           case 1:
             state.isProcessing = true;
 
             // If currently recording, pause it
             if (!(state.stream && !state.isPaused)) {
-              _context14.n = 9;
+              _context19.n = 9;
               break;
             }
-            _context14.p = 2;
+            _context19.p = 2;
             console.log('⏸️ Pausing PCM16 recording for:', patientId);
 
             // ✅ CRITICAL: Stop chunk timer first to prevent duplicate uploads
@@ -7744,14 +13415,14 @@ function addRecIcon(patientName, patientId) {
 
             // Pause the AudioContext recording
             if (!(state.audioContext && state.audioContext.state === 'running')) {
-              _context14.n = 3;
+              _context19.n = 3;
               break;
             }
-            _context14.n = 3;
+            _context19.n = 3;
             return state.audioContext.suspend();
           case 3:
             if (!(state.pcmChunks && state.pcmChunks.length > 0)) {
-              _context14.n = 4;
+              _context19.n = 4;
               break;
             }
             flat = mergeBuffersFinal(state.pcmChunks);
@@ -7767,7 +13438,7 @@ function addRecIcon(patientName, patientId) {
             });
             state.pcmChunks = [];
             // Don't await - let it upload in background
-            _context14.n = 4;
+            _context19.n = 4;
             return processUploadQueue(state);
           case 4:
             state.lastPauseTime = new Date();
@@ -7775,71 +13446,71 @@ function addRecIcon(patientName, patientId) {
             clearInterval(state.timerInterval);
 
             // Notify backend and wait for response
-            _context14.n = 5;
+            _context19.n = 5;
             return callBackendAPI('send-command', 'POST', {
               command: 'pause',
               session_id: state.sessionId,
               pause_time: state.lastPauseTime.toISOString()
             });
           case 5:
-            pauseResponse = _context14.v;
+            pauseResponse = _context19.v;
             pauseIcon = document.querySelector(".pause-icon.".concat(patientId));
             if (pauseIcon) {
               togglePauseIcon(patientId, true);
             }
             if (!(pauseResponse && pauseResponse.status === 'pause acknowledged')) {
-              _context14.n = 6;
+              _context19.n = 6;
               break;
             }
             pauseWrapper.style.display = 'none';
             playWrapper.style.display = 'inline-flex';
             state.isPaused = true;
             state.isProcessing = false;
-            _context14.n = 7;
+            _context19.n = 7;
             break;
           case 6:
             throw new Error('Pause not acknowledged by server');
           case 7:
-            _context14.n = 9;
+            _context19.n = 9;
             break;
           case 8:
-            _context14.p = 8;
-            _t15 = _context14.v;
-            console.error("Pause error:", _t15);
+            _context19.p = 8;
+            _t20 = _context19.v;
+            console.error("Pause error:", _t20);
             toastr.error("Failed to pause recording");
             state.isProcessing = false;
           case 9:
-            return _context14.a(2);
+            return _context19.a(2);
         }
-      }, _callee14, null, [[2, 8]]);
+      }, _callee19, null, [[2, 8]]);
     })));
 
     // Resume recording - FIXED
-    playWrapper.addEventListener('click', /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee17() {
-      var uploadPCMChunk, _uploadPCMChunk, _resumeResponse, token, response, data, audioCtx, source, processor, timerElements, current_timer, crnt_timer, resumeResponse, _t16;
-      return _regenerator().w(function (_context17) {
-        while (1) switch (_context17.p = _context17.n) {
+    playWrapper.addEventListener('click', /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee22() {
+      var uploadPCMChunk, _uploadPCMChunk, _resumeResponse, token, response, data, audioCtx, source, processor, timerElements, current_timer, crnt_timer, resumeResponse, _t21;
+      return _regenerator().w(function (_context22) {
+        while (1) switch (_context22.p = _context22.n) {
           case 0:
             if (!state.isProcessingResume) {
-              _context17.n = 1;
+              _context22.n = 1;
               break;
             }
-            return _context17.a(2);
+            return _context22.a(2);
           case 1:
             state.isProcessingResume = true;
-            _context17.p = 2;
+            _context22.p = 2;
             // Setup chunk upload timer
             uploadPCMChunk = /*#__PURE__*/function () {
-              var _ref16 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee16() {
+              var _ref23 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee21() {
                 var flat, pcm16, blob;
-                return _regenerator().w(function (_context16) {
-                  while (1) switch (_context16.n) {
+                return _regenerator().w(function (_context21) {
+                  while (1) switch (_context21.n) {
                     case 0:
                       if (!(state.pcmChunks.length === 0 || state.isPaused)) {
-                        _context16.n = 1;
+                        _context21.n = 1;
                         break;
                       }
-                      return _context16.a(2);
+                      return _context21.a(2);
                     case 1:
                       flat = mergeBuffersFinal(state.pcmChunks);
                       pcm16 = floatTo16BitPCM(flat);
@@ -7853,22 +13524,22 @@ function addRecIcon(patientName, patientId) {
                         timestamp: Date.now()
                       });
                       state.pcmChunks = [];
-                      _context16.n = 2;
+                      _context21.n = 2;
                       return processUploadQueue(state);
                     case 2:
-                      return _context16.a(2);
+                      return _context21.a(2);
                   }
-                }, _callee16);
+                }, _callee21);
               }));
               return function uploadPCMChunk() {
-                return _ref16.apply(this, arguments);
+                return _ref23.apply(this, arguments);
               };
             }();
             if (!(state.isPaused && state.audioContext)) {
-              _context17.n = 7;
+              _context22.n = 7;
               break;
             }
-            _context17.n = 3;
+            _context22.n = 3;
             return state.audioContext.resume();
           case 3:
             state.lastResumeTime = new Date();
@@ -7876,16 +13547,16 @@ function addRecIcon(patientName, patientId) {
             // ✅ CRITICAL: Restart chunk timer on resume
             if (!state.chunkTimer) {
               _uploadPCMChunk = /*#__PURE__*/function () {
-                var _ref15 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee15() {
+                var _ref22 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee20() {
                   var flat, pcm16, blob;
-                  return _regenerator().w(function (_context15) {
-                    while (1) switch (_context15.n) {
+                  return _regenerator().w(function (_context20) {
+                    while (1) switch (_context20.n) {
                       case 0:
                         if (!(state.pcmChunks.length === 0 || state.isPaused)) {
-                          _context15.n = 1;
+                          _context20.n = 1;
                           break;
                         }
-                        return _context15.a(2);
+                        return _context20.a(2);
                       case 1:
                         flat = mergeBuffersFinal(state.pcmChunks);
                         pcm16 = floatTo16BitPCM(flat);
@@ -7899,15 +13570,15 @@ function addRecIcon(patientName, patientId) {
                           timestamp: Date.now()
                         });
                         state.pcmChunks = [];
-                        _context15.n = 2;
+                        _context20.n = 2;
                         return processUploadQueue(state);
                       case 2:
-                        return _context15.a(2);
+                        return _context20.a(2);
                     }
-                  }, _callee15);
+                  }, _callee20);
                 }));
                 return function _uploadPCMChunk() {
-                  return _ref15.apply(this, arguments);
+                  return _ref22.apply(this, arguments);
                 };
               }();
               state.chunkTimer = setInterval(function () {
@@ -7918,32 +13589,32 @@ function addRecIcon(patientName, patientId) {
             state.timerInterval = setInterval(updateTimer, 1000);
 
             // Notify backend
-            _context17.n = 4;
+            _context22.n = 4;
             return callBackendAPI('send-command', 'POST', {
               command: 'resume',
               session_id: state.sessionId,
               resume_time: state.lastResumeTime.toISOString()
             });
           case 4:
-            _resumeResponse = _context17.v;
+            _resumeResponse = _context22.v;
             if (!(_resumeResponse && _resumeResponse.status === 'resume acknowledged')) {
-              _context17.n = 5;
+              _context22.n = 5;
               break;
             }
             playWrapper.style.display = 'none';
             pauseWrapper.style.display = 'inline-flex';
             state.isPaused = false;
             state.isProcessingResume = false;
-            _context17.n = 6;
+            _context22.n = 6;
             break;
           case 5:
             throw new Error('Resume not acknowledged by server');
           case 6:
-            return _context17.a(2);
+            return _context22.a(2);
           case 7:
             // === CASE 2: Start new AudioContext PCM16 recording ===
             token = localStorage.getItem('access_token');
-            _context17.n = 8;
+            _context22.n = 8;
             return fetch("".concat(BASE_URL_KINESIS, "check-session"), {
               method: 'POST',
               headers: {
@@ -7955,26 +13626,26 @@ function addRecIcon(patientName, patientId) {
               })
             });
           case 8:
-            response = _context17.v;
+            response = _context22.v;
             if (response.ok) {
-              _context17.n = 9;
+              _context22.n = 9;
               break;
             }
             throw new Error('Failed to check session');
           case 9:
-            _context17.n = 10;
+            _context22.n = 10;
             return response.json();
           case 10:
-            data = _context17.v;
+            data = _context22.v;
             state.sessionId = data.session_id;
 
             // Create new audio context and setup
-            _context17.n = 11;
+            _context22.n = 11;
             return navigator.mediaDevices.getUserMedia({
               audio: true
             });
           case 11:
-            state.stream = _context17.v;
+            state.stream = _context22.v;
             audioCtx = new AudioContext({
               sampleRate: 16000
             });
@@ -8001,7 +13672,7 @@ function addRecIcon(patientName, patientId) {
             }, 20000);
 
             // Resume recording
-            _context17.n = 12;
+            _context22.n = 12;
             return state.audioContext.resume();
           case 12:
             state.lastResumeTime = new Date();
@@ -8017,16 +13688,16 @@ function addRecIcon(patientName, patientId) {
             setWaveState('recording');
 
             // Notify backend resume
-            _context17.n = 13;
+            _context22.n = 13;
             return callBackendAPI('send-command', 'POST', {
               command: 'resume',
               session_id: state.sessionId,
               resume_time: state.lastResumeTime.toISOString()
             });
           case 13:
-            resumeResponse = _context17.v;
+            resumeResponse = _context22.v;
             if (!(resumeResponse && resumeResponse.status === 'resume acknowledged')) {
-              _context17.n = 14;
+              _context22.n = 14;
               break;
             }
             playWrapper.style.display = 'none';
@@ -8034,39 +13705,39 @@ function addRecIcon(patientName, patientId) {
             state.isPaused = false;
             state.isProcessingResume = false;
             state.isRecording = true;
-            _context17.n = 15;
+            _context22.n = 15;
             break;
           case 14:
             throw new Error('Resume not acknowledged by server');
           case 15:
-            _context17.n = 17;
+            _context22.n = 17;
             break;
           case 16:
-            _context17.p = 16;
-            _t16 = _context17.v;
-            console.error("Error starting/resuming recording:", _t16);
+            _context22.p = 16;
+            _t21 = _context22.v;
+            console.error("Error starting/resuming recording:", _t21);
             state.isProcessingResume = false;
-            if (_t16.name === 'NotAllowedError') {
+            if (_t21.name === 'NotAllowedError') {
               toastr.error("Microphone access is blocked. Please allow mic permissions in your browser settings.");
-            } else if (_t16.name === 'NotFoundError') {
+            } else if (_t21.name === 'NotFoundError') {
               toastr.error("No microphone detected. Please connect a mic and try again.");
             } else {
-              toastr.error("Failed to start or resume recording: " + _t16.message);
+              toastr.error("Failed to start or resume recording: " + _t21.message);
             }
           case 17:
-            return _context17.a(2);
+            return _context22.a(2);
         }
-      }, _callee17, null, [[2, 16]]);
+      }, _callee22, null, [[2, 16]]);
     })));
 
     // Stop recording - USING stop Current Recording
-    stopWrapper.addEventListener('click', /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee20() {
-      var _stream, _renderPatientRecording, _renderWaveTimer, token, response, data, _renderPatientRecording2, _renderWaveTimer2, _t18;
-      return _regenerator().w(function (_context20) {
-        while (1) switch (_context20.p = _context20.n) {
+    stopWrapper.addEventListener('click', /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee25() {
+      var _stream, _renderPatientRecording, _renderWaveTimer, token, response, data, _renderPatientRecording2, _renderWaveTimer2, _t23;
+      return _regenerator().w(function (_context25) {
+        while (1) switch (_context25.p = _context25.n) {
           case 0:
             if (!(state.audioContext && state.audioContext.state !== 'closed')) {
-              _context20.n = 2;
+              _context25.n = 2;
               break;
             }
             setWaveState('stop');
@@ -8085,10 +13756,10 @@ function addRecIcon(patientName, patientId) {
               state.source.disconnect();
             }
             if (!(state.audioContext.state !== 'closed')) {
-              _context20.n = 1;
+              _context25.n = 1;
               break;
             }
-            _context20.n = 1;
+            _context25.n = 1;
             return state.audioContext.close();
           case 1:
             _renderPatientRecording = document.querySelector('.render-patient-recording');
@@ -8117,24 +13788,24 @@ function addRecIcon(patientName, patientId) {
               },
               buttonsStyling: false
             }).then(/*#__PURE__*/function () {
-              var _ref18 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee18(result) {
-                var token, success, bar, label, progressWrapper, progressContainer, _progressContainer, patientItems, selectedItem, socket, summaryContainer, assessContainer, assessPlanContainer, reviewofSystemContainer, phyExamContainer, _t17;
-                return _regenerator().w(function (_context18) {
-                  while (1) switch (_context18.p = _context18.n) {
+              var _ref25 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee23(result) {
+                var token, success, bar, label, progressWrapper, progressContainer, _progressContainer, patientItems, selectedItem, socket, summaryContainer, assessContainer, assessPlanContainer, reviewofSystemContainer, phyExamContainer, _t22;
+                return _regenerator().w(function (_context23) {
+                  while (1) switch (_context23.p = _context23.n) {
                     case 0:
                       if (!result.isConfirmed) {
-                        _context18.n = 7;
+                        _context23.n = 7;
                         break;
                       }
                       document.getElementById("loader-overlay").style.display = "flex";
-                      _context18.p = 1;
+                      _context23.p = 1;
                       token = localStorage.getItem('access_token');
-                      _context18.n = 2;
+                      _context23.n = 2;
                       return stopCurrentRecording(patientId);
                     case 2:
-                      success = _context18.v;
+                      success = _context23.v;
                       if (!success) {
-                        _context18.n = 3;
+                        _context23.n = 3;
                         break;
                       }
                       document.getElementById("loader-overlay").style.display = "none";
@@ -8199,7 +13870,7 @@ function addRecIcon(patientName, patientId) {
                             var existingSpinner = item.querySelector(".spinner-icon");
                             if (existingSpinner) existingSpinner.remove();
                             var spinner = document.createElement("i");
-                            spinner.className = "ki-filled ki-arrows-circle spinner-icon animate-spin rounded-full -ml-2";
+                            spinner.className = "ki-outline ki-arrows-circle spinner-icon animate-spin rounded-full -ml-2";
                             spinner.style.color = "#0b6fac";
                             nameSpinner.parentNode.appendChild(spinner);
 
@@ -8358,39 +14029,39 @@ function addRecIcon(patientName, patientId) {
                         document.getElementById("loader-overlay").style.display = "none";
                         toastr.error("Error saving audio: " + error.message);
                       }
-                      _context18.n = 4;
+                      _context23.n = 4;
                       break;
                     case 3:
                       throw new Error('Failed to stop recording');
                     case 4:
-                      _context18.n = 6;
+                      _context23.n = 6;
                       break;
                     case 5:
-                      _context18.p = 5;
-                      _t17 = _context18.v;
+                      _context23.p = 5;
+                      _t22 = _context23.v;
                       document.getElementById("loader-overlay").style.display = "none";
-                      toastr.error("Error stopping recording 1:" + _t17.message);
+                      toastr.error("Error stopping recording 1:" + _t22.message);
                     case 6:
-                      _context18.n = 8;
+                      _context23.n = 8;
                       break;
                     case 7:
                       // state.mediaRecorder.stop();
                       setWaveState('stop');
                       deletePatientRecording(patientId, state.sessionId, state);
                     case 8:
-                      return _context18.a(2);
+                      return _context23.a(2);
                   }
-                }, _callee18, null, [[1, 5]]);
+                }, _callee23, null, [[1, 5]]);
               }));
-              return function (_x19) {
-                return _ref18.apply(this, arguments);
+              return function (_x23) {
+                return _ref25.apply(this, arguments);
               };
             }());
-            _context20.n = 7;
+            _context25.n = 7;
             break;
           case 2:
             token = localStorage.getItem('access_token');
-            _context20.n = 3;
+            _context25.n = 3;
             return fetch("".concat(BASE_URL_KINESIS, "check-session"), {
               method: 'POST',
               headers: {
@@ -8402,13 +14073,13 @@ function addRecIcon(patientName, patientId) {
               })
             });
           case 3:
-            response = _context20.v;
+            response = _context25.v;
             data = response.json();
             if (!response.ok) {
-              _context20.n = 6;
+              _context25.n = 6;
               break;
             }
-            _context20.p = 4;
+            _context25.p = 4;
             sweetalert2__WEBPACK_IMPORTED_MODULE_0___default().fire({
               title: 'Save Recording',
               text: "",
@@ -8424,22 +14095,22 @@ function addRecIcon(patientName, patientId) {
               },
               buttonsStyling: false
             }).then(/*#__PURE__*/function () {
-              var _ref19 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee19(result) {
+              var _ref26 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee24(result) {
                 var _token2, success, bar, label, progressContainer, stateSession, jobResponse, _data2, patientItems, selectedItem, socket, summaryContainer, assessContainer, assessPlanContainer, reviewofSystemContainer, phyExamContainer;
-                return _regenerator().w(function (_context19) {
-                  while (1) switch (_context19.n) {
+                return _regenerator().w(function (_context24) {
+                  while (1) switch (_context24.n) {
                     case 0:
                       if (!result.isConfirmed) {
-                        _context19.n = 5;
+                        _context24.n = 5;
                         break;
                       }
                       document.getElementById("loader-overlay").style.display = "flex";
                       // try {
                       _token2 = localStorage.getItem('access_token');
-                      _context19.n = 1;
+                      _context24.n = 1;
                       return stopCurrentRecording(patientId);
                     case 1:
-                      success = _context19.v;
+                      success = _context24.v;
                       setWaveState('stop');
                       // if (success) {
                       document.getElementById("loader-overlay").style.display = "none";
@@ -8464,11 +14135,11 @@ function addRecIcon(patientName, patientId) {
                       }
                       // Progress bar :: END
                       if (!(_token2 && state.sessionId)) {
-                        _context19.n = 4;
+                        _context24.n = 4;
                         break;
                       }
                       stateSession = state.sessionId;
-                      _context19.n = 2;
+                      _context24.n = 2;
                       return fetch("".concat(BASE_URL_KINESIS, "job-status/").concat(stateSession), {
                         method: 'GET',
                         headers: {
@@ -8477,11 +14148,11 @@ function addRecIcon(patientName, patientId) {
                         }
                       });
                     case 2:
-                      jobResponse = _context19.v;
-                      _context19.n = 3;
+                      jobResponse = _context24.v;
+                      _context24.n = 3;
                       return jobResponse.json();
                     case 3:
-                      _data2 = _context19.v;
+                      _data2 = _context24.v;
                       if (jobResponse.ok) {
                         if (_data2.status != 'completed') {
                           setTimeout(function () {
@@ -8517,7 +14188,7 @@ function addRecIcon(patientName, patientId) {
                               if (existingSpinner) existingSpinner.remove();
                               if (existingTick) existingTick.remove();
                               var spinner = document.createElement("i");
-                              spinner.className = "ki-filled ki-arrows-circle spinner-icon animate-spin rounded-full -ml-2";
+                              spinner.className = "ki-outline ki-arrows-circle spinner-icon animate-spin rounded-full -ml-2";
                               spinner.style.color = "#0b6fac";
                               nameSpinner.parentNode.appendChild(spinner);
 
@@ -8675,18 +14346,18 @@ function addRecIcon(patientName, patientId) {
                         document.getElementById("loader-overlay").style.display = "none";
                         toastr.error("Error saving audio: " + error.message);
                       }
-                      _context19.n = 6;
+                      _context24.n = 6;
                       break;
                     case 5:
                       setWaveState('stop');
                       deletePatientRecording(patientId, state.sessionId, state);
                     case 6:
-                      return _context19.a(2);
+                      return _context24.a(2);
                   }
-                }, _callee19);
+                }, _callee24);
               }));
-              return function (_x20) {
-                return _ref19.apply(this, arguments);
+              return function (_x24) {
+                return _ref26.apply(this, arguments);
               };
             }());
 
@@ -8716,19 +14387,19 @@ function addRecIcon(patientName, patientId) {
             state.pausedDuration = 0;
             state.lastResumeTime = null;
             state.lastPauseTime = null;
-            return _context20.a(2, true);
+            return _context25.a(2, true);
           case 5:
-            _context20.p = 5;
-            _t18 = _context20.v;
-            console.error("Error stopping recording 2:", _t18);
-            return _context20.a(2, false);
+            _context25.p = 5;
+            _t23 = _context25.v;
+            console.error("Error stopping recording 2:", _t23);
+            return _context25.a(2, false);
           case 6:
             console.error("Error stopping recording 3:", error);
-            return _context20.a(2, false);
+            return _context25.a(2, false);
           case 7:
-            return _context20.a(2);
+            return _context25.a(2);
         }
-      }, _callee20, null, [[4, 5]]);
+      }, _callee25, null, [[4, 5]]);
     })));
   }
 }
@@ -8767,10 +14438,19 @@ function handleTranscriptionFailure(data, socket) {
   clearAllIntervals.apply(void 0, intervals);
   socket.disconnect();
 }
+
+// Helper to escape HTML special chars
+function escapeHTMLSet(str) {
+  return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
 function createIconRow(currentPatient, id) {
+  // Protect against XSS by escaping user-controlled values before interpolating
+  var escapedPatient = escapeHTMLSet(currentPatient);
+  var escapedId = escapeHTMLSet(id);
+  var iconRow = document.createElement('div');
   var iconRow = document.createElement('div');
   iconRow.className = 'flex pt-5 feedback';
-  iconRow.innerHTML = "\n    <i class=\"material-icons mr-5 cursor-pointer thumb-up text-gray-300\" onclick=\"updateLikeAndDisLike('".concat(currentPatient, "', 'thumbs_up', '").concat(id, "')\">thumb_up</i>\n    <i class=\"material-icons mr-5 cursor-pointer thumb-down text-gray-300\" onclick=\"updateLikeAndDisLike('").concat(currentPatient, "', 'thumbs_down', '").concat(id, "')\">thumb_down</i>\n    <i class=\"material-icons cursor-pointer comment text-gray-300\" onclick=\"openCommentModal('").concat(currentPatient, "', '").concat(id, "')\">comment</i>\n  ");
+  iconRow.innerHTML = "\n    <i class=\"material-icons mr-5 cursor-pointer thumb-up text-gray-300\" onclick=\"updateLikeAndDisLike('" + escapedPatient + "', 'thumbs_up', '" + escapedId + "')\">thumb_up</i>\n    <i class=\"material-icons mr-5 cursor-pointer thumb-down text-gray-300\" onclick=\"updateLikeAndDisLike('" + escapedPatient + "', 'thumbs_down', '" + escapedId + "')\">thumb_down</i>\n    <i class=\"material-icons cursor-pointer comment text-gray-300\" onclick=\"openCommentModal('" + escapedPatient + "', '" + escapedId + "')\">comment</i>\n  ";
   return iconRow;
 }
 function displayFeedbackDesign(currentPatient) {
@@ -8786,14 +14466,14 @@ function displayFeedbackDesign(currentPatient) {
     }
   });
 }
-function fetchActivePatientSegments(_x21, _x22, _x23) {
+function fetchActivePatientSegments(_x25, _x26, _x27) {
   return _fetchActivePatientSegments.apply(this, arguments);
 }
 function _fetchActivePatientSegments() {
-  _fetchActivePatientSegments = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee30(patientName, patientId, element) {
+  _fetchActivePatientSegments = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee35(patientName, patientId, element) {
     var id, currentPatientState, currentPatientName, passPatientName, addModalPatientName, getPatientNameFromList, patientDetails, nameSpan, apiUrl, apiUrl_raw, summaryDiv, assessmentDiv, planDiv, rawTransDiv, rawUploadsDiv, reviewDiv, phyExamDiv, token, summarySeconds, assessmentSeconds, summaryTimer, assessmentTimer, idTitleMap, response, data, file_content, jsonArray, jsonString, newObj, key, newKey, formattedText, _formattedText11, _formattedText12, _formattedText13, _formattedText14, diagnosis, diagnosisItems, part, currentPatient, responseType, responseUrl, title, currentId, currentNoteTypeElement, selectedTab, hiddenSoap, sectionName, _i9, _Object$entries7, _Object$entries7$_i, className, sectionTitle, container, card, icons, accordionItem, titleToggle, titleSpan, _title2, result, response_data, ratings, idMap, _t32, _t33, _t34;
-    return _regenerator().w(function (_context30) {
-      while (1) switch (_context30.p = _context30.n) {
+    return _regenerator().w(function (_context35) {
+      while (1) switch (_context35.p = _context35.n) {
         case 0:
           // handleUploadButtonState('active');
           // handleSuturePhraseButtonState('active');
@@ -8802,23 +14482,23 @@ function _fetchActivePatientSegments() {
           _t32 = _regeneratorKeys(recordingStates);
         case 1:
           if ((_t33 = _t32()).done) {
-            _context30.n = 3;
+            _context35.n = 3;
             break;
           }
           id = _t33.value;
           if (!(id !== patientId && recordingStates[id].mediaRecorder)) {
-            _context30.n = 2;
+            _context35.n = 2;
             break;
           }
           currentPatientState = recordingStates[id];
           currentPatientName = currentPatientState.patientName || 'Previous Patient';
-          _context30.n = 2;
+          _context35.n = 2;
           return pauseCurrentRecording(id, currentPatientName);
         case 2:
-          _context30.n = 1;
+          _context35.n = 1;
           break;
         case 3:
-          // toggleContent();
+          toggleContent();
           // const recordingBlock = document.querySelector('.patient-wise-recording');
           // if (recordingBlock) {
           //   recordingBlock.style.display = 'block';
@@ -8907,10 +14587,9 @@ function _fetchActivePatientSegments() {
               return icon.classList.remove('active');
             });
           });
-
-          // checkSoapNotification(patientId, token);
-          _context30.p = 4;
-          _context30.n = 5;
+          checkSoapNotification(patientId, token);
+          _context35.p = 4;
+          _context35.n = 5;
           return fetch(apiUrl, {
             method: "GET",
             headers: {
@@ -8919,13 +14598,13 @@ function _fetchActivePatientSegments() {
             }
           });
         case 5:
-          response = _context30.v;
+          response = _context35.v;
           clearInterval(summaryTimer);
           clearInterval(assessmentTimer);
-          _context30.n = 6;
+          _context35.n = 6;
           return response.json();
         case 6:
-          data = _context30.v;
+          data = _context35.v;
           // Update Summary
           file_content = data.file_content;
           jsonArray = [file_content];
@@ -9009,28 +14688,28 @@ function _fetchActivePatientSegments() {
             responseType = 'SOAP';
           }
           if (!(responseType === 'SOAP' && responseUrl && responseUrl !== 'undefined')) {
-            _context30.n = 12;
+            _context35.n = 12;
             break;
           }
           sectionName = '';
           _i9 = 0, _Object$entries7 = Object.entries(idTitleMap);
         case 7:
           if (!(_i9 < _Object$entries7.length)) {
-            _context30.n = 9;
+            _context35.n = 9;
             break;
           }
           _Object$entries7$_i = _slicedToArray(_Object$entries7[_i9], 2), className = _Object$entries7$_i[0], sectionTitle = _Object$entries7$_i[1];
           container = document.querySelector(".".concat(className));
           if (!container) {
-            _context30.n = 8;
+            _context35.n = 8;
             break;
           }
           currentId = className;
           sectionName = sectionTitle;
-          return _context30.a(3, 9);
+          return _context35.a(3, 9);
         case 8:
           _i9++;
-          _context30.n = 7;
+          _context35.n = 7;
           break;
         case 9:
           card = document.querySelector(".".concat(currentId)).closest('.kt-accordion-content'); // clear old actives
@@ -9043,10 +14722,10 @@ function _fetchActivePatientSegments() {
           titleSpan = titleToggle ? titleToggle.querySelector('span') : null;
           _title2 = titleSpan ? titleSpan.textContent.trim() : '';
           if (!card) {
-            _context30.n = 12;
+            _context35.n = 12;
             break;
           }
-          _context30.n = 10;
+          _context35.n = 10;
           return fetch("".concat(BASE_URL, "summary/display_user_rating?patient_id=").concat(patientId, "&response_type=").concat(responseType, "&response_url=").concat(responseUrl), {
             method: 'GET',
             headers: {
@@ -9055,15 +14734,15 @@ function _fetchActivePatientSegments() {
             }
           });
         case 10:
-          result = _context30.v;
+          result = _context35.v;
           if (!result.ok) {
-            _context30.n = 12;
+            _context35.n = 12;
             break;
           }
-          _context30.n = 11;
+          _context35.n = 11;
           return result.json();
         case 11:
-          response_data = _context30.v;
+          response_data = _context35.v;
           if (response_data.user_ratings && response_data.user_ratings.length > 0) {
             ratings = response_data.user_ratings[0].good_bad;
             idMap = {
@@ -9073,10 +14752,10 @@ function _fetchActivePatientSegments() {
               "Physical Examination": ["physical-exam-id"],
               "Assessment and Plan": ["assessment-plan-container"]
             };
-            Object.entries(ratings).forEach(function (_ref32) {
-              var _ref33 = _slicedToArray(_ref32, 2),
-                title = _ref33[0],
-                ratingValue = _ref33[1];
+            Object.entries(ratings).forEach(function (_ref39) {
+              var _ref40 = _slicedToArray(_ref39, 2),
+                title = _ref40[0],
+                ratingValue = _ref40[1];
               var containerIds = idMap[title];
               if (!containerIds) return;
               containerIds.forEach(function (containerId) {
@@ -9095,11 +14774,11 @@ function _fetchActivePatientSegments() {
             });
           }
         case 12:
-          _context30.n = 14;
+          _context35.n = 14;
           break;
         case 13:
-          _context30.p = 13;
-          _t34 = _context30.v;
+          _context35.p = 13;
+          _t34 = _context35.v;
           console.error("Error fetching data:", _t34);
           summaryDiv.innerHTML = "<p class='text-xs'>Error loading summary</p>";
           assessmentDiv.innerHTML = "<p class='text-xs'>Error loading assessment</p>";
@@ -9114,28 +14793,28 @@ function _fetchActivePatientSegments() {
           // loadSutureFix(patientName, 'unarchived');
           // loadUploads(patientName, 'unarchived');
         case 15:
-          return _context30.a(2);
+          return _context35.a(2);
       }
-    }, _callee30, null, [[4, 13]]);
+    }, _callee35, null, [[4, 13]]);
   }));
   return _fetchActivePatientSegments.apply(this, arguments);
 }
-function fetchPatientHpDetails(_x24) {
+function fetchPatientHpDetails(_x28) {
   return _fetchPatientHpDetails.apply(this, arguments);
 }
 function _fetchPatientHpDetails() {
-  _fetchPatientHpDetails = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee31(patientName) {
+  _fetchPatientHpDetails = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee36(patientName) {
     var token, sectionMap, idMap, response, data, hpContent, _i0, _Object$entries8, _Object$entries8$_i, key, value, selector, container, part, currentPatient, hiddenHp, responseUrl, responseType, ratingRes, ratingData, ratings, _t35;
-    return _regenerator().w(function (_context31) {
-      while (1) switch (_context31.p = _context31.n) {
+    return _regenerator().w(function (_context36) {
+      while (1) switch (_context36.p = _context36.n) {
         case 0:
           token = localStorage.getItem('access_token');
           if (token) {
-            _context31.n = 1;
+            _context36.n = 1;
             break;
           }
-          window.location.href = '../index.html';
-          return _context31.a(2);
+          window.location.href = "./index.html";
+          return _context36.a(2);
         case 1:
           // Map JSON keys to class selectors
           sectionMap = {
@@ -9182,8 +14861,8 @@ function _fetchPatientHpDetails() {
               return icon.classList.remove('active');
             });
           });
-          _context31.p = 2;
-          _context31.n = 3;
+          _context36.p = 2;
+          _context36.n = 3;
           return fetch("".concat(BASE_URL, "summary/display-patient-hp-output?patient_name=").concat(encodeURIComponent(patientName)), {
             method: 'GET',
             headers: {
@@ -9191,24 +14870,24 @@ function _fetchPatientHpDetails() {
             }
           });
         case 3:
-          response = _context31.v;
+          response = _context36.v;
           if (response.ok) {
-            _context31.n = 4;
+            _context36.n = 4;
             break;
           }
           throw new Error('Failed to fetch patient data');
         case 4:
-          _context31.n = 5;
+          _context36.n = 5;
           return response.json();
         case 5:
-          data = _context31.v;
+          data = _context36.v;
           hpContent = data.hp_content;
           if (hpContent) {
-            _context31.n = 6;
+            _context36.n = 6;
             break;
           }
           toastr.warning('No patient data found');
-          return _context31.a(2);
+          return _context36.a(2);
         case 6:
           for (_i0 = 0, _Object$entries8 = Object.entries(hpContent); _i0 < _Object$entries8.length; _i0++) {
             _Object$entries8$_i = _slicedToArray(_Object$entries8[_i0], 2), key = _Object$entries8$_i[0], value = _Object$entries8$_i[1];
@@ -9223,7 +14902,7 @@ function _fetchPatientHpDetails() {
                   //   container.innerHTML = marked.parse(formatToMarkdownSafe(value));
                   // }
                 } else {
-                  container.innerHTML = '<p class="text-xs">No data available.</p>';
+                  container.innerHTML = "<p class='text-xs'>No data available.</p>";
                 }
               }
             } else {
@@ -9237,12 +14916,12 @@ function _fetchPatientHpDetails() {
           responseUrl = data.s3_hp_path;
           responseType = "HP";
           if (!(responseUrl === 'undefined' || !responseUrl)) {
-            _context31.n = 7;
+            _context36.n = 7;
             break;
           }
-          return _context31.a(2);
+          return _context36.a(2);
         case 7:
-          _context31.n = 8;
+          _context36.n = 8;
           return fetch("".concat(BASE_URL, "summary/display_user_rating?patient_id=").concat(currentPatient, "&response_type=").concat(responseType, "&response_url=").concat(responseUrl), {
             method: 'GET',
             headers: {
@@ -9251,23 +14930,23 @@ function _fetchPatientHpDetails() {
             }
           });
         case 8:
-          ratingRes = _context31.v;
+          ratingRes = _context36.v;
           if (ratingRes.ok) {
-            _context31.n = 9;
+            _context36.n = 9;
             break;
           }
           throw new Error('Failed to fetch ratings');
         case 9:
-          _context31.n = 10;
+          _context36.n = 10;
           return ratingRes.json();
         case 10:
-          ratingData = _context31.v;
+          ratingData = _context36.v;
           if (ratingData.user_ratings && ratingData.user_ratings.length > 0) {
             ratings = ratingData.user_ratings[0].good_bad;
-            Object.entries(ratings).forEach(function (_ref34) {
-              var _ref35 = _slicedToArray(_ref34, 2),
-                title = _ref35[0],
-                ratingValue = _ref35[1];
+            Object.entries(ratings).forEach(function (_ref41) {
+              var _ref42 = _slicedToArray(_ref41, 2),
+                title = _ref42[0],
+                ratingValue = _ref42[1];
               var containerIds = idMap[title];
               if (!containerIds) return;
               containerIds.forEach(function (containerId) {
@@ -9291,23 +14970,23 @@ function _fetchPatientHpDetails() {
               });
             });
           }
-          _context31.n = 12;
+          _context36.n = 12;
           break;
         case 11:
-          _context31.p = 11;
-          _t35 = _context31.v;
+          _context36.p = 11;
+          _t35 = _context36.v;
           console.error('Error fetching H&P details:', _t35);
         case 12:
-          return _context31.a(2);
+          return _context36.a(2);
       }
-    }, _callee31, null, [[2, 11]]);
+    }, _callee36, null, [[2, 11]]);
   }));
   return _fetchPatientHpDetails.apply(this, arguments);
 }
 function fetchArchivedPatientHpDetails(patientName) {
   var token = localStorage.getItem('access_token');
   if (!token) {
-    window.location.href = '../index.html';
+    window.location.href = "./index.html";
     return;
   }
 
@@ -9363,7 +15042,7 @@ function fetchArchivedPatientHpDetails(patientName) {
             //   container.innerHTML = marked.parse(formatToMarkdownSafe(value));
             // }
           } else {
-            container.innerHTML = '<p class="text-xs">No data available.</p>';
+            container.innerHTML = "<p class='text-xs'>No data available.</p>";
           }
         }
       } else {
@@ -9377,7 +15056,7 @@ function fetchArchivedPatientHpDetails(patientName) {
 function fetchPatientDsDetails(patientName) {
   var token = localStorage.getItem('access_token');
   if (!token) {
-    window.location.href = '../index.html';
+    window.location.href = "./index.html";
     return;
   }
   // Map JSON keys to class selectors
@@ -9445,7 +15124,7 @@ function fetchPatientDsDetails(patientName) {
             var formattedText = value.replace(/\n/g, "<br>");
             container.innerHTML = "".concat(formattedText);
           } else {
-            container.innerHTML = '<p class="text-xs">No data available.</p>';
+            container.innerHTML = "<p class='text-xs'>No data available.</p>";
           }
           // if (value && value.trim() !== '') {
           //   container.innerHTML = marked.parse(formatToMarkdownSafe(value));
@@ -9483,10 +15162,10 @@ function fetchPatientDsDetails(patientName) {
     if (!ratingData) return;
     if (ratingData.user_ratings && ratingData.user_ratings.length > 0) {
       var ratings = ratingData.user_ratings[0].good_bad;
-      Object.entries(ratings).forEach(function (_ref20) {
-        var _ref21 = _slicedToArray(_ref20, 2),
-          title = _ref21[0],
-          ratingValue = _ref21[1];
+      Object.entries(ratings).forEach(function (_ref27) {
+        var _ref28 = _slicedToArray(_ref27, 2),
+          title = _ref28[0],
+          ratingValue = _ref28[1];
         var containerIds = idMap[title];
         if (!containerIds) return;
         containerIds.forEach(function (containerId) {
@@ -9547,7 +15226,7 @@ function handleSuturePhraseButtonState(archiveState) {
 function fetchArchivedPatientDsDetails(patientName) {
   var token = localStorage.getItem('access_token');
   if (!token) {
-    window.location.href = '../index.html';
+    window.location.href = "./index.html";
     return;
   }
 
@@ -9597,7 +15276,7 @@ function fetchArchivedPatientDsDetails(patientName) {
             container.innerHTML = "".concat(formattedText);
             // container.innerHTML = marked.parse(formatToMarkdownSafe(value));
           } else {
-            container.innerHTML = '<p class="text-xs">No data available.</p>';
+            container.innerHTML = "<p class='text-xs'>No data available.</p>";
           }
         }
       } else {
@@ -9891,7 +15570,7 @@ window.onDemandSummaryCall = function () {
   var planDiv = document.querySelector(".assessment-plan-container");
   var token = localStorage.getItem('access_token');
   if (!token) {
-    window.location.href = '../index.html';
+    window.location.href = "./index.html";
     return;
   }
   var patientName = selectedPatientName;
@@ -9930,7 +15609,7 @@ window.onDemandSummaryCall = function () {
         if (existingSpinner) existingSpinner.remove();
         if (existingTick) existingTick.remove();
         var spinner = document.createElement("i");
-        spinner.className = "ki-filled ki-arrows-circle spinner-icon animate-spin rounded-full -ml-2";
+        spinner.className = "ki-outline ki-arrows-circle spinner-icon animate-spin rounded-full -ml-2";
         spinner.style.color = "#0b6fac";
         nameSpinner.parentNode.appendChild(spinner);
 
@@ -10144,7 +15823,7 @@ window.onDemandSummaryCall = function () {
 window.onDemandHpCall = function () {
   var token = localStorage.getItem('access_token');
   if (!token) {
-    window.location.href = '../index.html';
+    window.location.href = "./index.html";
     return;
   }
   var patientName = selectedPatientName;
@@ -10165,7 +15844,7 @@ window.onDemandHpCall = function () {
         if (existingSpinner) existingSpinner.remove();
         if (existingTick) existingTick.remove();
         var spinner = document.createElement("i");
-        spinner.className = "ki-filled ki-arrows-circle spinner-icon animate-spin rounded-full -ml-2";
+        spinner.className = "ki-outline ki-arrows-circle spinner-icon animate-spin rounded-full -ml-2";
         spinner.style.color = "#0b6fac";
         nameSpinner.parentNode.appendChild(spinner);
 
@@ -10208,12 +15887,12 @@ window.onDemandHpCall = function () {
   socket.on('connect', function () {
     console.log('🔌 WebSocket connected');
   });
-  socket.on("hp_generated", function (_ref22) {
-    var status = _ref22.status,
-      pname = _ref22.patient_name,
-      hp_content = _ref22.hp_content,
-      user = _ref22.user,
-      s3_hp_file_url = _ref22.s3_hp_file_url;
+  socket.on("hp_generated", function (_ref29) {
+    var status = _ref29.status,
+      pname = _ref29.patient_name,
+      hp_content = _ref29.hp_content,
+      user = _ref29.user,
+      s3_hp_file_url = _ref29.s3_hp_file_url;
     if (status === "success" && pname === patientName) {
       // if (user === urlUserName) {
       // ✅ Reset all HP thumbs
@@ -10282,9 +15961,9 @@ window.onDemandHpCall = function () {
   });
 
   // Listen for error
-  socket.on("hp_error", function (_ref23) {
-    var error = _ref23.error,
-      pname = _ref23.patient_name;
+  socket.on("hp_error", function (_ref30) {
+    var error = _ref30.error,
+      pname = _ref30.patient_name;
     if (pname === patientName) {
       toastr.error(error);
       console.error("Socket error:", error);
@@ -10400,7 +16079,7 @@ function injectHpContent(hpContent) {
         //   container.innerHTML = marked.parse(formatToMarkdownSafe(content));
         // }
       } else {
-        container.innerHTML = '<p class="text-xs">No data available.</p>';
+        container.innerHTML = "<p class='text-xs'>No data available.</p>";
       }
     }
   }
@@ -10413,7 +16092,7 @@ function formatToMarkdownSafe(text) {
 window.onDemandDsCall = function () {
   var token = localStorage.getItem('access_token');
   if (!token) {
-    window.location.href = '../index.html';
+    window.location.href = "./index.html";
     return;
   }
   var patientName = selectedPatientName;
@@ -10434,7 +16113,7 @@ window.onDemandDsCall = function () {
         if (existingSpinner) existingSpinner.remove();
         if (existingTick) existingTick.remove();
         var spinner = document.createElement("i");
-        spinner.className = "ki-filled ki-arrows-circle spinner-icon animate-spin rounded-full -ml-2";
+        spinner.className = "ki-outline ki-arrows-circle spinner-icon animate-spin rounded-full -ml-2";
         spinner.style.color = "#0b6fac";
         nameSpinner.parentNode.appendChild(spinner);
 
@@ -10472,12 +16151,12 @@ window.onDemandDsCall = function () {
   });
 
   // Updated: Listen to 'ds_generated'
-  socket.on("ds_generated", function (_ref24) {
-    var status = _ref24.status,
-      pname = _ref24.patient_name,
-      ds_content = _ref24.ds_content,
-      user = _ref24.user,
-      s3_ds_file_url = _ref24.s3_ds_file_url;
+  socket.on("ds_generated", function (_ref31) {
+    var status = _ref31.status,
+      pname = _ref31.patient_name,
+      ds_content = _ref31.ds_content,
+      user = _ref31.user,
+      s3_ds_file_url = _ref31.s3_ds_file_url;
     if (status === "success" && pname === patientName) {
       // ✅ Reset all DS thumbs
       var dsIds = ["discharge-condition-container", "discharge-diagnoses-container", "discharge-disposition-container", "discharge-instructions-container", "discharge-medications-container", "discharge-summary-container", "followup-care-container", "principal-diagnosis-container"];
@@ -10543,9 +16222,9 @@ window.onDemandDsCall = function () {
   });
 
   // Updated: Listen to 'ds_error'
-  socket.on("ds_error", function (_ref25) {
-    var error = _ref25.error,
-      pname = _ref25.patient_name;
+  socket.on("ds_error", function (_ref32) {
+    var error = _ref32.error,
+      pname = _ref32.patient_name;
     if (pname === patientName) {
       toastr.error("⚠️ " + error);
       console.error("Socket error:", error);
@@ -10653,7 +16332,7 @@ function injectDsContent(dsContent) {
         // const formatted = formatToMarkdownSafe(content);
         // container.innerHTML = marked.parse(formatted);
       } else {
-        container.innerHTML = '<p class="text-xs">No data available.</p>';
+        container.innerHTML = "<p class='text-xs'>No data available.</p>";
       }
     }
   }
@@ -10662,7 +16341,7 @@ function injectDsContent(dsContent) {
 // document.addEventListener("DOMContentLoaded", function () {
 //   const token = localStorage.getItem('access_token');
 //   if (!token) {
-//     window.location.href = '../index.html';
+//     window.location.href = "./index.html";
 //   }
 //   fetch(`${BASE_URL}authenticate/get-user-profile`, {
 //     method: "POST",
@@ -10710,7 +16389,7 @@ function injectDsContent(dsContent) {
 function copyAllRichText() {
   var token = localStorage.getItem('access_token');
   if (!token) {
-    window.location.href = '../index.html';
+    window.location.href = "./index.html";
     return;
   }
   fetch("".concat(BASE_URL, "copy_count"), {
@@ -10825,8 +16504,8 @@ function copyAllRichText() {
 function copyAllRichTextDshp(copyAttrValue) {
   var token = localStorage.getItem('access_token');
   if (!token) {
-    // window.location.href = '../index.html';
-    // return;
+    window.location.href = "./index.html";
+    return;
   }
   fetch("".concat(BASE_URL, "copy_count"), {
     method: 'POST',
@@ -10971,7 +16650,7 @@ function copyRichText(id, event) {
   event.stopPropagation();
   var token = localStorage.getItem('access_token');
   if (!token) {
-    window.location.href = '../index.html';
+    window.location.href = "./index.html";
     return;
   }
   fetch("".concat(BASE_URL, "copy_count"), {
@@ -11126,19 +16805,19 @@ function enableSutureNote() {
   var editText = document.getElementById('saveTranscriptEdits');
   editText.disabled = false;
 }
-function refreshSoapSections(_x25) {
+function refreshSoapSections(_x29) {
   return _refreshSoapSections.apply(this, arguments);
 } // Progress bar :: START
 function _refreshSoapSections() {
-  _refreshSoapSections = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee32(patientName) {
+  _refreshSoapSections = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee37(patientName) {
     var apiUrl, token, response, data, file_content, summaryDiv, assessmentDiv, planDiv, reviewDiv, phyExamDiv, newObj, key, newKey, diagnosis, diagnosisItems, soap_url, part, crtPatient, _t36;
-    return _regenerator().w(function (_context32) {
-      while (1) switch (_context32.p = _context32.n) {
+    return _regenerator().w(function (_context37) {
+      while (1) switch (_context37.p = _context37.n) {
         case 0:
           apiUrl = "".concat(BASE_URL, "summary/display-patient-jobs-output?patient_name=") + patientName;
           token = localStorage.getItem('access_token');
-          _context32.p = 1;
-          _context32.n = 2;
+          _context37.p = 1;
+          _context37.n = 2;
           return fetch(apiUrl, {
             method: "GET",
             headers: {
@@ -11147,11 +16826,11 @@ function _refreshSoapSections() {
             }
           });
         case 2:
-          response = _context32.v;
-          _context32.n = 3;
+          response = _context37.v;
+          _context37.n = 3;
           return response.json();
         case 3:
-          data = _context32.v;
+          data = _context37.v;
           file_content = data.file_content || {};
           summaryDiv = document.querySelector(".summary-container");
           assessmentDiv = document.querySelector(".assessment-container");
@@ -11221,60 +16900,60 @@ function _refreshSoapSections() {
             crtPatient = part.split("_")[1];
             displayFeedbackDesign(crtPatient);
           }
-          _context32.n = 5;
+          _context37.n = 5;
           break;
         case 4:
-          _context32.p = 4;
-          _t36 = _context32.v;
+          _context37.p = 4;
+          _t36 = _context37.v;
           console.error("Error refreshing SOAP sections:", _t36);
         case 5:
-          return _context32.a(2);
+          return _context37.a(2);
       }
-    }, _callee32, null, [[1, 4]]);
+    }, _callee37, null, [[1, 4]]);
   }));
   return _refreshSoapSections.apply(this, arguments);
 }
-function updateProgressBarOnce(_x26) {
+function updateProgressBarOnce(_x30) {
   return _updateProgressBarOnce.apply(this, arguments);
 } // Progress bar :: END
 // Notes :: start
 function _updateProgressBarOnce() {
-  _updateProgressBarOnce = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee33(patientId) {
+  _updateProgressBarOnce = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee38(patientId) {
     var bar, label, token, res, data, _data$, overall_status, pipeline_status, _progressContainer2, patientItems, targetPercent, currentPercent, progressContainer, animate, _t37;
-    return _regenerator().w(function (_context33) {
-      while (1) switch (_context33.p = _context33.n) {
+    return _regenerator().w(function (_context38) {
+      while (1) switch (_context38.p = _context38.n) {
         case 0:
           bar = document.getElementById("patient-progress-bar-".concat(patientId));
           label = document.getElementById("patient-progress-label-".concat(patientId));
           if (!(!bar || !label)) {
-            _context33.n = 1;
+            _context38.n = 1;
             break;
           }
-          return _context33.a(2);
+          return _context38.a(2);
         case 1:
-          _context33.p = 1;
+          _context38.p = 1;
           token = localStorage.getItem("access_token");
-          _context33.n = 2;
+          _context38.n = 2;
           return fetch("".concat(BASE_URL, "patient-progress-bar-redis"), {
             headers: {
               "Authorization": "Bearer ".concat(token)
             }
           });
         case 2:
-          res = _context33.v;
-          _context33.n = 3;
+          res = _context38.v;
+          _context38.n = 3;
           return res.json();
         case 3:
-          data = _context33.v;
+          data = _context38.v;
           if (!(!res.ok || !Array.isArray(data) || !data.length)) {
-            _context33.n = 4;
+            _context38.n = 4;
             break;
           }
-          return _context33.a(2);
+          return _context38.a(2);
         case 4:
           _data$ = data[0], overall_status = _data$.overall_status, pipeline_status = _data$.pipeline_status; // 🛑 If failed — no need to calculate or animate anything
           if (!(overall_status === "failed")) {
-            _context33.n = 5;
+            _context38.n = 5;
             break;
           }
           // Hide progress bar and label
@@ -11311,7 +16990,7 @@ function _updateProgressBarOnce() {
             clearInterval(progressIntervals[patientId]);
             delete progressIntervals[patientId];
           }
-          return _context33.a(2);
+          return _context38.a(2);
         case 5:
           targetPercent = 0;
           if ((pipeline_status === null || pipeline_status === void 0 ? void 0 : pipeline_status.transcription) === "in_progress") targetPercent = 10;
@@ -11346,23 +17025,23 @@ function _updateProgressBarOnce() {
               }
             }
           }, 50);
-          _context33.n = 7;
+          _context38.n = 7;
           break;
         case 6:
-          _context33.p = 6;
-          _t37 = _context33.v;
+          _context38.p = 6;
+          _t37 = _context38.v;
           console.error("Progress fetch error:", _t37);
         case 7:
-          return _context33.a(2);
+          return _context38.a(2);
       }
-    }, _callee33, null, [[1, 6]]);
+    }, _callee38, null, [[1, 6]]);
   }));
   return _updateProgressBarOnce.apply(this, arguments);
 }
 document.addEventListener("DOMContentLoaded", function () {
   var token = localStorage.getItem("access_token");
   if (!token) {
-    window.location.href = '../index.html';
+    window.location.href = "./index.html";
     return;
   }
   var summaryContainer = document.getElementById('summary-container');
@@ -11443,29 +17122,29 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // 🔹 Submit button
-  submitBtn.addEventListener("click", /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee21() {
-    var _patientName, noteContext, content, drawer, socket, patientItems, selectedItem, payload, response, result, part, patientId, spinner, tick, _spinner, _patientName2, _patientItems, _t19;
-    return _regenerator().w(function (_context21) {
-      while (1) switch (_context21.p = _context21.n) {
+  submitBtn.addEventListener("click", /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee26() {
+    var _patientName, noteContext, content, drawer, socket, patientItems, selectedItem, payload, response, result, part, patientId, spinner, tick, _spinner, _patientName2, _patientItems, _t24;
+    return _regenerator().w(function (_context26) {
+      while (1) switch (_context26.p = _context26.n) {
         case 0:
-          _context21.p = 0;
+          _context26.p = 0;
           _patientName = document.getElementById("addModalPatientName").textContent.trim();
           noteContext = selectedTab;
           content = textarea.value.trim();
           if (noteContext) {
-            _context21.n = 1;
+            _context26.n = 1;
             break;
           }
           toastr.warning("Select one context");
           errorMsg.classList.remove("hidden");
-          return _context21.a(2);
+          return _context26.a(2);
         case 1:
           if (content) {
-            _context21.n = 2;
+            _context26.n = 2;
             break;
           }
           toastr.warning("Enter some content.");
-          return _context21.a(2);
+          return _context26.a(2);
         case 2:
           drawer = KTDrawer.getInstance(drawerEl);
           if (drawer) drawer.hide();
@@ -11529,7 +17208,7 @@ document.addEventListener("DOMContentLoaded", function () {
               var existingSpinner = item.querySelector(".spinner-icon");
               if (existingSpinner) existingSpinner.remove();
               var spinner = document.createElement("i");
-              spinner.className = "ki-filled ki-arrows-circle spinner-icon animate-spin rounded-full -ml-2";
+              spinner.className = "ki-outline ki-arrows-circle spinner-icon animate-spin rounded-full -ml-2";
               spinner.style.color = "#0b6fac";
               if (nameSpinner) {
                 nameSpinner.parentNode.appendChild(spinner);
@@ -11543,7 +17222,7 @@ document.addEventListener("DOMContentLoaded", function () {
             upload_context: noteContext,
             content: content
           };
-          _context21.n = 3;
+          _context26.n = 3;
           return fetch("".concat(window.BASE_URL, "ondemand/upload-note-manually"), {
             method: "POST",
             headers: {
@@ -11553,11 +17232,11 @@ document.addEventListener("DOMContentLoaded", function () {
             body: JSON.stringify(payload)
           });
         case 3:
-          response = _context21.v;
-          _context21.n = 4;
+          response = _context26.v;
+          _context26.n = 4;
           return response.json();
         case 4:
-          result = _context21.v;
+          result = _context26.v;
           if (response.ok) {
             toastr.success(result.message || "Content saved successfully!");
             part = result.master_s3_url.split("/")[3];
@@ -11582,12 +17261,12 @@ document.addEventListener("DOMContentLoaded", function () {
               if (_spinner) _spinner.remove();
             }
           }
-          _context21.n = 6;
+          _context26.n = 6;
           break;
         case 5:
-          _context21.p = 5;
-          _t19 = _context21.v;
-          console.error("Error submitting note:", _t19);
+          _context26.p = 5;
+          _t24 = _context26.v;
+          console.error("Error submitting note:", _t24);
           _patientName2 = document.getElementById("addModalPatientName").innerText.trim();
           _patientItems = document.querySelectorAll(".navi-item");
           _patientItems.forEach(function (item) {
@@ -11598,15 +17277,15 @@ document.addEventListener("DOMContentLoaded", function () {
             }
           });
         case 6:
-          return _context21.a(2);
+          return _context26.a(2);
       }
-    }, _callee21, null, [[0, 5]]);
+    }, _callee26, null, [[0, 5]]);
   })));
 });
 function addExternalCounts(clickType) {
   var token = localStorage.getItem('access_token');
   if (!token) {
-    window.location.href = '../index.html';
+    window.location.href = "./index.html";
     return;
   }
   fetch("".concat(BASE_URL, "copy_count"), {
@@ -11631,10 +17310,10 @@ function addExternalCounts(clickType) {
   });
 }
 window.updateLikeAndDisLike = /*#__PURE__*/function () {
-  var _ref27 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee22(currentPatient, feedbackType, currentId) {
+  var _ref34 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee27(currentPatient, feedbackType, currentId) {
     var currentNoteTypeElement, selectedTab, responseUrl, responseType, card, token, part, crtPatient, accordionItem, titleToggle, titleSpan, title, payload, icons, response, data, result, response_data, ratings, ratingValue, upIcon, downIcon;
-    return _regenerator().w(function (_context22) {
-      while (1) switch (_context22.n) {
+    return _regenerator().w(function (_context27) {
+      while (1) switch (_context27.n) {
         case 0:
           currentNoteTypeElement = document.getElementById('currentNoteType');
           selectedTab = (currentNoteTypeElement === null || currentNoteTypeElement === void 0 ? void 0 : currentNoteTypeElement.textContent.trim()) || 'SOAP';
@@ -11651,16 +17330,16 @@ window.updateLikeAndDisLike = /*#__PURE__*/function () {
             responseType = 'DS';
           }
           if (!(!currentPatient || !responseUrl || !responseType || responseUrl === 'undefined')) {
-            _context22.n = 1;
+            _context27.n = 1;
             break;
           }
           toastr.warning("There is no record for this patient");
-          return _context22.a(2);
+          return _context27.a(2);
         case 1:
           card = document.querySelector(".".concat(currentId)).closest('.kt-accordion-content');
           token = localStorage.getItem('access_token');
           if (!(card && responseUrl != 'undefined')) {
-            _context22.n = 8;
+            _context27.n = 8;
             break;
           }
           part = responseUrl.split("/")[3];
@@ -11670,7 +17349,7 @@ window.updateLikeAndDisLike = /*#__PURE__*/function () {
           titleSpan = titleToggle ? titleToggle.querySelector('span') : null;
           title = titleSpan ? titleSpan.textContent.trim() : '';
           if (!titleSpan) {
-            _context22.n = 8;
+            _context27.n = 8;
             break;
           }
           payload = {
@@ -11683,7 +17362,7 @@ window.updateLikeAndDisLike = /*#__PURE__*/function () {
           icons.forEach(function (icon) {
             return icon.classList.remove('active');
           });
-          _context22.n = 2;
+          _context27.n = 2;
           return fetch("".concat(BASE_URL, "summary/user_rating"), {
             method: 'POST',
             headers: {
@@ -11693,16 +17372,16 @@ window.updateLikeAndDisLike = /*#__PURE__*/function () {
             body: JSON.stringify(payload)
           });
         case 2:
-          response = _context22.v;
-          _context22.n = 3;
+          response = _context27.v;
+          _context27.n = 3;
           return response.json();
         case 3:
-          data = _context22.v;
+          data = _context27.v;
           if (!data) {
-            _context22.n = 7;
+            _context27.n = 7;
             break;
           }
-          _context22.n = 4;
+          _context27.n = 4;
           return fetch("".concat(BASE_URL, "summary/display_user_rating?patient_id=").concat(crtPatient, "&response_type=").concat(responseType, "&response_url=").concat(responseUrl), {
             method: 'GET',
             headers: {
@@ -11711,15 +17390,15 @@ window.updateLikeAndDisLike = /*#__PURE__*/function () {
             }
           });
         case 4:
-          result = _context22.v;
+          result = _context27.v;
           if (!result.ok) {
-            _context22.n = 6;
+            _context27.n = 6;
             break;
           }
-          _context22.n = 5;
+          _context27.n = 5;
           return result.json();
         case 5:
-          response_data = _context22.v;
+          response_data = _context27.v;
           if (response_data.user_ratings && response_data.user_ratings.length > 0) {
             ratings = response_data.user_ratings[0].good_bad;
             ratingValue = ratings[title]; // set active based on API response
@@ -11732,18 +17411,18 @@ window.updateLikeAndDisLike = /*#__PURE__*/function () {
             }
           }
         case 6:
-          _context22.n = 8;
+          _context27.n = 8;
           break;
         case 7:
           toastr.warning("There is no record for this patient");
-          return _context22.a(2);
+          return _context27.a(2);
         case 8:
-          return _context22.a(2);
+          return _context27.a(2);
       }
-    }, _callee22);
+    }, _callee27);
   }));
-  return function (_x27, _x28, _x29) {
-    return _ref27.apply(this, arguments);
+  return function (_x31, _x32, _x33) {
+    return _ref34.apply(this, arguments);
   };
 }();
 var currentPatientId = null;
@@ -11780,306 +17459,132 @@ window.openCommentModal = function (currentPatient, cardId) {
     }, 100);
   }
 };
-
-// Save comment button event listener
-var saveCommentBtn = document.getElementById('saveCommentBtn');
-if (saveCommentBtn) {
-  saveCommentBtn.addEventListener('click', /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee23() {
-    var _currentNoteTypeEleme;
-    var commentText, errorEl, comment, currentNoteTypeElement, selectedTab, responseUrl, responseType, hdSoapUrl, hdHpUrl, hdDsUrl, modalEl, modal, crtPatient, urlParts, patientPart, parts, _iterator4, _step4, part, title, card, cardElement, accordionItem, titleToggle, titleSpan, payload, token, response, data, _modalEl, _modal, result, responseData, ratings, ratingValue, upIcon, downIcon, _t20, _t21, _t22, _t23, _t24;
-    return _regenerator().w(function (_context23) {
-      while (1) switch (_context23.p = _context23.n) {
-        case 0:
-          commentText = document.getElementById("commentText");
-          errorEl = document.getElementById("commentError");
-          if (commentText) {
-            _context23.n = 1;
-            break;
-          }
-          console.error("Comment textarea not found");
-          return _context23.a(2);
-        case 1:
-          comment = commentText.value.trim();
-          if (comment) {
-            _context23.n = 2;
-            break;
-          }
-          if (errorEl) {
-            errorEl.style.display = "block"; // show error
-          }
-          return _context23.a(2);
-        case 2:
-          if (errorEl) {
-            errorEl.style.display = "none"; // hide error
-          }
-          currentNoteTypeElement = document.getElementById('currentNoteType');
-          selectedTab = (currentNoteTypeElement === null || currentNoteTypeElement === void 0 || (_currentNoteTypeEleme = currentNoteTypeElement.textContent) === null || _currentNoteTypeEleme === void 0 ? void 0 : _currentNoteTypeEleme.trim()) || 'SOAP';
-          responseUrl = "";
-          responseType = "";
-          if (selectedTab === 'SOAP') {
-            hdSoapUrl = document.getElementById('hd_soap_url');
-            responseUrl = hdSoapUrl ? hdSoapUrl.value : "";
-            responseType = 'SOAP';
-          } else if (selectedTab === 'H&P') {
-            hdHpUrl = document.getElementById('hd_hp_url');
-            responseUrl = hdHpUrl ? hdHpUrl.value : "";
-            responseType = 'HP';
-          } else if (selectedTab === 'Discharge') {
-            hdDsUrl = document.getElementById('hd_ds_url');
-            responseUrl = hdDsUrl ? hdDsUrl.value : "";
-            responseType = 'DS';
-          }
-
-          // Validate response URL
-          if (!(!responseUrl || !responseType || responseUrl === 'undefined' || responseUrl === 'null')) {
-            _context23.n = 3;
-            break;
-          }
-          toastr.warning("There is no record for this patient");
-
-          // Close KT modal properly
-          modalEl = document.getElementById('commentModal');
-          if (modalEl) {
-            modal = KTModal.getInstance(modalEl);
-            if (modal) {
-              modal.hide();
-            }
-          }
-          return _context23.a(2);
-        case 3:
-          // Parse patient ID from response URL
-          crtPatient = null;
-          _context23.p = 4;
-          // Assuming responseUrl format like: /something/patient_123/...
-          urlParts = responseUrl.split("/");
-          patientPart = urlParts.find(function (part) {
-            return part.includes("patient_");
-          });
-          if (!patientPart) {
-            _context23.n = 5;
-            break;
-          }
-          crtPatient = patientPart.split("_")[1];
-          _context23.n = 12;
+window.saveComment = /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee28() {
+  var comment, errorEl, currentNoteTypeElement, selectedTab, responseUrl, responseType, part, crtPatient, card, accordionItem, titleToggle, titleSpan, title, token, payload, response, modal, data, result, response_data, ratings, ratingValue, upIcon, downIcon;
+  return _regenerator().w(function (_context28) {
+    while (1) switch (_context28.n) {
+      case 0:
+        comment = document.getElementById("commentText").value.trim();
+        errorEl = document.getElementById("commentError");
+        if (comment) {
+          _context28.n = 1;
           break;
-        case 5:
-          // Fallback: try to extract from the URL structure
-          parts = responseUrl.split("/");
-          if (!(parts.length > 1)) {
-            _context23.n = 12;
-            break;
-          }
-          // Try to get patient ID from the path
-          _iterator4 = _createForOfIteratorHelper(parts);
-          _context23.p = 6;
-          _iterator4.s();
-        case 7:
-          if ((_step4 = _iterator4.n()).done) {
-            _context23.n = 9;
-            break;
-          }
-          part = _step4.value;
-          if (!part.startsWith("patient_")) {
-            _context23.n = 8;
-            break;
-          }
-          crtPatient = part.split("_")[1];
-          return _context23.a(3, 9);
-        case 8:
-          _context23.n = 7;
+        }
+        errorEl.style.display = "block";
+        return _context28.a(2);
+      case 1:
+        errorEl.style.display = "none";
+        currentNoteTypeElement = document.getElementById('currentNoteType');
+        selectedTab = (currentNoteTypeElement === null || currentNoteTypeElement === void 0 ? void 0 : currentNoteTypeElement.textContent.trim()) || 'SOAP';
+        responseUrl = "";
+        responseType = "";
+        if (selectedTab == 'SOAP') {
+          responseUrl = document.getElementById('hd_soap_url').value;
+          responseType = 'SOAP';
+        } else if (selectedTab == 'H&P') {
+          responseUrl = document.getElementById('hd_hp_url').value;
+          responseType = 'HP';
+        } else if (selectedTab == 'Discharge Summary') {
+          responseUrl = document.getElementById('hd_ds_url').value;
+          responseType = 'DS';
+        }
+        if (!(!responseUrl || !responseType || responseUrl === 'undefined')) {
+          _context28.n = 2;
           break;
-        case 9:
-          _context23.n = 11;
+        }
+        toastr.warning("There is no record for this patient");
+        $('#commentModal').modal('hide');
+        return _context28.a(2);
+      case 2:
+        part = responseUrl.split("/")[3];
+        crtPatient = part.split("_")[1];
+        card = document.querySelector(".".concat(currentCardId)).closest('.kt-accordion-content');
+        accordionItem = card.parentElement;
+        titleToggle = accordionItem.querySelector('.kt-accordion-toggle');
+        titleSpan = titleToggle ? titleToggle.querySelector('span') : null;
+        title = titleSpan ? titleSpan.textContent.trim() : '';
+        token = localStorage.getItem('access_token');
+        payload = {
+          patient_id: crtPatient,
+          response_type: responseType,
+          response_url: responseUrl,
+          fields: _defineProperty({}, title, {
+            comment: comment
+          })
+        };
+        _context28.n = 3;
+        return fetch("".concat(BASE_URL, "summary/user_rating"), {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': "Bearer ".concat(token)
+          },
+          body: JSON.stringify(payload)
+        });
+      case 3:
+        response = _context28.v;
+        if (!response.ok) {
+          _context28.n = 8;
           break;
-        case 10:
-          _context23.p = 10;
-          _t20 = _context23.v;
-          _iterator4.e(_t20);
-        case 11:
-          _context23.p = 11;
-          _iterator4.f();
-          return _context23.f(11);
-        case 12:
-          _context23.n = 14;
+        }
+        toastr.success("Comment saved successfully!");
+        modal = document.getElementById('commentModal');
+        modal.style.display = 'none';
+        document.getElementById('commentText').value = '';
+        _context28.n = 4;
+        return response.json();
+      case 4:
+        data = _context28.v;
+        if (!data) {
+          _context28.n = 7;
           break;
-        case 13:
-          _context23.p = 13;
-          _t21 = _context23.v;
-          console.error("Error parsing patient ID:", _t21);
-          toastr.error("Error parsing patient information");
-          return _context23.a(2);
-        case 14:
-          if (crtPatient) {
-            _context23.n = 15;
-            break;
+        }
+        _context28.n = 5;
+        return fetch("".concat(BASE_URL, "summary/display_user_rating?patient_id=").concat(crtPatient, "&response_type=").concat(responseType, "&response_url=").concat(responseUrl), {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': "Bearer ".concat(token)
           }
-          toastr.error("Could not determine patient ID from the URL");
-          return _context23.a(2);
-        case 15:
-          // Get the card element
-          title = '';
-          card = null;
-          if (currentCardId) {
-            cardElement = document.querySelector(".".concat(currentCardId));
-            if (cardElement) {
-              card = cardElement.closest('.kt-accordion-content');
-              if (card) {
-                accordionItem = card.parentElement;
-                if (accordionItem) {
-                  titleToggle = accordionItem.querySelector('.kt-accordion-toggle');
-                  if (titleToggle) {
-                    titleSpan = titleToggle.querySelector('span');
-                    if (titleSpan) {
-                      title = titleSpan.textContent.trim();
-                    }
-                  }
-                }
-              }
-            }
+        });
+      case 5:
+        result = _context28.v;
+        _context28.n = 6;
+        return result.json();
+      case 6:
+        response_data = _context28.v;
+        if (response_data.user_ratings && response_data.user_ratings.length > 0) {
+          ratings = response_data.user_ratings[0].good_bad;
+          ratingValue = ratings[title]; // set active based on API response
+          if (ratingValue === "good") {
+            upIcon = card.querySelector('.thumb-up');
+            if (upIcon) upIcon.classList.add('active');
+          } else if (ratingValue === "bad") {
+            downIcon = card.querySelector('.thumb-down');
+            if (downIcon) downIcon.classList.add('active');
           }
-          if (!title) {
-            title = 'Unknown Section';
-          }
-          payload = {
-            patient_id: crtPatient,
-            response_type: responseType,
-            response_url: responseUrl,
-            fields: _defineProperty({}, title, {
-              comment: comment
-            })
-          };
-          token = localStorage.getItem('access_token');
-          if (token) {
-            _context23.n = 16;
-            break;
-          }
-          toastr.error("Authentication required. Please log in again.");
-          return _context23.a(2);
-        case 16:
-          _context23.p = 16;
-          _context23.n = 17;
-          return fetch("".concat(BASE_URL, "summary/user_rating"), {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'Authorization': "Bearer ".concat(token)
-            },
-            body: JSON.stringify(payload)
-          });
-        case 17:
-          response = _context23.v;
-          if (!response.ok) {
-            _context23.n = 28;
-            break;
-          }
-          data = null;
-          _context23.p = 18;
-          _context23.n = 19;
-          return response.json();
-        case 19:
-          data = _context23.v;
-          _context23.n = 21;
-          break;
-        case 20:
-          _context23.p = 20;
-          _t22 = _context23.v;
-          console.warn("Response was OK but not valid JSON");
-        case 21:
-          toastr.success("Comment saved successfully!");
-
-          // Close KT modal properly
-          _modalEl = document.getElementById('commentModal');
-          if (_modalEl) {
-            _modal = KTModal.getInstance(_modalEl);
-            if (_modal) {
-              _modal.hide();
-            }
-          }
-
-          // Clear textarea
-          if (commentText) {
-            commentText.value = '';
-          }
-
-          // Fetch updated ratings if data is available
-          if (!(data || true)) // removed by dead control flow
-{}
-          _context23.p = 22;
-          _context23.n = 23;
-          return fetch("".concat(BASE_URL, "summary/display_user_rating?patient_id=").concat(crtPatient, "&response_type=").concat(responseType, "&response_url=").concat(encodeURIComponent(responseUrl)), {
-            method: 'GET',
-            headers: {
-              'Content-Type': 'application/json',
-              'Authorization': "Bearer ".concat(token)
-            }
-          });
-        case 23:
-          result = _context23.v;
-          if (!result.ok) {
-            _context23.n = 25;
-            break;
-          }
-          _context23.n = 24;
-          return result.json();
-        case 24:
-          responseData = _context23.v;
-          if (responseData.user_ratings && responseData.user_ratings.length > 0) {
-            ratings = responseData.user_ratings[0].good_bad;
-            ratingValue = ratings[title]; // Update UI if card element exists
-            if (card) {
-              // Remove existing active classes first
-              upIcon = card.querySelector('.thumb-up');
-              downIcon = card.querySelector('.thumb-down');
-              if (upIcon) upIcon.classList.remove('active');
-              if (downIcon) downIcon.classList.remove('active');
-
-              // Set active based on API response
-              if (ratingValue === "good") {
-                if (upIcon) upIcon.classList.add('active');
-              } else if (ratingValue === "bad") {
-                if (downIcon) downIcon.classList.add('active');
-              }
-            }
-          }
-        case 25:
-          _context23.n = 27;
-          break;
-        case 26:
-          _context23.p = 26;
-          _t23 = _context23.v;
-          console.error("Error fetching updated ratings:", _t23);
-          // Don't show error toast for this - it's a secondary action
-        case 27:
-          _context23.n = 29;
-          break;
-        case 28:
-          console.error("Failed to save comment. Status:", response.status);
-          toastr.error("Failed to save comment. Please try again.");
-        case 29:
-          _context23.n = 31;
-          break;
-        case 30:
-          _context23.p = 30;
-          _t24 = _context23.v;
-          console.error("Error saving comment:", _t24);
-          toastr.error("An error occurred while saving the comment.");
-        case 31:
-          return _context23.a(2);
-      }
-    }, _callee23, null, [[22, 26], [18, 20], [16, 30], [6, 10, 11, 12], [4, 13]]);
-  })));
-}
-function checkSoapNotification(_x30, _x31) {
+        }
+      case 7:
+        _context28.n = 9;
+        break;
+      case 8:
+        console.error("Failed to save comment");
+      case 9:
+        return _context28.a(2);
+    }
+  }, _callee28);
+}));
+function checkSoapNotification(_x34, _x35) {
   return _checkSoapNotification.apply(this, arguments);
 }
 function _checkSoapNotification() {
-  _checkSoapNotification = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee34(patientId, token) {
+  _checkSoapNotification = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee39(patientId, token) {
     var soap_notes, soap_response, allNavLinks, soapTab, soapButton, oldDot, oldBtnDot, tabDot, btnDot, _t38;
-    return _regenerator().w(function (_context34) {
-      while (1) switch (_context34.p = _context34.n) {
+    return _regenerator().w(function (_context39) {
+      while (1) switch (_context39.p = _context39.n) {
         case 0:
-          _context34.p = 0;
-          _context34.n = 1;
+          _context39.p = 0;
+          _context39.n = 1;
           return fetch("".concat(BASE_URL, "ondemand/pending-soap-notes?patient_id=").concat(patientId), {
             method: 'GET',
             headers: {
@@ -12088,17 +17593,17 @@ function _checkSoapNotification() {
             }
           });
         case 1:
-          soap_notes = _context34.v;
+          soap_notes = _context39.v;
           if (soap_notes.ok) {
-            _context34.n = 2;
+            _context39.n = 2;
             break;
           }
-          return _context34.a(2);
+          return _context39.a(2);
         case 2:
-          _context34.n = 3;
+          _context39.n = 3;
           return soap_notes.json();
         case 3:
-          soap_response = _context34.v;
+          soap_response = _context39.v;
           // --- Find SOAP Tab (by text) ---
           allNavLinks = document.querySelectorAll('#navTabsDropdown .nav-link');
           soapTab = null;
@@ -12151,16 +17656,16 @@ function _checkSoapNotification() {
               soapButton.appendChild(btnDot);
             }
           }
-          _context34.n = 5;
+          _context39.n = 5;
           break;
         case 4:
-          _context34.p = 4;
-          _t38 = _context34.v;
+          _context39.p = 4;
+          _t38 = _context39.v;
           console.error("SOAP notification check failed:", _t38);
         case 5:
-          return _context34.a(2);
+          return _context39.a(2);
       }
-    }, _callee34, null, [[0, 4]]);
+    }, _callee39, null, [[0, 4]]);
   }));
   return _checkSoapNotification.apply(this, arguments);
 }
@@ -12221,7 +17726,7 @@ function setButtonState(buttonId, isDisabled, opacity) {
 
 // Function to update which suture button is visible
 function updateVisibleSutureButton(noteType) {
-  var _document$getElementB, _document$getElementB2, _document$getElementB3;
+  var _document$getElementB2, _document$getElementB3, _document$getElementB4;
   // Hide all suture buttons
   document.querySelectorAll('.suture-btn').forEach(function (btn) {
     btn.classList.add('hidden');
@@ -12230,13 +17735,13 @@ function updateVisibleSutureButton(noteType) {
   // Show the correct button based on note type
   switch (noteType) {
     case 'SOAP':
-      (_document$getElementB = document.getElementById('onDemandSummaryCall')) === null || _document$getElementB === void 0 || _document$getElementB.classList.remove('hidden');
+      (_document$getElementB2 = document.getElementById('onDemandSummaryCall')) === null || _document$getElementB2 === void 0 || _document$getElementB2.classList.remove('hidden');
       break;
     case 'H&P':
-      (_document$getElementB2 = document.getElementById('onDemandHpCall')) === null || _document$getElementB2 === void 0 || _document$getElementB2.classList.remove('hidden');
+      (_document$getElementB3 = document.getElementById('onDemandHpCall')) === null || _document$getElementB3 === void 0 || _document$getElementB3.classList.remove('hidden');
       break;
     case 'Discharge':
-      (_document$getElementB3 = document.getElementById('onDemandDsCall')) === null || _document$getElementB3 === void 0 || _document$getElementB3.classList.remove('hidden');
+      (_document$getElementB4 = document.getElementById('onDemandDsCall')) === null || _document$getElementB4 === void 0 || _document$getElementB4.classList.remove('hidden');
       break;
   }
 }
